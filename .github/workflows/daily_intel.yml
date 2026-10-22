@@ -1,0 +1,42 @@
+name: Daily UK Retail Threat Scraper & Summary
+
+on:
+  schedule:
+    # 07:30 UTC every Monday through Friday
+    - cron: '30 7 * * 1-5'
+  workflow_dispatch: # Allows you to manually trigger the run via GitHub button anytime
+
+permissions:
+  contents: write # Crucial: Allows GitHub Actions to push data/threats.json back to repo
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Execute Threat Intelligence Pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          python threat_intel_pipeline.py
+
+      - name: Commit and Push Updated Threat Feed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/threats.json data/daily_summary.md
+          git diff --staged --quiet || (git commit -m "Auto-update threat intel feed [skip ci]" && git push)
