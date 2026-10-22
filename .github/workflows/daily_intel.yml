@@ -31,6 +31,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL || secrets.GOOGLE_CHAT_WEBHOOK_URL || secrets.SLACK_WEBHOOK_URL }}
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL || secrets.DASHBOARD_URL }}
         run: |
           python threat_intel_pipeline.py
 
