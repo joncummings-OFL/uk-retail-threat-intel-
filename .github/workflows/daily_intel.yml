@@ -30,7 +30,7 @@ jobs:
       - name: Execute Threat Intelligence Pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL || secrets.GOOGLE_CHAT_WEBHOOK_URL || secrets.SLACK_WEBHOOK_URL }}
         run: |
           python threat_intel_pipeline.py
 
