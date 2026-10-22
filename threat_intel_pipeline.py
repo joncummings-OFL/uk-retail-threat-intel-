@@ -117,12 +117,39 @@ def save_output_files(articles, briefing):
     logging.info("Saved data/threats.json and data/daily_summary.md successfully.")
 
 def notify_webhook(briefing):
-    """Sends summary to Slack or Teams if webhook is present."""
-    webhook_url = os.getenv("SLACK_WEBHOOK_URL")
-    if webhook_url:
+    """
+    Sends summary to Google Spaces/Chat, Slack, or Teams.
+    Supports WEBHOOK_URL, GOOGLE_CHAT_WEBHOOK_URL, or SLACK_WEBHOOK_URL.
+    """
+    webhook_url = (
+        os.getenv("WEBHOOK_URL") 
+        or os.getenv("GOOGLE_CHAT_WEBHOOK_URL") 
+        or os.getenv("SLACK_WEBHOOK_URL")
+    )
+    if not webhook_url:
+        logging.info("No webhook URL configured. Skipping notifications.")
+        return
+
+    full_message = f"🛡️ *UK Retail Daily Cyber Threat Briefing*\n\n{briefing}"
+
+    # Google Chat has a strict 4,096-character limit per message.
+    # Chunking at 3,800 characters ensures requests never fail with HTTP 400.
+    MAX_CHUNK = 3800
+    chunks = [full_message[i:i + MAX_CHUNK] for i in range(0, len(full_message), MAX_CHUNK)]
+
+    for idx, chunk in enumerate(chunks):
+        payload = {"text": chunk}
         try:
-            requests.post(webhook_url, json={"text": f"🛡️ *UK Retail Daily CTI Briefing*\n\n{briefing}"}, timeout=10)
-            logging.info("Briefing dispatched to Slack/Teams webhook.")
+            res = requests.post(
+                webhook_url, 
+                headers={"Content-Type": "application/json; charset=UTF-8"},
+                json=payload, 
+                timeout=10
+            )
+            if res.status_code in [200, 204]:
+                logging.info(f"Dispatched briefing chunk {idx+1}/{len(chunks)} to webhook.")
+            else:
+                logging.error(f"Webhook rejected with HTTP {res.status_code}: {res.text}")
         except Exception as e:
             logging.error(f"Failed to post to webhook: {e}")
 
