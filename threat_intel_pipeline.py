@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 import logging
 from datetime import datetime, timezone
 import feedparser
@@ -29,6 +30,13 @@ RETAIL_KEYWORDS = [
     r"\bboots\b", r"\bcurrys\b", r"\bnext\b", r"\bjohn lewis\b", r"\bharrods\b"
 ]
 KEYWORD_PATTERN = re.compile("|".join(RETAIL_KEYWORDS), re.IGNORECASE)
+
+# Models to attempt in order of preference if 503 high-demand errors occur
+CANDIDATE_MODELS = [
+    "gemini-3.8-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+]
 
 def fetch_and_filter_intel():
     """Scrapes RSS feeds and matches articles against the UK retail taxonomy."""
@@ -68,7 +76,10 @@ def fetch_and_filter_intel():
     return matched_articles
 
 def generate_ciso_daily_brief(articles):
-    """Uses Gemini API to synthesize an executive CISO threat briefing."""
+    """
+    Uses Gemini API to synthesize an executive CISO threat briefing.
+    Includes automated retries and fallback models to gracefully handle 503 errors.
+    """
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
         logging.warning("GEMINI_API_KEY is not set. Generating fallback summary.")
@@ -89,28 +100,44 @@ def generate_ciso_daily_brief(articles):
     4. **Tactical MITRE ATT&CK Mapping**: Key tactics observed.
     5. **Immediate Defensive Recommendations for Retail CISOs**: Actionable steps for SecOps.
 
-    Format cleanly in professional Markdown with bullet points.
+    Format cleanly in professional Markdown with bullet points. Avoid excessive fluff.
     """
 
-    try:
-        response = client.models.generate_content(
-            model="gemini-3.8-flash",
-            contents=prompt
-        )
-        return response.text
-    except Exception as e:
-        logging.error(f"Gemini generation error: {e}")
-        return f"Error generating Gemini briefing: {str(e)}"
+    last_error = None
+
+    # Cascade through candidate models with exponential backoff on 503/transient errors
+    for model_name in CANDIDATE_MODELS:
+        for attempt in range(1, 4):
+            try:
+                logging.info(f"Requesting briefing from {model_name} (attempt {attempt}/3)...")
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=prompt
+                )
+                if response and response.text:
+                    logging.info(f"Successfully generated briefing using {model_name}.")
+                    return response.text
+            except Exception as e:
+                last_error = e
+                logging.warning(f"Error on {model_name} (attempt {attempt}/3): {e}")
+                time.sleep(attempt * 3)  # Wait 3s, then 6s before retry
+
+    # Clean fallback output if all model endpoints are temporarily saturated
+    logging.error(f"All candidate models saturated. Final error: {last_error}")
+    return (
+        "⚠️ *UK Retail Threat Briefing — Fallback Mode*\n\n"
+        f"AI executive briefing generation was temporarily delayed by upstream API demand.\n\n"
+        f"**Latest Filtered Threats Today ({len(articles)} alerts captured):**\n" +
+        "\n".join([f"• *[{a['severity']}]* {a['title']} — _{a['source']}_" for a in articles[:7]])
+    )
 
 def save_output_files(articles, briefing):
     """Saves structured data into the /data folder for dashboard ingestion."""
     os.makedirs("data", exist_ok=True)
     
-    # Save JSON feed for the frontend
     with open("data/threats.json", "w", encoding="utf-8") as f:
         json.dump(articles, f, indent=2, ensure_ascii=False)
         
-    # Save Markdown summary
     with open("data/daily_summary.md", "w", encoding="utf-8") as f:
         f.write(briefing)
 
@@ -119,7 +146,7 @@ def save_output_files(articles, briefing):
 def notify_webhook(briefing):
     """
     Sends summary to Google Spaces/Chat, Slack, or Teams.
-    Supports WEBHOOK_URL, GOOGLE_CHAT_WEBHOOK_URL, or SLACK_WEBHOOK_URL.
+    Supports either WEBHOOK_URL, GOOGLE_CHAT_WEBHOOK_URL, or SLACK_WEBHOOK_URL.
     """
     webhook_url = (
         os.getenv("WEBHOOK_URL") 
@@ -132,8 +159,8 @@ def notify_webhook(briefing):
 
     full_message = f"🛡️ *UK Retail Daily Cyber Threat Briefing*\n\n{briefing}"
 
-    # Google Chat has a strict 4,096-character limit per message.
-    # Chunking at 3,800 characters ensures requests never fail with HTTP 400.
+    # Google Chat / Spaces has a strict 4096 character limit per message.
+    # Chunk long briefings so Google does not reject with 400 Bad Request.
     MAX_CHUNK = 3800
     chunks = [full_message[i:i + MAX_CHUNK] for i in range(0, len(full_message), MAX_CHUNK)]
 
