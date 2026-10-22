@@ -1,0 +1,135 @@
+import os
+import re
+import json
+import logging
+from datetime import datetime, timezone
+import feedparser
+import requests
+from bs4 import BeautifulSoup
+from google import genai
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+
+# 1. CURATED SOURCES (UK & Global Cybersecurity Feeds)
+FEEDS = [
+    {"name": "NCSC UK Advisories", "url": "https://www.ncsc.gov.uk/api/1/services/v1/report-rss-feed.xml", "subsector": "supply"},
+    {"name": "The Register Security (UK)", "url": "https://www.theregister.com/security/headlines.atom", "subsector": "ecom"},
+    {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "subsector": "ecom"},
+    {"name": "Dark Reading", "url": "https://www.darkreading.com/rss.xml", "subsector": "pos"},
+    {"name": "SecurityWeek", "url": "https://feeds.feedburner.com/securityweek", "subsector": "loyalty"},
+]
+
+# 2. UK RETAIL KEYWORD TAXONOMY
+RETAIL_KEYWORDS = [
+    r"\bretail\b", r"\be-commerce\b", r"\becommerce\b", r"\bpoint of sale\b", r"\bpos\b",
+    r"\bmagecart\b", r"\be-skimming\b", r"\bcheckout\b", r"\bpci[- ]dss\b", r"\bloyalty\b",
+    r"\bcredential stuffing\b", r"\baccount takeover\b", r"\bato\b", r"\bgift card\b",
+    r"\bsupply chain\b", r"\bwarehouse\b", r"\blogistics\b", r"\bico\b", r"\bshop\b",
+    r"\btesco\b", r"\bsainsbury\b", r"\basda\b", r"\bmarks & spencer\b", r"\bm&s\b",
+    r"\bboots\b", r"\bcurrys\b", r"\bnext\b", r"\bjohn lewis\b", r"\bharrods\b"
+]
+KEYWORD_PATTERN = re.compile("|".join(RETAIL_KEYWORDS), re.IGNORECASE)
+
+def fetch_and_filter_intel():
+    """Scrapes RSS feeds and matches articles against the UK retail taxonomy."""
+    matched_articles = []
+    
+    for feed in FEEDS:
+        logging.info(f"Ingesting feed: {feed['name']}...")
+        try:
+            parsed = feedparser.parse(feed["url"])
+            for entry in parsed.entries[:20]:
+                title = entry.get("title", "")
+                summary = entry.get("summary", "") or entry.get("description", "")
+                link = entry.get("link", "")
+                
+                clean_summary = BeautifulSoup(summary, "html.parser").get_text()
+                combined_text = f"{title} {clean_summary}"
+                
+                matches = KEYWORD_PATTERN.findall(combined_text)
+                if matches:
+                    matched_articles.append({
+                        "id": f"scraped-{len(matched_articles) + 1}",
+                        "title": title.strip(),
+                        "source": feed["name"],
+                        "date": datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC"),
+                        "severity": "CRITICAL" if any(k in combined_text.lower() for k in ["ransomware", "magecart", "breach", "zero-day", "cvv"]) else "HIGH",
+                        "subsector": feed["subsector"],
+                        "tags": list(set([m.lower().capitalize() for m in matches]))[:4],
+                        "mitre": "T1190 (Exploit Public Facing Application)" if "ecom" in feed["subsector"] else "T1078 (Valid Accounts)",
+                        "summary": clean_summary[:350].strip() + ("..." if len(clean_summary) > 350 else ""),
+                        "indicators": [link],
+                        "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+                    })
+        except Exception as e:
+            logging.error(f"Error scraping {feed['name']}: {e}")
+
+    logging.info(f"Retrieved {len(matched_articles)} retail-relevant alerts.")
+    return matched_articles
+
+def generate_ciso_daily_brief(articles):
+    """Uses Gemini API to synthesize an executive CISO threat briefing."""
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        logging.warning("GEMINI_API_KEY is not set. Generating fallback summary.")
+        return "GEMINI_API_KEY was not provided. Daily briefing could not be generated."
+
+    client = genai.Client(api_key=api_key)
+
+    prompt = f"""
+    Act as a Principal Cyber Threat Intelligence Analyst for the UK Retail Sector.
+    Review the following raw scraped cyber security news and indicators collected today:
+
+    {json.dumps(articles[:10], indent=2)}
+
+    Generate a high-impact Daily Cyber Threat Intelligence Executive Briefing containing:
+    1. **Executive TL;DR**: 2-3 sentences on the prevailing UK retail threat landscape today.
+    2. **Critical Incidents & Exploits**: Highlight top vulnerabilities (e.g. Magecart, POS, Supply Chain, ATO).
+    3. **UK Regulatory & Compliance Impact**: Potential UK GDPR / ICO / PCI-DSS v4.0.1 implications.
+    4. **Tactical MITRE ATT&CK Mapping**: Key tactics observed.
+    5. **Immediate Defensive Recommendations for Retail CISOs**: Actionable steps for SecOps.
+
+    Format cleanly in professional Markdown with bullet points.
+    """
+
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
+        return response.text
+    except Exception as e:
+        logging.error(f"Gemini generation error: {e}")
+        return f"Error generating Gemini briefing: {str(e)}"
+
+def save_output_files(articles, briefing):
+    """Saves structured data into the /data folder for dashboard ingestion."""
+    os.makedirs("data", exist_ok=True)
+    
+    # Save JSON feed for the frontend
+    with open("data/threats.json", "w", encoding="utf-8") as f:
+        json.dump(articles, f, indent=2, ensure_ascii=False)
+        
+    # Save Markdown summary
+    with open("data/daily_summary.md", "w", encoding="utf-8") as f:
+        f.write(briefing)
+
+    logging.info("Saved data/threats.json and data/daily_summary.md successfully.")
+
+def notify_webhook(briefing):
+    """Sends summary to Slack or Teams if webhook is present."""
+    webhook_url = os.getenv("SLACK_WEBHOOK_URL")
+    if webhook_url:
+        try:
+            requests.post(webhook_url, json={"text": f"🛡️ *UK Retail Daily CTI Briefing*\n\n{briefing}"}, timeout=10)
+            logging.info("Briefing dispatched to Slack/Teams webhook.")
+        except Exception as e:
+            logging.error(f"Failed to post to webhook: {e}")
+
+if __name__ == "__main__":
+    logging.info("Executing UK Retail Threat Intelligence Run...")
+    items = fetch_and_filter_intel()
+    brief = generate_ciso_daily_brief(items)
+    save_output_files(items, brief)
+    notify_webhook(brief)
+    logging.info("Run complete.")
