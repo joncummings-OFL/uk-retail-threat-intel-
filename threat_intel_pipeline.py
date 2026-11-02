@@ -111,6 +111,21 @@ RETAIL_KEYWORDS = [
 ]
 KEYWORD_PATTERN = re.compile("|".join(RETAIL_KEYWORDS), re.IGNORECASE)
 
+# ==============================================================================
+# 3. GLOBAL CRITICAL THREAT TAXONOMY (Zero-Days, Active Exploits, Perimeter CVEs)
+# Ensures critical threats affecting enterprise IT stacks (VPNs, Identity, Cloud, OS)
+# are never dropped even if they do not explicitly mention retail terms.
+# ==============================================================================
+CRITICAL_ENTERPRISE_KEYWORDS = [
+    r"\bzero[- ]day\b", r"\b0[- ]day\b", r"\bactively exploited\b", r"\bexploited in the wild\b",
+    r"\bknown exploited vulnerability\b", r"\bcisa kev\b", r"\bemergency directive\b",
+    r"\bremote code execution\b", r"\bunauthenticated rce\b", r"\bcvss (?:9\.\d|10(?:\.0)?)\b",
+    r"\bransomware outbreak\b", r"\bextortion campaign\b", r"\bnation[- ]state\b",
+    r"\bpalo alto\b", r"\bfortinet\b", r"\bivanti\b", r"\bcitrix\b", r"\bvmware\b",
+    r"\bactive directory\b", r"\bexchange server\b", r"\bwindows kernel\b"
+]
+CRITICAL_ENTERPRISE_PATTERN = re.compile("|".join(CRITICAL_ENTERPRISE_KEYWORDS), re.IGNORECASE)
+
 # Model fallback cascade for Gemini
 CANDIDATE_MODELS = [
     "gemini-3.8-flash",
@@ -161,12 +176,30 @@ def fetch_and_filter_intel():
                 clean_summary = BeautifulSoup(summary, "html.parser").get_text()
                 combined_text = f"{title} {clean_summary}"
                 
-                matches = KEYWORD_PATTERN.findall(combined_text)
-                if matches:
+                # Check for retail relevance OR global critical enterprise threats
+                retail_matches = KEYWORD_PATTERN.findall(combined_text)
+                crit_matches = CRITICAL_ENTERPRISE_PATTERN.findall(combined_text)
+
+                # Include if it matches retail keywords OR represents an active critical threat
+                is_global_critical = bool(crit_matches) or ("advisory" in feed["name"].lower() and "critical" in combined_text.lower())
+
+                if retail_matches or is_global_critical:
                     date_display = pub_date.strftime("%d %b %Y") if pub_date else "Recent"
-                    is_critical = any(k in combined_text.lower() for k in [
-                        "ransomware", "magecart", "breach", "zero-day", "cvv", "compromise", "skimmer"
-                    ])
+                    
+                    if retail_matches:
+                        subsector = feed["subsector"]
+                        is_crit = is_global_critical or any(k in combined_text.lower() for k in [
+                            "ransomware", "magecart", "breach", "zero-day", "cvv", "skimmer"
+                        ])
+                        severity = "CRITICAL" if is_crit else "HIGH"
+                        tags = list(set([m[0].upper() + m[1:].lower() for m in retail_matches if isinstance(m, str)]))[:4]
+                        advisory_text = "Review logs and e-commerce infrastructure for exposure to this vector."
+                    else:
+                        # Global critical enterprise threat affecting broader corporate perimeter
+                        subsector = "enterprise"
+                        severity = "CRITICAL"
+                        tags = ["Global 0-Day", "Enterprise"] + list(set([m[0].upper() + m[1:].lower() for m in crit_matches if isinstance(m, str)]))[:2]
+                        advisory_text = "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
 
                     matched_articles.append({
                         "id": f"scraped-{len(matched_articles) + 1}",
@@ -175,13 +208,13 @@ def fetch_and_filter_intel():
                         "url": link,
                         "date": date_display,
                         "_timestamp": pub_date.timestamp() if pub_date else 0,
-                        "severity": "CRITICAL" if is_critical else "HIGH",
-                        "subsector": feed["subsector"],
-                        "tags": list(set([m[0].upper() + m[1:].lower() for m in matches if isinstance(m, str)]))[:4],
-                        "mitre": "T1190 (Exploit Public Facing Application)" if "ecom" in feed["subsector"] else "T1078 (Valid Accounts)",
+                        "severity": severity,
+                        "subsector": subsector,
+                        "tags": tags,
+                        "mitre": "T1190 (Exploit Public Facing Application)" if subsector in ["ecom", "enterprise"] else "T1078 (Valid Accounts)",
                         "summary": clean_summary[:350].strip() + ("..." if len(clean_summary) > 350 else ""),
                         "indicators": [link] if link else [],
-                        "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+                        "advisory": advisory_text
                     })
         except Exception as e:
             logging.error(f"Error scraping {feed['name']}: {e}")
@@ -205,16 +238,16 @@ def generate_ciso_daily_brief(articles):
 
     prompt = f"""
     Act as a Principal Cyber Threat Intelligence Analyst for the UK Retail Sector.
-    Review the following raw scraped cyber security news and indicators collected across UK and global feeds:
+    Review the following raw scraped cyber security news and indicators collected today across UK retail vectors and critical enterprise zero-days:
 
-    {json.dumps(articles[:12], indent=2)}
+    {json.dumps(articles[:14], indent=2)}
 
     Generate a high-impact Daily Cyber Threat Intelligence Executive Briefing containing:
-    1. **Executive TL;DR**: 2-3 crisp sentences summarizing prevailing UK retail cyber exposure today.
-    2. **Critical Incidents & Exploits**: Highlight top vulnerabilities (e.g. Magecart, POS, Supply Chain, ATO).
+    1. **Executive TL;DR**: 2-3 crisp sentences summarizing prevailing UK retail cyber exposure and any urgent global perimeter/enterprise zero-day threats.
+    2. **Critical Incidents & Exploits**: Highlight top vulnerabilities (e.g. Magecart, POS, Supply Chain, ATO, and critical enterprise zero-days affecting retail IT/store estates).
     3. **UK Regulatory & Compliance Impact**: Potential UK GDPR / ICO 72h notifications and PCI-DSS v4.0.1 implications.
-    4. **Tactical MITRE ATT&CK Mapping**: Key tactics observed.
-    5. **Immediate Defensive Recommendations for Retail CISOs**: 3 actionable, prioritized controls.
+    4. **Tactical MITRE ATT&CK Mapping**: Key tactics observed across customer-facing and internal networks.
+    5. **Immediate Defensive Recommendations for Retail CISOs**: 3 actionable, prioritized controls for retail IT, e-commerce, and enterprise SOCs.
 
     Format cleanly in Markdown with bullet points. Avoid unnecessary conversational preambles.
     """
