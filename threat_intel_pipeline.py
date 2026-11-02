@@ -11,36 +11,117 @@ from google import genai
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-# 1. CURATED SOURCES (Active UK & Global Cybersecurity Feeds)
+# ==============================================================================
+# 1. CURATED SOURCES (10 UK & Global Cybersecurity Intelligence Feeds)
+# ==============================================================================
 FEEDS = [
-    # Uses all-rss-feed for active advisories instead of the static report-rss-feed
-    {"name": "NCSC UK Advisories", "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml", "subsector": "supply"},
-    {"name": "The Register Security (UK)", "url": "https://www.theregister.com/security/headlines.atom", "subsector": "ecom"},
-    {"name": "BleepingComputer", "url": "https://www.bleepingcomputer.com/feed/", "subsector": "ecom"},
-    {"name": "Dark Reading", "url": "https://www.darkreading.com/rss.xml", "subsector": "pos"},
-    {"name": "SecurityWeek", "url": "https://feeds.feedburner.com/securityweek", "subsector": "loyalty"},
+    # UK National & Technical Press
+    {
+        "name": "NCSC UK Advisories",
+        "url": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
+        "subsector": "supply"
+    },
+    {
+        "name": "The Register Security (UK)",
+        "url": "https://www.theregister.com/security/headlines.atom",
+        "subsector": "ecom"
+    },
+    {
+        "name": "Computer Weekly Security (UK)",
+        "url": "https://www.computerweekly.com/rss/IT-security.xml",
+        "subsector": "loyalty"
+    },
+    # Payment Skimming, Retail Breaches & Investigative Journalism
+    {
+        "name": "Krebs on Security",
+        "url": "https://krebsonsecurity.com/feed/",
+        "subsector": "pos"
+    },
+    {
+        "name": "The Hacker News",
+        "url": "https://thehackernews.com/feeds/posts/default",
+        "subsector": "ecom"
+    },
+    # Enterprise Threats, Ransomware & Vulnerabilities
+    {
+        "name": "BleepingComputer",
+        "url": "https://www.bleepingcomputer.com/feed/",
+        "subsector": "ecom"
+    },
+    {
+        "name": "Dark Reading",
+        "url": "https://www.darkreading.com/rss.xml",
+        "subsector": "pos"
+    },
+    {
+        "name": "SecurityWeek",
+        "url": "https://feeds.feedburner.com/securityweek",
+        "subsector": "loyalty"
+    },
+    {
+        "name": "Security Affairs",
+        "url": "https://securityaffairs.com/wordpress/feed",
+        "subsector": "supply"
+    },
+    # Government Critical Infrastructure & Known Exploited Vulnerabilities
+    {
+        "name": "CISA Cyber Advisories",
+        "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+        "subsector": "supply"
+    },
 ]
 
-# 2. MAX AGE FILTER (Only process articles from the last 7 days)
-# 7 days covers Friday/weekend announcements during Monday morning runs while ignoring multi-year archives.
+# Max age: 7 days ensures Monday runs catch weekend developments without pulling archives
 MAX_ARTICLE_AGE_DAYS = 7
 
-# 3. UK RETAIL KEYWORD TAXONOMY
+# ==============================================================================
+# 2. EXPANDED UK RETAIL TAXONOMY (Vectors, Brands, Platforms, Couriers, Regs)
+# ==============================================================================
 RETAIL_KEYWORDS = [
-    r"\bretail\b", r"\be-commerce\b", r"\becommerce\b", r"\bpoint of sale\b", r"\bpos\b",
-    r"\bmagecart\b", r"\be-skimming\b", r"\bcheckout\b", r"\bpci[- ]dss\b", r"\bloyalty\b",
+    # Core Retail & Payment Concepts
+    r"\bretail\b", r"\bretailer\b", r"\bretailers\b", r"\be-commerce\b", r"\becommerce\b",
+    r"\bpoint of sale\b", r"\bpos\b", r"\bped\b", r"\bpin pad\b", r"\bcheckout\b",
+    r"\bpci[- ]dss\b", r"\b3[- ]?d secure\b", r"\bcardholder\b", r"\bpayment gateway\b",
+    
+    # Skimming & E-Commerce Exploits
+    r"\bmagecart\b", r"\be-skimming\b", r"\bdigital skimm(er|ing)\b", r"\bweb skimm(er|ing)\b",
+    r"\bformjacking\b", r"\btag manager\b", r"\bcheckout injection\b",
+    
+    # Popular E-Commerce Platforms & Frameworks
+    r"\bmagento\b", r"\badobe commerce\b", r"\bwoocommerce\b", r"\bshopify\b",
+    r"\bbigcommerce\b", r"\bprestashop\b", r"\bopencart\b", r"\bsalesforce commerce\b",
+    
+    # Fraud, ATO & Loyalty Systems
     r"\bcredential stuffing\b", r"\baccount takeover\b", r"\bato\b", r"\bgift card\b",
-    r"\bsupply chain\b", r"\bwarehouse\b", r"\blogistics\b", r"\bico\b", r"\bshop\b",
-    r"\btesco\b", r"\bsainsbury\b", r"\basda\b", r"\bmarks & spencer\b", r"\bm&s\b",
-    r"\bboots\b", r"\bcurrys\b", r"\bnext\b", r"\bjohn lewis\b", r"\bharrods\b"
+    r"\bloyalty\b", r"\bvoucher(s)?\b", r"\breward points\b", r"\bclubcard\b", r"\bnectar\b",
+    
+    # Logistics, 3PL & Supply Chain
+    r"\bsupply chain\b", r"\bwarehouse\b", r"\blogistics\b", r"\bcold-chain\b",
+    r"\bdistribution centr(e|es)\b", r"\bcourier(s)?\b", r"\bparcel(s)?\b",
+    r"\broyal mail\b", r"\bdpd\b", r"\bevri\b", r"\byodel\b",
+    
+    # Major UK Retailers & Grocers
+    r"\btesco\b", r"\bsainsbury\b", r"\basda\b", r"\bmorrisons\b",
+    r"\bmarks & spencer\b", r"\bm&s\b", r"\bboots\b", r"\bcurrys\b", r"\bnext\b",
+    r"\bjohn lewis\b", r"\bwaitrose\b", r"\bharrods\b", r"\bocado\b", r"\bargos\b",
+    r"\bgreggs\b", r"\bjd sports\b", r"\bprimark\b", r"\bco-op\b",
+    
+    # UK Regulators & Law Enforcement
+    r"\bico\b", r"\binformation commissioner\b", r"\buk gdpr\b", r"\baction fraud\b"
 ]
 KEYWORD_PATTERN = re.compile("|".join(RETAIL_KEYWORDS), re.IGNORECASE)
 
+# Model fallback cascade for Gemini
 CANDIDATE_MODELS = [
     "gemini-3.8-flash",
     "gemini-3.5-flash",
     "gemini-3.5-flash-lite",
 ]
+
+# Standard browser User-Agent to avoid automated bot blocks on security blogs
+SCRAPE_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+}
 
 def extract_entry_datetime(entry):
     """Safely extracts and converts an RSS entry's publication date to a UTC datetime."""
@@ -53,19 +134,25 @@ def extract_entry_datetime(entry):
     return None
 
 def fetch_and_filter_intel():
-    """Scrapes RSS feeds, enforces freshness threshold, and matches against UK retail taxonomy."""
+    """Scrapes all 10 RSS feeds, enforces freshness, and applies the UK retail taxonomy."""
     matched_articles = []
     cutoff_date = datetime.now(timezone.utc) - timedelta(days=MAX_ARTICLE_AGE_DAYS)
     
     for feed in FEEDS:
         logging.info(f"Ingesting feed: {feed['name']}...")
         try:
-            parsed = feedparser.parse(feed["url"])
+            # Fetch using requests with custom User-Agent to prevent 403 Forbidden responses
+            resp = requests.get(feed["url"], headers=SCRAPE_HEADERS, timeout=12)
+            if resp.status_code != 200:
+                logging.warning(f"Feed {feed['name']} returned HTTP {resp.status_code}. Skipping.")
+                continue
+
+            parsed = feedparser.parse(resp.content)
             for entry in parsed.entries[:25]:
-                # 1. FRESHNESS FILTER: Reject old articles
+                # 1. Freshness check
                 pub_date = extract_entry_datetime(entry)
                 if pub_date and pub_date < cutoff_date:
-                    continue  # Skip historical stories older than 7 days
+                    continue  # Skip historical articles
 
                 title = entry.get("title", "").strip()
                 summary = entry.get("summary", "") or entry.get("description", "")
@@ -77,6 +164,10 @@ def fetch_and_filter_intel():
                 matches = KEYWORD_PATTERN.findall(combined_text)
                 if matches:
                     date_display = pub_date.strftime("%d %b %Y") if pub_date else "Recent"
+                    is_critical = any(k in combined_text.lower() for k in [
+                        "ransomware", "magecart", "breach", "zero-day", "cvv", "compromise", "skimmer"
+                    ])
+
                     matched_articles.append({
                         "id": f"scraped-{len(matched_articles) + 1}",
                         "title": title,
@@ -84,9 +175,9 @@ def fetch_and_filter_intel():
                         "url": link,
                         "date": date_display,
                         "_timestamp": pub_date.timestamp() if pub_date else 0,
-                        "severity": "CRITICAL" if any(k in combined_text.lower() for k in ["ransomware", "magecart", "breach", "zero-day", "cvv", "compromise"]) else "HIGH",
+                        "severity": "CRITICAL" if is_critical else "HIGH",
                         "subsector": feed["subsector"],
-                        "tags": list(set([m.lower().capitalize() for m in matches]))[:4],
+                        "tags": list(set([m[0].upper() + m[1:].lower() for m in matches if isinstance(m, str)]))[:4],
                         "mitre": "T1190 (Exploit Public Facing Application)" if "ecom" in feed["subsector"] else "T1078 (Valid Accounts)",
                         "summary": clean_summary[:350].strip() + ("..." if len(clean_summary) > 350 else ""),
                         "indicators": [link] if link else [],
@@ -95,9 +186,9 @@ def fetch_and_filter_intel():
         except Exception as e:
             logging.error(f"Error scraping {feed['name']}: {e}")
 
-    # Sort matching articles with newest publication dates first
+    # Sort so the newest stories appear first
     matched_articles.sort(key=lambda x: x.get("_timestamp", 0), reverse=True)
-    logging.info(f"Retrieved {len(matched_articles)} fresh retail-relevant alerts (last {MAX_ARTICLE_AGE_DAYS} days).")
+    logging.info(f"Retrieved {len(matched_articles)} fresh retail-relevant alerts across all feeds.")
     return matched_articles
 
 def generate_ciso_daily_brief(articles):
@@ -114,9 +205,9 @@ def generate_ciso_daily_brief(articles):
 
     prompt = f"""
     Act as a Principal Cyber Threat Intelligence Analyst for the UK Retail Sector.
-    Review the following raw scraped cyber security news and indicators collected over the past few days:
+    Review the following raw scraped cyber security news and indicators collected across UK and global feeds:
 
-    {json.dumps(articles[:10], indent=2)}
+    {json.dumps(articles[:12], indent=2)}
 
     Generate a high-impact Daily Cyber Threat Intelligence Executive Briefing containing:
     1. **Executive TL;DR**: 2-3 crisp sentences summarizing prevailing UK retail cyber exposure today.
@@ -125,7 +216,7 @@ def generate_ciso_daily_brief(articles):
     4. **Tactical MITRE ATT&CK Mapping**: Key tactics observed.
     5. **Immediate Defensive Recommendations for Retail CISOs**: 3 actionable, prioritized controls.
 
-    Format cleanly in Markdown with bullet points. Avoid unnecessary introductory text.
+    Format cleanly in Markdown with bullet points. Avoid unnecessary conversational preambles.
     """
 
     last_error = None
@@ -148,18 +239,12 @@ def generate_ciso_daily_brief(articles):
     logging.error(f"All candidate models saturated. Final error: {last_error}")
     return (
         "*Executive TL;DR*\n"
-        "AI executive synthesis temporarily unavailable due to upstream capacity. "
+        "AI executive synthesis temporarily unavailable due to upstream API capacity. "
         f"Filtered {len(articles)} high-priority retail advisories below for immediate analyst review."
     )
 
 def format_for_google_chat(markdown_text):
-    """
-    Converts generic markdown into clean Google Chat format:
-    - Headers (###) converted to bold section labels
-    - Standard markdown links [Title](URL) converted to Google Chat <URL|Title>
-    - Standard double asterisks **bold** normalized to *bold*
-    - Dashes converted to clean bullet points
-    """
+    """Converts standard markdown into clean Google Chat markup."""
     text = markdown_text
     text = re.sub(r'\[([^\]]+)\]\((https?://[^\)]+)\)', r'<\2|\1>', text)
     text = re.sub(r'#{1,4}\s*(.*)', r'\n*◈ \1*', text)
@@ -168,14 +253,10 @@ def format_for_google_chat(markdown_text):
     return text.strip()
 
 def build_google_spaces_payload(briefing, articles):
-    """
-    Wraps the AI briefing with an executive header, a link to the live dashboard,
-    and direct source citations with their true published dates.
-    """
+    """Formats Google Space message with header, live dashboard button, and verified sources."""
     today_str = datetime.now(timezone.utc).strftime("%d %b %Y")
     dashboard_url = os.getenv("DASHBOARD_URL", "")
 
-    # Top banner & dashboard link
     header = (
         "╔══════════════════════════════════════════════╗\n"
         "🛡️ *UK RETAIL CYBER THREAT INTELLIGENCE*\n"
@@ -186,19 +267,17 @@ def build_google_spaces_payload(briefing, articles):
     if dashboard_url:
         header += f"🌐 *Interactive SOC Dashboard:* <{dashboard_url}|Open Live Threat Hub>\n"
     else:
-        header += "🌐 *Live Dashboard:* _(Set DASHBOARD_URL in GitHub repo variables for 1-click link)_\n"
+        header += "🌐 *Live Dashboard:* _(Set DASHBOARD_URL in GitHub repository variables)_\n"
 
     header += "───────────────────────────────────────────────\n\n"
 
-    # Format the AI content
     styled_briefing = format_for_google_chat(briefing)
 
-    # Build the clickable sources section with verified published dates
     sources_section = "\n\n───────────────────────────────────────────────\n"
     sources_section += "*📑 Monitored Sources & Verified Incident Links:*\n"
 
     if articles:
-        for idx, art in enumerate(articles[:6], start=1):
+        for idx, art in enumerate(articles[:8], start=1):
             severity_icon = "🔴" if art["severity"] == "CRITICAL" else "🟠"
             title = art["title"]
             source = art["source"]
@@ -227,10 +306,7 @@ def save_output_files(articles, briefing):
     logging.info("Saved data/threats.json and data/daily_summary.md successfully.")
 
 def notify_webhook(message_text):
-    """
-    Dispatches message to Google Spaces.
-    Chunks text at 3,800 characters to stay within Google Chat's 4,096-character limit.
-    """
+    """Dispatches formatted message chunks to Google Spaces (4,096 char limit)."""
     webhook_url = (
         os.getenv("WEBHOOK_URL") 
         or os.getenv("GOOGLE_CHAT_WEBHOOK_URL") 
