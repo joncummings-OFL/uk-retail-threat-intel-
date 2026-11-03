@@ -40,6 +40,9 @@
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.4; transform: scale(0.85); }
     }
+    .matrix-cell:hover {
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased bg-slate-50 text-slate-800 dark:bg-[#07090e] dark:text-slate-100 selection:bg-sky-500 selection:text-white">
@@ -59,35 +62,40 @@
               UK Retail <span class="text-sky-600 dark:text-sky-400 font-mono text-xs uppercase px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-950 border border-sky-300 dark:border-sky-800">Threat Intel</span>
             </h1>
 
-            <!-- INTERACTIVE LIVE SYNC BUTTON (Clickable + Auto-Refresh) -->
-            <button id="feedSyncBtn" onclick="manualSync()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 hover:bg-emerald-200 dark:bg-emerald-950/80 dark:hover:bg-emerald-900/90 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/80 transition cursor-pointer shadow-sm group select-none" title="Click to manually sync fresh data. Automatically syncs every 60s.">
+            <!-- LIVE SYNC BUTTON -->
+            <button id="feedSyncBtn" onclick="manualSync()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 hover:bg-emerald-200 dark:bg-emerald-950/80 dark:hover:bg-emerald-900/90 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/80 transition cursor-pointer shadow-sm group select-none" title="Click to manually refresh data. Polled automatically every 60s.">
               <span id="syncDot" class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
               <svg id="syncSpinner" class="w-3 h-3 text-emerald-600 dark:text-emerald-300 hidden animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
               <span id="syncText">LIVE SYNC</span>
               <span id="syncTime" class="text-[10px] opacity-75 font-mono hidden sm:inline"></span>
             </button>
           </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">Automated Scraper & Aggregator • UK Retail, E-Commerce & CISA KEV Ingestion</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">Automated Scraper & Aggregator • UK Retail, E-Commerce, CISA KEV & EPSS</p>
         </div>
       </div>
 
       <!-- Quick Action Controls -->
       <div class="flex items-center space-x-2 sm:space-x-3">
-        <!-- CTI CSV Export Button -->
+        <!-- Export CSV -->
         <button onclick="exportFilteredToCSV()" class="px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 border border-slate-300 dark:border-slate-700" title="Export current threat intelligence data to CSV">
           <svg class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           <span class="hidden sm:inline">Export CSV</span>
         </button>
 
-        <!-- View Switcher -->
+        <!-- Navigation Tabs -->
         <button id="tabFeedBtn" onclick="switchMainTab('feed')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 4v10a2 2 0 01-2 2h-4"/></svg>
           Intel Feed
         </button>
 
-        <button id="tabAutomationBtn" onclick="switchMainTab('automation')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-          Pipeline
+        <button id="tabMatrixBtn" onclick="switchMainTab('matrix')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+          MITRE Matrix
+        </button>
+
+        <button id="tabEdlBtn" onclick="switchMainTab('edl')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          EDL & Feeds
         </button>
 
         <!-- Light/Dark Mode Switcher -->
@@ -106,7 +114,7 @@
   <!-- MAIN CONTAINER -->
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
 
-    <!-- DYNAMIC FLASH ALERT EMERGENCY BANNER -->
+    <!-- DYNAMIC FLASH ALERT BANNER -->
     <div id="flashAlertBanner" class="hidden relative overflow-hidden rounded-xl border border-rose-500/80 bg-gradient-to-r from-rose-950/90 via-red-900/60 to-rose-950/90 p-4 text-white shadow-lg shadow-rose-950/40">
       <div class="flex items-start justify-between gap-3 relative z-10">
         <div class="flex items-start gap-3">
@@ -128,13 +136,13 @@
             </div>
           </div>
         </div>
-        <button onclick="dismissFlashAlert()" class="text-rose-300 hover:text-white text-xs px-2 py-1 rounded bg-rose-900/40 hover:bg-rose-900/80 border border-rose-700/50 transition whitespace-nowrap" title="Acknowledge and dismiss for this session">
+        <button onclick="dismissFlashAlert()" class="text-rose-300 hover:text-white text-xs px-2 py-1 rounded bg-rose-900/40 hover:bg-rose-900/80 border border-rose-700/50 transition whitespace-nowrap">
           ✕ Dismiss
         </button>
       </div>
     </div>
 
-    <!-- TOAST NOTIFICATION CONTAINER -->
+    <!-- TOAST NOTIFICATION -->
     <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg border border-slate-700 shadow-xl flex items-center gap-2">
       <span class="text-emerald-400">●</span>
       <span id="toastMessage"></span>
@@ -143,7 +151,7 @@
     <!-- TAB 1: INTEL FEED CONTENT -->
     <div id="tabFeedContent" class="space-y-6">
       
-      <!-- CTI Metric Counters Bar -->
+      <!-- Metric Counters Bar -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm">
           <div class="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
@@ -160,11 +168,11 @@
             <span class="text-sky-500">●</span>
           </div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-sky-600 dark:text-sky-400">10 Feeds + KEV</div>
-          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">NCSC, CISA KEV JSON, Krebs</p>
+          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">NCSC, CISA, ICO, Krebs, THN</p>
         </div>
 
         <!-- CLICKABLE KEV & 0-DAY METRIC CARD -->
-        <div id="cardKevMetric" onclick="toggleKevFilter()" class="cursor-pointer bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm hover:border-amber-500/60 dark:hover:border-amber-400/60 hover:shadow-md transition group select-none" title="Click to filter feed for KEVs and Zero-Days">
+        <div id="cardKevMetric" onclick="toggleKevFilter()" class="cursor-pointer bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm hover:border-amber-500/60 dark:hover:border-amber-400/60 hover:shadow-md transition group select-none">
           <div class="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
             <span>Active KEV & 0-Days</span>
             <span class="text-amber-500 group-hover:scale-125 transition-transform">●</span>
@@ -175,16 +183,16 @@
               Filter <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </span>
           </div>
-          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">Known Exploited Vulnerabilities</p>
+          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">With Live EPSS Scoring</p>
         </div>
 
         <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm">
           <div class="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
-            <span>PCI-DSS / ICO Impact</span>
+            <span>PCI & ICO Watch</span>
             <span class="text-emerald-500">●</span>
           </div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400">v4.0.1 Ready</div>
-          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">Targeted E-Commerce Compliance</p>
+          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">UK GDPR & Scripts Compliance</p>
         </div>
       </div>
 
@@ -199,7 +207,7 @@
             </div>
             <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Generate UK Retail Threat Intelligence Briefing</h2>
             <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
-              Synthesize active alerts into an executive summary, MITRE ATT&CK tactic mappings, and prioritized defensive safeguards for retail SecOps teams.
+              Synthesize active alerts into an executive summary, MITRE ATT&CK mappings, EPSS exploit predictions, and prioritized defensive safeguards.
             </p>
           </div>
           <div class="flex items-center gap-2.5">
@@ -210,7 +218,6 @@
           </div>
         </div>
 
-        <!-- AI Output Drawer -->
         <div id="aiSummaryOutput" class="hidden mt-4 pt-4 border-t border-sky-500/20 text-slate-200 text-xs sm:text-sm space-y-3 bg-slate-950/60 p-4 rounded-xl">
           <div class="flex items-center justify-between">
             <span class="font-mono text-[11px] text-sky-400 uppercase tracking-wider">Executive Threat Briefing</span>
@@ -220,32 +227,42 @@
         </div>
       </div>
 
-      <!-- Search & Subsector Filters -->
-      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-3 sm:p-4 flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
-        <div class="relative flex-1">
-          <svg class="w-4 h-4 absolute left-3 top-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-          <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Search threat name, CVE, retail brand, or keyword..." class="w-full pl-9 pr-4 py-2 text-xs sm:text-sm bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-lg text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-sky-500">
+      <!-- Search, Subsectors & Operational Filters -->
+      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-3 sm:p-4 space-y-3">
+        <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+          <div class="relative flex-1">
+            <svg class="w-4 h-4 absolute left-3 top-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Search threat title, CVE, threat actor, or IOC..." class="w-full pl-9 pr-4 py-2 text-xs sm:text-sm bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-lg text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-sky-500">
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            <!-- PEAK TRADING / GOLDEN QUARTER TOGGLE BUTTON -->
+            <button id="btnPeakTradingToggle" onclick="togglePeakTradingFilter()" class="px-2.5 py-1 text-xs rounded-md font-medium border border-purple-400/40 text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition flex items-center gap-1 shadow-sm select-none" title="Filter for Bot scraping, inventory hoarding, courier smishing & checkout DDoS">
+              <span>🛍️ Peak Trading Mode</span>
+            </button>
+
+            <!-- KEV & 0-DAY FILTER TOGGLE BUTTON -->
+            <button id="btnKevToggle" onclick="toggleKevFilter()" class="px-2.5 py-1 text-xs rounded-md font-medium border border-amber-400/40 text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition flex items-center gap-1 shadow-sm select-none">
+              <span>⚡ KEV & 0-Day</span>
+            </button>
+
+            <select id="severitySelect" onchange="applyFilters()" class="text-xs bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-md px-2 py-1 text-slate-700 dark:text-slate-300 focus:outline-none">
+              <option value="all">All Severities</option>
+              <option value="CRITICAL">Critical Only</option>
+              <option value="HIGH">High Only</option>
+            </select>
+          </div>
         </div>
 
-        <div class="flex flex-wrap items-center gap-2">
+        <!-- Subsector Pills & Actor Filters -->
+        <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-slate-100 dark:border-slate-800/60">
           <span class="text-xs text-slate-500 font-medium">Sub-sector:</span>
           <button onclick="setSubsector('all')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-sky-600 text-white font-medium" data-sub="all">All</button>
           <button onclick="setSubsector('ecom')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="ecom">E-Commerce</button>
           <button onclick="setSubsector('pos')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="pos">High Street & POS</button>
           <button onclick="setSubsector('supply')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="supply">Logistics & Supply</button>
-          <button onclick="setSubsector('loyalty')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="loyalty">Loyalty / ATO</button>
-          <button onclick="setSubsector('enterprise')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="enterprise">Enterprise & 0-Day</button>
-
-          <!-- DEDICATED KEV & 0-DAY FILTER TOGGLE BUTTON -->
-          <button id="btnKevToggle" onclick="toggleKevFilter()" class="px-2.5 py-1 text-xs rounded-md font-medium border border-amber-400/40 text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition flex items-center gap-1 shadow-sm">
-            <span>⚡ KEV & 0-Day Only</span>
-          </button>
-
-          <select id="severitySelect" onchange="applyFilters()" class="text-xs bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-md px-2 py-1 text-slate-700 dark:text-slate-300 focus:outline-none">
-            <option value="all">All Severities</option>
-            <option value="CRITICAL">Critical Only</option>
-            <option value="HIGH">High Only</option>
-          </select>
+          <button onclick="setSubsector('loyalty')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="loyalty">Loyalty & ICO</button>
+          <button onclick="setSubsector('enterprise')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="enterprise">Enterprise 0-Day</button>
         </div>
       </div>
 
@@ -255,17 +272,220 @@
       </div>
     </div>
 
-    <!-- TAB 2: PIPELINE ARCHITECTURE CONTENT -->
-    <div id="tabAutomationContent" class="hidden space-y-4">
-      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 space-y-3">
-        <h3 class="text-base font-bold text-slate-900 dark:text-white">Automated Threat Pipeline Architecture</h3>
+    <!-- TAB 2: INTERACTIVE MITRE ATT&CK MATRIX -->
+    <div id="tabMatrixContent" class="hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 space-y-2">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <span>MITRE ATT&CK Matrix for UK Retail</span>
+              <span class="text-xs px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-mono">Enterprise & E-Commerce</span>
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+              Visual heatmap of adversary tradecraft observed across active retail threats. Click any technique to filter the intelligence feed.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tactical Matrix Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <!-- Initial Access -->
+        <div class="space-y-2">
+          <div class="p-2 rounded-lg bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-800/60 text-center">
+            <h4 class="text-xs font-bold text-sky-800 dark:text-sky-300 uppercase">Initial Access</h4>
+          </div>
+          <div class="space-y-1.5" id="col-InitialAccess">
+            <div onclick="filterByMitreTechnique('T1190')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-bold">T1190</div>
+              <div class="text-[11px] font-medium leading-tight">Exploit Public App</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1190">0 Observed</div>
+            </div>
+            <div onclick="filterByMitreTechnique('T1566')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-bold">T1566</div>
+              <div class="text-[11px] font-medium leading-tight">Phishing / Smishing</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1566">0 Observed</div>
+            </div>
+            <div onclick="filterByMitreTechnique('T1195')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-bold">T1195</div>
+              <div class="text-[11px] font-medium leading-tight">Supply Chain</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1195">0 Observed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credential Access -->
+        <div class="space-y-2">
+          <div class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800/60 text-center">
+            <h4 class="text-xs font-bold text-indigo-800 dark:text-indigo-300 uppercase">Credentials</h4>
+          </div>
+          <div class="space-y-1.5" id="col-Credentials">
+            <div onclick="filterByMitreTechnique('T1110')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-indigo-600 dark:text-indigo-400 font-bold">T1110</div>
+              <div class="text-[11px] font-medium leading-tight">Credential Stuffing</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1110">0 Observed</div>
+            </div>
+            <div onclick="filterByMitreTechnique('T1078')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-indigo-600 dark:text-indigo-400 font-bold">T1078</div>
+              <div class="text-[11px] font-medium leading-tight">Valid Accounts (ATO)</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1078">0 Observed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Execution & Defense Evasion -->
+        <div class="space-y-2">
+          <div class="p-2 rounded-lg bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800/60 text-center">
+            <h4 class="text-xs font-bold text-purple-800 dark:text-purple-300 uppercase">Evasion</h4>
+          </div>
+          <div class="space-y-1.5" id="col-Evasion">
+            <div onclick="filterByMitreTechnique('T1059')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-purple-600 dark:text-purple-400 font-bold">T1059</div>
+              <div class="text-[11px] font-medium leading-tight">Command & Script</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1059">0 Observed</div>
+            </div>
+            <div onclick="filterByMitreTechnique('T1027')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-purple-600 dark:text-purple-400 font-bold">T1027</div>
+              <div class="text-[11px] font-medium leading-tight">Obfuscated Payloads</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1027">0 Observed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection -->
+        <div class="space-y-2">
+          <div class="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/60 text-center">
+            <h4 class="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase">Collection</h4>
+          </div>
+          <div class="space-y-1.5" id="col-Collection">
+            <div onclick="filterByMitreTechnique('T1056.004')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-amber-600 dark:text-amber-400 font-bold">T1056.004</div>
+              <div class="text-[11px] font-medium leading-tight">Web Skimming (Magecart)</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1056.004">0 Observed</div>
+            </div>
+            <div onclick="filterByMitreTechnique('T1005')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-amber-600 dark:text-amber-400 font-bold">T1005</div>
+              <div class="text-[11px] font-medium leading-tight">Data from POS System</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1005">0 Observed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exfiltration -->
+        <div class="space-y-2">
+          <div class="p-2 rounded-lg bg-orange-50 dark:bg-orange-950/50 border border-orange-200 dark:border-orange-800/60 text-center">
+            <h4 class="text-xs font-bold text-orange-800 dark:text-orange-300 uppercase">Exfiltration</h4>
+          </div>
+          <div class="space-y-1.5" id="col-Exfiltration">
+            <div onclick="filterByMitreTechnique('T1041')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-orange-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-orange-600 dark:text-orange-400 font-bold">T1041</div>
+              <div class="text-[11px] font-medium leading-tight">Exfiltration Over C2</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1041">0 Observed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Impact -->
+        <div class="space-y-2">
+          <div class="p-2 rounded-lg bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800/60 text-center">
+            <h4 class="text-xs font-bold text-rose-800 dark:text-rose-300 uppercase">Impact</h4>
+          </div>
+          <div class="space-y-1.5" id="col-Impact">
+            <div onclick="filterByMitreTechnique('T1486')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-rose-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-rose-600 dark:text-rose-400 font-bold">T1486</div>
+              <div class="text-[11px] font-medium leading-tight">Ransomware Encryption</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1486">0 Observed</div>
+            </div>
+            <div onclick="filterByMitreTechnique('T1499')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-rose-500 transition text-xs shadow-sm">
+              <div class="font-mono text-[10px] text-rose-600 dark:text-rose-400 font-bold">T1499</div>
+              <div class="text-[11px] font-medium leading-tight">Endpoint / Store DoS</div>
+              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1499">0 Observed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: FIREWALL EDLs & SYNDICATION FEEDS -->
+    <div id="tabEdlContent" class="hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 space-y-2">
+        <h3 class="text-base font-bold text-slate-900 dark:text-white">External Dynamic Lists (EDLs) & Outbound Syndication</h3>
         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-          This system ingests official CISA KEV JSON catalogs and curated UK cybersecurity feeds, filters using retail regular expressions, synthesizes findings via Gemini AI, and exports actionable data to Google Spaces and GitHub Pages.
+          Subscribe your enterprise firewalls (Palo Alto, Fortinet), Cloudflare Edge WAFs, and Microsoft Sentinel SIEM directly to live indicators extracted by your pipeline.
         </p>
-        <div class="p-3 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 space-y-1">
-          <div>• Daily Pipeline: <code class="text-sky-600 dark:text-sky-400">.github/workflows/daily_intel.yml</code> (Mon-Fri 07:30 UTC)</div>
-          <div>• Weekly Rollup: <code class="text-sky-600 dark:text-sky-400">.github/workflows/weekly_intel.yml</code> (Fri 16:00 UTC)</div>
-          <div>• Ingest Engine: <code class="text-sky-600 dark:text-sky-400">threat_intel_pipeline.py</code></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Domain EDL Card -->
+        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="text-emerald-500">●</span> Firewall Domain Blocklist (EDL)
+            </span>
+            <span class="text-[11px] font-mono text-slate-400">Palo Alto / Fortinet / WAF</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300">
+            Plain-text list of malicious checkout exfiltration hosts, Magecart domains, and drop servers updated daily.
+          </p>
+          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
+            <span id="edlDomainUrl">data/edl_domains.txt</span>
+            <button onclick="copyToClipboard('edlDomainUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
+          </div>
+          <a href="data/edl_domains.txt" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View Raw File ↗</a>
+        </div>
+
+        <!-- IP EDL Card -->
+        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="text-emerald-500">●</span> Firewall IP Blocklist (EDL)
+            </span>
+            <span class="text-[11px] font-mono text-slate-400">IP Ingress / Egress</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300">
+            Deduplicated, routable public IP indicators observed across attack campaigns targeting retail assets.
+          </p>
+          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
+            <span id="edlIpUrl">data/edl_ips.txt</span>
+            <button onclick="copyToClipboard('edlIpUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
+          </div>
+          <a href="data/edl_ips.txt" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View Raw File ↗</a>
+        </div>
+
+        <!-- STIX 2.1 JSON Feed -->
+        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="text-sky-500">●</span> STIX 2.1 Threat Bundle
+            </span>
+            <span class="text-[11px] font-mono text-slate-400">Sentinel / Splunk / OpenCTI</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300">
+            OASIS STIX 2.1 JSON format. Ingests directly into Microsoft Sentinel Threat Intelligence, Splunk ES, or MISP.
+          </p>
+          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
+            <span id="stixUrl">data/threats.stix.json</span>
+            <button onclick="copyToClipboard('stixUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
+          </div>
+          <a href="data/threats.stix.json" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View STIX Feed ↗</a>
+        </div>
+
+        <!-- Outbound RSS 2.0 Feed -->
+        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="text-amber-500">●</span> Outbound Syndication RSS Feed
+            </span>
+            <span class="text-[11px] font-mono text-slate-400">Slack / Teams / RSS Readers</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300">
+            Subscribe directly to retail cyber advisories in Slack RSS integrations, Microsoft Teams, or Feedly.
+          </p>
+          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
+            <span id="rssUrl">data/feed.xml</span>
+            <button onclick="copyToClipboard('rssUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
+          </div>
+          <a href="data/feed.xml" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View XML RSS ↗</a>
         </div>
       </div>
     </div>
@@ -274,43 +494,14 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    let currentThreats = [
-      {
-        id: "threat-1",
-        title: "Active Magecart Injection Detected in UK High-Street Checkout Gateway",
-        source: "NCSC UK Advisories",
-        url: "https://www.ncsc.gov.uk",
-        date: "Today, 06:45 UTC",
-        severity: "CRITICAL",
-        is_flash: true,
-        subsector: "ecom",
-        tags: ["Magecart", "E-Commerce", "PCI-DSS 6.4.3"],
-        mitre: "T1190 (Exploit Public Facing Application)",
-        summary: "Obfuscated JavaScript skimming library discovered exfiltrating payment CVVs and billing postcodes to an unmonitored drop server in Eastern Europe.",
-        advisory: "Immediately audit CSP script headers and verify integrity hashes under PCI-DSS v4.0.1 requirements."
-      },
-      {
-        id: "threat-2",
-        title: "Credential Stuffing Campaign Targets UK Supermarket Loyalty App",
-        source: "The Register Security",
-        url: "https://www.theregister.com",
-        date: "Yesterday",
-        severity: "HIGH",
-        is_flash: false,
-        subsector: "loyalty",
-        tags: ["ATO", "Loyalty", "UK GDPR"],
-        mitre: "T1078 (Valid Accounts)",
-        summary: "Distributed proxy network observed testing 1.2M credential combinations against high-street loyalty authentication endpoints to deplete customer vouchers.",
-        advisory: "Enforce IP rate-limiting, risk-based step-up MFA, and notify customer accounts with compromised credentials."
-      }
-    ];
-
+    let currentThreats = [];
     let activeSubsector = 'all';
     let isKevOnlyFilter = false;
+    let isPeakTradingFilter = false;
+    let activeMitreFilter = null;
     let isSyncing = false;
     let autoSyncInterval = null;
 
-    // Toast Message Display
     function showToast(message) {
       const toast = document.getElementById('toastNotification');
       const toastMsg = document.getElementById('toastMessage');
@@ -322,14 +513,19 @@
       }, 3500);
     }
 
+    function copyToClipboard(elementId) {
+      const text = document.getElementById(elementId)?.innerText;
+      if (!text) return;
+      const fullUrl = new URL(text, window.location.href).href;
+      navigator.clipboard.writeText(fullUrl).then(() => {
+        showToast("Copied full URL to clipboard!");
+      });
+    }
+
     // Flash Alert Management
     function evaluateFlashAlert(items) {
-      // Check if user has acknowledged the alert this browser session
-      if (sessionStorage.getItem('dismissed_flash_id')) {
-        return;
-      }
+      if (sessionStorage.getItem('dismissed_flash_id')) return;
 
-      // Find highest priority flash alert
       const flash = items.find(t => t.is_flash === true) || items.find(t => 
         t.severity === 'CRITICAL' && 
         (t.tags || []).some(tg => /0-day|zero-day|active exploit|ransomware/i.test(tg))
@@ -368,7 +564,7 @@
       }
     }
 
-    // Manual and Automated Data Sync
+    // Live Sync
     async function syncThreatData(isSilent = false) {
       if (isSyncing) return;
       isSyncing = true;
@@ -394,14 +590,10 @@
             const previousCount = currentThreats.length;
             currentThreats = liveData;
 
-            // Recalculate metrics
-            const critCount = currentThreats.filter(t => t.severity === 'CRITICAL').length;
-            document.getElementById('statCriticalCount').textContent = critCount;
+            document.getElementById('statCriticalCount').textContent = currentThreats.filter(t => t.severity === 'CRITICAL').length;
+            document.getElementById('statKevCount').textContent = currentThreats.filter(t => isKevOrZeroDayItem(t)).length;
 
-            const kevCount = currentThreats.filter(t => isKevOrZeroDayItem(t)).length;
-            document.getElementById('statKevCount').textContent = kevCount;
-
-            // Re-render feed and flash alert
+            updateMitreMatrixCounts();
             applyFilters();
             evaluateFlashAlert(currentThreats);
 
@@ -410,15 +602,14 @@
             if (syncTime) syncTime.textContent = `(${timeStr})`;
 
             if (!isSilent) {
-              showToast(`✓ Synced: ${liveData.length} active intelligence items.`);
-            } else if (liveData.length > previousCount) {
-              showToast(`⚡ New threat telemetry detected (${liveData.length - previousCount} new alerts).`);
+              showToast(`✓ Synced: ${liveData.length} threat alerts & KEV items.`);
+            } else if (previousCount > 0 && liveData.length > previousCount) {
+              showToast(`⚡ ${liveData.length - previousCount} new threats detected.`);
             }
           }
         }
       } catch (err) {
-        console.warn("Live sync check completed (using cached store):", err);
-        if (!isSilent) showToast("✓ Feed synced with local cache.");
+        console.warn("Using local cache:", err);
       } finally {
         isSyncing = false;
         if (spinner) spinner.classList.add('hidden');
@@ -431,7 +622,6 @@
       syncThreatData(false);
     }
 
-    // --- RESTORED FEED RENDERING & FILTERING FUNCTIONS ---
     function isKevOrZeroDayItem(item) {
       if (!item) return false;
       const combined = [
@@ -444,6 +634,36 @@
       return /cisa kev|kev catalog|zero-day|0-day|actively exploited|known exploited/i.test(combined);
     }
 
+    function updateMitreMatrixCounts() {
+      const counts = {};
+      currentThreats.forEach(t => {
+        const id = t.mitre_id || (t.mitre ? t.mitre.split(' ')[0] : null);
+        if (id) {
+          counts[id] = (counts[id] || 0) + 1;
+        }
+      });
+
+      document.querySelectorAll('.count-badge').forEach(el => {
+        const tech = el.getAttribute('data-tech');
+        const count = counts[tech] || 0;
+        el.textContent = `${count} Observed`;
+        if (count > 0) {
+          el.className = 'text-[10px] text-amber-600 dark:text-amber-400 font-bold mt-1 count-badge';
+        } else {
+          el.className = 'text-[10px] text-slate-400 mt-1 count-badge';
+        }
+      });
+    }
+
+    function filterByMitreTechnique(techId) {
+      activeMitreFilter = techId;
+      switchMainTab('feed');
+      const search = document.getElementById('searchInput');
+      if (search) search.value = techId;
+      applyFilters();
+      showToast(`Filtered feed for MITRE technique: ${techId}`);
+    }
+
     function applyFilters() {
       const query = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
       const sev = document.getElementById('severitySelect')?.value || 'all';
@@ -451,6 +671,8 @@
       const filtered = currentThreats.filter(item => {
         if (activeSubsector !== 'all' && item.subsector !== activeSubsector) return false;
         if (isKevOnlyFilter && !isKevOrZeroDayItem(item)) return false;
+        if (isPeakTradingFilter && !item.is_peak_trading) return false;
+        if (activeMitreFilter && !(item.mitre_id === activeMitreFilter || (item.mitre && item.mitre.includes(activeMitreFilter)))) return false;
         if (sev !== 'all' && item.severity !== sev) return false;
         if (query) {
           const text = [
@@ -459,6 +681,8 @@
             item.summary || '',
             item.advisory || '',
             item.mitre || '',
+            item.actor || '',
+            ...(item.cves || []),
             ...(item.tags || [])
           ].join(' ').toLowerCase();
           if (!text.includes(query)) return false;
@@ -498,6 +722,18 @@
           ? '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/30 ml-1.5">⚡ KEV / 0-DAY</span>'
           : '';
 
+        const epssBadge = item.epss 
+          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30 ml-1.5" title="EPSS Probability of Wild Exploitation in 30 Days (Percentile: ${item.epss.percentile})">🎯 EPSS: ${item.epss.score}</span>`
+          : '';
+
+        const actorBadge = item.actor
+          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/30 ml-1.5">👾 ${item.actor}</span>`
+          : '';
+
+        const peakBadge = item.is_peak_trading
+          ? '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-800 ml-1.5">🛍️ PEAK VECTOR</span>'
+          : '';
+
         const tagsHtml = (item.tags || []).map(t => 
           `<span class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">${t}</span>`
         ).join(' ');
@@ -514,10 +750,13 @@
           <div class="bg-white dark:bg-slate-900/80 border ${isCrit ? 'border-rose-200 dark:border-rose-950/60' : 'border-slate-200 dark:border-slate-800'} rounded-xl p-4 sm:p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
             <div class="space-y-2.5">
               <div class="flex items-center justify-between gap-2 flex-wrap">
-                <div class="flex items-center gap-1.5">
+                <div class="flex items-center gap-1.5 flex-wrap">
                   ${sevBadge}
                   ${newBadge}
                   ${kevBadge}
+                  ${epssBadge}
+                  ${actorBadge}
+                  ${peakBadge}
                 </div>
                 <div class="text-[11px] font-mono text-slate-400">${item.date || 'Recent'}</div>
               </div>
@@ -583,9 +822,23 @@
       applyFilters();
     }
 
+    function togglePeakTradingFilter() {
+      isPeakTradingFilter = !isPeakTradingFilter;
+      const btn = document.getElementById('btnPeakTradingToggle');
+      if (isPeakTradingFilter) {
+        btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-purple-500 text-white bg-purple-600 hover:bg-purple-500 transition flex items-center gap-1 shadow-sm select-none';
+        showToast("Filtered for Peak Trading & Golden Quarter threats.");
+      } else {
+        btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-purple-400/40 text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition flex items-center gap-1 shadow-sm select-none';
+      }
+      applyFilters();
+    }
+
     function resetFilters() {
       activeSubsector = 'all';
       isKevOnlyFilter = false;
+      isPeakTradingFilter = false;
+      activeMitreFilter = null;
       const searchInput = document.getElementById('searchInput');
       if (searchInput) searchInput.value = '';
       const severitySelect = document.getElementById('severitySelect');
@@ -607,26 +860,40 @@
 
     function switchMainTab(tab) {
       const feedContent = document.getElementById('tabFeedContent');
-      const autoContent = document.getElementById('tabAutomationContent');
+      const matrixContent = document.getElementById('tabMatrixContent');
+      const edlContent = document.getElementById('tabEdlContent');
+
       const feedBtn = document.getElementById('tabFeedBtn');
-      const autoBtn = document.getElementById('tabAutomationBtn');
+      const matrixBtn = document.getElementById('tabMatrixBtn');
+      const edlBtn = document.getElementById('tabEdlBtn');
+
+      const activeBtnClass = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5';
+      const inactiveBtnClass = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5';
+
+      feedContent?.classList.add('hidden');
+      matrixContent?.classList.add('hidden');
+      edlContent?.classList.add('hidden');
+
+      if (feedBtn) feedBtn.className = inactiveBtnClass;
+      if (matrixBtn) matrixBtn.className = inactiveBtnClass;
+      if (edlBtn) edlBtn.className = inactiveBtnClass;
 
       if (tab === 'feed') {
         feedContent?.classList.remove('hidden');
-        autoContent?.classList.add('hidden');
-        if (feedBtn) feedBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5';
-        if (autoBtn) autoBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5';
-      } else {
-        feedContent?.classList.add('hidden');
-        autoContent?.classList.remove('hidden');
-        if (autoBtn) autoBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5';
-        if (feedBtn) feedBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5';
+        if (feedBtn) feedBtn.className = activeBtnClass;
+      } else if (tab === 'matrix') {
+        matrixContent?.classList.remove('hidden');
+        if (matrixBtn) matrixBtn.className = activeBtnClass;
+        updateMitreMatrixCounts();
+      } else if (tab === 'edl') {
+        edlContent?.classList.remove('hidden');
+        if (edlBtn) edlBtn.className = activeBtnClass;
       }
     }
 
     function exportFilteredToCSV() {
       const rows = [
-        ["ID", "Title", "Severity", "Subsector", "Source", "Date", "MITRE", "URL", "Advisory", "Summary"]
+        ["ID", "Title", "Severity", "Subsector", "Actor", "EPSS", "Date", "MITRE", "URL", "Advisory", "Summary"]
       ];
       currentThreats.forEach(t => {
         rows.push([
@@ -634,7 +901,8 @@
           `"${(t.title || "").replace(/"/g, '""')}"`,
           t.severity || "",
           t.subsector || "",
-          `"${(t.source || "").replace(/"/g, '""')}"`,
+          t.actor || "Unattributed",
+          t.epss ? t.epss.score : "N/A",
           t.date || "",
           `"${(t.mitre || "").replace(/"/g, '""')}"`,
           `"${(t.url || "").replace(/"/g, '""')}"`,
@@ -650,7 +918,7 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      showToast("Exported threat data to CSV.");
+      showToast("Exported CTI CSV dataset.");
     }
 
     function generateDailySummary() {
@@ -678,12 +946,8 @@
       if (drawer) drawer.classList.add('hidden');
     }
 
-    // Initializer and 60-Second Auto-Poller
     window.onload = function() {
-      // 1. Initial Load
       syncThreatData(true);
-
-      // 2. Start automated 60-second real-time poller
       if (autoSyncInterval) clearInterval(autoSyncInterval);
       autoSyncInterval = setInterval(() => {
         syncThreatData(true);
