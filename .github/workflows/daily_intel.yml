@@ -4,10 +4,10 @@ on:
 schedule:
 # 07:30 UTC every Monday through Friday
 - cron: '30 7 * * 1-5'
-workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+workflow_dispatch:
 
 permissions:
-contents: write # Allows GitHub Actions to push data outputs back to repo
+contents: write
 
 jobs:
 run-pipeline:
