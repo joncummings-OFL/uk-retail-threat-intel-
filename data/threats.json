@@ -1,6 +1,199 @@
 [
   {
+    "id": "scraped-3",
+    "title": "Cold chain cyber attacks highlight lack of OT security in retail",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366653380/Cold-chain-cyber-attacks-highlight-lack-of-OT-security-in-retail",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793629080.0,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "tags": [],
+    "mitre": "T1078 (Valid Accounts)",
+    "summary": "<p>A series of renewed cyber attacks on retail refrigeration systems across has set alarm bells ringing across Europe, with reports of temperatures in some freezer units rising as high as 50° Centigrade, causing ruined food to have to be dumped.</p> \n<p>Although on a smaller scale, the latest incidents that took place across multiple countries are...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366653380/Cold-chain-cyber-attacks-highlight-lack-of-OT-security-in-retail"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-15",
+    "title": "Over 1,000 GitLab servers vulnerable to ongoing RCE attacks",
+    "source": "BleepingComputer",
+    "url": "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793623620.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Remote code execution",
+      "Actively exploited"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "Over 1,000 Internet-exposed GitLab servers are still unpatched against a maximum-severity flaw actively exploited in remote code execution attacks. [...]",
+    "indicators": [
+      "https://www.bleepingcomputer.com/news/security/over-1-000-gitlab-servers-vulnerable-to-code-execution-attacks/"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-9",
+    "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793619000.0,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "tags": [],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "Forty percent of security teams now use AI every day, and another 56% are testing it. Only 4% have no plans to adopt it, according to Prophet Security's State of AI in Security Operations 2026 survey of more than 250 CISOs, SOC leaders and practitioners. For the teams still testing, the next decision is whether their own SOC is ready.\n\nAI SOC readi...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-21",
+    "title": "Malicious Claude Code Extension Served in Cursor Supply Chain Attack",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793618979.0,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "tags": [],
+    "mitre": "T1078 (Valid Accounts)",
+    "summary": "The extension performed host reconnaissance and attempted to create a reverse SSH tunnel.\nThe post Malicious Claude Code Extension Served in Cursor Supply Chain Attack appeared first on SecurityWeek.",
+    "indicators": [
+      "https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
     "id": "scraped-10",
+    "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793617725.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Active directory"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtain login certificates for privileged accounts, including one for a domain controller.\n\nMicrosoft said in a report that it investigated two such intrusi...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-11",
+    "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793616599.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Palo alto"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign specifically targeting Linux infrastructure associated with government entities and state-affiliated infrastructure.\n\nThe activity, observed by Palo Alto Networks Unit 42 between October 2025 and April 2026, has been tracked under the moniker CL-UNK-1211, where \"CL\" refe...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-4",
+    "title": "Who controls the technology we depend on?",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/opinion/Who-controls-the-technology-we-depend-on",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793614140.0,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "tags": [],
+    "mitre": "T1078 (Valid Accounts)",
+    "summary": "<p>Being dependent on another country’s technology and support carries risk, however close the relationship appears. Yet when we discuss nation state cyber threats, we tend to focus on hostile actors breaking into our systems. We should also examine who controls the systems we already depend on.</p> \n<p>For the UK, that means facing our reliance on...",
+    "indicators": [
+      "https://www.computerweekly.com/opinion/Who-controls-the-technology-we-depend-on"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-16",
+    "title": "Ivanti patches two more Connect Secure zero-days chained in attacks",
+    "source": "BleepingComputer",
+    "url": "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793612006.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Ivanti",
+      "Zero-day"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "Ivanti released security updates to patch two more Connect Secure (ICS) remote access gateway flaws that have been chained in zero-day attacks since at least October 1. [...]",
+    "indicators": [
+      "https://www.bleepingcomputer.com/news/security/ivanti-patches-two-more-connect-secure-zero-days-chained-in-attacks/"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-22",
+    "title": "Ivanti Patches Two More Zero-Days Exploited in Connect Secure Attack Chain",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793606269.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Ivanti",
+      "Zero-day"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "CISA has added CVE-2026-111357 and CVE-2026-118527 to its KEV catalog after the Ivanti VPN flaws were chained in zero-day attacks.\nThe post Ivanti Patches Two More Zero-Days Exploited in Connect Secure Attack Chain appeared first on SecurityWeek.",
+    "indicators": [
+      "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-5",
+    "title": "Belfast journalists subjected to unlawful spying cannot claim costs over PSNI failures",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366653294/Belfast-journalists-subjected-to-unlawful-spying-cannot-claim-costs-over-PSNI-failures",
+    "date": "02 Nov 2026",
+    "_timestamp": 1793599200.0,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "tags": [],
+    "mitre": "T1078 (Valid Accounts)",
+    "summary": "<p>Two Belfast journalists placed under unlawful police surveillance expressed “deep disappointment” after the Court of Appeal found that police cannot be sanctioned for “late and inadequate disclosures” of evidence that led to two court hearings having to be abandoned.</p> \n<p>Investigative journalists Barry McCaffrey and Trevor Birney brought a c...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366653294/Belfast-journalists-subjected-to-unlawful-spying-cannot-claim-costs-over-PSNI-failures"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-23",
     "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 121",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/202209/malware/security-affairs-malware-newsletter-round-121.html",
@@ -17,7 +210,108 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-6",
+    "id": "scraped-24",
+    "title": "Security Affairs newsletter Round 602 by Pierluigi Paganini – INTERNATIONAL EDITION",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/202200/breaking-news/security-affairs-newsletter-round-602-by-pierluigi-paganini-international-edition.html",
+    "date": "01 Nov 2026",
+    "_timestamp": 1793539378.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Ivanti"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "A new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box. Enjoy a new round of the weekly SecurityAffairs newsletter, including international press. U.S. CISA adds Ivanti Connect Secure flaws to its Known Exploited Vulnerabilities catalog Attackers Exp...",
+    "indicators": [
+      "https://securityaffairs.com/202200/breaking-news/security-affairs-newsletter-round-602-by-pierluigi-paganini-international-edition.html"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-12",
+    "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
+    "date": "01 Nov 2026",
+    "_timestamp": 1793523091.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Cvss 10.0"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacker had to reach their HTTPS API over the network and have the trusted client's public certificate.\n\nOnce in, the attacker would act as that client, with access to the cluster and its virtual mac...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-13",
+    "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
+    "date": "31 Oct 2026",
+    "_timestamp": 1793435263.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Ivanti"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploited Vulnerabilities (KEV) catalog, following active exploitation in the wild.\n\nThe vulnerabilities are listed below -\n\n\n  CVE-2026-111357 (CVSS score: 8.8) - A missing authentication for a crit...",
+    "indicators": [
+      "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-17",
+    "title": "Investors Dish on New Startups &amp; What They'd Back Next",
+    "source": "Dark Reading",
+    "url": "https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next",
+    "date": "30 Oct 2026",
+    "_timestamp": 1793394505.0,
+    "severity": "HIGH",
+    "subsector": "pos",
+    "tags": [],
+    "mitre": "T1078 (Valid Accounts)",
+    "summary": "The cybersecurity market is difficult to predict, but a glimpse into the annual DataTribe Challenge shows what's trending and what's not.",
+    "indicators": [
+      "https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-14",
+    "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html",
+    "date": "30 Oct 2026",
+    "_timestamp": 1793369294.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Remote code execution"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "Threat actors have been observed attempting to exploit a high-severity security flaw in WordPress Core shortly after patches were released.\n\nThe vulnerability, which does not have a CVE identifier, relates to a case of remote code execution impacting WordPress Core versions 4.7 through 7.1.3. It carries a CVSS score of 8.1 on the CVSS scoring syste...",
+    "indicators": [
+      "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-18",
     "title": "Rethinking Cybersecurity Awareness in the AI Era",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyber-risk/rethinking-cybersecurity-awareness-ai-era",
@@ -34,13 +328,13 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-3",
+    "id": "scraped-6",
     "title": "Having a PHP patch available does not mean you're protected",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/Having-a-PHP-patch-available-does-not-mean-youre-protected",
     "date": "29 Oct 2026",
     "_timestamp": 1793275440.0,
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "subsector": "loyalty",
     "tags": [],
     "mitre": "T1078 (Valid Accounts)",
@@ -68,7 +362,28 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-7",
+    "id": "scraped-2",
+    "title": "Oracle celebrates end of Cybersecurity Awareness Month with quadruple trouble",
+    "source": "The Register Security (UK)",
+    "url": "https://www.theregister.com/security/2026/10/28/oracle-celebrates-end-of-cybersecurity-awareness-month-with-quadruple-trouble/5306121",
+    "date": "28 Oct 2026",
+    "_timestamp": 1793217416.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "0-day"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "Attackers probe another EBS bug, and ShinyHunters' PeopleSoft 0-day turns out to involve three vulns",
+    "indicators": [
+      "https://www.theregister.com/security/2026/10/28/oracle-celebrates-end-of-cybersecurity-awareness-month-with-quadruple-trouble/5306121"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-19",
     "title": "GhostAction Hacking Wave Fizzles, but Attackers Lurk on in GitHub",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/application-security/ghostaction-hacking-wave-fizzles-attackers-github",
@@ -85,13 +400,13 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-8",
+    "id": "scraped-20",
     "title": "SBOMs Alone Can't Reveal the Scope of a Supply Chain Attack",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyber-risk/sboms-alone-scope-supply-chain-attack",
     "date": "27 Oct 2026",
     "_timestamp": 1793131086.0,
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "subsector": "pos",
     "tags": [],
     "mitre": "T1078 (Valid Accounts)",
@@ -102,7 +417,28 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-4",
+    "id": "scraped-7",
+    "title": "PHP2Shell: US updates Kev catalogue as exploits spread",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366652834/PHP2Shell-US-updates-Kev-catalogue-as-exploits-spread",
+    "date": "27 Oct 2026",
+    "_timestamp": 1793110500.0,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "tags": [
+      "Global 0-Day",
+      "Enterprise",
+      "Remote code execution"
+    ],
+    "mitre": "T1190 (Exploit Public Facing Application)",
+    "summary": "<p>The US Cybersecurity and Infrastructure Security Agency (Cisa) has added the two so-called PHP2Shell vulnerabilities to its <a href=\"https://www.cisa.gov/known-exploited-vulnerabilities-catalog\" target=\"_blank\" rel=\"noopener\">Known Exploited Vulnerabilities</a> (Kev) catalogue after confirming <a href=\"https://www.computerweekly.com/news/3666526...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366652834/PHP2Shell-US-updates-Kev-catalogue-as-exploits-spread"
+    ],
+    "advisory": "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
+  },
+  {
+    "id": "scraped-8",
     "title": "OpenAI’s Altman: Only way out of patch apocalypse is through",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366652912/OpenAIs-Altman-Only-way-out-of-patch-apocalypse-is-through",
@@ -115,57 +451,6 @@
     "summary": "<p>At <a href=\"https://www.oracle.com/ai-world/\" target=\"_blank\" rel=\"noopener\">Oracle AI World</a> in Las Vegas, Nevada, OpenAI CEO Sam Altman has rallied the security community and called for cyber pros to keep focus, saying the only way out of the current tsunami of patches is through.</p> \n<p>In conversation with Oracle co-CEO Clay Magouyrk dur...",
     "indicators": [
       "https://www.computerweekly.com/news/366652912/OpenAIs-Altman-Only-way-out-of-patch-apocalypse-is-through"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-5",
-    "title": "AI World: AI vulnerability surge brings change for Oracle’s cyber practice",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366652684/AI-World-AI-vulnerability-surge-brings-change-for-Oracles-cyber-practice",
-    "date": "27 Oct 2026",
-    "_timestamp": 1793083500.0,
-    "severity": "HIGH",
-    "subsector": "loyalty",
-    "tags": [],
-    "mitre": "T1078 (Valid Accounts)",
-    "summary": "<p>With Microsoft’s regular Patch Tuesday updates now routinely comprising <a href=\"https://www.computerweekly.com/news/366652119/Microsoft-CVE-volumes-on-relentless-upward-trajectory\" target=\"_blank\" rel=\"noopener\">well over 1,000 vulnerabilities</a> per month, Oracle has revealed that it too is picking up flaws in its products at a comparable rat...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366652684/AI-World-AI-vulnerability-surge-brings-change-for-Oracles-cyber-practice"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-2",
-    "title": "LiteLLM supply chain attack started with an exposed master key",
-    "source": "The Register Security (UK)",
-    "url": "https://www.theregister.com/security/2026/10/26/litellm-supply-chain-attack-started-with-an-exposed-master-key/5305544",
-    "date": "26 Oct 2026",
-    "_timestamp": 1793046653.0,
-    "severity": "HIGH",
-    "subsector": "ecom",
-    "tags": [],
-    "mitre": "T1190 (Exploit Public Facing Application)",
-    "summary": "A 'strong illustration of the risks associated with failing to rotate a potentially exposed key'",
-    "indicators": [
-      "https://www.theregister.com/security/2026/10/26/litellm-supply-chain-attack-started-with-an-exposed-master-key/5305544"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-9",
-    "title": "'Gheist' Weaponizes GitHub Tokens to Steal Cloud Secrets",
-    "source": "Dark Reading",
-    "url": "https://www.darkreading.com/cyberattacks-data-breaches/gheist-stolen-github-tokens-cloud-secrets",
-    "date": "26 Oct 2026",
-    "_timestamp": 1793037700.0,
-    "severity": "HIGH",
-    "subsector": "pos",
-    "tags": [],
-    "mitre": "T1078 (Valid Accounts)",
-    "summary": "An ongoing supply chain attack is harvesting credentials and sensitive data from thousands of developer repositories.",
-    "indicators": [
-      "https://www.darkreading.com/cyberattacks-data-breaches/gheist-stolen-github-tokens-cloud-secrets"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   }
