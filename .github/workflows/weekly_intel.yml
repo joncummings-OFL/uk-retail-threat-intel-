@@ -1,0 +1,44 @@
+name: Friday Weekly UK Retail Threat Rollup
+
+on:
+  schedule:
+    # Runs at 16:00 UTC every Friday afternoon
+    - cron: '0 16 * * 5'
+  workflow_dispatch: # Allows one-click testing from the GitHub Actions tab anytime
+
+permissions:
+  contents: write # Needed to commit data/weekly_summary.md back to the repository
+
+jobs:
+  run-weekly-rollup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Execute Weekly Threat Intelligence Rollup
+        env:
+          RUN_MODE: "weekly"
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL || secrets.GOOGLE_CHAT_WEBHOOK_URL || secrets.SLACK_WEBHOOK_URL }}
+          DASHBOARD_URL: ${{ vars.DASHBOARD_URL || secrets.DASHBOARD_URL }}
+        run: |
+          python threat_intel_pipeline.py --weekly
+
+      - name: Commit and Push Weekly Rollup Summary
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/threats.json data/weekly_summary.md || true
+          git diff --staged --quiet || (git commit -m "Auto-update weekly executive rollup [skip ci]" && git push)
