@@ -150,6 +150,9 @@ def fetch_cisa_kev_alerts(cutoff_date, seen_urls):
                 f"Required Remediation: {action} (Federal Due Date: {due_date})."
             )
 
+            # Detect emergency conditions for Flash Alerting
+            is_flash = ransomware_flag or (subsector == "ecom" and "remote code execution" in short_desc.lower())
+
             kev_articles.append({
                 "id": f"cisa-kev-{cve_id.lower().replace('-', '_')}",
                 "title": f"CISA KEV Alert: {cve_id} in {vendor} {product} Under Active Exploitation",
@@ -158,6 +161,7 @@ def fetch_cisa_kev_alerts(cutoff_date, seen_urls):
                 "date": date_added.strftime("%d %b %Y"),
                 "_timestamp": date_added.timestamp(),
                 "is_new": is_new,
+                "is_flash": is_flash,
                 "severity": "CRITICAL",
                 "subsector": subsector,
                 "tags": tags[:4],
@@ -226,6 +230,14 @@ def fetch_and_filter_intel():
                         tags = ["Global 0-Day", "Enterprise"] + list(set([m[0].upper() + m[1:].lower() for m in crit_matches if isinstance(m, str)]))[:2]
                         advisory_text = "Urgent: Patch edge devices, audit perimeter gateways, and review EDR/SOC telemetry immediately."
 
+                    # Identify breaking emergency threats for Flash Alerts
+                    is_flash_threat = is_new_threat and severity == "CRITICAL" and any(
+                        term in combined_text.lower() for term in [
+                            "actively exploited in the wild", "0-day", "zero-day", 
+                            "emergency directive", "critical checkout breach"
+                        ]
+                    )
+
                     matched_articles.append({
                         "id": f"scraped-{len(matched_articles) + 1}",
                         "title": title,
@@ -234,6 +246,7 @@ def fetch_and_filter_intel():
                         "date": date_display,
                         "_timestamp": pub_date.timestamp() if pub_date else 0,
                         "is_new": is_new_threat,
+                        "is_flash": is_flash_threat,
                         "severity": severity,
                         "subsector": subsector,
                         "tags": tags,
@@ -382,12 +395,49 @@ def build_google_spaces_payload(briefing, articles, is_weekly=False):
 
     return message
 
+def build_flash_alert_payload(flash_article):
+    """Generates an urgent high-priority Google Chat dispatch for breaking emergency threats."""
+    today_str = datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC")
+    dashboard_url = os.getenv("DASHBOARD_URL", "")
+
+    title = flash_article.get("title", "High-Priority Cyber Incident")
+    url = flash_article.get("url", "")
+    advisory = flash_article.get("advisory", "Isolate exposed endpoints and patch immediately.")
+    summary = flash_article.get("summary", "")
+
+    msg = (
+        "🚨🚨🚨 *UK RETAIL CYBER SECURITY FLASH ALERT* 🚨🚨🚨\n"
+        f"⏱️ _Dispatched: {today_str}_\n\n"
+        f"*INCIDENT:* *{title}*\n"
+        f"*SOURCE:* _{flash_article.get('source', 'Threat Intel Feed')}_\n\n"
+        f"*EXECUTIVE SYNOPSIS:*\n{summary}\n\n"
+        f"⚡ *MANDATORY ACTION:* {advisory}\n"
+    )
+
+    if url:
+        msg += f"\n🔗 *Source Report:* <{url}|Open Original Advisory ↗>"
+    if dashboard_url:
+        msg += f"\n🌐 *Live Incident Hub:* <{dashboard_url}|Open Threat Hub ↗>"
+
+    return msg
+
 def save_output_files(articles, briefing, is_weekly=False):
-    """Saves structured data and markdown briefings into the /data folder."""
+    """Saves structured data, flash alert states, and markdown briefings into the /data folder."""
     os.makedirs("data", exist_ok=True)
 
     with open("data/threats.json", "w", encoding="utf-8") as f:
         json.dump(articles, f, indent=2, ensure_ascii=False)
+
+    # Check for active flash alerts
+    flash_items = [a for a in articles if a.get("is_flash")]
+    if flash_items:
+        with open("data/flash_alert.json", "w", encoding="utf-8") as f:
+            json.dump(flash_items[0], f, indent=2, ensure_ascii=False)
+    elif os.path.exists("data/flash_alert.json"):
+        try:
+            os.remove("data/flash_alert.json")
+        except OSError:
+            pass
 
     summary_filename = "data/weekly_summary.md" if is_weekly else "data/daily_summary.md"
     with open(summary_filename, "w", encoding="utf-8") as f:
@@ -422,9 +472,19 @@ def notify_webhook(message_text):
 
 if __name__ == "__main__":
     is_weekly_run = ("--weekly" in sys.argv) or (os.getenv("RUN_MODE", "").lower() == "weekly")
-    logging.info(f"Executing UK Retail Threat Intelligence Run (Mode: {'WEEKLY ROLLUP' if is_weekly_run else 'DAILY BRIEFING'})...")
+    is_flash_mode = ("--flash" in sys.argv) or (os.getenv("RUN_MODE", "").lower() == "flash")
+
+    logging.info(f"Executing UK Retail Threat Intelligence Run (Mode: {'FLASH ALERT' if is_flash_mode else ('WEEKLY ROLLUP' if is_weekly_run else 'DAILY BRIEFING')})...")
 
     items = fetch_and_filter_intel()
+
+    # Flash alert priority handling
+    flash_candidates = [a for a in items if a.get("is_flash")]
+    if is_flash_mode or flash_candidates:
+        top_flash = flash_candidates[0] if flash_candidates else items[0]
+        logging.info(f"🚨 Flash Alert triggered: {top_flash.get('title')}")
+        flash_msg = build_flash_alert_payload(top_flash)
+        notify_webhook(flash_msg)
 
     if is_weekly_run:
         summary_text = generate_weekly_executive_rollup(items)
@@ -433,6 +493,8 @@ if __name__ == "__main__":
 
     save_output_files(items, summary_text, is_weekly=is_weekly_run)
 
-    formatted_msg = build_google_spaces_payload(summary_text, items, is_weekly=is_weekly_run)
-    notify_webhook(formatted_msg)
+    if not is_flash_mode:
+        formatted_msg = build_google_spaces_payload(summary_text, items, is_weekly=is_weekly_run)
+        notify_webhook(formatted_msg)
+
     logging.info("Run complete.")
