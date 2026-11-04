@@ -724,6 +724,16 @@
       renderFeedItems(filtered);
     }
 
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
     function renderFeedItems(items) {
       const container = document.getElementById('threatFeedContainer');
       if (!container) return;
@@ -754,11 +764,11 @@
           : '';
 
         const epssBadge = item.epss 
-          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30 ml-1.5" title="EPSS Probability of Wild Exploitation in 30 Days (Percentile: ${item.epss.percentile})">🎯 EPSS: ${item.epss.score}</span>`
+          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30 ml-1.5" title="EPSS Probability of Wild Exploitation in 30 Days (Percentile: ${escapeHtml(item.epss.percentile)})">🎯 EPSS: ${escapeHtml(item.epss.score)}</span>`
           : '';
 
         const actorBadge = item.actor
-          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/30 ml-1.5">👾 ${item.actor}</span>`
+          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/30 ml-1.5">👾 ${escapeHtml(item.actor)}</span>`
           : '';
 
         const peakBadge = item.is_peak_trading
@@ -774,13 +784,20 @@
           complianceBadge = '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/30 ml-1.5" title="Triggers UK GDPR / ICO Mandatory 72h Data Breach Assessment">📋 UK ICO / 72h</span>';
         }
 
+        const safeTitle = escapeHtml(item.title || 'Untitled Advisory');
+        const safeSummary = escapeHtml(item.summary || '');
+        const safeAdvisory = escapeHtml(item.advisory || '');
+        const safeSource = escapeHtml(item.source || 'Threat Intel');
+        const safeMitre = escapeHtml(item.mitre || '');
+        const safeDate = escapeHtml(item.date || 'Recent');
+
         const tagsHtml = (item.tags || []).map(t => 
-          `<span class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">${t}</span>`
+          `<span class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">${escapeHtml(t)}</span>`
         ).join(' ');
 
         const titleLink = item.url 
-          ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 transition underline-offset-2 hover:underline">${item.title}</a>`
-          : item.title;
+          ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 transition underline-offset-2 hover:underline">${safeTitle}</a>`
+          : safeTitle;
 
         const readBtn = item.url 
           ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-sky-600 dark:text-sky-400 hover:text-sky-500">Read Advisory ↗</a>`
@@ -799,7 +816,7 @@
                   ${actorBadge}
                   ${peakBadge}
                 </div>
-                <div class="text-[11px] font-mono text-slate-400">${item.date || 'Recent'}</div>
+                <div class="text-[11px] font-mono text-slate-400">${safeDate}</div>
               </div>
 
               <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
@@ -807,12 +824,12 @@
               </h3>
 
               <div class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                ${item.summary || ''}
+                ${safeSummary}
               </div>
 
-              ${item.advisory ? `
+              ${safeAdvisory ? `
                 <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/60 text-xs text-slate-700 dark:text-slate-300">
-                  <span class="font-semibold text-slate-900 dark:text-white">Action:</span> ${item.advisory}
+                  <span class="font-semibold text-slate-900 dark:text-white">Action:</span> ${safeAdvisory}
                 </div>
               ` : ''}
 
@@ -823,8 +840,8 @@
 
             <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
               <div class="flex items-center gap-2">
-                <span class="font-medium text-slate-700 dark:text-slate-300">${item.source || 'Threat Intel'}</span>
-                ${item.mitre ? `<span class="hidden sm:inline font-mono text-[10px] text-slate-400">• ${item.mitre}</span>` : ''}
+                <span class="font-medium text-slate-700 dark:text-slate-300">${safeSource}</span>
+                ${safeMitre ? `<span class="hidden sm:inline font-mono text-[10px] text-slate-400">• ${safeMitre}</span>` : ''}
               </div>
               ${readBtn}
             </div>
