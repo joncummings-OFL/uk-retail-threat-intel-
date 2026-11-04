@@ -309,8 +309,9 @@ def fetch_and_filter_intel():
                 clean_summary = BeautifulSoup(summary, "html.parser").get_text()
                 combined_text = f"{title} {clean_summary}"
 
-                retail_matches = KEYWORD_PATTERN.findall(combined_text)
-                crit_matches = CRITICAL_ENTERPRISE_PATTERN.findall(combined_text)
+                # Use finditer to capture the full matched string reliably
+                retail_matches = [m.group(0) for m in KEYWORD_PATTERN.finditer(combined_text)]
+                crit_matches = [m.group(0) for m in CRITICAL_ENTERPRISE_PATTERN.finditer(combined_text)]
                 is_ico_enforcement = "ico" in feed["name"].lower() and any(k in combined_text.lower() for k in ["penalty", "fine", "reprimand", "action", "breach", "retail"])
                 is_global_critical = bool(crit_matches) or ("advisory" in feed["name"].lower() and "critical" in combined_text.lower())
 
@@ -332,7 +333,7 @@ def fetch_and_filter_intel():
                             "ransomware", "magecart", "breach", "zero-day", "cvv", "skimmer"
                         ])
                         severity = "CRITICAL" if is_crit else "HIGH"
-                        tags = list(set([m[0].upper() + m[1:].lower() for m in retail_matches if isinstance(m, str)]))[:3]
+                        tags = list(set([m.strip().capitalize() for m in retail_matches if m.strip()]))[:3]
                         advisory_text = "Review logs and e-commerce infrastructure for exposure to this vector."
                     else:
                         subsector = "enterprise"
