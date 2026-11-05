@@ -703,7 +703,75 @@ def build_flash_alert_payload(flash_article):
 
     return msg
 
-def save_output_files(articles, briefing, is_weekly=False):
+# ==============================================================================
+# 8b. SCHEDULING & STATE GUARDS (PREVENTS 15-MIN CHAT SPAM)
+# ==============================================================================
+def should_send_daily_briefing(force_briefing=False):
+    """
+    Determines if today's morning briefing should be dispatched.
+    Returns True if:
+    1. Explicitly forced via CLI (--briefing) or GitHub manual trigger.
+    2. Current time is within the morning window (07:00 - 08:00 UTC, Mon-Fri)
+       AND the briefing has not yet been dispatched today.
+    """
+    if force_briefing:
+        return True
+
+    now_utc = datetime.now(timezone.utc)
+    # Only dispatch morning briefing Monday through Friday (0 = Mon, 4 = Fri)
+    if now_utc.weekday() > 4:
+        return False
+
+    # Morning window: 07:00 to 08:00 UTC (reliably catches 07:15, 07:30, 07:45 runs)
+    if not (7 <= now_utc.hour < 8):
+        return False
+
+    today_str = now_utc.strftime("%Y-%m-%d")
+    state_file = "data/last_briefing_date.txt"
+    if os.path.exists(state_file):
+        try:
+            with open(state_file, "r", encoding="utf-8") as f:
+                last_date = f.read().strip()
+                if last_date == today_str:
+                    logging.info(f"Morning briefing already dispatched today ({today_str}). Skipping.")
+                    return False
+        except Exception as e:
+            logging.warning(f"Could not read {state_file}: {e}")
+
+    return True
+
+def mark_daily_briefing_sent():
+    """Records today's date so subsequent 15-minute runs do not repeat the briefing."""
+    os.makedirs("data", exist_ok=True)
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    with open("data/last_briefing_date.txt", "w", encoding="utf-8") as f:
+        f.write(today_str)
+
+def filter_unsent_flash_alerts(flash_items):
+    """Deduplicates flash alerts so each breaking incident is only posted once."""
+    sent_flashes_file = "data/sent_flashes.txt"
+    sent_ids = set()
+    if os.path.exists(sent_flashes_file):
+        try:
+            with open(sent_flashes_file, "r", encoding="utf-8") as f:
+                sent_ids = {line.strip() for line in f if line.strip()}
+        except Exception as e:
+            logging.warning(f"Could not read {sent_flashes_file}: {e}")
+
+    unsent = []
+    for item in flash_items:
+        unique_key = item.get("url") or item.get("id") or item.get("title")
+        if unique_key and unique_key not in sent_ids:
+            unsent.append((item, unique_key))
+    return unsent
+
+def mark_flash_alert_sent(unique_key):
+    """Records the unique identifier of a sent flash alert."""
+    os.makedirs("data", exist_ok=True)
+    with open("data/sent_flashes.txt", "a", encoding="utf-8") as f:
+        f.write(f"{unique_key}\n")
+
+def save_output_files(articles, briefing=None, is_weekly=False):
     os.makedirs("data", exist_ok=True)
 
     with open("data/threats.json", "w", encoding="utf-8") as f:
@@ -719,11 +787,12 @@ def save_output_files(articles, briefing, is_weekly=False):
         except OSError:
             pass
 
-    summary_filename = "data/weekly_summary.md" if is_weekly else "data/daily_summary.md"
-    with open(summary_filename, "w", encoding="utf-8") as f:
-        f.write(briefing)
+    if briefing:
+        summary_filename = "data/weekly_summary.md" if is_weekly else "data/daily_summary.md"
+        with open(summary_filename, "w", encoding="utf-8") as f:
+            f.write(briefing)
 
-    logging.info(f"Saved data/threats.json and {summary_filename} successfully.")
+    logging.info("Saved output files in data/ successfully.")
 
 def notify_webhook(message_text):
     webhook_url = (
@@ -757,34 +826,46 @@ if __name__ == "__main__":
     is_weekly_run = ("--weekly" in sys.argv) or (os.getenv("RUN_MODE", "").lower() == "weekly")
     is_flash_mode = ("--flash" in sys.argv) or (os.getenv("RUN_MODE", "").lower() == "flash")
     is_peak_mode = ("--peak" in sys.argv) or (os.getenv("RUN_MODE", "").lower() == "peak")
+    force_briefing = ("--briefing" in sys.argv) or (os.getenv("FORCE_BRIEFING", "").lower() in ["true", "1"])
 
-    logging.info(f"Executing UK Retail Threat Intelligence Run (Mode: {'FLASH ALERT' if is_flash_mode else ('WEEKLY ROLLUP' if is_weekly_run else ('PEAK TRADING' if is_peak_mode else 'DAILY BRIEFING'))})...")
+    logging.info("Executing UK Retail Threat Intelligence Run...")
 
-    # Ingest, filter & enrich
+    # 1. Ingest, filter & enrich (runs every 15 minutes)
     items = fetch_and_filter_intel()
 
-    # Export Firewall EDLs & Syndication Feeds
+    # 2. Export Firewall EDLs & Syndication Feeds
     export_firewall_edls(items)
     export_stix_and_rss(items)
 
-    # Flash alert priority handling
+    # 3. Flash alert priority handling (immediate dispatch, never duplicated)
     flash_candidates = [a for a in items if a.get("is_flash")]
-    if is_flash_mode or flash_candidates:
-        top_flash = flash_candidates[0] if flash_candidates else items[0]
-        logging.info(f"🚨 Flash Alert triggered: {top_flash.get('title')}")
-        flash_msg = build_flash_alert_payload(top_flash)
+    unsent_flashes = filter_unsent_flash_alerts(flash_candidates)
+    if is_flash_mode or unsent_flashes:
+        target_flash = unsent_flashes[0][0] if unsent_flashes else items[0]
+        flash_key = unsent_flashes[0][1] if unsent_flashes else target_flash.get("url", "")
+        logging.info(f"🚨 New Flash Alert triggered: {target_flash.get('title')}")
+        flash_msg = build_flash_alert_payload(target_flash)
         notify_webhook(flash_msg)
+        if flash_key:
+            mark_flash_alert_sent(flash_key)
 
-    # AI Synthesis
+    # 4. Determine whether to send the CISO briefing
+    should_brief = should_send_daily_briefing(force_briefing=force_briefing)
+
     if is_weekly_run:
         summary_text = generate_weekly_executive_rollup(items)
-    else:
-        summary_text = generate_ciso_daily_brief(items, is_peak_trading=is_peak_mode)
-
-    save_output_files(items, summary_text, is_weekly=is_weekly_run)
-
-    if not is_flash_mode:
-        formatted_msg = build_google_spaces_payload(summary_text, items, is_weekly=is_weekly_run, is_peak=is_peak_mode)
+        save_output_files(items, summary_text, is_weekly=True)
+        formatted_msg = build_google_spaces_payload(summary_text, items, is_weekly=True, is_peak=is_peak_mode)
         notify_webhook(formatted_msg)
+    elif should_brief:
+        logging.info("Triggering scheduled morning CISO briefing...")
+        summary_text = generate_ciso_daily_brief(items, is_peak_trading=is_peak_mode)
+        save_output_files(items, summary_text, is_weekly=False)
+        formatted_msg = build_google_spaces_payload(summary_text, items, is_weekly=False, is_peak=is_peak_mode)
+        notify_webhook(formatted_msg)
+        mark_daily_briefing_sent()
+    else:
+        logging.info("Feed telemetry synced. Morning briefing skipped for this 15-minute interval.")
+        save_output_files(items, None, is_weekly=False)
 
     logging.info("Run complete.")
