@@ -1,5 +1,41 @@
 [
   {
+    "id": "scraped-13",
+    "title": "Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/zyxel-switch-hacks-blamed-on-patched-flaw-actually-exploited-a-zero-day/",
+    "date": "05 Nov 2026",
+    "_timestamp": 1793876201.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-107441"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Tracked as CVE-2026-107441, the out-of-bounds write flaw could allow attackers to execute OS commands via crafted HTTP requests. The post Zyxel Switch Hacks Blamed on Patched Flaw Actually Exploited a Zero-Day appeared first on SecurityWeek .",
+    "indicators": [
+      "https://www.securityweek.com/zyxel-switch-hacks-blamed-on-patched-flaw-actually-exploited-a-zero-day/"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-107441",
+      "score": "0.3%",
+      "raw_score": 0.00293,
+      "percentile": "22.0%"
+    }
+  },
+  {
     "id": "scraped-10",
     "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
     "source": "The Hacker News",
@@ -82,7 +118,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-14",
     "title": "Malicious cPGuard Updates Served in OpsShield Supply Chain Attack",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/",
@@ -109,7 +145,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-15",
     "title": "CVE-2026-58868: Critical Android Bug Could Let Attackers Run Remote Code",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html",
@@ -145,7 +181,7 @@
     }
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-16",
     "title": "U.S. CISA adds WordPress flaw to its Known Exploited Vulnerabilities catalog",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/202394/security/u-s-cisa-adds-wordpress-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html",
@@ -315,8 +351,8 @@
     "cves": [],
     "tags": [
       "Retail",
-      "Asda",
-      "Retailers"
+      "Retailers",
+      "Asda"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -380,9 +416,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Retail",
-      "Sainsbury",
-      "Information commissioner"
+      "Distribution centres",
+      "Marks & spencer",
+      "Tesco"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
