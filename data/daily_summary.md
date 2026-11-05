@@ -1,3 +1,5 @@
-*TL;DR:* Today's threat posture is dominated by OT breaches targeting European supermarket cold-chains—impacting UK food supply chains—alongside active exploitation of a WordPress Core RCE vulnerability.
-*Key Alert:* Cyber attacks on European supermarket refrigeration networks have extended to UK abattoirs, posing severe operational risks to grocery supply chains.
-*Priority Action:* Audit OT/ICS cold-chain remote access telemetry and immediately patch perimeter WordPress instances against CVE-2026-119977.
+*TL;DR:* Today's threat posture sees heightened perimeter and supply-chain risk, driven by incomplete network switch patches and compromised e-commerce web analytics scripts.
+
+*Key Alert:* Zyxel GS1900 edge switches remain exposed to unauthenticated root command execution due to failed vendor patches, directly threatening store and corporate perimeters.
+
+*Priority Action:* Audit networks for Zyxel switches immediately, deploy newly released firmware, and restrict management interfaces from public internet access.

@@ -1,19 +1,239 @@
 [
   {
+    "id": "scraped-10",
+    "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html",
+    "date": "05 Nov 2026",
+    "_timestamp": 1793862393.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Zyxel GS1900 network switches that received the vendor's earlier fix for an actively exploited flaw are still open to the exploit attackers used, researchers at Binarly found.\n\nThe exploit lets anyone who can reach a switch's web management interface run commands on it without logging in. Zyxel has released new firmware for 10 GS1900 models that cl...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-11",
+    "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
+    "date": "04 Nov 2026",
+    "_timestamp": 1793802472.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Supply chain"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "The Russia-linked threat actor known as APT29 is presumed to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain attack involving a Ukrainian web analytics service called Plerdy SEO Tracker.\n\n\"The injected JavaScript code collects browser and device attributes...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-3",
+    "title": "Mastercard meets ‘responsibility’ through SME cyber security training",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366653613/Mastercard-meets-responsibility-through-SME-cyber-security-training",
+    "date": "04 Nov 2026",
+    "_timestamp": 1793793600.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "<p>Mastercard has launched free cyber security training to UK small and medium-sized enterprises (SMEs) as the firm’s own research reveals over three million of them don’t use cyber security.</p> \n<p>With SMEs being targeted by cyber criminals and many going out of business as a result, the card giant’s UK boss says financial services firms have a...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366653613/Mastercard-meets-responsibility-through-SME-cyber-security-training"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-13",
+    "title": "Malicious cPGuard Updates Served in OpsShield Supply Chain Attack",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/",
+    "date": "04 Nov 2026",
+    "_timestamp": 1793789688.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Supply chain"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Using compromised credentials, the attackers accessed OpsShield’s update servers and poisoned multiple cPGuard versions.\nThe post Malicious cPGuard Updates Served in OpsShield Supply Chain Attack appeared first on SecurityWeek.",
+    "indicators": [
+      "https://www.securityweek.com/malicious-cpguard-updates-served-in-opsshield-supply-chain-attack/"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-14",
+    "title": "CVE-2026-58868: Critical Android Bug Could Let Attackers Run Remote Code",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html",
+    "date": "04 Nov 2026",
+    "_timestamp": 1793788012.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-58868"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Critical Android flaw CVE-2026-58868 could allow remote code execution without user interaction on devices running Android 14 through 17. Google has fixed CVE-2026-58868, a critical Android vulnerability affecting versions 14 through 17. The flaw is a critical Android vulnerability caused by a heap buffer overflow in the onOutputReceived function o...",
+    "indicators": [
+      "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-58868",
+      "score": "0.2%",
+      "raw_score": 0.00211,
+      "percentile": "11.4%"
+    }
+  },
+  {
+    "id": "scraped-15",
+    "title": "U.S. CISA adds WordPress flaw to its Known Exploited Vulnerabilities catalog",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/202394/security/u-s-cisa-adds-wordpress-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html",
+    "date": "04 Nov 2026",
+    "_timestamp": 1793783797.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-119977"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "U.S. Cybersecurity and Infrastructure Security Agency (CISA) adds WordPress flaw to its Known Exploited Vulnerabilities catalog. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added a WordPress flaw, tracked as CVE-2026-119977 (CVSS score of 8.1), to its Known Exploited Vulnerabilities (KEV) catalog. CVE-2026-119977 is a high-seve...",
+    "indicators": [
+      "https://securityaffairs.com/202394/security/u-s-cisa-adds-wordpress-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-119977",
+      "score": "1.0%",
+      "raw_score": 0.0102,
+      "percentile": "63.5%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2024_27834",
+    "title": "CISA KEV Alert: CVE-2024-27834 in Apple Multiple Products Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-27834",
+    "date": "04 Nov 2026",
+    "_timestamp": 1793750400.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2024-27834"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2024-27834"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Apple Multiple Products is affected by CVE-2024-27834. Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication. Required Remediation: Apply mitigations in accordance with vendor instructions, ensur...",
+    "indicators": [
+      "CVE-2024-27834"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Multiple Products.",
+    "epss": {
+      "cve": "CVE-2024-27834",
+      "score": "0.6%",
+      "raw_score": 0.00598,
+      "percentile": "48.8%"
+    }
+  },
+  {
     "id": "scraped-12",
     "title": "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security",
     "date": "03 Nov 2026",
     "_timestamp": 1793744209.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
     "subsector": "pos",
     "actor": null,
     "cves": [],
-    "tags": [],
+    "tags": [
+      "Cold-chain"
+    ],
     "mitre": "T1005 (Data from Local System / POS)",
     "mitre_id": "T1005",
     "mitre_tactic": "Collection",
@@ -25,13 +245,13 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-2",
+    "id": "scraped-4",
     "title": "Exposing state threats still matters - resilience matters more",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/Exposing-state-threats-still-matters-resilience-matters-more",
     "date": "03 Nov 2026",
     "_timestamp": 1793714220.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -53,45 +273,51 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-3",
+    "id": "scraped-5",
     "title": "UK government backs Cyber Essentials discount for SMEs",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366653512/UK-government-backs-Cyber-Essentials-discount-for-SMEs",
     "date": "03 Nov 2026",
     "_timestamp": 1793709300.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "loyalty",
     "actor": null,
     "cves": [],
-    "tags": [],
+    "tags": [
+      "Supply chain"
+    ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
     "mitre_tactic": "Credential Access",
     "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "<p>The UK government is to back a 75% discount for the National Cyber Security Centre’s (NCSC’s) <a href=\"https://www.ncsc.gov.uk/cyberessentials/overview\" target=\"_blank\" rel=\"noopener\">Cyber Essentials</a> certification scheme for small and medium sized enterprises (SMEs), with many set to benefit from free certification.</p> \n<p>The offer, which...",
+    "summary": "<p>The UK government is to back a 75% discount for the National Cyber Security Centre’s (NCSC’s) <a href=\"https://www.ncsc.gov.uk/cyberessentials/overview\" target=\"_blank\" rel=\"noopener\">Cyber Essentials</a> certification scheme for small and medium-sized enterprises (SMEs), with many set to benefit from free certification.</p> \n<p>The offer, which...",
     "indicators": [
       "https://www.computerweekly.com/news/366653512/UK-government-backs-Cyber-Essentials-discount-for-SMEs"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-4",
+    "id": "scraped-6",
     "title": "UK abattoirs caught up in cyber attack against European supermarkets",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366653356/UK-abattoirs-caught-up-in-cyber-attack-against-European-supermarkets",
     "date": "03 Nov 2026",
     "_timestamp": 1793709000.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "loyalty",
     "actor": null,
     "cves": [],
-    "tags": [],
+    "tags": [
+      "Cold-chain",
+      "Asda",
+      "Retail"
+    ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
     "mitre_tactic": "Credential Access",
@@ -109,7 +335,7 @@
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-119977",
     "date": "03 Nov 2026",
     "_timestamp": 1793664000.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -134,41 +360,13 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for WordPress Core.",
     "epss": {
       "cve": "CVE-2026-119977",
-      "score": "0.6%",
-      "raw_score": 0.006,
-      "percentile": "48.8%"
+      "score": "1.0%",
+      "raw_score": 0.0102,
+      "percentile": "63.5%"
     }
   },
   {
-    "id": "scraped-14",
-    "title": "Android’s November 2026 Updates Patch Over 200 Vulnerabilities",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/androids-november-2026-updates-patch-over-200-vulnerabilities/",
-    "date": "03 Nov 2026",
-    "_timestamp": 1793708509.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The most severe is a critical flaw in Framework leading to remote code execution without user interaction.\nThe post Android’s November 2026 Updates Patch Over 200 Vulnerabilities appeared first on SecurityWeek.",
-    "indicators": [
-      "https://www.securityweek.com/androids-november-2026-updates-patch-over-200-vulnerabilities/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-5",
+    "id": "scraped-7",
     "title": "Cold chain cyber attacks highlight lack of OT security in retail",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366653380/Cold-chain-cyber-attacks-highlight-lack-of-OT-security-in-retail",
@@ -181,7 +379,11 @@
     "subsector": "loyalty",
     "actor": null,
     "cves": [],
-    "tags": [],
+    "tags": [
+      "Retail",
+      "Currys",
+      "Distribution centres"
+    ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
     "mitre_tactic": "Credential Access",
@@ -194,87 +396,6 @@
   },
   {
     "id": "scraped-8",
-    "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html",
-    "date": "02 Nov 2026",
-    "_timestamp": 1793619000.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "ecom",
-    "actor": null,
-    "cves": [],
-    "tags": [],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Forty percent of security teams now use AI every day, and another 56% are testing it. Only 4% have no plans to adopt it, according to Prophet Security's State of AI in Security Operations 2026 survey of more than 250 CISOs, SOC leaders and practitioners. For the teams still testing, the next decision is whether their own SOC is ready.\n\nAI SOC readi...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-9",
-    "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
-    "date": "02 Nov 2026",
-    "_timestamp": 1793617725.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Directory Certificate Services (AD CS) settings to obtain login certificates for privileged accounts, including one for a domain controller.\n\nMicrosoft said in a report that it investigated two such intrusi...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-10",
-    "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
-    "date": "02 Nov 2026",
-    "_timestamp": 1793616599.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign specifically targeting Linux infrastructure associated with government entities and state-affiliated infrastructure.\n\nThe activity, observed by Palo Alto Networks Unit 42 between October 2025 and April 2026, has been tracked under the moniker CL-UNK-1211, where \"CL\" refe...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-6",
     "title": "Who controls the technology we depend on?",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/Who-controls-the-technology-we-depend-on",
@@ -287,7 +408,9 @@
     "subsector": "loyalty",
     "actor": null,
     "cves": [],
-    "tags": [],
+    "tags": [
+      "Supply chain"
+    ],
     "mitre": "T1566 (Phishing / Courier Smishing)",
     "mitre_id": "T1566",
     "mitre_tactic": "Initial Access",
@@ -299,7 +422,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-7",
+    "id": "scraped-9",
     "title": "Belfast journalists subjected to unlawful spying cannot claim costs over PSNI failures",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366653294/Belfast-journalists-subjected-to-unlawful-spying-cannot-claim-costs-over-PSNI-failures",
@@ -312,7 +435,9 @@
     "subsector": "loyalty",
     "actor": null,
     "cves": [],
-    "tags": [],
+    "tags": [
+      "Next"
+    ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
     "mitre_tactic": "Credential Access",
@@ -320,59 +445,6 @@
     "summary": "<p>Two Belfast journalists placed under unlawful police surveillance expressed “deep disappointment” after the Court of Appeal found that police cannot be sanctioned for “late and inadequate disclosures” of evidence that led to two court hearings having to be abandoned.</p> \n<p>Investigative journalists Barry McCaffrey and Trevor Birney brought a c...",
     "indicators": [
       "https://www.computerweekly.com/news/366653294/Belfast-journalists-subjected-to-unlawful-spying-cannot-claim-costs-over-PSNI-failures"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-11",
-    "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
-    "date": "01 Nov 2026",
-    "_timestamp": 1793523091.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "A critical flaw in Canonical's LXD and MicroCloud let an attacker log in as a trusted client without holding that client's private key. To do it, the attacker had to reach their HTTPS API over the network and have the trusted client's public certificate.\n\nOnce in, the attacker would act as that client, with access to the cluster and its virtual mac...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-13",
-    "title": "Investors Dish on New Startups &amp; What They'd Back Next",
-    "source": "Dark Reading",
-    "url": "https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next",
-    "date": "30 Oct 2026",
-    "_timestamp": 1793394505.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "pos",
-    "actor": null,
-    "cves": [],
-    "tags": [],
-    "mitre": "T1005 (Data from Local System / POS)",
-    "mitre_id": "T1005",
-    "mitre_tactic": "Collection",
-    "mitre_name": "Data from Local System / POS",
-    "summary": "The cybersecurity market is difficult to predict, but a glimpse into the annual DataTribe Challenge shows what's trending and what's not.",
-    "indicators": [
-      "https://www.darkreading.com/cybersecurity-operations/investors-dish-new-startsup-what-back-next"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   }
