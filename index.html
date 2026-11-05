@@ -268,8 +268,8 @@
         <button onclick="clearAllFilters()" class="text-sky-600 dark:text-sky-400 hover:underline font-bold text-[11px] uppercase tracking-wide cursor-pointer">Clear Filters ✕</button>
       </div>
 
-      <!-- THREAT FEED 2-COLUMN GRID (BALANCED, NON-NESTED) -->
-      <div id="threatFeedContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <!-- THREAT FEED 2-COLUMN GRID (STRICT 2 CARDS PER ROW) -->
+      <div id="threatFeedContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
         <!-- Rendered dynamically by JavaScript -->
       </div>
 
@@ -699,9 +699,9 @@
         // MITRE Tactic Tag
         const mitreTacticStr = item.mitre ? `<span class="font-mono text-[10px] text-slate-400 dark:text-slate-500">• ${escapeHtml(item.mitre)}</span>` : '';
 
-        // Return strictly isolated, non-nested card DOM block
+        // Return strictly isolated, non-nested card DOM block (2 per row with matching height)
         return `
-          <article class="bg-white dark:bg-slate-900/80 border ${isCritical ? 'border-rose-300 dark:border-rose-900/60' : 'border-slate-200 dark:border-slate-800'} rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+          <article class="bg-white dark:bg-slate-900/80 border ${isCritical ? 'border-rose-300 dark:border-rose-900/60' : 'border-slate-200 dark:border-slate-800'} rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between h-full">
             <div>
               <!-- Header Badges & Date -->
               <div class="flex items-start justify-between gap-2 mb-2.5">
@@ -713,7 +713,7 @@
 
               <!-- Title -->
               <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug tracking-tight mb-2">
-                ${safeTitle}
+                ${safeUrl ? `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 hover:underline transition">${safeTitle}</a>` : safeTitle}
               </h3>
 
               <!-- Summary -->
