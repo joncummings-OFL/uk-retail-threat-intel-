@@ -5,6 +5,7 @@ import json
 import time
 import uuid
 import logging
+import html
 from datetime import datetime, timezone, timedelta
 from xml.etree import ElementTree as ET
 import feedparser
@@ -119,6 +120,23 @@ def extract_entry_datetime(entry):
         except Exception:
             pass
     return None
+
+def clean_feed_text(raw_text):
+    """Strips all HTML tags, decodes escaped entities, and collapses redundant whitespace."""
+    if not raw_text:
+        return ""
+    # Pass 1: Parse HTML
+    soup = BeautifulSoup(raw_text, "html.parser")
+    text = soup.get_text(separator=" ")
+    # Pass 2: If the text contained escaped tags (&lt;p&gt;), strip them too
+    if "<" in text and ">" in text:
+        soup2 = BeautifulSoup(text, "html.parser")
+        text = soup2.get_text(separator=" ")
+    # Pass 3: Strip any residual HTML/XML tags
+    text = re.sub(r"<[^>]+>", " ", text)
+    # Pass 4: Unescape standard HTML entities
+    text = html.unescape(text)
+    return re.sub(r"\s+", " ", text).strip()
 
 def detect_threat_actor(text):
     for actor_name, pattern in THREAT_ACTOR_MAP.items():
@@ -302,11 +320,11 @@ def fetch_and_filter_intel():
                 if pub_date and pub_date < cutoff_date:
                     continue
 
-                title = entry.get("title", "").strip()
+                title = clean_feed_text(entry.get("title", ""))
                 summary = entry.get("summary", "") or entry.get("description", "")
                 link = entry.get("link", "").strip()
 
-                clean_summary = BeautifulSoup(summary, "html.parser").get_text()
+                clean_summary = clean_feed_text(summary)
                 combined_text = f"{title} {clean_summary}"
 
                 # Use finditer to capture the full matched string reliably
