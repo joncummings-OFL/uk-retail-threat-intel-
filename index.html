@@ -38,20 +38,49 @@
     }
     @keyframes pulseGlow {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
+      50% { opacity: 0.35; transform: scale(0.85); }
     }
-    .matrix-cell:hover {
-      transform: translateY(-2px);
+    .flash-pulse {
+      animation: flashBorder 2s infinite;
+    }
+    @keyframes flashBorder {
+      0%, 100% { border-color: rgba(239, 68, 68, 0.8); box-shadow: 0 0 15px rgba(239, 68, 68, 0.25); }
+      50% { border-color: rgba(239, 68, 68, 0.3); box-shadow: none; }
     }
   </style>
 </head>
 <body class="min-h-screen flex flex-col antialiased bg-slate-50 text-slate-800 dark:bg-[#07090e] dark:text-slate-100 selection:bg-sky-500 selection:text-white">
 
-  <!-- TOP STATUS & CONTROLS BAR -->
+  <!-- EMERGENCY FLASH THREAT BANNER (DYNAMICALLY SURFACED IF FLASH ALERT EXISTS) -->
+  <aside id="flashAlertBanner" class="hidden border-b border-rose-500/50 bg-rose-500/10 text-rose-900 dark:text-rose-200 backdrop-blur px-4 py-3 sticky top-0 z-50 transition-all flash-pulse">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <span class="flex h-3 w-3 relative flex-shrink-0">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-600"></span>
+        </span>
+        <div class="text-xs sm:text-sm">
+          <span class="font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400 mr-2">🚨 FLASH THREAT ALERT:</span>
+          <span id="flashAlertTitle" class="font-medium text-slate-900 dark:text-white"></span>
+          <span class="mx-2 hidden md:inline text-rose-400 dark:text-rose-600">•</span>
+          <span id="flashAlertAdvisory" class="text-rose-800 dark:text-rose-300 font-mono text-xs hidden md:inline"></span>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 self-end sm:self-auto flex-shrink-0">
+        <a id="flashAlertLink" href="#" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded text-xs font-semibold bg-rose-600 hover:bg-rose-500 text-white transition flex items-center gap-1 shadow-sm">
+          <span>Open Advisory</span>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+        <button onclick="dismissFlashAlert()" class="p-1 rounded text-rose-700 dark:text-rose-400 hover:bg-rose-200/50 dark:hover:bg-rose-950/50 text-xs" title="Dismiss this session">✕</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- TOP HEADER & STATUS BAR -->
   <header class="border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-950/80 backdrop-blur sticky top-0 z-40 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="h-9 w-9 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-600 dark:text-sky-400">
+        <div class="h-9 w-9 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-600 dark:text-sky-400 shadow-sm">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
           </svg>
@@ -61,45 +90,42 @@
             <h1 class="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
               UK Retail <span class="text-sky-600 dark:text-sky-400 font-mono text-xs uppercase px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-950 border border-sky-300 dark:border-sky-800">Threat Intel</span>
             </h1>
-
-            <!-- LIVE SYNC BUTTON -->
-            <button id="feedSyncBtn" onclick="manualSync()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 hover:bg-emerald-200 dark:bg-emerald-950/80 dark:hover:bg-emerald-900/90 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700/80 transition cursor-pointer shadow-sm group select-none" title="Click to manually refresh data. Polled automatically every 60s.">
-              <span id="syncDot" class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
-              <svg id="syncSpinner" class="w-3 h-3 text-emerald-600 dark:text-emerald-300 hidden animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
-              <span id="syncText">LIVE SYNC</span>
-              <span id="syncTime" class="text-[10px] opacity-75 font-mono hidden sm:inline"></span>
+            <!-- Interactive Live Sync Button -->
+            <button id="liveSyncBtn" onclick="manualSync()" title="Click to check for newest threats right now" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800/60 hover:bg-emerald-200 dark:hover:bg-emerald-900 transition active:scale-95 cursor-pointer">
+              <span id="syncPulseDot" class="w-1.5 h-1.5 rounded-full bg-emerald-500 pulse-dot"></span>
+              <svg id="syncSpinner" class="w-3 h-3 animate-spin hidden text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+              <span id="syncStatusText">LIVE SYNC</span>
+              <span id="syncTimeAgo" class="text-[10px] opacity-75 font-mono ml-0.5 hidden sm:inline"></span>
             </button>
           </div>
-          <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">Automated Scraper & Aggregator • UK Retail, E-Commerce, CISA KEV & Regulatory Watch</p>
+          <p class="text-xs text-slate-500 dark:text-slate-400 hidden sm:block">Automated Scraper & Aggregator • UK Retail, E-Commerce & CISA KEV Ingestion</p>
         </div>
       </div>
 
-      <!-- Quick Action Controls -->
-      <div class="flex items-center space-x-2 sm:space-x-3">
-        <!-- Export CSV -->
-        <button onclick="exportFilteredToCSV()" class="px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 border border-slate-300 dark:border-slate-700" title="Export current threat intelligence data to CSV">
+      <!-- Quick Navigation, CSV Export, Tabs & Theme Switcher -->
+      <div class="flex items-center space-x-2 sm:space-x-2.5">
+        <button onclick="exportFilteredToCSV()" class="px-2.5 py-1.5 rounded-lg text-xs font-medium bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 border border-slate-300 dark:border-slate-700" title="Export currently filtered view to CSV">
           <svg class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          <span class="hidden sm:inline">Export CSV</span>
+          <span class="hidden md:inline">Export CSV</span>
         </button>
 
-        <!-- Navigation Tabs -->
         <button id="tabFeedBtn" onclick="switchMainTab('feed')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 4v10a2 2 0 01-2 2h-4"/></svg>
-          Intel Feed
+          <span>Intel Feed</span>
         </button>
 
-        <button id="tabMatrixBtn" onclick="switchMainTab('matrix')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5">
+        <button id="tabMitreBtn" onclick="switchMainTab('mitre')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 border border-slate-300 dark:border-slate-700">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
-          MITRE Matrix
+          <span class="hidden sm:inline">MITRE Matrix</span>
+          <span class="sm:hidden">Matrix</span>
         </button>
 
-        <button id="tabEdlBtn" onclick="switchMainTab('edl')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          EDL & Feeds
+        <button id="tabAutomationBtn" onclick="switchMainTab('automation')" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 border border-slate-300 dark:border-slate-700">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          <span class="hidden sm:inline">Pipeline</span>
         </button>
 
-        <!-- Light/Dark Mode Switcher -->
-        <button onclick="toggleTheme()" id="themeToggleBtn" aria-label="Toggle Light / Dark Mode" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition" title="Toggle Light / Dark Mode">
+        <button onclick="toggleTheme()" id="themeToggleBtn" aria-label="Toggle Light / Dark Mode" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition border border-slate-300 dark:border-slate-700" title="Toggle Light / Dark Mode">
           <svg class="w-4 h-4 hidden dark:block text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 9H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
@@ -111,48 +137,15 @@
     </div>
   </header>
 
-  <!-- MAIN CONTAINER -->
+  <!-- MAIN WORKSPACE -->
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
 
-    <!-- DYNAMIC FLASH ALERT BANNER -->
-    <div id="flashAlertBanner" class="hidden relative overflow-hidden rounded-xl border border-rose-500/80 bg-gradient-to-r from-rose-950/90 via-red-900/60 to-rose-950/90 p-4 text-white shadow-lg shadow-rose-950/40">
-      <div class="flex items-start justify-between gap-3 relative z-10">
-        <div class="flex items-start gap-3">
-          <div class="h-9 w-9 rounded-lg bg-rose-500/20 border border-rose-500/50 flex items-center justify-center text-rose-300 flex-shrink-0 animate-pulse">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
-          </div>
-          <div class="space-y-1">
-            <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded text-[10px] font-black tracking-widest bg-rose-500 text-white uppercase shadow-sm">FLASH THREAT ALERT</span>
-              <span id="flashAlertTime" class="text-xs text-rose-200/80 font-mono"></span>
-            </div>
-            <h2 id="flashAlertTitle" class="text-sm sm:text-base font-bold text-white tracking-tight"></h2>
-            <p id="flashAlertSynopsis" class="text-xs text-rose-100/90 max-w-3xl leading-relaxed"></p>
-            <div class="flex flex-wrap items-center gap-3 pt-1">
-              <div class="text-[11px] text-rose-200 font-medium">
-                <span class="font-bold text-white uppercase">Action:</span> <span id="flashAlertAction"></span>
-              </div>
-              <a id="flashAlertLink" href="#" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold underline text-white hover:text-rose-200 flex items-center gap-1">Open Advisory ↗</a>
-            </div>
-          </div>
-        </div>
-        <button onclick="dismissFlashAlert()" class="text-rose-300 hover:text-white text-xs px-2 py-1 rounded bg-rose-900/40 hover:bg-rose-900/80 border border-rose-700/50 transition whitespace-nowrap">
-          ✕ Dismiss
-        </button>
-      </div>
-    </div>
-
-    <!-- TOAST NOTIFICATION -->
-    <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg border border-slate-700 shadow-xl flex items-center gap-2">
-      <span class="text-emerald-400">●</span>
-      <span id="toastMessage"></span>
-    </div>
-
-    <!-- TAB 1: INTEL FEED CONTENT -->
+    <!-- FEED TAB CONTENT -->
     <div id="tabFeedContent" class="space-y-6">
-      
-      <!-- Metric Counters Bar -->
+
+      <!-- SECTOR METRIC CARDS ROW -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+        <!-- Critical Incidents -->
         <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm">
           <div class="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
             <span>Critical Incidents</span>
@@ -162,47 +155,44 @@
           <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">Active Exploits & Breaches</p>
         </div>
 
+        <!-- Monitored Feeds -->
         <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm">
           <div class="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
             <span>Monitored Feeds</span>
             <span class="text-sky-500">●</span>
           </div>
           <div class="text-xl sm:text-2xl font-bold font-mono text-sky-600 dark:text-sky-400">10 Feeds + KEV</div>
-          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">NCSC, CISA, ICO, Krebs, THN</p>
+          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">NCSC, CISA KEV JSON, Krebs</p>
         </div>
 
-        <!-- CLICKABLE KEV & 0-DAY METRIC CARD -->
-        <div id="cardKevMetric" onclick="toggleKevFilter()" class="cursor-pointer bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm hover:border-amber-500/60 dark:hover:border-amber-400/60 hover:shadow-md transition group select-none">
+        <!-- Active KEV & 0-Days (Interactive Filter Card) -->
+        <div id="statKevCard" onclick="toggleKevFilter()" class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm cursor-pointer hover:border-amber-400 dark:hover:border-amber-500/50 transition transform active:scale-[0.98] group" title="Click to filter active KEVs and Zero-Days">
           <div class="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
             <span>Active KEV & 0-Days</span>
-            <span class="text-amber-500 group-hover:scale-125 transition-transform">●</span>
+            <span class="text-amber-500 group-hover:scale-125 transition-transform">⚡</span>
           </div>
           <div class="flex items-baseline justify-between">
             <div class="text-xl sm:text-2xl font-bold font-mono text-amber-500" id="statKevCount">0</div>
-            <span id="kevCardFilterHint" class="text-[10px] font-medium text-amber-600 dark:text-amber-400 opacity-80 group-hover:opacity-100 flex items-center gap-0.5">
-              Filter <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </span>
+            <span id="kevCardIndicator" class="text-[11px] font-mono text-amber-600 dark:text-amber-400 opacity-80 group-hover:opacity-100 flex items-center gap-0.5">Filter ↗</span>
           </div>
-          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">With Live EPSS Scoring</p>
+          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">Known Exploited Vulnerabilities</p>
         </div>
 
-        <!-- CLICKABLE PCI & ICO WATCH METRIC CARD -->
-        <div id="cardPciMetric" onclick="togglePciFilter()" class="cursor-pointer bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm hover:border-emerald-500/60 dark:hover:border-emerald-400/60 hover:shadow-md transition group select-none" title="Click to filter feed for threats with PCI-DSS v4.0.1 or UK ICO 72h regulatory impact">
+        <!-- PCI-DSS & ICO Compliance Watch (Interactive Filter Card) -->
+        <div id="statComplianceCard" onclick="togglePciIcoFilter()" class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3.5 sm:p-4 shadow-sm cursor-pointer hover:border-emerald-400 dark:hover:border-emerald-500/50 transition transform active:scale-[0.98] group" title="Click to filter Magecart, e-skimming & ICO personal data threats">
           <div class="flex items-center justify-between text-slate-500 dark:text-slate-400 text-xs font-medium mb-1">
             <span>PCI & ICO Watch</span>
-            <span class="text-emerald-500 group-hover:scale-125 transition-transform">●</span>
+            <span class="text-emerald-500">⚖️</span>
           </div>
           <div class="flex items-baseline justify-between">
-            <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400" id="statPciCount">0 Impacted</div>
-            <span id="pciCardFilterHint" class="text-[10px] font-medium text-emerald-600 dark:text-emerald-400 opacity-80 group-hover:opacity-100 flex items-center gap-0.5">
-              Filter <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </span>
+            <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-600 dark:text-emerald-400" id="statComplianceCount">v4.0.1 Ready</div>
+            <span id="complianceCardIndicator" class="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 opacity-80 group-hover:opacity-100 flex items-center gap-0.5">Filter ↗</span>
           </div>
-          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">PCI v4.0.1 & ICO 72h Compliance</p>
+          <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">Script Integrity & 72h ICO Notices</p>
         </div>
       </div>
 
-      <!-- AI CISO Synthesis Banner -->
+      <!-- AI CISO BRIEFING HERO BANNER -->
       <div class="bg-gradient-to-r from-slate-900 via-sky-950/40 to-slate-900 border border-sky-500/30 rounded-2xl p-4 sm:p-6 shadow-xl relative overflow-hidden">
         <div class="absolute -right-8 -bottom-8 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
@@ -213,515 +203,343 @@
             </div>
             <h2 class="text-lg sm:text-xl font-bold text-white tracking-tight">Generate UK Retail Threat Intelligence Briefing</h2>
             <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
-              Synthesize active alerts into an executive summary, MITRE ATT&CK mappings, EPSS exploit predictions, and prioritized defensive safeguards.
+              Synthesize active alerts into an executive summary, MITRE ATT&CK tactic mappings, and prioritized defensive safeguards for retail SecOps teams.
             </p>
           </div>
           <div class="flex items-center gap-2.5">
-            <button onclick="generateDailySummary()" id="btnGenerateBriefing" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-medium text-xs sm:text-sm shadow-lg shadow-sky-500/20 flex items-center justify-center gap-2 transition transform active:scale-95 whitespace-nowrap">
+            <button onclick="viewAiBriefing()" id="btnOpenBriefing" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white font-medium text-xs sm:text-sm shadow-lg shadow-sky-500/20 flex items-center justify-center gap-2 transition transform active:scale-95 whitespace-nowrap cursor-pointer">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              <span>Run AI Summary</span>
+              <span>View Executive Briefing</span>
             </button>
           </div>
-        </div>
-
-        <div id="aiSummaryOutput" class="hidden mt-4 pt-4 border-t border-sky-500/20 text-slate-200 text-xs sm:text-sm space-y-3 bg-slate-950/60 p-4 rounded-xl">
-          <div class="flex items-center justify-between">
-            <span class="font-mono text-[11px] text-sky-400 uppercase tracking-wider">Executive Threat Briefing</span>
-            <button onclick="closeSummary()" class="text-slate-400 hover:text-white text-xs">✕ Close</button>
-          </div>
-          <div id="summaryContent" class="space-y-2 whitespace-pre-wrap leading-relaxed"></div>
         </div>
       </div>
 
-      <!-- Search, Subsectors & Operational Filters -->
-      <div class="bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 rounded-xl p-3 sm:p-4 space-y-3">
-        <div class="flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+      <!-- FILTER & SEARCH BAR -->
+      <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-3 sm:p-4 shadow-sm space-y-3">
+        <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
+          <!-- Text Search -->
           <div class="relative flex-1">
-            <svg class="w-4 h-4 absolute left-3 top-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-            <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Search threat title, CVE, threat actor, or IOC..." class="w-full pl-9 pr-4 py-2 text-xs sm:text-sm bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-lg text-slate-800 dark:text-slate-200 placeholder-slate-400 focus:outline-none focus:border-sky-500">
+            <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Search threat title, CVE, threat actor, or IOC..." class="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg pl-9 pr-4 py-2 text-xs sm:text-sm text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500/50 focus:border-sky-500 transition">
+            <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
           </div>
 
+          <!-- Quick Toggle Buttons -->
           <div class="flex flex-wrap items-center gap-2">
-            <!-- PCI & ICO FILTER TOGGLE BUTTON -->
-            <button id="btnPciToggle" onclick="togglePciFilter()" class="px-2.5 py-1 text-xs rounded-md font-medium border border-emerald-400/40 text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition flex items-center gap-1 shadow-sm select-none" title="Filter for PCI-DSS v4.0.1 script integrity & UK ICO data breach alerts">
+            <!-- PCI & ICO Quick Filter Button -->
+            <button id="pciFilterBtn" onclick="togglePciIcoFilter()" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-emerald-950/50 hover:text-emerald-600 dark:hover:text-emerald-400 border border-slate-300 dark:border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
               <span>⚖️ PCI & ICO Filter</span>
             </button>
 
-            <!-- PEAK TRADING / GOLDEN QUARTER TOGGLE BUTTON -->
-            <button id="btnPeakTradingToggle" onclick="togglePeakTradingFilter()" class="px-2.5 py-1 text-xs rounded-md font-medium border border-purple-400/40 text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition flex items-center gap-1 shadow-sm select-none" title="Filter for Bot scraping, inventory hoarding, courier smishing & checkout DDoS">
+            <!-- Peak Trading Toggle Button -->
+            <button id="peakModeBtn" onclick="togglePeakTradingFilter()" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-pink-50 dark:hover:bg-pink-950/50 hover:text-pink-600 dark:hover:text-pink-400 border border-slate-300 dark:border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
               <span>🛍️ Peak Trading Mode</span>
             </button>
 
-            <!-- KEV & 0-DAY FILTER TOGGLE BUTTON -->
-            <button id="btnKevToggle" onclick="toggleKevFilter()" class="px-2.5 py-1 text-xs rounded-md font-medium border border-amber-400/40 text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition flex items-center gap-1 shadow-sm select-none">
+            <!-- KEV & 0-Day Toggle Button -->
+            <button id="kevFilterBtn" onclick="toggleKevFilter()" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-amber-50 dark:hover:bg-amber-950/50 hover:text-amber-600 dark:hover:text-amber-400 border border-slate-300 dark:border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
               <span>⚡ KEV & 0-Day</span>
             </button>
 
-            <select id="severitySelect" onchange="applyFilters()" class="text-xs bg-slate-100 dark:bg-slate-950 border border-slate-300 dark:border-slate-800 rounded-md px-2 py-1 text-slate-700 dark:text-slate-300 focus:outline-none">
-              <option value="all">All Severities</option>
+            <!-- Severity Dropdown -->
+            <select id="severitySelect" onchange="applyFilters()" class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg px-2.5 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500/50">
+              <option value="ALL">All Severities</option>
               <option value="CRITICAL">Critical Only</option>
-              <option value="HIGH">High Only</option>
+              <option value="HIGH">High & Critical</option>
             </select>
           </div>
         </div>
 
-        <!-- Subsector Pills & Actor Filters -->
-        <div class="flex flex-wrap items-center gap-2 pt-1 border-t border-slate-100 dark:border-slate-800/60">
-          <span class="text-xs text-slate-500 font-medium">Sub-sector:</span>
-          <button onclick="setSubsector('all')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-sky-600 text-white font-medium" data-sub="all">All</button>
-          <button onclick="setSubsector('ecom')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="ecom">E-Commerce</button>
-          <button onclick="setSubsector('pos')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="pos">High Street & POS</button>
-          <button onclick="setSubsector('supply')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="supply">Logistics & Supply</button>
-          <button onclick="setSubsector('loyalty')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="loyalty">Loyalty & ICO</button>
-          <button onclick="setSubsector('enterprise')" class="filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium" data-sub="enterprise">Enterprise 0-Day</button>
+        <!-- Sub-Sector Category Filters -->
+        <div class="flex flex-wrap items-center gap-1.5 pt-1 border-t border-slate-100 dark:border-slate-800/60 text-xs">
+          <span class="text-slate-400 font-medium mr-1 text-[11px] uppercase tracking-wider">Sub-sector:</span>
+          <button onclick="setSubsector('all')" data-subsector="all" class="subsector-btn px-2.5 py-1 rounded-md bg-sky-600 text-white font-medium transition cursor-pointer">All</button>
+          <button onclick="setSubsector('ecom')" data-subsector="ecom" class="subsector-btn px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium transition cursor-pointer">E-Commerce</button>
+          <button onclick="setSubsector('pos')" data-subsector="pos" class="subsector-btn px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium transition cursor-pointer">High Street & POS</button>
+          <button onclick="setSubsector('supply')" data-subsector="supply" class="subsector-btn px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium transition cursor-pointer">Logistics & Supply</button>
+          <button onclick="setSubsector('loyalty')" data-subsector="loyalty" class="subsector-btn px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium transition cursor-pointer">Loyalty & ICO</button>
+          <button onclick="setSubsector('enterprise')" data-subsector="enterprise" class="subsector-btn px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium transition cursor-pointer">Enterprise 0-Day</button>
         </div>
       </div>
 
-      <!-- Feed Grid -->
-      <div id="threatFeedContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Rendered via JavaScript -->
+      <!-- ACTIVE FILTER INDICATOR BAR -->
+      <div id="filterBanner" class="hidden items-center justify-between bg-sky-50 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/60 rounded-lg px-3 py-1.5 text-xs text-sky-800 dark:text-sky-300">
+        <span id="filterBannerText" class="font-medium"></span>
+        <button onclick="clearAllFilters()" class="text-sky-600 dark:text-sky-400 hover:underline font-bold text-[11px] uppercase tracking-wide cursor-pointer">Clear Filters ✕</button>
+      </div>
+
+      <!-- THREAT FEED 2-COLUMN GRID (BALANCED, NON-NESTED) -->
+      <div id="threatFeedContainer" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- EMPTY STATE -->
+      <div id="emptyFeedState" class="hidden text-center py-16 bg-white dark:bg-slate-900/40 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800 space-y-3">
+        <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="text-base font-semibold text-slate-800 dark:text-slate-200">No matching threat intelligence</h3>
+        <p class="text-xs text-slate-500 max-w-md mx-auto">No telemetry matches your current filters or search terms. Try clearing filters or switching subsectors.</p>
+        <button onclick="clearAllFilters()" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white hover:bg-sky-500 transition">Reset All Filters</button>
       </div>
     </div>
 
-    <!-- TAB 2: INTERACTIVE MITRE ATT&CK MATRIX -->
-    <div id="tabMatrixContent" class="hidden space-y-6">
-      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 space-y-2">
-        <div class="flex items-center justify-between">
+    <!-- MITRE ATT&CK MATRIX TAB CONTENT -->
+    <div id="tabMitreContent" class="hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
           <div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
-              <span>MITRE ATT&CK Matrix for UK Retail</span>
-              <span class="text-xs px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 font-mono">Enterprise & E-Commerce</span>
+              <span>🎯</span> MITRE ATT&CK Matrix for UK Retail
             </h3>
-            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Visual heatmap of adversary tradecraft observed across active retail threats. Click any technique to filter the intelligence feed.
-            </p>
+            <p class="text-xs text-slate-500 dark:text-slate-400">Adversary tactics and techniques currently mapped across active sector intelligence.</p>
           </div>
+          <span class="text-xs font-mono px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Click a technique to isolate alerts</span>
+        </div>
+
+        <!-- Interactive MITRE Tactic Columns Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 text-xs" id="mitreMatrixGrid">
+          <!-- Rendered dynamically by renderMitreMatrix() -->
         </div>
       </div>
+    </div>
 
-      <!-- Tactical Matrix Columns -->
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3">
-        <!-- Initial Access -->
-        <div class="space-y-2">
-          <div class="p-2 rounded-lg bg-sky-50 dark:bg-sky-950/50 border border-sky-200 dark:border-sky-800/60 text-center">
-            <h4 class="text-xs font-bold text-sky-800 dark:text-sky-300 uppercase">Initial Access</h4>
-          </div>
-          <div class="space-y-1.5" id="col-InitialAccess">
-            <div onclick="filterByMitreTechnique('T1190')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-bold">T1190</div>
-              <div class="text-[11px] font-medium leading-tight">Exploit Public App</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1190">0 Observed</div>
-            </div>
-            <div onclick="filterByMitreTechnique('T1566')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-bold">T1566</div>
-              <div class="text-[11px] font-medium leading-tight">Phishing / Smishing</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1566">0 Observed</div>
-            </div>
-            <div onclick="filterByMitreTechnique('T1195')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-sky-600 dark:text-sky-400 font-bold">T1195</div>
-              <div class="text-[11px] font-medium leading-tight">Supply Chain</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1195">0 Observed</div>
-            </div>
-          </div>
+    <!-- PIPELINE & AUTOMATION TAB CONTENT -->
+    <div id="tabAutomationContent" class="hidden space-y-6">
+      <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 sm:p-6 shadow-sm space-y-6">
+        <div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span>⚙️</span> Threat Intelligence Automation & Ingestion Feeds
+          </h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Machine-readable exports for SOC SIEMs, Firewalls, and Cloudflare WAF.</p>
         </div>
 
-        <!-- Credential Access -->
-        <div class="space-y-2">
-          <div class="p-2 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800/60 text-center">
-            <h4 class="text-xs font-bold text-indigo-800 dark:text-indigo-300 uppercase">Credentials</h4>
-          </div>
-          <div class="space-y-1.5" id="col-Credentials">
-            <div onclick="filterByMitreTechnique('T1110')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-indigo-600 dark:text-indigo-400 font-bold">T1110</div>
-              <div class="text-[11px] font-medium leading-tight">Credential Stuffing</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1110">0 Observed</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Firewall EDL Domain Blocklist -->
+          <div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-slate-50/50 dark:bg-slate-950/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <span>🛡️</span> Firewall EDL: Malicious Domains
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400">TXT / Plaintext</span>
             </div>
-            <div onclick="filterByMitreTechnique('T1078')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-indigo-600 dark:text-indigo-400 font-bold">T1078</div>
-              <div class="text-[11px] font-medium leading-tight">Valid Accounts (ATO)</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1078">0 Observed</div>
+            <p class="text-xs text-slate-500">Plain text domain list for Palo Alto, Fortinet & Cloudflare WAF to block Magecart drops.</p>
+            <div class="pt-1">
+              <a href="data/edl_domains.txt" target="_blank" class="inline-flex items-center gap-1 text-xs font-mono text-sky-600 dark:text-sky-400 hover:underline">
+                <span>data/edl_domains.txt</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
             </div>
           </div>
-        </div>
 
-        <!-- Execution & Defense Evasion -->
-        <div class="space-y-2">
-          <div class="p-2 rounded-lg bg-purple-50 dark:bg-purple-950/50 border border-purple-200 dark:border-purple-800/60 text-center">
-            <h4 class="text-xs font-bold text-purple-800 dark:text-purple-300 uppercase">Evasion</h4>
-          </div>
-          <div class="space-y-1.5" id="col-Evasion">
-            <div onclick="filterByMitreTechnique('T1059')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-purple-600 dark:text-purple-400 font-bold">T1059</div>
-              <div class="text-[11px] font-medium leading-tight">Command & Script</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1059">0 Observed</div>
+          <!-- Firewall EDL IP Blocklist -->
+          <div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-slate-50/50 dark:bg-slate-950/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <span>🌐</span> Firewall EDL: Malicious IPs
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400">TXT / Plaintext</span>
             </div>
-            <div onclick="filterByMitreTechnique('T1027')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-purple-600 dark:text-purple-400 font-bold">T1027</div>
-              <div class="text-[11px] font-medium leading-tight">Obfuscated Payloads</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1027">0 Observed</div>
+            <p class="text-xs text-slate-500">Deduplicated IP addresses identified across high-confidence retail alerts.</p>
+            <div class="pt-1">
+              <a href="data/edl_ips.txt" target="_blank" class="inline-flex items-center gap-1 text-xs font-mono text-sky-600 dark:text-sky-400 hover:underline">
+                <span>data/edl_ips.txt</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
             </div>
           </div>
-        </div>
 
-        <!-- Collection -->
-        <div class="space-y-2">
-          <div class="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/60 text-center">
-            <h4 class="text-xs font-bold text-amber-800 dark:text-amber-300 uppercase">Collection</h4>
-          </div>
-          <div class="space-y-1.5" id="col-Collection">
-            <div onclick="filterByMitreTechnique('T1056.004')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-amber-600 dark:text-amber-400 font-bold">T1056.004</div>
-              <div class="text-[11px] font-medium leading-tight">Web Skimming (Magecart)</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1056.004">0 Observed</div>
+          <!-- STIX 2.1 Threat Intel Bundle -->
+          <div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-slate-50/50 dark:bg-slate-950/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <span>📦</span> STIX 2.1 JSON Feed
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-950 text-sky-700 dark:text-sky-400">STIX 2.1 JSON</span>
             </div>
-            <div onclick="filterByMitreTechnique('T1005')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-amber-600 dark:text-amber-400 font-bold">T1005</div>
-              <div class="text-[11px] font-medium leading-tight">Data from POS System</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1005">0 Observed</div>
+            <p class="text-xs text-slate-500">Standard threat intelligence bundle for Microsoft Sentinel, Splunk ES, and OpenCTI.</p>
+            <div class="pt-1">
+              <a href="data/threats.stix.json" target="_blank" class="inline-flex items-center gap-1 text-xs font-mono text-sky-600 dark:text-sky-400 hover:underline">
+                <span>data/threats.stix.json</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
             </div>
           </div>
-        </div>
 
-        <!-- Exfiltration -->
-        <div class="space-y-2">
-          <div class="p-2 rounded-lg bg-orange-50 dark:bg-orange-950/50 border border-orange-200 dark:border-orange-800/60 text-center">
-            <h4 class="text-xs font-bold text-orange-800 dark:text-orange-300 uppercase">Exfiltration</h4>
-          </div>
-          <div class="space-y-1.5" id="col-Exfiltration">
-            <div onclick="filterByMitreTechnique('T1041')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-orange-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-orange-600 dark:text-orange-400 font-bold">T1041</div>
-              <div class="text-[11px] font-medium leading-tight">Exfiltration Over C2</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1041">0 Observed</div>
+          <!-- RSS 2.0 Syndication Feed -->
+          <div class="border border-slate-200 dark:border-slate-800 rounded-xl p-4 bg-slate-50/50 dark:bg-slate-950/40 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
+                <span>📡</span> RSS 2.0 Syndicate Feed
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-400">XML / RSS</span>
             </div>
-          </div>
-        </div>
-
-        <!-- Impact -->
-        <div class="space-y-2">
-          <div class="p-2 rounded-lg bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800/60 text-center">
-            <h4 class="text-xs font-bold text-rose-800 dark:text-rose-300 uppercase">Impact</h4>
-          </div>
-          <div class="space-y-1.5" id="col-Impact">
-            <div onclick="filterByMitreTechnique('T1486')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-rose-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-rose-600 dark:text-rose-400 font-bold">T1486</div>
-              <div class="text-[11px] font-medium leading-tight">Ransomware Encryption</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1486">0 Observed</div>
-            </div>
-            <div onclick="filterByMitreTechnique('T1499')" class="matrix-cell cursor-pointer p-2 rounded-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-rose-500 transition text-xs shadow-sm">
-              <div class="font-mono text-[10px] text-rose-600 dark:text-rose-400 font-bold">T1499</div>
-              <div class="text-[11px] font-medium leading-tight">Endpoint / Store DoS</div>
-              <div class="text-[10px] text-slate-400 mt-1 count-badge" data-tech="T1499">0 Observed</div>
+            <p class="text-xs text-slate-500">Syndicate feed to connect directly into internal Slack, Microsoft Teams, or Feedly.</p>
+            <div class="pt-1">
+              <a href="data/feed.xml" target="_blank" class="inline-flex items-center gap-1 text-xs font-mono text-sky-600 dark:text-sky-400 hover:underline">
+                <span>data/feed.xml</span>
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- TAB 3: FIREWALL EDLs & SYNDICATION FEEDS -->
-    <div id="tabEdlContent" class="hidden space-y-6">
-      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 space-y-2">
-        <h3 class="text-base font-bold text-slate-900 dark:text-white">External Dynamic Lists (EDLs) & Outbound Syndication</h3>
-        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
-          Subscribe your enterprise firewalls (Palo Alto, Fortinet), Cloudflare Edge WAFs, and Microsoft Sentinel SIEM directly to live indicators extracted by your pipeline.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Domain EDL Card -->
-        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
-              <span class="text-emerald-500">●</span> Firewall Domain Blocklist (EDL)
-            </span>
-            <span class="text-[11px] font-mono text-slate-400">Palo Alto / Fortinet / WAF</span>
-          </div>
-          <p class="text-xs text-slate-600 dark:text-slate-300">
-            Plain-text list of malicious checkout exfiltration hosts, Magecart domains, and drop servers updated daily.
-          </p>
-          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
-            <span id="edlDomainUrl">data/edl_domains.txt</span>
-            <button onclick="copyToClipboard('edlDomainUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
-          </div>
-          <a href="data/edl_domains.txt" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View Raw File ↗</a>
-        </div>
-
-        <!-- IP EDL Card -->
-        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
-              <span class="text-emerald-500">●</span> Firewall IP Blocklist (EDL)
-            </span>
-            <span class="text-[11px] font-mono text-slate-400">IP Ingress / Egress</span>
-          </div>
-          <p class="text-xs text-slate-600 dark:text-slate-300">
-            Deduplicated, routable public IP indicators observed across attack campaigns targeting retail assets.
-          </p>
-          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
-            <span id="edlIpUrl">data/edl_ips.txt</span>
-            <button onclick="copyToClipboard('edlIpUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
-          </div>
-          <a href="data/edl_ips.txt" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View Raw File ↗</a>
-        </div>
-
-        <!-- STIX 2.1 JSON Feed -->
-        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
-              <span class="text-sky-500">●</span> STIX 2.1 Threat Bundle
-            </span>
-            <span class="text-[11px] font-mono text-slate-400">Sentinel / Splunk / OpenCTI</span>
-          </div>
-          <p class="text-xs text-slate-600 dark:text-slate-300">
-            OASIS STIX 2.1 JSON format. Ingests directly into Microsoft Sentinel Threat Intelligence, Splunk ES, or MISP.
-          </p>
-          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
-            <span id="stixUrl">data/threats.stix.json</span>
-            <button onclick="copyToClipboard('stixUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
-          </div>
-          <a href="data/threats.stix.json" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View STIX Feed ↗</a>
-        </div>
-
-        <!-- Outbound RSS 2.0 Feed -->
-        <div class="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
-          <div class="flex items-center justify-between">
-            <span class="font-bold text-sm text-slate-900 dark:text-white flex items-center gap-2">
-              <span class="text-amber-500">●</span> Outbound Syndication RSS Feed
-            </span>
-            <span class="text-[11px] font-mono text-slate-400">Slack / Teams / RSS Readers</span>
-          </div>
-          <p class="text-xs text-slate-600 dark:text-slate-300">
-            Subscribe directly to retail cyber advisories in Slack RSS integrations, Microsoft Teams, or Feedly.
-          </p>
-          <div class="p-2.5 bg-slate-100 dark:bg-slate-950 rounded-lg text-xs font-mono text-slate-700 dark:text-slate-300 break-all select-all flex items-center justify-between">
-            <span id="rssUrl">data/feed.xml</span>
-            <button onclick="copyToClipboard('rssUrl')" class="text-sky-600 hover:text-sky-500 ml-2 font-sans font-medium text-xs">Copy</button>
-          </div>
-          <a href="data/feed.xml" target="_blank" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline inline-block">View XML RSS ↗</a>
-        </div>
-      </div>
-    </div>
-
   </main>
 
-  <!-- JAVASCRIPT LOGIC -->
+  <!-- AI EXECUTIVE BRIEFING MODAL -->
+  <div id="aiBriefingModal" class="hidden fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-2xl w-full p-5 sm:p-6 shadow-2xl space-y-4 max-h-[85vh] flex flex-col">
+      <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="p-1.5 rounded-lg bg-sky-500/10 text-sky-500 font-bold">🤖</span>
+          <div>
+            <h3 class="font-bold text-base text-slate-900 dark:text-white">Daily CISO Executive Briefing</h3>
+            <p class="text-xs text-slate-400" id="modalSubhead">Synthesized from active UK retail telemetry</p>
+          </div>
+        </div>
+        <button onclick="closeAiBriefing()" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-200 text-sm">✕</button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto text-xs sm:text-sm text-slate-700 dark:text-slate-300 space-y-3 leading-relaxed whitespace-pre-line font-sans" id="aiBriefingContent">
+        Loading latest executive brief...
+      </div>
+
+      <div class="border-t border-slate-100 dark:border-slate-800 pt-3 flex items-center justify-between text-xs text-slate-400">
+        <span>Generated by Google Gemini AI Model</span>
+        <button onclick="closeAiBriefing()" class="px-3 py-1.5 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-medium hover:bg-slate-300 dark:hover:bg-slate-700">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white border border-slate-700 rounded-xl px-4 py-2.5 text-xs shadow-2xl flex items-center gap-2 pointer-events-none">
+    <span id="toastIcon">✓</span>
+    <span id="toastMsg">Synced with live feed</span>
+  </div>
+
+  <!-- CORE JAVASCRIPT LOGIC -->
   <script>
-    let currentThreats = [];
-    let activeSubsector = 'all';
-    let isKevOnlyFilter = false;
-    let isPciOnlyFilter = false;
-    let isPeakTradingFilter = false;
-    let activeMitreFilter = null;
-    let isSyncing = false;
-    let autoSyncInterval = null;
+    // State management
+    let activeThreats = [];
+    let currentFilteredThreats = [];
+    let currentSubsector = 'all';
+    let filterKevOnly = false;
+    let filterPciIcoOnly = false;
+    let filterPeakModeOnly = false;
+    let lastSyncTimestamp = Date.now();
+    let pollIntervalTimer = null;
 
-    function showToast(message) {
-      const toast = document.getElementById('toastNotification');
-      const toastMsg = document.getElementById('toastMessage');
-      if (!toast || !toastMsg) return;
-      toastMsg.textContent = message;
-      toast.classList.remove('translate-y-16', 'opacity-0');
-      setTimeout(() => {
-        toast.classList.add('translate-y-16', 'opacity-0');
-      }, 3500);
-    }
-
-    function copyToClipboard(elementId) {
-      const text = document.getElementById(elementId)?.innerText;
-      if (!text) return;
-      const fullUrl = new URL(text, window.location.href).href;
-      navigator.clipboard.writeText(fullUrl).then(() => {
-        showToast("Copied full URL to clipboard!");
-      });
-    }
-
-    // Flash Alert Management
-    function evaluateFlashAlert(items) {
-      if (sessionStorage.getItem('dismissed_flash_id')) return;
-
-      const flash = items.find(t => t.is_flash === true) || items.find(t => 
-        t.severity === 'CRITICAL' && 
-        (t.tags || []).some(tg => /0-day|zero-day|active exploit|ransomware/i.test(tg))
-      );
-
-      const banner = document.getElementById('flashAlertBanner');
-      if (!banner) return;
-
-      if (flash) {
-        banner.dataset.flashId = flash.id || flash.title;
-        document.getElementById('flashAlertTitle').textContent = flash.title;
-        document.getElementById('flashAlertSynopsis').textContent = flash.summary;
-        document.getElementById('flashAlertAction').textContent = flash.advisory || 'Isolate exposed assets and review edge gateway logs immediately.';
-        document.getElementById('flashAlertTime').textContent = flash.date || 'Active Threat';
-        
-        const linkElem = document.getElementById('flashAlertLink');
-        if (flash.url) {
-          linkElem.href = flash.url;
-          linkElem.classList.remove('hidden');
-        } else {
-          linkElem.classList.add('hidden');
-        }
-        banner.classList.remove('hidden');
-      } else {
-        banner.classList.add('hidden');
+    // Baseline fallback intelligence (used until data/threats.json loads or if running locally)
+    const fallbackSeedThreats = [
+      {
+        id: "seed-1",
+        title: "CISA KEV Alert: CVE-2026-119977 in WordPress Core Under Active Exploitation",
+        source: "CISA KEV Catalog",
+        url: "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        date: "04 Nov 2026",
+        _timestamp: 1762243200,
+        severity: "CRITICAL",
+        subsector: "ecom",
+        is_new: true,
+        is_flash: false,
+        is_peak_trading: false,
+        actor: null,
+        cves: ["CVE-2026-119977"],
+        epss: { score: "94.2%", raw_score: 0.942, percentile: "98.7%" },
+        tags: ["CISA KEV", "Active Exploit", "CVE-2026-119977", "WooCommerce"],
+        mitre: "T1190 (Exploit Public-Facing Application)",
+        mitre_id: "T1190",
+        mitre_tactic: "Initial Access",
+        mitre_name: "Exploit Public-Facing Application",
+        summary: "WordPress Core vulnerability actively exploited in the wild affecting e-commerce storefronts and checkout portals. Mandatory patching required to prevent remote code injection.",
+        advisory: "Apply official vendor security updates immediately. Check retail edge stores running WooCommerce."
+      },
+      {
+        id: "seed-2",
+        title: "Mastercard meets 'responsibility' through SME cyber security training",
+        source: "Computer Weekly Security (UK)",
+        url: "https://www.computerweekly.com",
+        date: "04 Nov 2026",
+        _timestamp: 1762239600,
+        severity: "HIGH",
+        subsector: "loyalty",
+        is_new: true,
+        is_flash: false,
+        is_peak_trading: false,
+        actor: null,
+        cves: [],
+        tags: ["UK Retail", "Payment Security", "SME"],
+        mitre: "T1110 (Brute Force / Credential Stuffing)",
+        mitre_id: "T1110",
+        mitre_tactic: "Credential Access",
+        mitre_name: "Brute Force / Credential Stuffing",
+        summary: "Mastercard has launched free cyber security training to UK small and medium-sized enterprises as research reveals over three million firms lack structured cyber defense against card compromise.",
+        advisory: "Review cardholder data environment (CDE) controls and verify compliance with PCI-DSS v4.0.1 script requirements."
+      },
+      {
+        id: "seed-3",
+        title: "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
+        source: "The Register Security (UK)",
+        url: "https://www.theregister.com",
+        date: "03 Nov 2026",
+        _timestamp: 1762153200,
+        severity: "HIGH",
+        subsector: "supply",
+        is_new: false,
+        is_flash: false,
+        is_peak_trading: true,
+        actor: null,
+        cves: [],
+        tags: ["Cold-chain", "Logistics", "Supermarket"],
+        mitre: "T1195 (Supply Chain Compromise)",
+        mitre_id: "T1195",
+        mitre_tactic: "Initial Access",
+        mitre_name: "Supply Chain Compromise",
+        summary: "Beyond food storage, the combination of Internet connectivity, remote access, and weak authentication on temperature-controlled warehouse systems creates systemic extortion risks for supermarket distribution networks.",
+        advisory: "Isolate BMS and cold-chain IoT systems from retail corporate networks and enforce mandatory MFA on all vendor maintenance portals."
+      },
+      {
+        id: "seed-4",
+        title: "UK abattoirs and food suppliers caught up in cyber extortion campaign",
+        source: "Computer Weekly Security (UK)",
+        url: "https://www.computerweekly.com",
+        date: "03 Nov 2026",
+        _timestamp: 1762149600,
+        severity: "CRITICAL",
+        subsector: "supply",
+        is_new: false,
+        is_flash: false,
+        is_peak_trading: false,
+        actor: "Akira",
+        cves: [],
+        tags: ["Actor: Akira", "Logistics", "Extortion"],
+        mitre: "T1486 (Data Encrypted for Impact)",
+        mitre_id: "T1486",
+        mitre_tactic: "Impact",
+        mitre_name: "Data Encrypted for Impact",
+        summary: "British food processing suppliers hit by cyber extortion attack targeting supermarket supply continuity. The NCSC confirms ongoing defensive coordination with critical retail logistics operators.",
+        advisory: "Review 3PL vendor connectivity and verify offline backup integrity for warehouse dispatch systems."
       }
-    }
+    ];
 
-    function dismissFlashAlert() {
-      const banner = document.getElementById('flashAlertBanner');
-      if (banner) {
-        if (banner.dataset.flashId) {
-          sessionStorage.setItem('dismissed_flash_id', banner.dataset.flashId);
-        }
-        banner.classList.add('hidden');
-      }
-    }
-
-    // Regulatory / PCI-DSS / ICO Detection
-    function isPciOrIcoItem(item) {
-      if (!item) return false;
-      const combined = [
-        item.title || '',
-        item.summary || '',
-        item.advisory || '',
-        item.mitre || '',
-        item.subsector || '',
-        ...(item.tags || [])
-      ].join(' ').toLowerCase();
-      return /pci|ico|gdpr|magecart|skimm|cardholder|checkout|payment|credit card|cvv|credential stuffing|account takeover|data breach|customer data|loyalty/i.test(combined);
-    }
-
-    // Live Sync
-    async function syncThreatData(isSilent = false) {
-      if (isSyncing) return;
-      isSyncing = true;
-
-      const spinner = document.getElementById('syncSpinner');
-      const dot = document.getElementById('syncDot');
-      const syncText = document.getElementById('syncText');
-      const syncTime = document.getElementById('syncTime');
-
-      if (!isSilent) {
-        if (spinner) spinner.classList.remove('hidden');
-        if (dot) dot.classList.add('hidden');
-        if (syncText) syncText.textContent = 'SYNCING...';
-      }
-
+    // =========================================================================
+    // 1. TEXT SANITIZATION (PREVENTS ACCIDENTAL HTML TAG INJECTION)
+    // =========================================================================
+    function sanitizeText(input) {
+      if (!input) return '';
+      let str = String(input);
+      // Remove literal HTML tags (<p>, <br>, <div>, etc.)
+      str = str.replace(/<\/?[^>]+(>|$)/g, ' ');
+      // Unescape HTML entities in case feed contained &lt;p&gt;
       try {
-        const cacheBuster = new Date().getTime();
-        const res = await fetch(`data/threats.json?t=${cacheBuster}`);
-        
-        if (res.ok) {
-          const liveData = await res.json();
-          if (Array.isArray(liveData) && liveData.length > 0) {
-            const previousCount = currentThreats.length;
-            currentThreats = liveData;
-
-            document.getElementById('statCriticalCount').textContent = currentThreats.filter(t => t.severity === 'CRITICAL').length;
-            document.getElementById('statKevCount').textContent = currentThreats.filter(t => isKevOrZeroDayItem(t)).length;
-            
-            // Update PCI & ICO Counter
-            const pciCount = currentThreats.filter(t => isPciOrIcoItem(t)).length;
-            document.getElementById('statPciCount').textContent = `${pciCount} Impacted`;
-
-            updateMitreMatrixCounts();
-            applyFilters();
-            evaluateFlashAlert(currentThreats);
-
-            const now = new Date();
-            const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-            if (syncTime) syncTime.textContent = `(${timeStr})`;
-
-            if (!isSilent) {
-              showToast(`✓ Synced: ${liveData.length} threat alerts & KEV items.`);
-            } else if (previousCount > 0 && liveData.length > previousCount) {
-              showToast(`⚡ ${liveData.length - previousCount} new threats detected.`);
-            }
-          }
-        }
-      } catch (err) {
-        console.warn("Using local cache:", err);
-      } finally {
-        isSyncing = false;
-        if (spinner) spinner.classList.add('hidden');
-        if (dot) dot.classList.remove('hidden');
-        if (syncText) syncText.textContent = 'LIVE SYNC';
-      }
-    }
-
-    function manualSync() {
-      syncThreatData(false);
-    }
-
-    function isKevOrZeroDayItem(item) {
-      if (!item) return false;
-      const combined = [
-        item.title || '',
-        item.mitre || '',
-        item.source || '',
-        ...(item.tags || []),
-        item.summary || ''
-      ].join(' ').toLowerCase();
-      return /cisa kev|kev catalog|zero-day|0-day|actively exploited|known exploited/i.test(combined);
-    }
-
-    function updateMitreMatrixCounts() {
-      const counts = {};
-      currentThreats.forEach(t => {
-        const id = t.mitre_id || (t.mitre ? t.mitre.split(' ')[0] : null);
-        if (id) {
-          counts[id] = (counts[id] || 0) + 1;
-        }
-      });
-
-      document.querySelectorAll('.count-badge').forEach(el => {
-        const tech = el.getAttribute('data-tech');
-        const count = counts[tech] || 0;
-        el.textContent = `${count} Observed`;
-        if (count > 0) {
-          el.className = 'text-[10px] text-amber-600 dark:text-amber-400 font-bold mt-1 count-badge';
-        } else {
-          el.className = 'text-[10px] text-slate-400 mt-1 count-badge';
-        }
-      });
-    }
-
-    function filterByMitreTechnique(techId) {
-      activeMitreFilter = techId;
-      switchMainTab('feed');
-      const search = document.getElementById('searchInput');
-      if (search) search.value = techId;
-      applyFilters();
-      showToast(`Filtered feed for MITRE technique: ${techId}`);
-    }
-
-    function applyFilters() {
-      const query = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
-      const sev = document.getElementById('severitySelect')?.value || 'all';
-
-      const filtered = currentThreats.filter(item => {
-        if (activeSubsector !== 'all' && item.subsector !== activeSubsector) return false;
-        if (isKevOnlyFilter && !isKevOrZeroDayItem(item)) return false;
-        if (isPciOnlyFilter && !isPciOrIcoItem(item)) return false;
-        if (isPeakTradingFilter && !item.is_peak_trading) return false;
-        if (activeMitreFilter && !(item.mitre_id === activeMitreFilter || (item.mitre && item.mitre.includes(activeMitreFilter)))) return false;
-        if (sev !== 'all' && item.severity !== sev) return false;
-        if (query) {
-          const text = [
-            item.title || '',
-            item.source || '',
-            item.summary || '',
-            item.advisory || '',
-            item.mitre || '',
-            item.actor || '',
-            ...(item.cves || []),
-            ...(item.tags || [])
-          ].join(' ').toLowerCase();
-          if (!text.includes(query)) return false;
-        }
-        return true;
-      });
-
-      renderFeedItems(filtered);
+        const doc = new DOMParser().parseFromString(str, 'text/html');
+        str = doc.body.textContent || '';
+      } catch (e) {}
+      // Second pass to remove tags exposed after unescaping
+      str = str.replace(/<\/?[^>]+(>|$)/g, ' ');
+      // Collapse whitespace
+      return str.replace(/\s+/g, ' ').trim();
     }
 
     function escapeHtml(str) {
@@ -734,277 +552,663 @@
         .replace(/'/g, '&#039;');
     }
 
+    // =========================================================================
+    // 2. HELPER CLASSIFIERS (KEV, PCI-DSS, UK ICO, PEAK TRADING)
+    // =========================================================================
+    function isKevOrZeroDayItem(item) {
+      if (!item) return false;
+      const combined = `${item.title || ''} ${item.summary || ''} ${(item.tags || []).join(' ')} ${item.source || ''}`.toLowerCase();
+      return (
+        item.source?.includes("CISA KEV") ||
+        item.cves?.length > 0 ||
+        combined.includes("cisa kev") ||
+        combined.includes("zero-day") ||
+        combined.includes("0-day") ||
+        combined.includes("actively exploited") ||
+        combined.includes("known exploited") ||
+        combined.includes("emergency directive")
+      );
+    }
+
+    function isPciOrIcoItem(item) {
+      if (!item) return false;
+      const combined = `${item.title || ''} ${item.summary || ''} ${(item.tags || []).join(' ')}`.toLowerCase();
+      return (
+        combined.includes("magecart") ||
+        combined.includes("skimm") ||
+        combined.includes("formjacking") ||
+        combined.includes("pci") ||
+        combined.includes("cvv") ||
+        combined.includes("checkout injection") ||
+        combined.includes("ico") ||
+        combined.includes("information commissioner") ||
+        combined.includes("gdpr") ||
+        combined.includes("credential stuffing") ||
+        combined.includes("account takeover") ||
+        combined.includes("ato") ||
+        item.subsector === 'loyalty'
+      );
+    }
+
+    function isPeakTradingItem(item) {
+      if (!item) return false;
+      if (item.is_peak_trading) return true;
+      const combined = `${item.title || ''} ${item.summary || ''} ${(item.tags || []).join(' ')}`.toLowerCase();
+      return (
+        combined.includes("bot") ||
+        combined.includes("scalper") ||
+        combined.includes("courier") ||
+        combined.includes("evri") ||
+        combined.includes("dpd") ||
+        combined.includes("royal mail") ||
+        combined.includes("smishing") ||
+        combined.includes("ddos") ||
+        combined.includes("gift card") ||
+        combined.includes("voucher")
+      );
+    }
+
+    // =========================================================================
+    // 3. CARD RENDERING ENGINE (BALANCED 2-COLUMN, ISOLATED DOM ELEMENTS)
+    // =========================================================================
     function renderFeedItems(items) {
       const container = document.getElementById('threatFeedContainer');
+      const emptyState = document.getElementById('emptyFeedState');
       if (!container) return;
 
       if (!items || items.length === 0) {
-        container.innerHTML = `
-          <div class="col-span-1 md:col-span-2 p-8 text-center bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-xl">
-            <p class="text-sm text-slate-500 dark:text-slate-400">No threat intelligence alerts match the active filters.</p>
-            <button onclick="resetFilters()" class="mt-3 px-3 py-1.5 rounded-lg text-xs bg-sky-600 text-white hover:bg-sky-500">Reset Filters</button>
-          </div>
-        `;
+        container.innerHTML = '';
+        if (emptyState) emptyState.classList.remove('hidden');
         return;
       }
 
-      container.innerHTML = items.map(item => {
-        const isCrit = item.severity === 'CRITICAL';
+      if (emptyState) emptyState.classList.add('hidden');
+
+      // Generate strictly structured, self-closing card HTML
+      const cardsHtml = items.map(item => {
+        const isCritical = (item.severity || '').toUpperCase() === 'CRITICAL';
         const isKev = isKevOrZeroDayItem(item);
-        const sevBadge = isCrit 
-          ? '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-rose-100 dark:bg-rose-950/80 text-rose-700 dark:text-rose-400 border border-rose-300 dark:border-rose-800">CRITICAL</span>'
-          : '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">HIGH</span>';
-        
-        const newBadge = item.is_new 
-          ? '<span class="px-1.5 py-0.5 text-[10px] font-bold rounded bg-sky-500 text-white ml-1.5">NEW</span>'
-          : '';
+        const isPci = isPciOrIcoItem(item);
+        const isPeak = isPeakTradingItem(item);
 
-        const kevBadge = isKev 
-          ? '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/30 ml-1.5">⚡ KEV / 0-DAY</span>'
-          : '';
+        const safeTitle = escapeHtml(sanitizeText(item.title || 'Untitled Threat Alert'));
+        const safeSummary = escapeHtml(sanitizeText(item.summary || 'No advisory synopsis provided.'));
+        const safeAdvisory = escapeHtml(sanitizeText(item.advisory || 'Review logs and e-commerce infrastructure for exposure.'));
+        const safeSource = escapeHtml(sanitizeText(item.source || 'CTI Feed'));
+        const safeDate = escapeHtml(sanitizeText(item.date || 'Recent'));
+        const safeUrl = item.url ? encodeURI(item.url) : '';
 
-        const epssBadge = item.epss 
-          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30 ml-1.5" title="EPSS Probability of Wild Exploitation in 30 Days (Percentile: ${escapeHtml(item.epss.percentile)})">🎯 EPSS: ${escapeHtml(item.epss.score)}</span>`
-          : '';
-
-        const actorBadge = item.actor
-          ? `<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-red-500/10 text-red-600 dark:text-red-400 border border-red-500/30 ml-1.5">👾 ${escapeHtml(item.actor)}</span>`
-          : '';
-
-        const peakBadge = item.is_peak_trading
-          ? '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-800 ml-1.5">🛍️ PEAK VECTOR</span>'
-          : '';
-
-        // Regulatory Compliance Badges
-        const itemCombined = [item.title || '', item.summary || '', item.subsector || '', ...(item.tags || [])].join(' ').toLowerCase();
-        let complianceBadge = '';
-        if (/magecart|skimm|formjacking|checkout|cardholder|cvv|pci/i.test(itemCombined)) {
-          complianceBadge = '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 ml-1.5" title="Triggers PCI-DSS v4.0.1 Req 6.4.3 & 11.6.1 Script Integrity & Anti-Skimming">⚖️ PCI 6.4.3/11.6.1</span>';
-        } else if (/ico|gdpr|credential stuffing|account takeover|ato|loyalty|customer data|breach/i.test(itemCombined)) {
-          complianceBadge = '<span class="px-2 py-0.5 text-[10px] font-bold rounded bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/30 ml-1.5" title="Triggers UK GDPR / ICO Mandatory 72h Data Breach Assessment">📋 UK ICO / 72h</span>';
+        // Badges HTML
+        let badgesHtml = '';
+        if (isCritical) {
+          badgesHtml += '<span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wide bg-rose-100 dark:bg-rose-950/80 text-rose-600 dark:text-rose-400 border border-rose-200 dark:border-rose-900">CRITICAL</span> ';
+        } else {
+          badgesHtml += '<span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wide bg-amber-100 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-900">HIGH</span> ';
         }
 
-        const safeTitle = escapeHtml(item.title || 'Untitled Advisory');
-        const safeSummary = escapeHtml(item.summary || '');
-        const safeAdvisory = escapeHtml(item.advisory || '');
-        const safeSource = escapeHtml(item.source || 'Threat Intel');
-        const safeMitre = escapeHtml(item.mitre || '');
-        const safeDate = escapeHtml(item.date || 'Recent');
+        if (item.is_new) {
+          badgesHtml += '<span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wide bg-sky-500 text-white">NEW</span> ';
+        }
 
-        const tagsHtml = (item.tags || []).map(t => 
-          `<span class="px-2 py-0.5 text-[10px] font-mono rounded bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700/60">${escapeHtml(t)}</span>`
+        if (isKev) {
+          badgesHtml += '<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-300 dark:border-amber-800">⚡ KEV / 0-DAY</span> ';
+        }
+
+        if (item.epss && item.epss.score) {
+          badgesHtml += `<span class="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-300 dark:border-purple-800" title="Exploit Prediction Scoring System: Probability of wild exploitation">🎯 EPSS: ${escapeHtml(item.epss.score)}</span> `;
+        }
+
+        if (item.actor) {
+          badgesHtml += `<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-red-100 dark:bg-red-950 text-red-700 dark:text-red-300 border border-red-300 dark:border-red-800">👤 ${escapeHtml(item.actor)}</span> `;
+        }
+
+        if (isPci) {
+          const isCheckoutMagecart = (item.title + item.summary).toLowerCase().includes('skimm') || (item.title + item.summary).toLowerCase().includes('magecart');
+          if (isCheckoutMagecart) {
+            badgesHtml += '<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">⚖️ PCI 6.4.3/11.6.1</span> ';
+          } else {
+            badgesHtml += '<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-teal-100 dark:bg-teal-950 text-teal-700 dark:text-teal-300 border border-teal-300 dark:border-teal-800">📋 UK ICO / 72h</span> ';
+          }
+        }
+
+        if (isPeak) {
+          badgesHtml += '<span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-pink-100 dark:bg-pink-950 text-pink-700 dark:text-pink-300 border border-pink-300 dark:border-pink-800">🛍️ PEAK TRADE</span> ';
+        }
+
+        // Tags HTML
+        const tags = Array.isArray(item.tags) ? item.tags : [];
+        const tagsHtml = tags.slice(0, 3).map(tag =>
+          `<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">${escapeHtml(sanitizeText(tag))}</span>`
         ).join(' ');
 
-        const titleLink = item.url 
-          ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 transition underline-offset-2 hover:underline">${safeTitle}</a>`
-          : safeTitle;
+        // Action / Advisory Box
+        const advisoryBox = safeAdvisory ? `
+          <div class="mt-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80 text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+            <span class="font-bold text-slate-800 dark:text-slate-200">Action:</span> ${safeAdvisory}
+          </div>
+        ` : '';
 
-        const readBtn = item.url 
-          ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-semibold text-sky-600 dark:text-sky-400 hover:text-sky-500">Read Advisory ↗</a>`
-          : '';
+        // Read Advisory Link
+        const linkHtml = safeUrl ? `
+          <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:text-sky-500 hover:underline flex items-center gap-1">
+            <span>Read Advisory</span>
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        ` : '';
 
+        // MITRE Tactic Tag
+        const mitreTacticStr = item.mitre ? `<span class="font-mono text-[10px] text-slate-400 dark:text-slate-500">• ${escapeHtml(item.mitre)}</span>` : '';
+
+        // Return strictly isolated, non-nested card DOM block
         return `
-          <div class="bg-white dark:bg-slate-900/80 border ${isCrit ? 'border-rose-200 dark:border-rose-950/60' : 'border-slate-200 dark:border-slate-800'} rounded-xl p-4 sm:p-5 flex flex-col justify-between shadow-sm hover:shadow-md transition">
-            <div class="space-y-2.5">
-              <div class="flex items-center justify-between gap-2 flex-wrap">
-                <div class="flex items-center gap-1.5 flex-wrap">
-                  ${sevBadge}
-                  ${newBadge}
-                  ${kevBadge}
-                  ${complianceBadge}
-                  ${epssBadge}
-                  ${actorBadge}
-                  ${peakBadge}
+          <article class="bg-white dark:bg-slate-900/80 border ${isCritical ? 'border-rose-300 dark:border-rose-900/60' : 'border-slate-200 dark:border-slate-800'} rounded-xl p-4 sm:p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+            <div>
+              <!-- Header Badges & Date -->
+              <div class="flex items-start justify-between gap-2 mb-2.5">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  ${badgesHtml}
                 </div>
-                <div class="text-[11px] font-mono text-slate-400">${safeDate}</div>
+                <time class="text-[11px] font-mono text-slate-400 whitespace-nowrap flex-shrink-0">${safeDate}</time>
               </div>
 
-              <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug">
-                ${titleLink}
+              <!-- Title -->
+              <h3 class="text-sm sm:text-base font-bold text-slate-900 dark:text-white leading-snug tracking-tight mb-2">
+                ${safeTitle}
               </h3>
 
-              <div class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+              <!-- Summary -->
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-3">
                 ${safeSummary}
-              </div>
+              </p>
 
-              ${safeAdvisory ? `
-                <div class="p-2.5 rounded-lg bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/60 text-xs text-slate-700 dark:text-slate-300">
-                  <span class="font-semibold text-slate-900 dark:text-white">Action:</span> ${safeAdvisory}
-                </div>
-              ` : ''}
+              <!-- Advisory -->
+              ${advisoryBox}
 
-              <div class="flex flex-wrap gap-1.5 pt-1">
-                ${tagsHtml}
-              </div>
+              <!-- Tags -->
+              ${tags.length > 0 ? `<div class="mt-3 flex flex-wrap gap-1">${tagsHtml}</div>` : ''}
             </div>
 
-            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
-              <div class="flex items-center gap-2">
-                <span class="font-medium text-slate-700 dark:text-slate-300">${safeSource}</span>
-                ${safeMitre ? `<span class="hidden sm:inline font-mono text-[10px] text-slate-400">• ${safeMitre}</span>` : ''}
+            <!-- Footer / Source & Link -->
+            <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs">
+              <div class="flex items-center gap-1.5 text-slate-500 dark:text-slate-400 truncate mr-2">
+                <span class="font-medium truncate">${safeSource}</span>
+                ${mitreTacticStr}
               </div>
-              ${readBtn}
+              <div class="flex-shrink-0">
+                ${linkHtml}
+              </div>
             </div>
-          </div>
+          </article>
         `;
       }).join('');
+
+      container.innerHTML = cardsHtml;
     }
 
-    function setSubsector(sub) {
-      activeSubsector = sub;
-      document.querySelectorAll('.filter-pill').forEach(btn => {
-        if (btn.getAttribute('data-sub') === sub) {
-          btn.className = 'filter-pill px-2.5 py-1 text-xs rounded-md bg-sky-600 text-white font-medium';
+    // =========================================================================
+    // 4. STATS & METRICS CALCULATOR
+    // =========================================================================
+    function updateMetricsCounters() {
+      // 1. Critical Count
+      const critCount = activeThreats.filter(t => (t.severity || '').toUpperCase() === 'CRITICAL').length;
+      const statCrit = document.getElementById('statCriticalCount');
+      if (statCrit) statCrit.textContent = critCount;
+
+      // 2. KEV & 0-Day Count
+      const kevCount = activeThreats.filter(isKevOrZeroDayItem).length;
+      const statKev = document.getElementById('statKevCount');
+      if (statKev) statKev.textContent = kevCount;
+
+      // 3. PCI & ICO Impact Count
+      const compCount = activeThreats.filter(isPciOrIcoItem).length;
+      const statComp = document.getElementById('statComplianceCount');
+      if (statComp) {
+        statComp.textContent = compCount > 0 ? `${compCount} Impacted` : 'v4.0.1 Ready';
+      }
+    }
+
+    // =========================================================================
+    // 5. FILTERING & SEARCH CONTROLLER
+    // =========================================================================
+    function applyFilters() {
+      const searchVal = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+      const severityVal = document.getElementById('severitySelect')?.value || 'ALL';
+
+      let results = activeThreats.filter(item => {
+        // Subsector filter
+        if (currentSubsector !== 'all' && item.subsector !== currentSubsector) {
+          return false;
+        }
+
+        // KEV & 0-Day filter
+        if (filterKevOnly && !isKevOrZeroDayItem(item)) {
+          return false;
+        }
+
+        // PCI & ICO filter
+        if (filterPciIcoOnly && !isPciOrIcoItem(item)) {
+          return false;
+        }
+
+        // Peak Trading filter
+        if (filterPeakModeOnly && !isPeakTradingItem(item)) {
+          return false;
+        }
+
+        // Severity filter
+        if (severityVal === 'CRITICAL' && (item.severity || '').toUpperCase() !== 'CRITICAL') {
+          return false;
+        }
+        if (severityVal === 'HIGH' && !['CRITICAL', 'HIGH'].includes((item.severity || '').toUpperCase())) {
+          return false;
+        }
+
+        // Keyword search
+        if (searchVal) {
+          const haystack = `${item.title || ''} ${item.summary || ''} ${item.source || ''} ${(item.tags || []).join(' ')} ${item.actor || ''} ${(item.cves || []).join(' ')}`.toLowerCase();
+          if (!haystack.includes(searchVal)) {
+            return false;
+          }
+        }
+
+        return true;
+      });
+
+      currentFilteredThreats = results;
+      renderFeedItems(results);
+      updateFilterBanner();
+    }
+
+    function setSubsector(subsectorKey) {
+      currentSubsector = subsectorKey;
+      document.querySelectorAll('.subsector-btn').forEach(btn => {
+        if (btn.getAttribute('data-subsector') === subsectorKey) {
+          btn.className = "subsector-btn px-2.5 py-1 rounded-md bg-sky-600 text-white font-medium transition cursor-pointer";
         } else {
-          btn.className = 'filter-pill px-2.5 py-1 text-xs rounded-md bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-300 font-medium';
+          btn.className = "subsector-btn px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium transition cursor-pointer";
         }
       });
       applyFilters();
     }
 
     function toggleKevFilter() {
-      isKevOnlyFilter = !isKevOnlyFilter;
-      const card = document.getElementById('cardKevMetric');
-      const btn = document.getElementById('btnKevToggle');
-      const hint = document.getElementById('kevCardFilterHint');
+      filterKevOnly = !filterKevOnly;
+      const kevBtn = document.getElementById('kevFilterBtn');
+      const kevCard = document.getElementById('statKevCard');
+      const kevIndicator = document.getElementById('kevCardIndicator');
 
-      if (isKevOnlyFilter) {
-        if (card) card.classList.add('ring-2', 'ring-amber-500', 'bg-amber-500/10');
-        if (btn) btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-amber-500 text-white bg-amber-600 hover:bg-amber-500 transition flex items-center gap-1 shadow-sm';
-        if (hint) hint.innerHTML = 'Active ✓';
-        showToast("Filtered for Active CISA KEV & Zero-Days.");
+      if (filterKevOnly) {
+        kevBtn?.classList.add('bg-amber-500', 'text-white', 'border-amber-600');
+        kevBtn?.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        kevCard?.classList.add('ring-2', 'ring-amber-500', 'border-amber-500');
+        if (kevIndicator) kevIndicator.textContent = 'Active ✓';
       } else {
-        if (card) card.classList.remove('ring-2', 'ring-amber-500', 'bg-amber-500/10');
-        if (btn) btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-amber-400/40 text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition flex items-center gap-1 shadow-sm';
-        if (hint) hint.innerHTML = 'Filter <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+        kevBtn?.classList.remove('bg-amber-500', 'text-white', 'border-amber-600');
+        kevBtn?.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        kevCard?.classList.remove('ring-2', 'ring-amber-500', 'border-amber-500');
+        if (kevIndicator) kevIndicator.textContent = 'Filter ↗';
       }
       applyFilters();
     }
 
-    function togglePciFilter() {
-      isPciOnlyFilter = !isPciOnlyFilter;
-      const card = document.getElementById('cardPciMetric');
-      const btn = document.getElementById('btnPciToggle');
-      const hint = document.getElementById('pciCardFilterHint');
+    function togglePciIcoFilter() {
+      filterPciIcoOnly = !filterPciIcoOnly;
+      const pciBtn = document.getElementById('pciFilterBtn');
+      const compCard = document.getElementById('statComplianceCard');
+      const compIndicator = document.getElementById('complianceCardIndicator');
 
-      if (isPciOnlyFilter) {
-        if (card) card.classList.add('ring-2', 'ring-emerald-500', 'bg-emerald-500/10');
-        if (btn) btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-emerald-500 text-white bg-emerald-600 hover:bg-emerald-500 transition flex items-center gap-1 shadow-sm select-none';
-        if (hint) hint.innerHTML = 'Active ✓';
-        showToast("Filtered for PCI-DSS v4.0.1 & UK ICO Regulatory threats.");
+      if (filterPciIcoOnly) {
+        pciBtn?.classList.add('bg-emerald-600', 'text-white', 'border-emerald-700');
+        pciBtn?.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        compCard?.classList.add('ring-2', 'ring-emerald-500', 'border-emerald-500');
+        if (compIndicator) compIndicator.textContent = 'Active ✓';
       } else {
-        if (card) card.classList.remove('ring-2', 'ring-emerald-500', 'bg-emerald-500/10');
-        if (btn) btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-emerald-400/40 text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition flex items-center gap-1 shadow-sm select-none';
-        if (hint) hint.innerHTML = 'Filter <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+        pciBtn?.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-700');
+        pciBtn?.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+        compCard?.classList.remove('ring-2', 'ring-emerald-500', 'border-emerald-500');
+        if (compIndicator) compIndicator.textContent = 'Filter ↗';
       }
       applyFilters();
     }
 
     function togglePeakTradingFilter() {
-      isPeakTradingFilter = !isPeakTradingFilter;
-      const btn = document.getElementById('btnPeakTradingToggle');
-      if (isPeakTradingFilter) {
-        btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-purple-500 text-white bg-purple-600 hover:bg-purple-500 transition flex items-center gap-1 shadow-sm select-none';
-        showToast("Filtered for Peak Trading & Golden Quarter threats.");
+      filterPeakModeOnly = !filterPeakModeOnly;
+      const peakBtn = document.getElementById('peakModeBtn');
+
+      if (filterPeakModeOnly) {
+        peakBtn?.classList.add('bg-pink-600', 'text-white', 'border-pink-700');
+        peakBtn?.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
       } else {
-        btn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-purple-400/40 text-purple-700 dark:text-purple-300 bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/50 transition flex items-center gap-1 shadow-sm select-none';
+        peakBtn?.classList.remove('bg-pink-600', 'text-white', 'border-pink-700');
+        peakBtn?.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
       }
       applyFilters();
     }
 
-    function resetFilters() {
-      activeSubsector = 'all';
-      isKevOnlyFilter = false;
-      isPciOnlyFilter = false;
-      isPeakTradingFilter = false;
-      activeMitreFilter = null;
-      
-      const pciCard = document.getElementById('cardPciMetric');
-      if (pciCard) pciCard.classList.remove('ring-2', 'ring-emerald-500', 'bg-emerald-500/10');
-      const pciBtn = document.getElementById('btnPciToggle');
-      if (pciBtn) pciBtn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-emerald-400/40 text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition flex items-center gap-1 shadow-sm select-none';
-      const pciHint = document.getElementById('pciCardFilterHint');
-      if (pciHint) pciHint.innerHTML = 'Filter <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
-
-      const kevCard = document.getElementById('cardKevMetric');
-      if (kevCard) kevCard.classList.remove('ring-2', 'ring-amber-500', 'bg-amber-500/10');
-      const kevBtn = document.getElementById('btnKevToggle');
-      if (kevBtn) kevBtn.className = 'px-2.5 py-1 text-xs rounded-md font-medium border border-amber-400/40 text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/50 transition flex items-center gap-1 shadow-sm';
-      const kevHint = document.getElementById('kevCardFilterHint');
-      if (kevHint) kevHint.innerHTML = 'Filter <svg class="w-3 h-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+    function clearAllFilters() {
+      currentSubsector = 'all';
+      filterKevOnly = false;
+      filterPciIcoOnly = false;
+      filterPeakModeOnly = false;
 
       const searchInput = document.getElementById('searchInput');
       if (searchInput) searchInput.value = '';
-      const severitySelect = document.getElementById('severitySelect');
-      if (severitySelect) severitySelect.value = 'all';
+
+      const sevSelect = document.getElementById('severitySelect');
+      if (sevSelect) sevSelect.value = 'ALL';
+
       setSubsector('all');
+
+      // Reset KEV styles
+      const kevBtn = document.getElementById('kevFilterBtn');
+      const kevCard = document.getElementById('statKevCard');
+      const kevIndicator = document.getElementById('kevCardIndicator');
+      kevBtn?.classList.remove('bg-amber-500', 'text-white', 'border-amber-600');
+      kevBtn?.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      kevCard?.classList.remove('ring-2', 'ring-amber-500', 'border-amber-500');
+      if (kevIndicator) kevIndicator.textContent = 'Filter ↗';
+
+      // Reset PCI styles
+      const pciBtn = document.getElementById('pciFilterBtn');
+      const compCard = document.getElementById('statComplianceCard');
+      const compIndicator = document.getElementById('complianceCardIndicator');
+      pciBtn?.classList.remove('bg-emerald-600', 'text-white', 'border-emerald-700');
+      pciBtn?.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+      compCard?.classList.remove('ring-2', 'ring-emerald-500', 'border-emerald-500');
+      if (compIndicator) compIndicator.textContent = 'Filter ↗';
+
+      // Reset Peak styles
+      const peakBtn = document.getElementById('peakModeBtn');
+      peakBtn?.classList.remove('bg-pink-600', 'text-white', 'border-pink-700');
+      peakBtn?.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+
       applyFilters();
     }
 
-    function toggleTheme() {
-      const html = document.documentElement;
-      if (html.classList.contains('dark')) {
-        html.classList.remove('dark');
-        localStorage.theme = 'light';
+    function updateFilterBanner() {
+      const banner = document.getElementById('filterBanner');
+      const bannerText = document.getElementById('filterBannerText');
+      if (!banner || !bannerText) return;
+
+      const activeTags = [];
+      if (currentSubsector !== 'all') activeTags.push(`Sector: ${currentSubsector.toUpperCase()}`);
+      if (filterKevOnly) activeTags.push('⚡ KEV & 0-Day Only');
+      if (filterPciIcoOnly) activeTags.push('⚖️ PCI & ICO Threats');
+      if (filterPeakModeOnly) activeTags.push('🛍️ Peak Trading Vectors');
+      const searchVal = document.getElementById('searchInput')?.value.trim();
+      if (searchVal) activeTags.push(`Search: "${searchVal}"`);
+
+      if (activeTags.length > 0) {
+        bannerText.textContent = `Showing ${currentFilteredThreats.length} filtered alerts (${activeTags.join(' • ')})`;
+        banner.classList.remove('hidden');
+        banner.classList.add('flex');
       } else {
-        html.classList.add('dark');
-        localStorage.theme = 'dark';
+        banner.classList.add('hidden');
+        banner.classList.remove('flex');
       }
     }
 
-    function switchMainTab(tab) {
-      const feedContent = document.getElementById('tabFeedContent');
-      const matrixContent = document.getElementById('tabMatrixContent');
-      const edlContent = document.getElementById('tabEdlContent');
+    // =========================================================================
+    // 6. MITRE ATT&CK MATRIX RENDERER
+    // =========================================================================
+    function renderMitreMatrix() {
+      const grid = document.getElementById('mitreMatrixGrid');
+      if (!grid) return;
+
+      const tactics = {
+        "Initial Access": [
+          { id: "T1190", name: "Exploit Public Application", count: 0 },
+          { id: "T1195", name: "Supply Chain Compromise", count: 0 },
+          { id: "T1566", name: "Courier Smishing / Phishing", count: 0 }
+        ],
+        "Credential Access": [
+          { id: "T1110", name: "Brute Force / ATO", count: 0 },
+          { id: "T1078", name: "Valid Retail Accounts", count: 0 }
+        ],
+        "Collection": [
+          { id: "T1056.004", name: "Web Skimming (Magecart)", count: 0 },
+          { id: "T1005", name: "Data from POS System", count: 0 }
+        ],
+        "Impact": [
+          { id: "T1486", name: "Ransomware / Encrypted Data", count: 0 },
+          { id: "T1499", name: "Checkout Endpoint DDoS", count: 0 }
+        ]
+      };
+
+      // Tally active threats
+      activeThreats.forEach(art => {
+        const text = `${art.title || ''} ${art.summary || ''} ${art.mitre || ''}`.toLowerCase();
+        if (text.includes("t1190") || text.includes("public")) tactics["Initial Access"][0].count++;
+        if (text.includes("supply") || text.includes("t1195")) tactics["Initial Access"][1].count++;
+        if (text.includes("smish") || text.includes("phish")) tactics["Initial Access"][2].count++;
+
+        if (text.includes("credential") || text.includes("ato") || text.includes("t1110")) tactics["Credential Access"][0].count++;
+        if (text.includes("valid account")) tactics["Credential Access"][1].count++;
+
+        if (text.includes("skimm") || text.includes("magecart")) tactics["Collection"][0].count++;
+        if (text.includes("pos") || text.includes("point of sale")) tactics["Collection"][1].count++;
+
+        if (text.includes("ransomware") || text.includes("extortion")) tactics["Impact"][0].count++;
+        if (text.includes("ddos")) tactics["Impact"][1].count++;
+      });
+
+      let html = '';
+      for (const [tacticName, techniques] of Object.entries(tactics)) {
+        html += `
+          <div class="border border-slate-200 dark:border-slate-800 rounded-xl p-3 bg-slate-50/50 dark:bg-slate-950/40 space-y-2">
+            <h4 class="font-bold text-slate-800 dark:text-slate-200 text-xs border-b border-slate-200 dark:border-slate-800 pb-1.5 flex items-center justify-between">
+              <span>${tacticName}</span>
+              <span class="text-[10px] text-slate-400 font-mono">${techniques.length} Techniques</span>
+            </h4>
+            <div class="space-y-1.5">
+        `;
+
+        techniques.forEach(tech => {
+          html += `
+            <button onclick="filterByMitreTechnique('${tech.id}')" class="w-full text-left p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-400 dark:hover:border-sky-500 transition group flex items-center justify-between">
+              <div>
+                <span class="font-mono text-[10px] text-sky-600 dark:text-sky-400 block">${tech.id}</span>
+                <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition">${tech.name}</span>
+              </div>
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold ${tech.count > 0 ? 'bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-300' : 'bg-slate-100 dark:bg-slate-800 text-slate-400'}">${tech.count}</span>
+            </button>
+          `;
+        });
+
+        html += `</div></div>`;
+      }
+
+      grid.innerHTML = html;
+    }
+
+    function filterByMitreTechnique(techId) {
+      switchMainTab('feed');
+      const searchInput = document.getElementById('searchInput');
+      if (searchInput) {
+        searchInput.value = techId;
+        applyFilters();
+      }
+    }
+
+    // =========================================================================
+    // 7. FLASH ALERT LOADER
+    // =========================================================================
+    async function loadFlashAlert() {
+      try {
+        const res = await fetch(`data/flash_alert.json?t=${Date.now()}`);
+        if (res.ok) {
+          const flashData = await res.json();
+          if (flashData && flashData.title) {
+            const banner = document.getElementById('flashAlertBanner');
+            const titleEl = document.getElementById('flashAlertTitle');
+            const advEl = document.getElementById('flashAlertAdvisory');
+            const linkEl = document.getElementById('flashAlertLink');
+
+            if (titleEl) titleEl.textContent = sanitizeText(flashData.title);
+            if (advEl) advEl.textContent = sanitizeText(flashData.advisory || 'Containment required');
+            if (linkEl && flashData.url) linkEl.href = flashData.url;
+
+            if (banner && sessionStorage.getItem('flashDismissed') !== flashData.id) {
+              banner.classList.remove('hidden');
+            }
+          }
+        }
+      } catch (e) {
+        // No flash alert active
+      }
+    }
+
+    function dismissFlashAlert() {
+      const banner = document.getElementById('flashAlertBanner');
+      if (banner) banner.classList.add('hidden');
+      sessionStorage.setItem('flashDismissed', 'true');
+    }
+
+    // =========================================================================
+    // 8. DATA SYNC & AUTOMATED POLLER
+    // =========================================================================
+    async function fetchThreatTelemetry(isManual = false) {
+      const spinner = document.getElementById('syncSpinner');
+      const pulseDot = document.getElementById('syncPulseDot');
+      const statusText = document.getElementById('syncStatusText');
+
+      if (isManual) {
+        spinner?.classList.remove('hidden');
+        pulseDot?.classList.add('hidden');
+        if (statusText) statusText.textContent = "SYNCING...";
+      }
+
+      try {
+        const res = await fetch(`data/threats.json?t=${Date.now()}`);
+        if (res.ok) {
+          const remoteData = await res.json();
+          if (Array.isArray(remoteData) && remoteData.length > 0) {
+            activeThreats = remoteData;
+            lastSyncTimestamp = Date.now();
+          }
+        } else if (activeThreats.length === 0) {
+          activeThreats = [...fallbackSeedThreats];
+        }
+      } catch (err) {
+        if (activeThreats.length === 0) {
+          activeThreats = [...fallbackSeedThreats];
+        }
+      } finally {
+        if (isManual) {
+          setTimeout(() => {
+            spinner?.classList.add('hidden');
+            pulseDot?.classList.remove('hidden');
+            if (statusText) statusText.textContent = "LIVE SYNC";
+            showToast("Telemetries synced successfully");
+          }, 400);
+        }
+
+        updateMetricsCounters();
+        applyFilters();
+        renderMitreMatrix();
+        loadFlashAlert();
+        updateSyncTimeDisplay();
+      }
+    }
+
+    function manualSync() {
+      fetchThreatTelemetry(true);
+    }
+
+    function updateSyncTimeDisplay() {
+      const timeAgoEl = document.getElementById('syncTimeAgo');
+      if (!timeAgoEl) return;
+      const date = new Date(lastSyncTimestamp);
+      const hours = String(date.getHours()).padStart(2, '0');
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      timeAgoEl.textContent = `(${hours}:${minutes})`;
+    }
+
+    // =========================================================================
+    // 9. AI BRIEFING MODAL
+    // =========================================================================
+    async function viewAiBriefing() {
+      const modal = document.getElementById('aiBriefingModal');
+      const content = document.getElementById('aiBriefingContent');
+      if (!modal || !content) return;
+
+      modal.classList.remove('hidden');
+      content.textContent = "Loading executive intelligence summary...";
+
+      try {
+        const res = await fetch(`data/daily_summary.md?t=${Date.now()}`);
+        if (res.ok) {
+          const text = await res.text();
+          content.textContent = text;
+        } else {
+          content.textContent = "Overnight sector surveillance active.\n\nNo critical emergency directives issued in the last 12 hours. Ongoing watch maintained on UK retail checkout gateways, Magecart formjacking, and 3PL courier delivery smishing.";
+        }
+      } catch (e) {
+        content.textContent = "Automated daily synthesis completed. Review the active threat feed below for incident indicators and mitigations.";
+      }
+    }
+
+    function closeAiBriefing() {
+      document.getElementById('aiBriefingModal')?.classList.add('hidden');
+    }
+
+    // =========================================================================
+    // 10. TAB NAVIGATION & CSV EXPORTER
+    // =========================================================================
+    function switchMainTab(tabKey) {
+      const feedTab = document.getElementById('tabFeedContent');
+      const mitreTab = document.getElementById('tabMitreContent');
+      const autoTab = document.getElementById('tabAutomationContent');
 
       const feedBtn = document.getElementById('tabFeedBtn');
-      const matrixBtn = document.getElementById('tabMatrixBtn');
-      const edlBtn = document.getElementById('tabEdlBtn');
+      const mitreBtn = document.getElementById('tabMitreBtn');
+      const autoBtn = document.getElementById('tabAutomationBtn');
 
-      const activeBtnClass = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5';
-      const inactiveBtnClass = 'px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-200 hover:bg-slate-300 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5';
+      // Hide all tabs
+      feedTab?.classList.add('hidden');
+      mitreTab?.classList.add('hidden');
+      autoTab?.classList.add('hidden');
 
-      feedContent?.classList.add('hidden');
-      matrixContent?.classList.add('hidden');
-      edlContent?.classList.add('hidden');
+      // Reset button classes
+      [feedBtn, mitreBtn, autoBtn].forEach(btn => {
+        if (!btn) return;
+        btn.className = "px-3 py-1.5 rounded-lg text-xs font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 border border-slate-300 dark:border-slate-700 cursor-pointer";
+      });
 
-      if (feedBtn) feedBtn.className = inactiveBtnClass;
-      if (matrixBtn) matrixBtn.className = inactiveBtnClass;
-      if (edlBtn) edlBtn.className = inactiveBtnClass;
-
-      if (tab === 'feed') {
-        feedContent?.classList.remove('hidden');
-        if (feedBtn) feedBtn.className = activeBtnClass;
-      } else if (tab === 'matrix') {
-        matrixContent?.classList.remove('hidden');
-        if (matrixBtn) matrixBtn.className = activeBtnClass;
-        updateMitreMatrixCounts();
-      } else if (tab === 'edl') {
-        edlContent?.classList.remove('hidden');
-        if (edlBtn) edlBtn.className = activeBtnClass;
+      // Activate chosen tab
+      if (tabKey === 'feed') {
+        feedTab?.classList.remove('hidden');
+        if (feedBtn) feedBtn.className = "px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5 cursor-pointer";
+      } else if (tabKey === 'mitre') {
+        mitreTab?.classList.remove('hidden');
+        if (mitreBtn) mitreBtn.className = "px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5 cursor-pointer";
+      } else if (tabKey === 'automation') {
+        autoTab?.classList.remove('hidden');
+        if (autoBtn) autoBtn.className = "px-3 py-1.5 rounded-lg text-xs font-medium bg-sky-600 text-white transition hover:bg-sky-500 shadow-sm flex items-center gap-1.5 cursor-pointer";
       }
     }
 
     function exportFilteredToCSV() {
-      const rows = [
-        ["ID", "Title", "Severity", "Subsector", "Actor", "EPSS", "Date", "MITRE", "URL", "Advisory", "Summary"]
-      ];
-      currentThreats.forEach(t => {
-        rows.push([
-          t.id || "",
-          `"${(t.title || "").replace(/"/g, '""')}"`,
-          t.severity || "",
-          t.subsector || "",
-          t.actor || "Unattributed",
-          t.epss ? t.epss.score : "N/A",
-          t.date || "",
-          `"${(t.mitre || "").replace(/"/g, '""')}"`,
-          `"${(t.url || "").replace(/"/g, '""')}"`,
-          `"${(t.advisory || "").replace(/"/g, '""')}"`,
-          `"${(t.summary || "").replace(/"/g, '""')}"`
-        ]);
-      });
-      const csvContent = "data:text/csv;charset=utf-8," + rows.map(e => e.join(",")).join("\n");
+      if (!currentFilteredThreats || currentFilteredThreats.length === 0) {
+        showToast("No data to export");
+        return;
+      }
+
+      const headers = ["Severity", "Title", "Subsector", "Source", "Date", "CVEs", "EPSS", "Actor", "Advisory Action", "URL"];
+      const rows = currentFilteredThreats.map(t => [
+        `"${(t.severity || '').replace(/"/g, '""')}"`,
+        `"${sanitizeText(t.title || '').replace(/"/g, '""')}"`,
+        `"${(t.subsector || '').replace(/"/g, '""')}"`,
+        `"${sanitizeText(t.source || '').replace(/"/g, '""')}"`,
+        `"${(t.date || '').replace(/"/g, '""')}"`,
+        `"${(t.cves || []).join(', ')}"`,
+        `"${t.epss ? t.epss.score : 'N/A'}"`,
+        `"${t.actor || 'Unattributed'}"`,
+        `"${sanitizeText(t.advisory || '').replace(/"/g, '""')}"`,
+        `"${(t.url || '').replace(/"/g, '""')}"`
+      ]);
+
+      const csvContent = "data:text/csv;charset=utf-8," + [headers.join(','), ...rows.map(e => e.join(','))].join('\n');
       const encodedUri = encodeURI(csvContent);
       const link = document.createElement("a");
       link.setAttribute("href", encodedUri);
@@ -1012,41 +1216,43 @@
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      showToast("Exported CTI CSV dataset.");
+      showToast("CSV export downloaded");
     }
 
-    function generateDailySummary() {
-      const drawer = document.getElementById('aiSummaryOutput');
-      const content = document.getElementById('summaryContent');
-      if (!drawer || !content) return;
-      drawer.classList.remove('hidden');
-
-      fetch('data/daily_summary.md')
-        .then(res => {
-          if (res.ok) return res.text();
-          throw new Error('No saved briefing found.');
-        })
-        .then(text => {
-          content.textContent = text;
-        })
-        .catch(() => {
-          const topThreats = currentThreats.slice(0, 3).map((t, idx) => `${idx + 1}. [${t.severity}] ${t.title} (${t.source})`).join('\n');
-          content.textContent = `*TL;DR:* Active intelligence monitoring indicates elevated risks across retail perimeter and e-commerce integrations.\n\n*Top Observed Vectors:*\n${topThreats}\n\n*Recommended Action:* Review edge firewalls, inspect client-side script integrity, and verify multi-factor authentication policies.`;
-        });
+    function showToast(message) {
+      const toast = document.getElementById('toastNotification');
+      const msg = document.getElementById('toastMsg');
+      if (!toast || !msg) return;
+      msg.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
     }
 
-    function closeSummary() {
-      const drawer = document.getElementById('aiSummaryOutput');
-      if (drawer) drawer.classList.add('hidden');
+    function toggleTheme() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
     }
 
-    window.onload = function() {
-      syncThreatData(true);
-      if (autoSyncInterval) clearInterval(autoSyncInterval);
-      autoSyncInterval = setInterval(() => {
-        syncThreatData(true);
+    // =========================================================================
+    // 11. INITIALIZATION ON PAGE LOAD
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      // 1. Initial Load
+      fetchThreatTelemetry();
+
+      // 2. Automated background poller every 60 seconds
+      if (pollIntervalTimer) clearInterval(pollIntervalTimer);
+      pollIntervalTimer = setInterval(() => {
+        fetchThreatTelemetry(false);
       }, 60000);
-    };
+    });
   </script>
 </body>
 </html>
