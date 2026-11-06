@@ -1,36 +1,5 @@
 [
   {
-    "id": "cisa-kev-cve_2026_19868",
-    "title": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868",
-    "date": "06 Nov 2026",
-    "_timestamp": 1793923200.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-19868"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-19868"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
-    "indicators": [
-      "CVE-2026-19868"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for SonicOS SSLVPN."
-  },
-  {
     "id": "scraped-11",
     "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
     "source": "The Hacker News",
@@ -120,6 +89,37 @@
       "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "cisa-kev-cve_2026_19868",
+    "title": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868",
+    "date": "06 Nov 2026",
+    "_timestamp": 1793923200.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-19868"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-19868"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
+    "indicators": [
+      "CVE-2026-19868"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for SonicOS SSLVPN."
   },
   {
     "id": "scraped-14",
@@ -439,9 +439,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Retail",
-      "Marks & spencer",
-      "Information commissioner"
+      "Tesco",
+      "Retailers",
+      "Retailer"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
