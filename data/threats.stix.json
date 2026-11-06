@@ -1,13 +1,54 @@
 {
   "type": "bundle",
-  "id": "bundle--f3e3fde5-5dca-4500-959b-171b2c17884e",
+  "id": "bundle--5d3f2268-4ea0-4fc7-aaf2-2d515aaef071",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e7ca7c9d-6288-46d4-a916-b3ee7221bee8",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--0e03915c-c650-4769-89f4-cacf1981a4ea",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
+      "name": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
+      "description": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
+      "confidence": 90,
+      "labels": [
+        "CISA KEV",
+        "Active Exploit",
+        "CVE-2026-19868"
+      ],
+      "external_references": [
+        {
+          "source_name": "CISA KEV Catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8f94f38e-b7e9-439a-bc8a-5be0188e93fc",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4f2d5ac6-3893-478f-880e-f2c04c2cfdad",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
       "description": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security researcher who found it. The update that installs the fix still unpacks its files using the site's old, unpatched code, so an attacker who strikes at the right moment can run code on the server. The rese...",
       "indicator_types": [
@@ -15,7 +56,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -31,9 +72,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--21814e33-c4c5-4e78-983b-e330b053a1df",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--7bf8d6a3-5f13-4f3b-9ff3-bc1b31da973f",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -45,9 +86,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--511c1daf-4a41-4859-a7bd-64d23af09492",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--f3b3abac-7a13-4f17-967a-e71be26f4a98",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
       "description": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store update, not through Windows updates. The fixed build, 11.2609.401.0, was the newest Paint build in all ten countries The Hacker News checked today. The flaw is an out-of-bounds read that could let an attac...",
       "indicator_types": [
@@ -55,7 +96,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -71,9 +112,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--7c9ee0db-55e0-4f1e-ba3a-c39f05a18c33",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--dbf60017-80b2-43a7-b5bb-78a1f83c6537",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -85,9 +126,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6debd098-d155-4352-882a-d196cc5e3108",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--bb90c963-b588-4faf-90ae-04dd20106ceb",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "The Flood is Coming And The Pipes Were Already Full",
       "description": "An update on Athena, and some unsolicited predictions on what's coming next On Saturday, Dario Amodei published We Must Pace the Frontier. I agree with him. Go read it if you haven't. I've spent the summer looking at what these models find, and the gap he describes between what they can do and what the rest of us are ready for is the one I've been...",
       "indicator_types": [
@@ -95,7 +136,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -110,9 +151,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c0a8c6ec-f176-4f7d-ad87-4817907ea49c",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--baf51fe2-e1ea-4f33-abbe-4ebf6f0b664b",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -124,9 +165,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--aace07e9-9ed0-40a2-859c-583edae10f8d",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--94446608-854b-4005-894c-e8b1c0a0b134",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
       "description": "Zyxel GS1900 network switches that received the vendor's earlier fix for an actively exploited flaw are still open to the exploit attackers used, researchers at Binarly found. The exploit lets anyone who can reach a switch's web management interface run commands on it without logging in. Zyxel has released new firmware for 10 GS1900 models that clo...",
       "indicator_types": [
@@ -134,7 +175,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -150,9 +191,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--1264e9c7-d8d3-443f-955a-338f10b70819",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--ce50219a-798b-4ef6-9d1e-4dcfcd89af23",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -164,9 +205,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ea05ba82-ceed-482f-a548-8525c08db1f2",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--9ef71cd9-13ef-4280-b537-d1a4627d026f",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
       "description": "The Russia-linked threat actor known as APT29 is presumed to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain attack involving a Ukrainian web analytics service called Plerdy SEO Tracker. \"The injected JavaScript code collects browser and device attributes,...",
       "indicator_types": [
@@ -174,7 +215,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 75,
       "labels": [
         "Supply chain"
@@ -189,9 +230,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--46170571-94d0-48de-9983-ac9acc16ca6e",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--56478956-1245-45ed-8ce6-c7ce704d449d",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -203,9 +244,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--59779077-591e-40fc-b1a1-a55a2f95ff35",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--c834adb4-ff90-4d0e-99ba-d402103c965f",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Mastercard meets \u2018responsibility\u2019 through SME cyber security training",
       "description": "Mastercard has launched free cyber security training to UK small and medium-sized enterprises (SMEs) as the firm\u2019s own research reveals over three million of them don\u2019t use cyber security. With SMEs being targeted by cyber criminals and many going out of business as a result, the card giant\u2019s UK boss says financial services firms have a responsibil...",
       "indicator_types": [
@@ -213,7 +254,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366653613/Mastercard-meets-responsibility-through-SME-cyber-security-training']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -228,9 +269,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a911da5e-72fe-4b44-976c-a1e97d3d98db",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--87cc166b-4f6c-4195-a65b-04253b0e4a9e",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -242,9 +283,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7592a9b5-ed31-4089-b1b6-7aa53228a2c1",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--d1ae784b-cf87-4ee8-aafa-87a27f4c31f9",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "CVE-2026-58868: Critical Android Bug Could Let Attackers Run Remote Code",
       "description": "Critical Android flaw CVE-2026-58868 could allow remote code execution without user interaction on devices running Android 14 through 17. Google has fixed CVE-2026-58868, a critical Android vulnerability affecting versions 14 through 17. The flaw is a critical Android vulnerability caused by a heap buffer overflow in the onOutputReceived function o...",
       "indicator_types": [
@@ -252,7 +293,7 @@
       ],
       "pattern": "[url:value = 'https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -268,9 +309,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--0419af0d-0323-4647-a717-126c6349d82f",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--655f8c6c-2fb7-4079-b118-bc0db2fa74d4",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -282,9 +323,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ba87563c-dabe-4b41-b7f7-10448cc5d42c",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--f86fa220-9ce5-4bba-aa7c-ca31edd991d2",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "CISA KEV Alert: CVE-2024-27834 in Apple Multiple Products Under Active Exploitation",
       "description": "Apple Multiple Products is affected by CVE-2024-27834. Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication. Required Remediation: Apply mitigations in accordance with vendor instructions, ensur...",
       "indicator_types": [
@@ -292,7 +333,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-27834']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -309,9 +350,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e42c77e5-15fd-4f89-bc86-43044899b574",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--38318a53-7dc9-4a5b-9fd3-1a6c8827e59e",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -323,9 +364,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2bb4b15a-6ac1-46d1-9a19-c369bd79109c",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--82075321-8513-46d6-a6d4-4fe221573cfa",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
       "description": "Beyond food storage, the same combination of Internet connectivity, remote access, and inadequate security practices can put temperature-controlled infrastructure across other critical sectors at risk.",
       "indicator_types": [
@@ -333,7 +374,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 75,
       "labels": [
         "Cold-chain"
@@ -348,9 +389,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--153c9907-93a5-4223-bc10-a68b14fbf493",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--6ea37f7b-a2d5-49e7-9f9c-5d2e8f9139a5",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Data from Local System / POS",
       "external_references": [
         {
@@ -362,9 +403,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2c637f7e-822b-4d05-94ed-9a29c018eace",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--95371623-2866-45a4-b119-48c64f76365a",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exposing state threats still matters - resilience matters more",
       "description": "On 8 October 2026, 10 agencies from across seven countries, from the FBI in the US to the UK\u2019s National Cyber Security Centre (NCSC) to Spain\u2019s Centro Nacional de Inteligencia (CNI), put their names to a 58-page advisory on Integrity Technology Group , a for-profit Chinese company with government links whose staff build and sell tools, acquire and...",
       "indicator_types": [
@@ -372,7 +413,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/Exposing-state-threats-still-matters-resilience-matters-more']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -388,9 +429,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--78855f87-58d6-4dc0-b001-0f982cca4d38",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--5c6cadcb-5bb8-4ca7-a54b-cd8e7828a0da",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -402,9 +443,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--794a7b17-6883-4a8e-b861-1dce395fd71d",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--6a401382-e23e-4cd8-a49c-2c787fc247b9",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "UK government backs Cyber Essentials discount for SMEs",
       "description": "The UK government is to back a 75% discount for the National Cyber Security Centre\u2019s (NCSC\u2019s) Cyber Essentials certification scheme for small and medium-sized enterprises (SMEs), with many set to benefit from free certification. The offer, which is to be provided through the NCSC\u2019s Cyber Essentials delivery partner, IASME , reflects the increasing...",
       "indicator_types": [
@@ -412,7 +453,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366653512/UK-government-backs-Cyber-Essentials-discount-for-SMEs']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Supply chain"
@@ -427,9 +468,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--b17d3793-a82f-4d4f-b73b-274c13998128",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--d4aefb7c-8f5d-433c-8069-908312f0288b",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -441,9 +482,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5015beda-6cbd-4e4a-8590-bdbb6e6bb634",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--24b288f7-0332-49af-b917-5d61a8f1e679",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "UK abattoirs caught up in cyber attack against European supermarkets",
       "description": "British meat processing companies have been hit by the cyber attack that targeted supermarket fridges and freezers across Europe . The National Cyber Security Centre (NCSC) confirmed today it was aware of the incidents, and that it is working with the affected organisations. NCSC chief executive Richard Horne said its experts worked through the nig...",
       "indicator_types": [
@@ -451,12 +492,12 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366653356/UK-abattoirs-caught-up-in-cyber-attack-against-European-supermarkets']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
-        "Retailers",
+        "Retail",
         "Asda",
-        "Retail"
+        "Retailers"
       ],
       "external_references": [
         {
@@ -468,9 +509,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e1362f97-7ac5-47f9-b0b2-02fe8e6dffae",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--4f2b9bf8-4820-4f50-8938-4c76f1d204a8",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -482,9 +523,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4e162ca5-2d90-4958-a381-26f585bdd4b1",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--3e0a1eb7-4baf-4540-b402-89684c457443",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "CISA KEV Alert: CVE-2026-119977 in WordPress WordPress Core Under Active Exploitation",
       "description": "WordPress WordPress Core is affected by CVE-2026-119977. WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrad...",
       "indicator_types": [
@@ -492,7 +533,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-119977']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -509,9 +550,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--0cbb189d-c420-494b-8573-1f18a988d5ba",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--1eaefb9c-c0b2-4b49-a74f-0f65e9806dea",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -523,9 +564,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5e0d23a0-6532-4eaa-9772-5728244ee119",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--0c4a54e1-8ccb-4e37-a9ec-e8a3f66c1713",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Cold chain cyber attacks highlight lack of OT security in retail",
       "description": "A series of renewed cyber attacks on retail refrigeration systems has set alarm bells ringing across Europe, with reports of temperatures in some freezer units rising as high as 50C, causing ruined food to have to be dumped. Although on a smaller scale, the latest incidents that took place across multiple countries are all strongly reminiscent of a...",
       "indicator_types": [
@@ -533,12 +574,12 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366653380/Cold-chain-cyber-attacks-highlight-lack-of-OT-security-in-retail']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
-        "Retailer",
-        "Information commissioner",
-        "Marks & spencer"
+        "Retail",
+        "Marks & spencer",
+        "Information commissioner"
       ],
       "external_references": [
         {
@@ -550,9 +591,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--8f6f0bd8-17f1-4b88-a209-985f40f8e1ba",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--40e327a8-16a9-4778-ab8f-7e6b972359e5",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -564,9 +605,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0c492e41-2be3-4882-8179-7f87641a4a0e",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--f5828058-914a-4852-a610-b66775092076",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Who controls the technology we depend on?",
       "description": "Being dependent on another country\u2019s technology and support carries risk, however close the relationship appears. Yet when we discuss nation state cyber threats, we tend to focus on hostile actors breaking into our systems. We should also examine who controls the systems we already depend on. For the UK, that means facing our reliance on US technol...",
       "indicator_types": [
@@ -574,7 +615,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/Who-controls-the-technology-we-depend-on']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Supply chain"
@@ -589,9 +630,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5eec575b-72f6-42b7-b300-f17639c433a9",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--1733d7fd-eb91-4a1b-b7d9-d14232dd4451",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Phishing / Courier Smishing",
       "external_references": [
         {
@@ -603,9 +644,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ab8be306-b665-45eb-ad8b-0881b3bfa7ad",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "indicator--58eb911d-8d49-4d2b-9c66-78caa5503ee4",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Belfast journalists subjected to unlawful spying cannot claim costs over PSNI failures",
       "description": "Two Belfast journalists placed under unlawful police surveillance expressed \u201cdeep disappointment\u201d after the Court of Appeal found that police cannot be sanctioned for \u201clate and inadequate disclosures\u201d of evidence that led to two court hearings having to be abandoned. Investigative journalists Barry McCaffrey and Trevor Birney brought a case to the...",
       "indicator_types": [
@@ -613,7 +654,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366653294/Belfast-journalists-subjected-to-unlawful-spying-cannot-claim-costs-over-PSNI-failures']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-06T20:17:14.811972+00:00",
+      "valid_from": "2026-11-06T21:10:32.993836+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -628,9 +669,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a8205775-1f82-4b85-8020-670a4edc25d8",
-      "created": "2026-11-06T20:17:14.811972+00:00",
-      "modified": "2026-11-06T20:17:14.811972+00:00",
+      "id": "attack-pattern--bae92a51-6252-424e-9674-f91371190d1b",
+      "created": "2026-11-06T21:10:32.993836+00:00",
+      "modified": "2026-11-06T21:10:32.993836+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
