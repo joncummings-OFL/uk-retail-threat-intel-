@@ -204,42 +204,6 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-17",
-    "title": "CVE-2026-58868: Critical Android Bug Could Let Attackers Run Remote Code",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html",
-    "date": "04 Nov 2026",
-    "_timestamp": 1793788012.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-58868"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Critical Android flaw CVE-2026-58868 could allow remote code execution without user interaction on devices running Android 14 through 17. Google has fixed CVE-2026-58868, a critical Android vulnerability affecting versions 14 through 17. The flaw is a critical Android vulnerability caused by a heap buffer overflow in the onOutputReceived function o...",
-    "indicators": [
-      "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-58868",
-      "score": "0.4%",
-      "raw_score": 0.00388,
-      "percentile": "33.1%"
-    }
-  },
-  {
     "id": "cisa-kev-cve_2024_27834",
     "title": "CISA KEV Alert: CVE-2024-27834 in Apple Multiple Products Under Active Exploitation",
     "source": "CISA KEV Catalog",
@@ -373,9 +337,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Asda",
+      "Retail",
       "Retailers",
-      "Retail"
+      "Asda"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -439,9 +403,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Co-op",
-      "Warehouse",
-      "Retailer"
+      "Retail",
+      "Tesco",
+      "Co-op"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
