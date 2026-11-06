@@ -1,6 +1,34 @@
 [
   {
     "id": "scraped-10",
+    "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
+    "date": "06 Nov 2026",
+    "_timestamp": 1793981318.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security researcher who found it. The update that installs the fix still unpacks its files using the site's old, unpatched code, so an attacker who strikes at the right moment can run code on the server. The rese...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-11",
     "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
@@ -36,7 +64,7 @@
     }
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-12",
     "title": "The Flood is Coming And The Pipes Were Already Full",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html",
@@ -63,7 +91,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-13",
     "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html",
@@ -91,7 +119,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-14",
     "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
@@ -145,7 +173,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-16",
     "title": "CVE-2026-58868: Critical Android Bug Could Let Attackers Run Remote Code",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html",
@@ -218,7 +246,7 @@
     }
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-15",
     "title": "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security",
@@ -314,9 +342,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Retailers",
+      "Retail",
       "Asda",
-      "Retail"
+      "Retailers"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -380,9 +408,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Tesco",
+      "Retailer",
       "Currys",
-      "Retailers"
+      "Retail"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
