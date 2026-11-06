@@ -1,6 +1,42 @@
 [
   {
     "id": "scraped-10",
+    "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
+    "date": "06 Nov 2026",
+    "_timestamp": 1793966803.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-83844"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store update, not through Windows updates. The fixed build, 11.2609.401.0, was the newest Paint build in all ten countries The Hacker News checked today. The flaw is an out-of-bounds read that could let an attac...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-83844",
+      "score": "0.7%",
+      "raw_score": 0.00734,
+      "percentile": "54.5%"
+    }
+  },
+  {
+    "id": "scraped-11",
     "title": "The Flood is Coming And The Pipes Were Already Full",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html",
@@ -27,7 +63,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-12",
     "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html",
@@ -55,7 +91,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-13",
     "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
@@ -109,7 +145,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-15",
     "title": "CVE-2026-58868: Critical Android Bug Could Let Attackers Run Remote Code",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/202414/mobile-2/cve-2026-58868-critical-android-bug-could-let-attackers-run-remote-code.html",
@@ -142,42 +178,6 @@
       "score": "0.2%",
       "raw_score": 0.00211,
       "percentile": "11.4%"
-    }
-  },
-  {
-    "id": "scraped-15",
-    "title": "U.S. CISA adds WordPress flaw to its Known Exploited Vulnerabilities catalog",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/202394/security/u-s-cisa-adds-wordpress-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html",
-    "date": "04 Nov 2026",
-    "_timestamp": 1793783797.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-119977"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "U.S. Cybersecurity and Infrastructure Security Agency (CISA) adds WordPress flaw to its Known Exploited Vulnerabilities catalog. The U.S. Cybersecurity and Infrastructure Security Agency (CISA) added a WordPress flaw, tracked as CVE-2026-119977 (CVSS score of 8.1), to its Known Exploited Vulnerabilities (KEV) catalog. CVE-2026-119977 is a high-seve...",
-    "indicators": [
-      "https://securityaffairs.com/202394/security/u-s-cisa-adds-wordpress-flaw-to-its-known-exploited-vulnerabilities-catalog-2.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-119977",
-      "score": "1.2%",
-      "raw_score": 0.01157,
-      "percentile": "67.2%"
     }
   },
   {
@@ -218,7 +218,7 @@
     }
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-14",
     "title": "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security",
@@ -315,8 +315,8 @@
     "cves": [],
     "tags": [
       "Retail",
-      "Retailers",
-      "Asda"
+      "Asda",
+      "Retailers"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -380,9 +380,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Warehouse",
-      "Retail",
-      "Information commissioner"
+      "Distribution centres",
+      "Retailer",
+      "Co-op"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
