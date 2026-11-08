@@ -1,32 +1,5 @@
 [
   {
-    "id": "scraped-9",
-    "title": "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
-    "source": "Dark Reading",
-    "url": "https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security",
-    "date": "03 Nov 2026",
-    "_timestamp": 1793744209.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "pos",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Cold-chain"
-    ],
-    "mitre": "T1005 (Data from Local System / POS)",
-    "mitre_id": "T1005",
-    "mitre_tactic": "Collection",
-    "mitre_name": "Data from Local System / POS",
-    "summary": "Beyond food storage, the same combination of Internet connectivity, remote access, and inadequate security practices can put temperature-controlled infrastructure across other critical sectors at risk.",
-    "indicators": [
-      "https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
     "id": "scraped-4",
     "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
     "source": "The Hacker News",
@@ -85,9 +58,9 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
     "epss": {
       "cve": "CVE-2026-83844",
-      "score": "0.7%",
-      "raw_score": 0.00734,
-      "percentile": "54.6%"
+      "score": "0.4%",
+      "raw_score": 0.00384,
+      "percentile": "32.8%"
     }
   },
   {
@@ -272,5 +245,32 @@
       "raw_score": 0.01502,
       "percentile": "74.5%"
     }
+  },
+  {
+    "id": "scraped-9",
+    "title": "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
+    "source": "Dark Reading",
+    "url": "https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security",
+    "date": "03 Nov 2026",
+    "_timestamp": 1793744209.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "pos",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Cold-chain"
+    ],
+    "mitre": "T1005 (Data from Local System / POS)",
+    "mitre_id": "T1005",
+    "mitre_tactic": "Collection",
+    "mitre_name": "Data from Local System / POS",
+    "summary": "Beyond food storage, the same combination of Internet connectivity, remote access, and inadequate security practices can put temperature-controlled infrastructure across other critical sectors at risk.",
+    "indicators": [
+      "https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   }
 ]
