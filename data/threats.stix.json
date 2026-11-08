@@ -1,13 +1,13 @@
 {
   "type": "bundle",
-  "id": "bundle--719cafc5-0229-4e9d-a347-1b22ff0b3b0a",
+  "id": "bundle--81af0f12-6d8f-4402-9a01-950bb5b36d6a",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d3822f12-abaf-415f-8cdf-e6c50fed14a0",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--23f177e2-5c2b-4d2e-87ac-b243c0df1850",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
       "description": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security researcher who found it. The update that installs the fix still unpacks its files using the site's old, unpatched code, so an attacker who strikes at the right moment can run code on the server. The rese...",
       "indicator_types": [
@@ -15,7 +15,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -31,9 +31,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--06a1bd5f-d27b-453a-86d7-96147e94e04f",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--1a7bb2ba-a613-4e73-86b7-76070c1173aa",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -45,9 +45,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5559b9f4-39bb-4cda-9885-6106332df670",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--f31703cb-a6d5-4dd2-9a39-5f5b68f43173",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
       "description": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store update, not through Windows updates. The fixed build, 11.2609.401.0, was the newest Paint build in all ten countries The Hacker News checked today. The flaw is an out-of-bounds read that could let an attac...",
       "indicator_types": [
@@ -55,7 +55,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -71,9 +71,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--3fd7d414-1e44-4778-be8b-63fc8a9be838",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--42d08488-86a4-4b67-80ec-fbbbc3cd7ea5",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -85,9 +85,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5a442efe-0b06-440d-9669-163f67a40f7c",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--1c89ad47-337b-4838-ab7f-e0eb3e238e64",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "The Flood is Coming And The Pipes Were Already Full",
       "description": "An update on Athena, and some unsolicited predictions on what's coming next On Saturday, Dario Amodei published We Must Pace the Frontier. I agree with him. Go read it if you haven't. I've spent the summer looking at what these models find, and the gap he describes between what they can do and what the rest of us are ready for is the one I've been...",
       "indicator_types": [
@@ -95,7 +95,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -110,9 +110,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a084fabf-bcf0-4ebc-b917-bdda84ab28f7",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--d4a67e4d-33b5-4f16-a6d4-5fbe7a2d1275",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -124,9 +124,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--30b85fa3-ba8d-4fe0-b00e-b63ee1012003",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--6f135267-1fe0-449f-bf15-93896a3bc9b3",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
       "description": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
       "indicator_types": [
@@ -134,7 +134,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -151,9 +151,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f062610e-0481-4628-b4db-76c3d5983c8d",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--d4c129af-4c27-424b-810f-e02a0072a218",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -165,9 +165,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--66ec69b4-d62c-4bf1-ad19-3fd2555590c4",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--c1f81536-d46c-48da-a692-b570a4a817a7",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
       "description": "Zyxel GS1900 network switches that received the vendor's earlier fix for an actively exploited flaw are still open to the exploit attackers used, researchers at Binarly found. The exploit lets anyone who can reach a switch's web management interface run commands on it without logging in. Zyxel has released new firmware for 10 GS1900 models that clo...",
       "indicator_types": [
@@ -175,7 +175,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -191,9 +191,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--6b51ab24-7f81-48c7-9e80-7c02344d43bd",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--b78c8b11-e428-46da-80d2-3e2b503c8010",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -205,9 +205,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9a08e671-6765-4131-ba09-cecfc909eb3b",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--98d9c9c4-ede6-4016-8f30-037166ed7d3e",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
       "description": "The Russia-linked threat actor known as APT29 is presumed to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain attack involving a Ukrainian web analytics service called Plerdy SEO Tracker. \"The injected JavaScript code collects browser and device attributes,...",
       "indicator_types": [
@@ -215,7 +215,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 75,
       "labels": [
         "Supply chain"
@@ -230,9 +230,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--9fc1698e-846a-4f8a-94a5-f38ca48184d5",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--55a3f114-9e63-421e-b56c-2aae955c2a52",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -244,9 +244,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b4b77f67-cc34-4c84-9876-bc16d93cb3b1",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--f82f70f5-58c0-4bcf-aaca-70373ca8ae7e",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Mastercard meets \u2018responsibility\u2019 through SME cyber security training",
       "description": "Mastercard has launched free cyber security training to UK small and medium-sized enterprises (SMEs) as the firm\u2019s own research reveals over three million of them don\u2019t use cyber security. With SMEs being targeted by cyber criminals and many going out of business as a result, the card giant\u2019s UK boss says financial services firms have a responsibil...",
       "indicator_types": [
@@ -254,7 +254,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366653613/Mastercard-meets-responsibility-through-SME-cyber-security-training']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -269,9 +269,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--da9d66e7-6292-44e6-8096-a664b7185cf1",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--e4b0fb5e-fad5-431f-9b59-0fe7d7de29a8",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -283,9 +283,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3b019aea-d1e8-4cf7-9dbf-bda72883ea92",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--b1bcc656-72e8-4446-a448-b4f9c8b20758",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "CISA KEV Alert: CVE-2024-27834 in Apple Multiple Products Under Active Exploitation",
       "description": "Apple Multiple Products is affected by CVE-2024-27834. Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication. Required Remediation: Apply mitigations in accordance with vendor instructions, ensur...",
       "indicator_types": [
@@ -293,7 +293,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-27834']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -310,9 +310,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--54bba6aa-dbdc-4773-bdf7-5f29e186dcd4",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--45041bda-f71b-42fd-ac11-7fb74ce6f0bb",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -324,9 +324,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6e6d5d9a-2fb3-4f34-b53c-1c1625f2b7d9",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "indicator--4011d9eb-a61d-4e83-b6c3-53df8b65af59",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Fresh European Fridge Attacks Put Cold-Chain Security in Focus",
       "description": "Beyond food storage, the same combination of Internet connectivity, remote access, and inadequate security practices can put temperature-controlled infrastructure across other critical sectors at risk.",
       "indicator_types": [
@@ -334,7 +334,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/ics-ot-security/fresh-european-fridge-attacks-cold-chain-security']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-08T16:47:21.428586+00:00",
+      "valid_from": "2026-11-08T17:26:28.594292+00:00",
       "confidence": 75,
       "labels": [
         "Cold-chain"
@@ -349,9 +349,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--1b04904e-a355-472a-8c70-9d8639195c4f",
-      "created": "2026-11-08T16:47:21.428586+00:00",
-      "modified": "2026-11-08T16:47:21.428586+00:00",
+      "id": "attack-pattern--7ef88813-f61a-4f06-9325-13857fb86de1",
+      "created": "2026-11-08T17:26:28.594292+00:00",
+      "modified": "2026-11-08T17:26:28.594292+00:00",
       "name": "Data from Local System / POS",
       "external_references": [
         {
