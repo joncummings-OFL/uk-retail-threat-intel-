@@ -1,13 +1,175 @@
 {
   "type": "bundle",
-  "id": "bundle--a2024501-d10b-4c62-b64f-17db3df4ed02",
+  "id": "bundle--40923497-66af-4466-91ad-fa231885d74d",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a5f58e8e-1d18-44b0-a15a-67d9bf24c083",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--ca04762a-eb00-4558-a0ec-1a9293e9c700",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "PwC's CISO on AI, Robots & What's Next for Security",
+      "description": "As AI accelerates change across the enterprise, PwC's James Shira explains why security teams must rethink their approach to risk and adapt their strategies.",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
+      "confidence": 75,
+      "labels": [
+        "Next"
+      ],
+      "external_references": [
+        {
+          "source_name": "Dark Reading",
+          "url": "https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3d7f04f1-389e-4624-9a43-94b7296e267e",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "Data from Local System / POS",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0d30e0f3-cfdb-4078-81e2-7f621dc3d51b",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "CISA KEV Alert: CVE-2026-102895 in GPUStack GPUStack Under Active Exploitation",
+      "description": "GPUStack GPUStack is affected by CVE-2026-102895. GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/fro...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102895']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
+      "confidence": 90,
+      "labels": [
+        "CISA KEV",
+        "Active Exploit",
+        "CVE-2026-102895"
+      ],
+      "external_references": [
+        {
+          "source_name": "CISA KEV Catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102895"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--09a83654-7dcf-4e53-8a2b-6bda5470461b",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "Brute Force / Credential Stuffing",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--25892078-a7c6-418c-b460-9c4504527e65",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "CISA KEV Alert: CVE-2026-123158 in OpenBSD OpenSSH Under Active Exploitation",
+      "description": "OpenBSD OpenSSH is affected by CVE-2026-123158. OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (s...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123158']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
+      "confidence": 90,
+      "labels": [
+        "CISA KEV",
+        "Active Exploit",
+        "CVE-2026-123158"
+      ],
+      "external_references": [
+        {
+          "source_name": "CISA KEV Catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123158"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b001389b-c894-4de7-a211-b9ad4ef3abba",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4a9b17f4-3d78-4f87-931f-7c60973e17c4",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "CISA KEV Alert: CVE-2026-116779 in SignalWire FreeSwitch Under Active Exploitation",
+      "description": "SignalWire FreeSwitch is affected by CVE-2026-116779. SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizin...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116779']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
+      "confidence": 90,
+      "labels": [
+        "CISA KEV",
+        "Active Exploit",
+        "CVE-2026-116779"
+      ],
+      "external_references": [
+        {
+          "source_name": "CISA KEV Catalog",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116779"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--61dbd6d5-7196-4401-b3a8-f69b0892b0b3",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3d7d722c-744f-4628-839e-fd1e8fe7ee03",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
       "description": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeting South Asian organizations with a previously unreported remote access trojan called PapRAT. \"PapRAT has both C++ and Rust implementations,\" Fortinet FortiGuard Labs researcher Cara Lin said. \"Its ca...",
       "indicator_types": [
@@ -15,7 +177,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -31,9 +193,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--d751e37f-d8d9-4191-83ef-6c1c7c9eaea8",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--315836b5-3266-4677-b3ba-d54fc25bc676",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -45,9 +207,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fc610e30-3c8f-45d5-abc0-edf1fef90396",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--4db9989c-36f7-4056-86db-f2f58a2abc3a",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Revolve Puts Data Breach Victim Count at 1.5 Million",
       "description": "Online fashion retailer Revolve has told regulators that the September cyberattack affected more than 1.5 million individuals. The post Revolve Puts Data Breach Victim Count at 1.5 Million appeared first on SecurityWeek .",
       "indicator_types": [
@@ -55,7 +217,7 @@
       ],
       "pattern": "[url:value = 'https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 90,
       "labels": [
         "Retailer"
@@ -70,9 +232,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--85089db7-c6b5-484a-8451-d7b1ed55490d",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--c36947ae-7216-4232-88df-f1411a469a3a",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -84,9 +246,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--13aa5b03-c2db-4e97-ad64-5c6138443878",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--a50d7757-2914-467f-9445-0f1f38f717f7",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
       "description": "The OpenAI engineer who was arrested and charged last month for planting a covert audio recording device in the company's office has pleaded not guilty. According to reports from Bloomberg and CNBC, Saudi national Abdulrahman Alfozan made an appearance in San Francisco federal court on Friday, where he entered the plea. His next hearing is schedule...",
       "indicator_types": [
@@ -94,7 +256,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -109,9 +271,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e033f599-1513-4532-a483-927fcaaf9a10",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--f404e4ff-46a9-49fa-852f-dc506d362d57",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -123,9 +285,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--629267f8-1fc3-4d1c-a37e-e62f85ce24a8",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--0557b1c3-3d40-4c25-b23a-52d0fc6dfbc0",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
       "description": "U.S. government agencies have warned that threat actors are actively targeting industrial refrigeration and cold-chain monitoring systems globally with an aim to cause service disruptions, fire hazards, and loss of inventory. \"The actors may exploit vulnerabilities or weaknesses in unpatched or internet-accessible controllers to remotely alter sett...",
       "indicator_types": [
@@ -133,7 +295,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 75,
       "labels": [
         "Cold-chain"
@@ -148,9 +310,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--145d4943-43cd-4624-a11e-a39e9ec98469",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--6a968c6d-4af8-4a4d-a88c-de643816a560",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -162,9 +324,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--82c792f7-0daa-4594-8d8e-80114b2f33e6",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--fa24d38f-c58d-4763-ad9d-6307eb2ce5dc",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
       "description": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security researcher who found it. The update that installs the fix still unpacks its files using the site's old, unpatched code, so an attacker who strikes at the right moment can run code on the server. The rese...",
       "indicator_types": [
@@ -172,7 +334,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -188,9 +350,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--b0d8b038-beee-43bd-a0de-220131bbe3b0",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--70d3cd18-7ef8-425b-bdf8-78158dbb3c4a",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -202,9 +364,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3dc9d99b-6bba-4357-a087-9ff98c7fa90d",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--044cef87-9d45-49a8-80d0-110b298132be",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
       "description": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store update, not through Windows updates. The fixed build, 11.2609.401.0, was the newest Paint build in all ten countries The Hacker News checked today. The flaw is an out-of-bounds read that could let an attac...",
       "indicator_types": [
@@ -212,7 +374,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -228,9 +390,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--edd391cc-9906-4f55-aaf8-2debb42558d0",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--06efa6a2-b243-4791-9101-38e5969e6599",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -242,9 +404,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--26a3846d-a437-45db-a6b6-1398a34aa386",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--51dcf0be-687f-4a4d-ae91-9793da80dc1b",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "The Flood is Coming And The Pipes Were Already Full",
       "description": "An update on Athena, and some unsolicited predictions on what's coming next On Saturday, Dario Amodei published We Must Pace the Frontier. I agree with him. Go read it if you haven't. I've spent the summer looking at what these models find, and the gap he describes between what they can do and what the rest of us are ready for is the one I've been...",
       "indicator_types": [
@@ -252,7 +414,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -267,9 +429,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--20dcdaa0-5841-4844-9b94-14b9176f29af",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--5a48243d-85d2-4cdb-b80e-77d7c387e6a9",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -281,9 +443,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c2cd1c7f-cb56-47ae-8dc0-7ed14655c6a7",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "indicator--0e6e09cc-0d87-4c37-9787-ff8128be4492",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
       "description": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
       "indicator_types": [
@@ -291,7 +453,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T16:55:29.073499+00:00",
+      "valid_from": "2026-11-09T17:50:06.825387+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -308,9 +470,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--d26f64e5-35f4-416a-aad6-c30a2ca03dfd",
-      "created": "2026-11-09T16:55:29.073499+00:00",
-      "modified": "2026-11-09T16:55:29.073499+00:00",
+      "id": "attack-pattern--b3154a46-8233-4a05-8519-78e9d5e7b1e9",
+      "created": "2026-11-09T17:50:06.825387+00:00",
+      "modified": "2026-11-09T17:50:06.825387+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
