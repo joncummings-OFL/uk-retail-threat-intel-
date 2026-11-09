@@ -1,13 +1,13 @@
 {
   "type": "bundle",
-  "id": "bundle--5e8d7a91-57d7-4269-9941-f13706d2bc6c",
+  "id": "bundle--f041ec4e-08c2-4b92-9b7a-ddcaddc5e20b",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--42f31860-c2e5-4cca-9f07-83e9f6f869b4",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--142c1480-114a-4319-8005-bf6bb0625879",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
       "description": "The OpenAI engineer who was arrested and charged last month for planting a covert audio recording device in the company's office has pleaded not guilty. According to reports from Bloomberg and CNBC, Saudi national Abdulrahman Alfozan made an appearance in San Francisco federal court on Friday, where he entered the plea. His next hearing is schedule...",
       "indicator_types": [
@@ -15,7 +15,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -30,9 +30,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--72642938-151e-4ab4-8a8d-928480c94a05",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--e9b41efc-189e-4055-9a99-374fc9412870",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -44,9 +44,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--52f9e16b-2ef9-409c-89ed-386af95be0bf",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--fe5ef11e-9daa-4512-9244-df66a76b332b",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
       "description": "U.S. government agencies have warned that threat actors are actively targeting industrial refrigeration and cold-chain monitoring systems globally with an aim to cause service disruptions, fire hazards, and loss of inventory. \"The actors may exploit vulnerabilities or weaknesses in unpatched or internet-accessible controllers to remotely alter sett...",
       "indicator_types": [
@@ -54,7 +54,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 75,
       "labels": [
         "Cold-chain"
@@ -69,9 +69,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--adfb781b-c06a-418b-811f-2f7c5a3c7a2d",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--8fc6534f-d2e3-446d-8cd2-837f003b45aa",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -83,9 +83,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8ab0def5-8673-4e6a-a4a8-a79d22a9aff2",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--7834fc59-31fc-49da-9dbb-2e127b641fa2",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
       "description": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security researcher who found it. The update that installs the fix still unpacks its files using the site's old, unpatched code, so an attacker who strikes at the right moment can run code on the server. The rese...",
       "indicator_types": [
@@ -93,7 +93,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -109,9 +109,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--67359dbe-aa5e-4c72-8263-d5eab907a180",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--84f5cd86-36b0-44b5-9733-35378550f2b4",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -123,9 +123,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--de1df874-cb0d-45a0-8a57-32e83fef9289",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--2b1ed229-2bd8-44d7-b64e-5d8e4662033b",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
       "description": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store update, not through Windows updates. The fixed build, 11.2609.401.0, was the newest Paint build in all ten countries The Hacker News checked today. The flaw is an out-of-bounds read that could let an attac...",
       "indicator_types": [
@@ -133,7 +133,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -149,9 +149,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--015dc333-9b2b-4f10-a7e4-b3842ff515b5",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--c48462f6-67a3-4d53-bac3-b4dfbc41ca30",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -163,9 +163,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a43f0427-68c7-4250-a491-bf0b8b3f7caa",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--15918551-7bb4-4871-8f58-766ec31617f1",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "The Flood is Coming And The Pipes Were Already Full",
       "description": "An update on Athena, and some unsolicited predictions on what's coming next On Saturday, Dario Amodei published We Must Pace the Frontier. I agree with him. Go read it if you haven't. I've spent the summer looking at what these models find, and the gap he describes between what they can do and what the rest of us are ready for is the one I've been...",
       "indicator_types": [
@@ -173,7 +173,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -188,9 +188,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--1df6daf2-5dad-4f14-a2a1-c56e123b16da",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--2d8d355c-954a-47de-b1f7-ec44f3f98d0d",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -202,9 +202,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--75b3cee8-cfd5-4d0a-b45b-fd0372919a71",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--eabd7c60-6fc1-4ecb-8e72-9994a83f7dbf",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
       "description": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
       "indicator_types": [
@@ -212,7 +212,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -229,9 +229,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f3068a93-5fda-4779-9923-934c3f5643a4",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--aa185ca6-732b-44e6-ba44-1686397c6f58",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -243,9 +243,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5815237e-9d1a-4ae8-a759-2eb04ae594f2",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--5ce73ffe-3c04-46da-8a31-3e0a8a5ce707",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
       "description": "Zyxel GS1900 network switches that received the vendor's earlier fix for an actively exploited flaw are still open to the exploit attackers used, researchers at Binarly found. The exploit lets anyone who can reach a switch's web management interface run commands on it without logging in. Zyxel has released new firmware for 10 GS1900 models that clo...",
       "indicator_types": [
@@ -253,7 +253,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -269,9 +269,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--0ad8f2eb-fedc-4470-a4ef-e4b664c7e1cf",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--006f2aa9-8b39-4bf1-819f-5ebb0fdf8fc7",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -283,9 +283,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3aceb359-514f-4ab5-86e6-6cb2b9ae91c0",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "indicator--30f598ca-091d-4b6a-9f9b-e5cf8bb7347e",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Mastercard meets \u2018responsibility\u2019 through SME cyber security training",
       "description": "Mastercard has launched free cyber security training to UK small and medium-sized enterprises (SMEs) as the firm\u2019s own research reveals over three million of them don\u2019t use cyber security. With SMEs being targeted by cyber criminals and many going out of business as a result, the card giant\u2019s UK boss says financial services firms have a responsibil...",
       "indicator_types": [
@@ -293,7 +293,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366653613/Mastercard-meets-responsibility-through-SME-cyber-security-training']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T09:36:19.638124+00:00",
+      "valid_from": "2026-11-09T10:30:48.649336+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -308,9 +308,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--dc8d6442-9120-4ae9-b8a5-3a87baee19dc",
-      "created": "2026-11-09T09:36:19.638124+00:00",
-      "modified": "2026-11-09T09:36:19.638124+00:00",
+      "id": "attack-pattern--045ae956-a72f-4229-bdc1-5096377307c7",
+      "created": "2026-11-09T10:30:48.649336+00:00",
+      "modified": "2026-11-09T10:30:48.649336+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
