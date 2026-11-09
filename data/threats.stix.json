@@ -1,13 +1,53 @@
 {
   "type": "bundle",
-  "id": "bundle--ab0c14d4-cfaa-49ac-aeae-9421700a4008",
+  "id": "bundle--7ca46dbd-c4b9-4fa0-9147-8b6e17dc9856",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a36479bd-6955-4e2e-b0e7-864b506f2c77",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "indicator--10e51674-91ab-4657-a1c4-eac739feed3d",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
+      "name": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
+      "description": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeting South Asian organizations with a previously unreported remote access trojan called PapRAT. \"PapRAT has both C++ and Rust implementations,\" Fortinet FortiGuard Labs researcher Cara Lin said. \"Its ca...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8eada552-1117-4f29-97ba-d0d6cf12f34e",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b6605e29-665a-4f9d-ab3f-9e2d1e87958f",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Revolve Puts Data Breach Victim Count at 1.5 Million",
       "description": "Online fashion retailer Revolve has told regulators that the September cyberattack affected more than 1.5 million individuals. The post Revolve Puts Data Breach Victim Count at 1.5 Million appeared first on SecurityWeek .",
       "indicator_types": [
@@ -15,7 +55,7 @@
       ],
       "pattern": "[url:value = 'https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T14:47:39.180551+00:00",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
       "confidence": 90,
       "labels": [
         "Retailer"
@@ -30,9 +70,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--fc349cdb-09bc-40c9-b68e-c34227a1b48f",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "attack-pattern--95794b97-650c-454e-848a-b2e909f559da",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -44,9 +84,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4b6a9d81-eb92-4dd3-8878-790fe3c22a4f",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "indicator--925b70af-0612-4395-b9f8-afeb95d34beb",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
       "description": "The OpenAI engineer who was arrested and charged last month for planting a covert audio recording device in the company's office has pleaded not guilty. According to reports from Bloomberg and CNBC, Saudi national Abdulrahman Alfozan made an appearance in San Francisco federal court on Friday, where he entered the plea. His next hearing is schedule...",
       "indicator_types": [
@@ -54,7 +94,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T14:47:39.180551+00:00",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -69,9 +109,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ab6cb72e-ce7b-413d-b577-3ae6d2f45e11",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "attack-pattern--d05b8503-8e55-4ac5-ae37-28560dce163b",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -83,9 +123,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7fcbff33-6622-40f4-8ba8-60549024a338",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "indicator--8fb2d3de-5067-41dc-b891-3181ea27c707",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
       "description": "U.S. government agencies have warned that threat actors are actively targeting industrial refrigeration and cold-chain monitoring systems globally with an aim to cause service disruptions, fire hazards, and loss of inventory. \"The actors may exploit vulnerabilities or weaknesses in unpatched or internet-accessible controllers to remotely alter sett...",
       "indicator_types": [
@@ -93,7 +133,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T14:47:39.180551+00:00",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
       "confidence": 75,
       "labels": [
         "Cold-chain"
@@ -108,9 +148,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--39ce037e-4071-4a30-afd3-8457e6afa1af",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "attack-pattern--3ee6186a-10e3-4ee3-9c69-092a1fd6944f",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -122,9 +162,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ea387d24-e804-4a4f-86ce-1284143dca6d",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "indicator--4810b0f7-0021-40e0-a43e-5544e0bf3503",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
       "description": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security researcher who found it. The update that installs the fix still unpacks its files using the site's old, unpatched code, so an attacker who strikes at the right moment can run code on the server. The rese...",
       "indicator_types": [
@@ -132,7 +172,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T14:47:39.180551+00:00",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -148,9 +188,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5f58c3f0-6a32-474a-9963-9334134f40e7",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "attack-pattern--14601f1a-a21e-4e1f-9b39-779ffb0af0ac",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -162,9 +202,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0b51509f-2465-402e-ac11-1aa2d87bb130",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "indicator--168ecef5-9564-42d1-8cfa-8f44ed719a42",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
       "description": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store update, not through Windows updates. The fixed build, 11.2609.401.0, was the newest Paint build in all ten countries The Hacker News checked today. The flaw is an out-of-bounds read that could let an attac...",
       "indicator_types": [
@@ -172,7 +212,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T14:47:39.180551+00:00",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -188,9 +228,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--81504627-0592-498d-878d-2c666afda9f0",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "attack-pattern--b8f77892-c359-4b15-82b3-b5667adbce7d",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -202,9 +242,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c01fe2e7-7384-479b-919c-9a2cf7bd9430",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "indicator--bbf54d57-32a9-4de3-a62f-9c3414b8fdf6",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "The Flood is Coming And The Pipes Were Already Full",
       "description": "An update on Athena, and some unsolicited predictions on what's coming next On Saturday, Dario Amodei published We Must Pace the Frontier. I agree with him. Go read it if you haven't. I've spent the summer looking at what these models find, and the gap he describes between what they can do and what the rest of us are ready for is the one I've been...",
       "indicator_types": [
@@ -212,7 +252,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T14:47:39.180551+00:00",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -227,9 +267,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c901e296-c7c5-47d9-92d4-153bdfb9be71",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "attack-pattern--1616d92f-a775-4307-9a39-1bcc3c13bfd6",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -241,9 +281,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--149f1e32-2c15-4ae6-b854-0bade55de39e",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "indicator--5b6fb107-1704-4bf8-88fa-100088c773ff",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
       "description": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
       "indicator_types": [
@@ -251,7 +291,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-09T14:47:39.180551+00:00",
+      "valid_from": "2026-11-09T15:51:54.113463+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -268,9 +308,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ac7a9c1e-2e48-4687-9f14-e0c14a663637",
-      "created": "2026-11-09T14:47:39.180551+00:00",
-      "modified": "2026-11-09T14:47:39.180551+00:00",
+      "id": "attack-pattern--f81f0145-9f2e-4fc2-a30e-fc54889da21f",
+      "created": "2026-11-09T15:51:54.113463+00:00",
+      "modified": "2026-11-09T15:51:54.113463+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
