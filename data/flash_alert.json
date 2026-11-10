@@ -1,17 +1,19 @@
 {
-  "id": "scraped-13",
-  "title": "Chrome Update Patches Exploited XML Zero-Day, Eighth This Year",
-  "source": "SecurityWeek",
-  "url": "https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/",
+  "id": "scraped-6",
+  "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+  "source": "The Hacker News",
+  "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
   "date": "10 Nov 2026",
-  "_timestamp": 1794291144.0,
+  "_timestamp": 1794293574.0,
   "is_new": true,
   "is_flash": true,
   "is_peak_trading": false,
   "severity": "CRITICAL",
   "subsector": "enterprise",
   "actor": null,
-  "cves": [],
+  "cves": [
+    "CVE-2026-125350"
+  ],
   "tags": [
     "Global 0-Day",
     "Enterprise"
@@ -20,9 +22,9 @@
   "mitre_id": "T1190",
   "mitre_tactic": "Initial Access",
   "mitre_name": "Exploit Public-Facing Application",
-  "summary": "The high-severity use-after-free in Chrome’s XML component was reported anonymously on November 6 and is already exploited in attacks. The post Chrome Update Patches Exploited XML Zero-Day, Eighth This Year appeared first on SecurityWeek .",
+  "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has been described as a use-after-free bug in the XML component. Use-after-free bugs typically occur when a progr...",
   "indicators": [
-    "https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/"
+    "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"
   ],
   "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
 }
