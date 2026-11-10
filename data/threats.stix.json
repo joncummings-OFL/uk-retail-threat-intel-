@@ -1,13 +1,492 @@
 {
   "type": "bundle",
-  "id": "bundle--d76d0146-b525-41b6-a09c-37c6d4eeebe6",
+  "id": "bundle--eb151337-6a4d-4e9f-968d-30c4640110f9",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d3eb80f6-1f08-4e4a-a83a-5741ec76bbda",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--e4c7f0a2-deae-4602-8f2a-b383c0c8bcf9",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploited Outlook Zero-Day Among 1,094 Flaws Patched by Microsoft",
+      "description": "CVE-2026-124194 is the Outlook zero-day for which Microsoft says it\u2019s aware of active exploitation. The post Exploited Outlook Zero-Day Among 1,094 Flaws Patched by Microsoft appeared first on SecurityWeek .",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "SecurityWeek",
+          "url": "https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--83a4b549-1cae-42d2-a534-a745e90f028c",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--50581950-f098-4749-bb2a-61b0840d841e",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
+      "description": "An attacker exploited a remote code execution flaw in SGLang, an open-source inference engine, and ran code on one of NEAR AI's inference servers last Sunday. The attacker could also have seen requests being processed on that server that day, including requests sent in confidential mode, the company said earlier this week. That mode processes reque...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9cd03fd0-42df-46df-be59-e3b367f5578a",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b950d978-a235-49eb-ab32-ddb29a2cd5fd",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
+      "description": "French software company Vates VMS has warned of a critical security vulnerability in Xen Orchestra that it said is being actively exploited in the wild. The authentication bypass flaw, which does not yet have a CVE identifier, is tracked as VSA-2026-062. \"REST cookie parsing turns authenticationToken=j:%7B%7D into {},\" Vates VMS said in an alert. \"...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--19e8efa1-acde-4859-ad2f-f301834eef9f",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--edd33747-8edf-4e16-b9fe-8df6cbae7300",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Software Transparency Is Changing: Allan Friedman on SBOM, AI BOMs and What Comes Next",
+      "description": "SBOM pioneer Allan Friedman joined the SecurityWeek Podcast to discuss why knowing what is inside software is only the beginning, how AI is complicating software supply chain visibility, and what organizations should be doing with SBOM data once they have it. The post Software Transparency Is Changing: Allan Friedman on SBOM, AI BOMs and What Comes...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.securityweek.com/software-transparency-is-changing-allan-friedman-on-sbom-ai-boms-and-what-comes-next/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 75,
+      "labels": [
+        "Supply chain",
+        "Next"
+      ],
+      "external_references": [
+        {
+          "source_name": "SecurityWeek",
+          "url": "https://www.securityweek.com/software-transparency-is-changing-allan-friedman-on-sbom-ai-boms-and-what-comes-next/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--676e38e5-b01f-406f-accb-a4ad95eea29c",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c0a0e90a-cef6-4d54-bf19-9af227d6525b",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Chrome zero-day whack-a-mole continues as 2026 tally hits 8",
+      "description": "Another Chrome memory bug gets squashed, but not before attackers got their hands on it",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/10/chrome-zero-day-whack-a-mole-continues-as-2026-tally-hits-8/5308732']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Register Security (UK)",
+          "url": "https://www.theregister.com/security/2026/11/10/chrome-zero-day-whack-a-mole-continues-as-2026-tally-hits-8/5308732"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--56004cf2-b1bc-4786-b13f-ce70bbad384e",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f5df0655-d074-4b2d-a402-b230a4ca3e52",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Over a Dozen Organizations Hit in Qubole Supply Chain Attack",
+      "description": "Hackers used compromised Qubole IAM credentials to steal customer files, secrets, keys, environment variables, and credentials. The post Over a Dozen Organizations Hit in Qubole Supply Chain Attack appeared first on SecurityWeek .",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 75,
+      "labels": [
+        "Supply chain"
+      ],
+      "external_references": [
+        {
+          "source_name": "SecurityWeek",
+          "url": "https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1f1e8024-71a1-46a9-b124-48de5f97bd63",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dbcf615d-3360-4313-9263-03afd5851526",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Google fixes the eighth actively exploited Chrome zero-day of 2026",
+      "description": "Google patched nine Chrome flaws, including a V8 vulnerability tracked as CVE-2026-125350, that attackers have been actively exploiting in the wild. Google has addressed multiple security vulnerabilities, one of which, tracked as CVE-2026-125350, has been actively exploited in the wild. The vulnerability is a use after free issue that resides in XM...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "Security Affairs",
+          "url": "https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bc6bf38b-863d-4d6d-ba83-5b9d7d8a3340",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--88b8d787-15b8-4646-95ff-98cd2f34faf3",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
+      "description": "Four flaws that attackers could exploit without logging in were fixed today as part of SAP's monthly Security Patch Day\u2014the vendor rates all four 10.0, the maximum CVSS score. Three are in the SAP NetWeaver application server, the software SAP systems run on, and one is in the Web Dispatcher, which receives web requests from the internet and passes...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--25d0a31e-1c68-4af7-8ba9-f9f0d737ecd1",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--75eba70e-ad59-4e2e-83f9-817c3d37fc5b",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days",
+      "description": "Attackers could exploit the flaws for remote code execution, credential theft, and administrator account creation. The post N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days appeared first on SecurityWeek .",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "SecurityWeek",
+          "url": "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0f356708-d274-4eef-a79b-cc82664b4ce4",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Brute Force / Credential Stuffing",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f5503c76-cdcd-4aea-8674-b657a51165bd",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
+      "description": "An October cyberattack on refrigeration controllers at about 700 French retail sites was carried out by a cyber unit of Iran's Islamic Revolutionary Guard Corps (IRGC), the French government said yesterday. The attackers broke into controllers on the night of October 11 and changed their defrost settings to high temperatures. That caused food losse...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 75,
+      "labels": [
+        "Retail"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3318c229-d2d1-4e76-b773-f4e062bc57da",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3514d6c3-63cf-4298-b6db-2df2c5c6f33b",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+      "description": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has been described as a use-after-free bug in the XML component. Use-after-free bugs typically occur when a progr...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://thehackernews.com/2026/11/google-issues-chrome-security-update.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Hacker News",
+          "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a20622cd-8946-4c00-bb83-39d210fef012",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b35cb792-f8fb-4532-9482-abe3aeb6a1c6",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Google Cloud London outage: Continuity lessons for IT leaders",
+      "description": "On 20 October, a power event at the datacentre hosting Google Cloud\u2019s europe-west2-b zone took that zone offline. It is one of three availability zones in Google\u2019s London region, designed to allow the others to keep running if one experiences a fault. Yet Revolut, HSBC, DPD and Royal Mail were among the organisations reported to have experienced di...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
+      "confidence": 75,
+      "labels": [
+        "Royal mail",
+        "Next",
+        "Dpd"
+      ],
+      "external_references": [
+        {
+          "source_name": "Computer Weekly Security (UK)",
+          "url": "https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b1fe4c65-a40d-43a2-81e0-082b52eac353",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
+      "name": "Brute Force / Credential Stuffing",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fe721484-2e7a-4457-af37-3c7f830592e5",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-124194 in Microsoft Office Under Active Exploitation",
       "description": "Microsoft Office is affected by CVE-2026-124194. Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 P...",
       "indicator_types": [
@@ -15,7 +494,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -32,9 +511,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--713a8466-a33b-48f1-9c54-d812454553b8",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--8fd6099d-3017-4e56-b6f3-55534f3168f8",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -46,9 +525,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8100b541-f72d-4edb-96ce-5032299180bb",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--a0701e52-4f4a-488e-895f-8de4ccb0f225",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-111793 in Openwave Messaging Limited Webtop Media Transcoder Under Active Exploitation",
       "description": "Openwave Messaging Limited Webtop Media Transcoder is affected by CVE-2026-111793. Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience. Required Remediation: A...",
       "indicator_types": [
@@ -56,7 +535,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111793']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -73,9 +552,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ddd81ed4-aae5-44c0-8eb8-7409abf92370",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--38266576-2afb-401f-a239-e8c24774ecef",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -87,9 +566,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5ebc0650-2925-4e4e-9a38-c7f522dbd3d7",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--1c2fc868-1c55-4c40-b243-f1ae8a4e6429",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-20320 in Cisco BroadWorks Under Active Exploitation",
       "description": "Cisco BroadWorks is affected by CVE-2026-20320. Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system. Required Remediation: Apply mitigations in accordance with vendor instructions, ensur...",
       "indicator_types": [
@@ -97,7 +576,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20320']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -114,9 +593,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--bd484cdf-c1b8-47d5-8fee-16e7dde20e85",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--5c53b2c1-5876-40af-92ea-f121161434f6",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -128,9 +607,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--648a0275-946a-448a-8876-5b6db9380983",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--ab77f91f-3b0a-496a-91d7-52d05b430844",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-111560 in Barracuda Networks Multiple Products Under Active Exploitation",
       "description": "Barracuda Networks Multiple Products is affected by CVE-2026-111560. Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability...",
       "indicator_types": [
@@ -138,7 +617,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111560']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -155,9 +634,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a1c6ee8f-96a1-48c7-b97c-37b3b3f2b9da",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--3b55a784-d996-45e1-8275-8c37c1fb29c1",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -169,9 +648,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--38eee76e-ec92-4d9f-911f-7f3bde08935d",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--b129a538-d902-49f3-87bb-5b44c82a9c22",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-116606 in Barracuda Networks Barracuda Email Security Gateway (ESG) Under Active Exploitation",
       "description": "Barracuda Networks Barracuda Email Security Gateway (ESG) is affected by CVE-2026-116606. Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive,...",
       "indicator_types": [
@@ -179,7 +658,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116606']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -196,9 +675,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--eb31ae5f-0a3a-470d-9ba7-f5174e80d94b",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--27b4d0ac-13e4-4ee9-bd00-2cd99d97d271",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -210,9 +689,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--165371d2-72bf-4ba1-a4d0-bc3848aedf1c",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--008d1744-1256-432c-9197-966790ea24c1",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-125350 in Google Chromium Under Active Exploitation",
       "description": "Google Chromium is affected by CVE-2026-125350. Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Goog...",
       "indicator_types": [
@@ -220,7 +699,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-125350']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -237,9 +716,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--d8646772-ae2c-4792-8071-931001b3c4dc",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--ece4b646-185b-4884-b1b9-0554eb8fa314",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -251,368 +730,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--aedc7787-00ea-4671-9ea1-04fd577c8c4e",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Software Transparency Is Changing: Allan Friedman on SBOM, AI BOMs and What Comes Next",
-      "description": "SBOM pioneer Allan Friedman joined the SecurityWeek Podcast to discuss why knowing what is inside software is only the beginning, how AI is complicating software supply chain visibility, and what organizations should be doing with SBOM data once they have it. The post Software Transparency Is Changing: Allan Friedman on SBOM, AI BOMs and What Comes...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://www.securityweek.com/software-transparency-is-changing-allan-friedman-on-sbom-ai-boms-and-what-comes-next/']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 75,
-      "labels": [
-        "Supply chain",
-        "Next"
-      ],
-      "external_references": [
-        {
-          "source_name": "SecurityWeek",
-          "url": "https://www.securityweek.com/software-transparency-is-changing-allan-friedman-on-sbom-ai-boms-and-what-comes-next/"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--4572ebba-8ae3-42c7-a89f-045ef7f09177",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--b55cdf21-a2f0-45f6-a221-9edda36347ad",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Chrome zero-day whack-a-mole continues as 2026 tally hits 8",
-      "description": "Another Chrome memory bug gets squashed, but not before attackers got their hands on it",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/10/chrome-zero-day-whack-a-mole-continues-as-2026-tally-hits-8/5308732']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 90,
-      "labels": [
-        "Global 0-Day",
-        "Enterprise"
-      ],
-      "external_references": [
-        {
-          "source_name": "The Register Security (UK)",
-          "url": "https://www.theregister.com/security/2026/11/10/chrome-zero-day-whack-a-mole-continues-as-2026-tally-hits-8/5308732"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--90c659e9-bb26-4d83-95b7-1aef4c4a1dcf",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--c66f87e4-613c-4adf-8573-a7e5171ea873",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Over a Dozen Organizations Hit in Qubole Supply Chain Attack",
-      "description": "Hackers used compromised Qubole IAM credentials to steal customer files, secrets, keys, environment variables, and credentials. The post Over a Dozen Organizations Hit in Qubole Supply Chain Attack appeared first on SecurityWeek .",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 75,
-      "labels": [
-        "Supply chain"
-      ],
-      "external_references": [
-        {
-          "source_name": "SecurityWeek",
-          "url": "https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--40c25401-c9a6-490b-bebf-e4b720236491",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--407e15cf-6835-4539-9e2b-361e35c85f04",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Google fixes the eighth actively exploited Chrome zero-day of 2026",
-      "description": "Google patched nine Chrome flaws, including a V8 vulnerability tracked as CVE-2026-125350, that attackers have been actively exploiting in the wild. Google has addressed multiple security vulnerabilities, one of which, tracked as CVE-2026-125350, has been actively exploited in the wild. The vulnerability is a use after free issue that resides in XM...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 90,
-      "labels": [
-        "Global 0-Day",
-        "Enterprise"
-      ],
-      "external_references": [
-        {
-          "source_name": "Security Affairs",
-          "url": "https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--cf80a906-495f-4ac1-a8a1-fd731ac8c1d8",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--93e866e8-04d6-4879-a6b1-5e46abf9c668",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
-      "description": "Four flaws that attackers could exploit without logging in were fixed today as part of SAP's monthly Security Patch Day\u2014the vendor rates all four 10.0, the maximum CVSS score. Three are in the SAP NetWeaver application server, the software SAP systems run on, and one is in the Web Dispatcher, which receives web requests from the internet and passes...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 90,
-      "labels": [
-        "Global 0-Day",
-        "Enterprise"
-      ],
-      "external_references": [
-        {
-          "source_name": "The Hacker News",
-          "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--bb2b24a3-6461-430d-b575-b8ee4fb21dce",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--05d0881b-595a-4049-8436-97294b9df134",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days",
-      "description": "Attackers could exploit the flaws for remote code execution, credential theft, and administrator account creation. The post N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days appeared first on SecurityWeek .",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 90,
-      "labels": [
-        "Global 0-Day",
-        "Enterprise"
-      ],
-      "external_references": [
-        {
-          "source_name": "SecurityWeek",
-          "url": "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--0d37c25d-6da6-4fad-a607-2a6d305aa32d",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Brute Force / Credential Stuffing",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1110"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--50f08406-552e-493b-8a6b-7b4007c4d5c4",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
-      "description": "An October cyberattack on refrigeration controllers at about 700 French retail sites was carried out by a cyber unit of Iran's Islamic Revolutionary Guard Corps (IRGC), the French government said yesterday. The attackers broke into controllers on the night of October 11 and changed their defrost settings to high temperatures. That caused food losse...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 75,
-      "labels": [
-        "Retail"
-      ],
-      "external_references": [
-        {
-          "source_name": "The Hacker News",
-          "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--828ea45a-c0fd-45d7-9e3c-958a8db356f7",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--f6626f09-a258-4eab-b698-efdec899b6e5",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
-      "description": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350 (CVSS score: N/A), has been described as a use-after-free bug in the XML component. Use-after-free bugs typically occur when a progr...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://thehackernews.com/2026/11/google-issues-chrome-security-update.html']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 90,
-      "labels": [
-        "Global 0-Day",
-        "Enterprise"
-      ],
-      "external_references": [
-        {
-          "source_name": "The Hacker News",
-          "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--16599fd0-9b28-4d6b-85bc-2ed3d3c606cf",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--3ecbe31c-7de5-480f-9a8b-516e90c35282",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Google Cloud London outage: Continuity lessons for IT leaders",
-      "description": "On 20 October, a power event at the datacentre hosting Google Cloud\u2019s europe-west2-b zone took that zone offline. It is one of three availability zones in Google\u2019s London region, designed to allow the others to keep running if one experiences a fault. Yet Revolut, HSBC, DPD and Royal Mail were among the organisations reported to have experienced di...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 75,
-      "labels": [
-        "Royal mail",
-        "Dpd",
-        "Next"
-      ],
-      "external_references": [
-        {
-          "source_name": "Computer Weekly Security (UK)",
-          "url": "https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--89cab617-b3f9-4145-a01f-dd698447d3e0",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Brute Force / Credential Stuffing",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1110"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--9423e643-ad52-45fc-a724-a2d0fd1b12a4",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--89bec12c-dadd-44d2-89d4-27d21e76fe55",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "PwC's CISO on AI, Robots & What's Next for Security",
       "description": "As AI accelerates change across the enterprise, PwC's James Shira explains why security teams must rethink their approach to risk and adapt their strategies.",
       "indicator_types": [
@@ -620,7 +740,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -635,9 +755,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5d0f2817-9fad-4922-ac08-f4c32b2e5c70",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--38c01071-8d0c-450f-9e48-b1377877bb4e",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Data from Local System / POS",
       "external_references": [
         {
@@ -649,9 +769,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3aac2c7f-a891-481e-9c28-d8f45be790f3",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--d5570b47-24ee-4a4d-b38d-046a0e7beb7a",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
       "description": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeting South Asian organizations with a previously unreported remote access trojan called PapRAT. \"PapRAT has both C++ and Rust implementations,\" Fortinet FortiGuard Labs researcher Cara Lin said. \"Its ca...",
       "indicator_types": [
@@ -659,7 +779,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -675,9 +795,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--74c7a146-aa8f-44df-94c1-47cba83f4e3c",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--ed780bfc-2cd9-4a5f-bc08-2d0125d57c4c",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -689,87 +809,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c6fb78a2-d161-450a-a747-18b9b80e5791",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
-      "description": "The OpenAI engineer who was arrested and charged last month for planting a covert audio recording device in the company's office has pleaded not guilty. According to reports from Bloomberg and CNBC, Saudi national Abdulrahman Alfozan made an appearance in San Francisco federal court on Friday, where he entered the plea. His next hearing is schedule...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 75,
-      "labels": [
-        "Next"
-      ],
-      "external_references": [
-        {
-          "source_name": "The Hacker News",
-          "url": "https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--d76a390e-dd77-4225-8115-7fdf07828ce9",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--c49e9ba4-7df1-4b78-8de0-84a55b17ebd8",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
-      "description": "U.S. government agencies have warned that threat actors are actively targeting industrial refrigeration and cold-chain monitoring systems globally with an aim to cause service disruptions, fire hazards, and loss of inventory. \"The actors may exploit vulnerabilities or weaknesses in unpatched or internet-accessible controllers to remotely alter sett...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
-      "confidence": 75,
-      "labels": [
-        "Cold-chain"
-      ],
-      "external_references": [
-        {
-          "source_name": "The Hacker News",
-          "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--573eab2a-dccc-4173-b0ba-b90330dcfb5b",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
-      "name": "Exploit Public-Facing Application",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--d2154005-98fd-4c5c-892d-d92565eb1f3a",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--3b358daa-b01d-4442-9d80-9f0879e74903",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-102895 in GPUStack GPUStack Under Active Exploitation",
       "description": "GPUStack GPUStack is affected by CVE-2026-102895. GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/fro...",
       "indicator_types": [
@@ -777,7 +819,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102895']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -794,9 +836,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--1245a025-b63c-472a-a39d-f89b878c8d6c",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--39d870d9-ccb9-4d65-a848-3645aaa9ecb5",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -808,9 +850,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--376b11d5-ca9c-47c4-b752-63986bc27b00",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--55f46ea1-f952-4c48-a4e2-2df604442800",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-123158 in OpenBSD OpenSSH Under Active Exploitation",
       "description": "OpenBSD OpenSSH is affected by CVE-2026-123158. OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (s...",
       "indicator_types": [
@@ -818,7 +860,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123158']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -835,9 +877,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--2f5b062a-e6b8-4179-b324-04acebedc9ae",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--18ed92e5-0d5b-41be-990f-28e6bb96a863",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -849,9 +891,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e6b6c3da-935e-42ee-879a-0311355f2f05",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--b8b29d55-d3c2-4191-9eb9-8dcf0f507904",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-116779 in SignalWire FreeSwitch Under Active Exploitation",
       "description": "SignalWire FreeSwitch is affected by CVE-2026-116779. SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizin...",
       "indicator_types": [
@@ -859,7 +901,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116779']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -876,9 +918,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--9aabe74c-9553-4cd4-89a5-f95ae657e279",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--bb9f8a16-8e88-4280-a51e-8972b9bbd3c5",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -890,9 +932,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4863e38c-a6a5-4a3e-8604-dc4265b00347",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--1c982e4b-b64a-462b-9594-673322d4d885",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-123218 in IBM Aspera Faspex Under Active Exploitation",
       "description": "IBM Aspera Faspex is affected by CVE-2026-123218. IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA...",
       "indicator_types": [
@@ -900,7 +942,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123218']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -917,9 +959,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ea0d60b3-551f-4c3d-93be-cf346f5680ac",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--f6b1a0ed-6543-4272-98c5-90885ef7b57e",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -931,9 +973,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--449689d7-11b7-448e-9e0a-a7f38ec0c145",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "indicator--5dc167fb-07b0-470e-9d1f-d0566ad80a28",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "CISA KEV Alert: CVE-2026-19868 in SonicWall SonicOS SSLVPN Under Active Exploitation",
       "description": "SonicWall SonicOS SSLVPN is affected by CVE-2026-19868. SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (M...",
       "indicator_types": [
@@ -941,7 +983,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-19868']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-10T19:03:59.703112+00:00",
+      "valid_from": "2026-11-10T19:59:33.601714+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -958,9 +1000,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--7e85ff81-8d40-458f-a76f-5ef68399642f",
-      "created": "2026-11-10T19:03:59.703112+00:00",
-      "modified": "2026-11-10T19:03:59.703112+00:00",
+      "id": "attack-pattern--59fa619e-b861-47eb-bcc0-a62d910c1959",
+      "created": "2026-11-10T19:59:33.601714+00:00",
+      "modified": "2026-11-10T19:59:33.601714+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
