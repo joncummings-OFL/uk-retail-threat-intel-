@@ -1,28 +1,30 @@
 {
-  "id": "scraped-17",
-  "title": "N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days",
-  "source": "SecurityWeek",
-  "url": "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/",
+  "id": "scraped-19",
+  "title": "Google fixes the eighth actively exploited Chrome zero-day of 2026",
+  "source": "Security Affairs",
+  "url": "https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html",
   "date": "10 Nov 2026",
-  "_timestamp": 1794304588.0,
+  "_timestamp": 1794305100.0,
   "is_new": true,
   "is_flash": true,
   "is_peak_trading": false,
   "severity": "CRITICAL",
   "subsector": "enterprise",
   "actor": null,
-  "cves": [],
+  "cves": [
+    "CVE-2026-125350"
+  ],
   "tags": [
     "Global 0-Day",
     "Enterprise"
   ],
-  "mitre": "T1110 (Brute Force / Credential Stuffing)",
-  "mitre_id": "T1110",
-  "mitre_tactic": "Credential Access",
-  "mitre_name": "Brute Force / Credential Stuffing",
-  "summary": "Attackers could exploit the flaws for remote code execution, credential theft, and administrator account creation. The post N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days appeared first on SecurityWeek .",
+  "mitre": "T1190 (Exploit Public-Facing Application)",
+  "mitre_id": "T1190",
+  "mitre_tactic": "Initial Access",
+  "mitre_name": "Exploit Public-Facing Application",
+  "summary": "Google patched nine Chrome flaws, including a V8 vulnerability tracked as CVE-2026-125350, that attackers have been actively exploiting in the wild. Google has addressed multiple security vulnerabilities, one of which, tracked as CVE-2026-125350, has been actively exploited in the wild. The vulnerability is a use after free issue that resides in XM...",
   "indicators": [
-    "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/"
+    "https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html"
   ],
   "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
 }

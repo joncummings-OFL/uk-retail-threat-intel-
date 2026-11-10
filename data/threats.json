@@ -1,12 +1,42 @@
 [
   {
+    "id": "scraped-19",
+    "title": "Google fixes the eighth actively exploited Chrome zero-day of 2026",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html",
+    "date": "10 Nov 2026",
+    "_timestamp": 1794305100.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-125350"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Google patched nine Chrome flaws, including a V8 vulnerability tracked as CVE-2026-125350, that attackers have been actively exploiting in the wild. Google has addressed multiple security vulnerabilities, one of which, tracked as CVE-2026-125350, has been actively exploited in the wild. The vulnerability is a use after free issue that resides in XM...",
+    "indicators": [
+      "https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
     "id": "scraped-7",
     "title": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html",
     "date": "10 Nov 2026",
     "_timestamp": 1794304960.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -28,14 +58,14 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-16",
     "title": "N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/",
     "date": "10 Nov 2026",
     "_timestamp": 1794304588.0,
-    "is_new": true,
-    "is_flash": true,
+    "is_new": false,
+    "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "enterprise",
@@ -113,7 +143,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-17",
     "title": "Chrome Update Patches Exploited XML Zero-Day, Eighth This Year",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/",
@@ -170,7 +200,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-15",
     "title": "PwC's CISO on AI, Robots & What's Next for Security",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security",
@@ -225,7 +255,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-18",
     "title": "Revolve Puts Data Breach Victim Count at 1.5 Million",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/",
@@ -516,33 +546,6 @@
       "raw_score": 0.00384,
       "percentile": "32.8%"
     }
-  },
-  {
-    "id": "scraped-15",
-    "title": "The Flood is Coming And The Pipes Were Already Full",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html",
-    "date": "06 Nov 2026",
-    "_timestamp": 1793964600.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "ecom",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "An update on Athena, and some unsolicited predictions on what's coming next On Saturday, Dario Amodei published We Must Pace the Frontier. I agree with him. Go read it if you haven't. I've spent the summer looking at what these models find, and the gap he describes between what they can do and what the rest of us are ready for is the one I've been...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
     "id": "cisa-kev-cve_2026_19868",
