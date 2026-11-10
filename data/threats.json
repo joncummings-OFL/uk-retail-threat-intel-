@@ -1,12 +1,68 @@
 [
   {
     "id": "scraped-7",
+    "title": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html",
+    "date": "10 Nov 2026",
+    "_timestamp": 1794304960.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Four flaws that attackers could exploit without logging in were fixed today as part of SAP's monthly Security Patch Day—the vendor rates all four 10.0, the maximum CVSS score. Three are in the SAP NetWeaver application server, the software SAP systems run on, and one is in the Web Dispatcher, which receives web requests from the internet and passes...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-17",
+    "title": "N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/",
+    "date": "10 Nov 2026",
+    "_timestamp": 1794304588.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "Attackers could exploit the flaws for remote code execution, credential theft, and administrator account creation. The post N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days appeared first on SecurityWeek .",
+    "indicators": [
+      "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-8",
     "title": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
     "date": "10 Nov 2026",
     "_timestamp": 1794301700.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
@@ -27,36 +83,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-6",
-    "title": "Google Cloud London outage: Continuity lessons for IT leaders",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders",
-    "date": "10 Nov 2026",
-    "_timestamp": 1794283980.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": true,
-    "severity": "HIGH",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Royal mail",
-      "Next",
-      "Dpd"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "On 20 October, a power event at the datacentre hosting Google Cloud’s europe-west2-b zone took that zone offline. It is one of three availability zones in Google’s London region, designed to allow the others to keep running if one experiences a fault. Yet Revolut, HSBC, DPD and Royal Mail were among the organisations reported to have experienced di...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-8",
+    "id": "scraped-9",
     "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
@@ -86,7 +113,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-18",
     "title": "Chrome Update Patches Exploited XML Zero-Day, Eighth This Year",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/chrome-update-patches-exploited-xml-zero-day-eighth-this-year/",
@@ -114,7 +141,36 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-6",
+    "title": "Google Cloud London outage: Continuity lessons for IT leaders",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders",
+    "date": "10 Nov 2026",
+    "_timestamp": 1794283980.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": true,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Royal mail",
+      "Dpd",
+      "Next"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "On 20 October, a power event at the datacentre hosting Google Cloud’s europe-west2-b zone took that zone offline. It is one of three availability zones in Google’s London region, designed to allow the others to keep running if one experiences a fault. Yet Revolut, HSBC, DPD and Royal Mail were among the organisations reported to have experienced di...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-16",
     "title": "PwC's CISO on AI, Robots & What's Next for Security",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security",
@@ -141,7 +197,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-9",
+    "id": "scraped-10",
     "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
@@ -169,7 +225,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-19",
     "title": "Revolve Puts Data Breach Victim Count at 1.5 Million",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/revolve-puts-data-breach-victim-count-at-1-5-million/",
@@ -196,7 +252,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-10",
+    "id": "scraped-11",
     "title": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html",
@@ -223,7 +279,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-12",
     "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
@@ -398,7 +454,7 @@
     }
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-13",
     "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
@@ -426,7 +482,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-14",
     "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won't Deliver It",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
@@ -462,7 +518,7 @@
     }
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-15",
     "title": "The Flood is Coming And The Pipes Were Already Full",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html",
