@@ -1,5 +1,41 @@
 [
   {
+    "id": "scraped-15",
+    "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+    "date": "11 Nov 2026",
+    "_timestamp": 1794377042.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-20320"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) Tuesday added two security flaws impacting Cisco BroadWorks and Openwave Messaging Webtop Media Transcoder to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. Details of the vulnerabilities are below - CVE-2026-20320 (CVSS score: 7.5) - An imp...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-20320",
+      "score": "0.4%",
+      "raw_score": 0.00385,
+      "percentile": "32.9%"
+    }
+  },
+  {
     "id": "scraped-11",
     "title": "November Patch Tuesday boasts over 1,000 bugs but only one zero-day so far",
     "source": "The Register Security (UK)",
@@ -28,7 +64,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-21",
+    "id": "scraped-22",
     "title": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves",
@@ -84,7 +120,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-24",
     "title": "Exploited Outlook Zero-Day Among 1,094 Flaws Patched by Microsoft",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/exploited-outlook-zero-day-among-1094-flaws-patched-by-microsoft/",
@@ -114,7 +150,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-16",
     "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
@@ -142,7 +178,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-17",
     "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
@@ -170,7 +206,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-24",
+    "id": "scraped-25",
     "title": "Software Transparency Is Changing: Allan Friedman on SBOM, AI BOMs and What Comes Next",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/software-transparency-is-changing-allan-friedman-on-sbom-ai-boms-and-what-comes-next/",
@@ -226,7 +262,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-26",
     "title": "Over a Dozen Organizations Hit in Qubole Supply Chain Attack",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/over-a-dozen-organizations-hit-in-qubole-supply-chain-attack/",
@@ -283,7 +319,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-18",
     "title": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html",
@@ -311,35 +347,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-26",
-    "title": "N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/",
-    "date": "10 Nov 2026",
-    "_timestamp": 1794304588.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "Attackers could exploit the flaws for remote code execution, credential theft, and administrator account creation. The post N-able Takes N-central Offline as Researcher Drops Over 30 Zero-Days appeared first on SecurityWeek .",
-    "indicators": [
-      "https://www.securityweek.com/n-able-takes-n-central-offline-as-researcher-drops-over-30-zero-days/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-18",
+    "id": "scraped-19",
     "title": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
@@ -366,7 +374,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-20",
     "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
@@ -410,9 +418,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
       "Royal mail",
-      "Dpd"
+      "Dpd",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -635,7 +643,7 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Chromium."
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-23",
     "title": "PwC's CISO on AI, Robots & What's Next for Security",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security",
@@ -662,7 +670,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-20",
+    "id": "scraped-21",
     "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
