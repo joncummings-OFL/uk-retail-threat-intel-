@@ -1,12 +1,42 @@
 [
   {
+    "id": "scraped-17",
+    "title": "Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html",
+    "date": "12 Nov 2026",
+    "_timestamp": 1794497929.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-120868"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Citrix has released patches for multiple critical security flaws impacting NetScaler ADC, Citrix NetScaler Gateway, and NetScaler Console that could lead to denial-of-service (DoS) or an authentication bypass. The critical vulnerabilities that impact NetScaler ADC and NetScaler Gateway are listed below - CVE-2026-120868 (CVSS score: 9.3) - A memory...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
     "id": "scraped-11",
     "title": "Microsoft Exchange Server 2016 and 2019 enter their 'permanently vulnerable' era",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/saas/2026/11/12/microsoft-exchange-server-2016-and-2019-enter-their-permanently-vulnerable-era/5309401",
     "date": "12 Nov 2026",
     "_timestamp": 1794495300.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -28,7 +58,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-18",
     "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
@@ -64,7 +94,7 @@
     }
   },
   {
-    "id": "scraped-21",
+    "id": "scraped-20",
     "title": "Inside an AI Attack Against a US Retailer",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer",
@@ -146,7 +176,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-19",
     "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
@@ -182,7 +212,7 @@
     }
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-21",
     "title": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves",
@@ -238,62 +268,6 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-19",
-    "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
-    "date": "10 Nov 2026",
-    "_timestamp": 1794338379.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "An attacker exploited a remote code execution flaw in SGLang, an open-source inference engine, and ran code on one of NEAR AI's inference servers last Sunday. The attacker could also have seen requests being processed on that server that day, including requests sent in confidential mode, the company said earlier this week. That mode processes reque...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-20",
-    "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
-    "date": "10 Nov 2026",
-    "_timestamp": 1794334341.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "French software company Vates VMS has warned of a critical security vulnerability in Xen Orchestra that it said is being actively exploited in the wild. The authentication bypass flaw, which does not yet have a CVE identifier, is tracked as VSA-2026-062. \"REST cookie parsing turns authenticationToken=j:%7B%7D into {},\" Vates VMS said in an alert. \"...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
     "id": "scraped-12",
     "title": "Chrome zero-day whack-a-mole continues as 2026 tally hits 8",
     "source": "The Register Security (UK)",
@@ -337,8 +311,8 @@
     "cves": [],
     "tags": [
       "Dpd",
-      "Royal mail",
-      "Next"
+      "Next",
+      "Royal mail"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -573,7 +547,7 @@
     }
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-22",
     "title": "PwC's CISO on AI, Robots & What's Next for Security",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security",
