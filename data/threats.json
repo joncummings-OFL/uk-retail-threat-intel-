@@ -1,6 +1,64 @@
 [
   {
-    "id": "scraped-18",
+    "id": "scraped-16",
+    "title": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html",
+    "date": "12 Nov 2026",
+    "_timestamp": 1794483195.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-126325"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution. The security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9.2 out of a maximum of 10.0. It has been described as a case of improper input validation and deserializ...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-12",
+    "title": "AI agents bring down wind farm within two hours",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366654794/AI-agents-bring-down-wind-farm-within-two-hours",
+    "date": "12 Nov 2026",
+    "_timestamp": 1794471180.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next",
+      "Retailers"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "Artificial intelligence (AI) agents can hack into wind farms, erase the memory of electronic controllers and cut off their electricity production capability in under two hours. Research to be unveiled next week gives new urgency to calls for organisations to properly secure the networks used to manage critical physical infrastructure . The warning...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366654794/AI-agents-bring-down-wind-farm-within-two-hours"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-20",
     "title": "Inside an AI Attack Against a US Retailer",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer",
@@ -27,7 +85,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-13",
     "title": "Bug-hunting time cut dramatically with AI, says Forescout",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366654735/Bug-hunting-time-cut-dramatically-with-AI-says-Forescout",
@@ -54,35 +112,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-21",
-    "title": "Citrix, Ivanti Patch Critical and High-Severity Vulnerabilities",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/citrix-ivanti-patch-critical-and-high-severity-vulnerabilities/",
-    "date": "11 Nov 2026",
-    "_timestamp": 1794404239.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Attackers could exploit the bugs to tamper with certificate entries, achieve remote code execution, and compromise hosts. The post Citrix, Ivanti Patch Critical and High-Severity Vulnerabilities appeared first on SecurityWeek .",
-    "indicators": [
-      "https://www.securityweek.com/citrix-ivanti-patch-critical-and-high-severity-vulnerabilities/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-15",
+    "id": "scraped-17",
     "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
@@ -118,7 +148,7 @@
     }
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-21",
     "title": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves",
@@ -146,7 +176,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-15",
     "title": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
     "source": "Krebs on Security",
     "url": "https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/",
@@ -174,7 +204,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-18",
     "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
@@ -202,7 +232,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-19",
     "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
@@ -258,7 +288,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-23",
     "title": "Google fixes the eighth actively exploited Chrome zero-day of 2026",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/202772/breaking-news/google-fixes-the-eighth-actively-exploited-chrome-zero-day-of-2026.html",
@@ -288,7 +318,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-14",
     "title": "Google Cloud London outage: Continuity lessons for IT leaders",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders",
@@ -302,9 +332,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
       "Dpd",
-      "Royal mail"
+      "Royal mail",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -527,7 +557,7 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Chromium."
   },
   {
-    "id": "scraped-20",
+    "id": "scraped-22",
     "title": "PwC's CISO on AI, Robots & What's Next for Security",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security",
