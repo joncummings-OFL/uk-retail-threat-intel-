@@ -6,7 +6,7 @@
     "url": "https://www.computerweekly.com/opinion/Mid-sized-businesses-cant-leave-quantum-readiness-to-their-suppliers",
     "date": "13 Nov 2026",
     "_timestamp": 1794582780.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
@@ -14,8 +14,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Logistics",
-      "Next"
+      "Next",
+      "Logistics"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -83,7 +83,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-30",
+    "id": "scraped-29",
     "title": "New SignDrop Exploit Can Abuse Windows Defender to Bypass Security Protections",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/202968/hacking/new-signdrop-exploit-can-abuse-windows-defender-to-bypass-security-protections.html",
@@ -135,34 +135,6 @@
     "summary": "It abuses CLFS and Windows Defender to trigger arbitrary file creation in the context of the antimalware process. The post Nightmare Eclipse Drops Windows Zero-Day Exploit ‘SignDrop’ appeared first on SecurityWeek .",
     "indicators": [
       "https://www.securityweek.com/nightmare-eclipse-drops-windows-zero-day-exploit-signdrop/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-29",
-    "title": "Hackers Exploit New N-central Zero-Day Hours After PoC Publication",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/",
-    "date": "13 Nov 2026",
-    "_timestamp": 1794554450.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Dubbed 4EverAble2Shell, the flaw could allow remote, unauthenticated attackers to execute code with root privileges. The post Hackers Exploit New N-central Zero-Day Hours After PoC Publication appeared first on SecurityWeek .",
-    "indicators": [
-      "https://www.securityweek.com/hackers-exploit-new-n-central-zero-day-hours-after-poc-publication/"
     ],
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
@@ -549,9 +521,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
+      "Dpd",
       "Royal mail",
-      "Dpd"
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
