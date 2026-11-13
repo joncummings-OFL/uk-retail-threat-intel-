@@ -1,13 +1,13 @@
 {
   "type": "bundle",
-  "id": "bundle--1a671459-9368-4918-a20e-22cd69394231",
+  "id": "bundle--9cd84ddc-d118-45a9-aa75-3a0102f71d6b",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5158c9d9-b869-44b0-a3c9-f22a013ed7fb",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--d2d1f2df-c647-4caf-bcc0-6edf1e30704a",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
       "description": "Public exploit code released earlier this week claims that a local Windows user can gain SYSTEM privileges through the Common Log File System driver. The proof of concept, called SignDrop, targets a log-authentication feature added to the driver last year. It abuses how clfs.sys creates companion files when a privileged process opens a prepared log...",
       "indicator_types": [
@@ -15,7 +15,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -31,9 +31,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e33c2179-30fc-4536-bc82-23f0775a67f4",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--8ee9d635-5a2b-4146-bd3f-b87fdfd3f9ab",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -45,9 +45,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2de2074d-f80b-449a-b0fc-8b9cb8ebe7ca",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--b99dc672-7e56-4dba-aae8-a5ef904c3b8d",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Citrix Patches 12 NetScaler and Secure Access Client Flaws, Including Authentication Bypass",
       "description": "Citrix has released patches for multiple critical security flaws impacting NetScaler ADC, Citrix NetScaler Gateway, and NetScaler Console that could lead to denial-of-service (DoS) or an authentication bypass. The critical vulnerabilities that impact NetScaler ADC and NetScaler Gateway are listed below - CVE-2026-120868 (CVSS score: 9.3) - A memory...",
       "indicator_types": [
@@ -55,7 +55,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/citrix-patches-12-netscaler-and-secure.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -71,9 +71,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--2ddeeff7-4110-4dec-918a-883afaf87427",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--fb790451-dcee-494e-9f1e-f6cec65fecdd",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -85,9 +85,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5b4eda34-9229-4fdb-a4ce-923429767c63",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--eb9bb1b9-a6c2-4b70-bac8-813ed543f850",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Microsoft Exchange Server 2016 and 2019 enter their 'permanently vulnerable' era",
       "description": "Upgrade, migrate, but don't prevaricate \u2013 time has run out",
       "indicator_types": [
@@ -95,7 +95,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/saas/2026/11/12/microsoft-exchange-server-2016-and-2019-enter-their-permanently-vulnerable-era/5309401']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -111,9 +111,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--1e7dff41-76ac-42be-8149-710a282a560f",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--136a65d8-bf18-4bd5-b7f7-54a7b84df8e8",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -125,9 +125,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--057a07f1-4775-4831-ab5f-5530f1ca8b98",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--b1a61037-90b7-4d6a-b32f-a9c9a1812020",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "PTC Patches Critical Windchill and FlexPLM Flaw That Could Enable Remote Code Execution",
       "description": "PTC has released patches for a new critical vulnerability impacting Windchill and FlexPLM software that, if successfully exploited, could result in remote code execution. The security flaw, tracked as CVE-2026-126325, carries a CVSS v4 score of 9.2 out of a maximum of 10.0. It has been described as a case of improper input validation and deserializ...",
       "indicator_types": [
@@ -135,7 +135,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/ptc-patches-critical-windchill-and.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -151,9 +151,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--d349d876-f1b4-4113-8c64-3a0fec351296",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--32a36aa1-20dd-4d21-b475-53ed9a54202e",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -165,9 +165,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6123150d-c9e1-4896-a8cf-90f8c53a2479",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--ad933072-4c28-4b04-b8b2-22371a038caa",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Inside an AI Attack Against a US Retailer",
       "description": "When hand-typed commands failed to breach a US retailer, the attacker turned to AI-generated scripts, achieving lateral movement in minutes.",
       "indicator_types": [
@@ -175,7 +175,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Retailer"
@@ -190,9 +190,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a1ab56e9-d458-42ac-9ebe-2eb91beb3cc0",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--d4cd305e-5511-4da6-9378-b5f5fbadf3dd",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Data from Local System / POS",
       "external_references": [
         {
@@ -204,9 +204,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--66586e25-7f46-43df-9aa0-af9cde80265f",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--2b63e41c-0978-462f-8acd-b9768c0c90bd",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "AI agents bring down wind farm within two hours",
       "description": "Artificial intelligence (AI) agents can hack into wind farms, erase the memory of electronic controllers and cut off their electricity production capability in under two hours. Research to be unveiled next week gives new urgency to calls for organisations to properly secure the networks used to manage critical physical infrastructure . The warning...",
       "indicator_types": [
@@ -214,11 +214,11 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654794/AI-agents-bring-down-wind-farm-within-two-hours']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
-        "Retailers",
-        "Next"
+        "Next",
+        "Retailers"
       ],
       "external_references": [
         {
@@ -230,9 +230,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--d0341aa1-d653-4eda-9f43-c7a02fd4cb5e",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--9ac30afa-d977-4018-a371-418b6790abe8",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -244,9 +244,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bc04b038-c348-467c-b3cf-eb6fedb1f2c5",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--7a6be040-9181-4cb0-afe0-1c10d469bdaf",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Bug-hunting time cut dramatically with AI, says Forescout",
       "description": "Artificial intelligence (AI) is making faster and easier discovery of vulnerabilities in code that is common in critical infrastructure, according to findings from Forescout\u2019s research arm Vedere Labs. The Forescout report, Finding critical infrastructure bugs with off-the-shelf AI looked at how security researchers and attackers can use generally...",
       "indicator_types": [
@@ -254,7 +254,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654735/Bug-hunting-time-cut-dramatically-with-AI-says-Forescout']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 75,
       "labels": [
         "Supply chain"
@@ -269,9 +269,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--9abfbdaf-5d91-4705-b322-51e9d3c260d0",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--e6478c02-cc65-4781-8bd7-b766ab8b7e98",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -283,9 +283,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--781e8d4f-a8d8-4000-bfa3-ca6644289026",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--5afc6ded-2175-44bc-829d-5d42423dbfee",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "November Patch Tuesday: An Overflowing Cornucopia of CVEs",
       "description": "Microsoft serves up an actively exploited Outlook zero-day, and a wave of critical Exchange, SharePoint, Windows Search, and LDAP bugs that exhausted defenders need to prioritize fast.",
       "indicator_types": [
@@ -293,7 +293,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/vulnerabilities-threats/november-patch-tuesday-cornucopia-cves']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -309,9 +309,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e34898d0-33df-4601-a90c-fcaa409ade11",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--7379019f-b39a-4871-9e72-e597763a3ce5",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -323,9 +323,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--98dd9df8-330e-42f5-82fc-57f28bd73bd2",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--e47fde89-b06c-4c5e-af9c-94a3da24fcbb",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Microsoft Fixes Nearly 1,100 Security Vulnerabilities",
       "description": "Microsoft did another four-digit patch drop today, releasing updates to fix almost 1,100 security vulnerabilities in its Windows operating systems and supported software. This month's Patch Tuesday addresses 63 critical flaws -- including a zero-day in Microsoft Outlook -- and comes amid important security updates from other software makers, includ...",
       "indicator_types": [
@@ -333,7 +333,7 @@
       ],
       "pattern": "[url:value = 'https://krebsonsecurity.com/2026/11/microsoft-fixes-nearly-1100-security-vulnerabilities/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -349,9 +349,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f73679b5-9c86-4276-a35e-58927afacdf5",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--1e529677-d324-431d-9017-d1a43fc190c1",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -363,9 +363,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cfbfb649-40ac-4eff-982c-2f3b13fd4875",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--30aef8dd-8634-4d40-be9d-ee71db2bc39d",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Chrome zero-day whack-a-mole continues as 2026 tally hits 8",
       "description": "Another Chrome memory bug gets squashed, but not before attackers got their hands on it",
       "indicator_types": [
@@ -373,7 +373,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/10/chrome-zero-day-whack-a-mole-continues-as-2026-tally-hits-8/5308732']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -389,9 +389,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--23632e13-f5d6-4826-b69e-1ac47f2427b3",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--312f1603-f069-4635-ba51-61628f117efa",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -403,9 +403,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1fb4b4c2-43aa-41d0-ba53-7cc6b9181aa4",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--ee05a76e-f228-4628-b9fa-72ff14e791a6",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Google Cloud London outage: Continuity lessons for IT leaders",
       "description": "On 20 October, a power event at the datacentre hosting Google Cloud\u2019s europe-west2-b zone took that zone offline. It is one of three availability zones in Google\u2019s London region, designed to allow the others to keep running if one experiences a fault. Yet Revolut, HSBC, DPD and Royal Mail were among the organisations reported to have experienced di...",
       "indicator_types": [
@@ -413,12 +413,12 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654732/Google-Cloud-London-outage-Continuity-lessons-for-IT-leaders']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 75,
       "labels": [
-        "Dpd",
+        "Royal mail",
         "Next",
-        "Royal mail"
+        "Dpd"
       ],
       "external_references": [
         {
@@ -430,9 +430,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--9f553315-3232-4303-aa5b-a13f6928becd",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--114ba136-d6d2-4617-92d7-5c7f27358d9d",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -444,9 +444,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6cf90e46-7806-4837-9e73-9249f1cbe956",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--7e11cbf4-0894-477c-bbd7-2fb7ef66b7ca",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-124194 in Microsoft Office Under Active Exploitation",
       "description": "Microsoft Office is affected by CVE-2026-124194. Microsoft Office Outlook contains a missing user interaction for potentially unsafe action vulnerability that allows an unauthorized attacker to perform spoofing over a network. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 P...",
       "indicator_types": [
@@ -454,7 +454,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-124194']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -471,9 +471,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a6c9e1cc-58db-4118-bff7-c9b76f957c70",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--b1df6e4b-9c05-464b-89fc-18069e769bcf",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -485,9 +485,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3a8ba5fb-2ec2-409d-91af-3006a14cb91e",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--83c8b57c-c83a-4cdf-8554-3d1c44c8fbc8",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-111793 in Openwave Messaging Limited Webtop Media Transcoder Under Active Exploitation",
       "description": "Openwave Messaging Limited Webtop Media Transcoder is affected by CVE-2026-111793. Openwave Messaging Limited Webtop Media Transcoder contains an incorrect resource transfer between spheres vulnerability that may allow an authenticated user to process and convert unintended document types if bypassing the Webmail experience. Required Remediation: A...",
       "indicator_types": [
@@ -495,7 +495,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111793']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -512,9 +512,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--fd3c6df7-10e2-4c42-a934-3a29e5158603",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--b1bf2d3d-53ff-478d-b5bb-217330e75dbf",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -526,9 +526,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c632c411-a519-41b6-a721-883e0b26421f",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--bd1d612d-4070-49ad-bb0e-ae8d9df9973d",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-20320 in Cisco BroadWorks Under Active Exploitation",
       "description": "Cisco BroadWorks is affected by CVE-2026-20320. Cisco BroadWorks contains an improper restriction of XML external entity reference vulnerability that could allow an unauthenticated, remote attacker to read sensitive configuration information on an affected system. Required Remediation: Apply mitigations in accordance with vendor instructions, ensur...",
       "indicator_types": [
@@ -536,7 +536,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-20320']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -553,9 +553,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f665ac96-58eb-4144-9bf5-cc9f87bc5313",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--4efc247c-c004-49e6-9175-f8ca3cf58c82",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -567,9 +567,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ed65ac52-1bc4-4ff4-b7a3-997df6fa6ca2",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--7071f879-8932-4c0e-83e1-7091941d6d8d",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-111560 in Barracuda Networks Multiple Products Under Active Exploitation",
       "description": "Barracuda Networks Multiple Products is affected by CVE-2026-111560. Barracuda Networks Email Security Gateway (ESG), Load Balancer, Application Delivery Controller (ADC), Message Archiver (BMA), WAF Control Center (WCC), Web Application Firewall (WAF), and Web Security Gateway (WSG) contain an OS command injection vulnerability. This vulnerability...",
       "indicator_types": [
@@ -577,7 +577,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-111560']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -594,9 +594,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--32223b4f-6fff-439b-b498-ea80b5bbb77f",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--411b382f-e324-43d1-ac8b-ae4842e495bd",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -608,9 +608,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--96fa390d-31d5-4cef-900e-0e5adf65c7ca",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--29f4673c-d3f5-441e-a029-0f1f885a7373",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-116606 in Barracuda Networks Barracuda Email Security Gateway (ESG) Under Active Exploitation",
       "description": "Barracuda Networks Barracuda Email Security Gateway (ESG) is affected by CVE-2026-116606. Barracuda Networks Email Security Gateway (ESG) contains an authentication bypass using an alternate path or channel that could allow an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive,...",
       "indicator_types": [
@@ -618,7 +618,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116606']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -635,9 +635,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f758c822-c8e1-4944-80f3-7ced5c9aecc4",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--e7d009fb-d11e-4dc8-a961-a68efd4d7e86",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -649,9 +649,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1f9bb94f-63a3-481a-940a-72d8ef46df9c",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--cf8723bc-9f01-4478-995a-43297fa726d5",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-125350 in Google Chromium Under Active Exploitation",
       "description": "Google Chromium is affected by CVE-2026-125350. Google Chromium contains a use-after-free vulnerability in the XML component that could allow a remote attacker to execute arbitrary code inside the sandbox via a specially crafted webpage. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Goog...",
       "indicator_types": [
@@ -659,7 +659,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-125350']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -676,9 +676,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--94748efe-f4bb-4425-b31f-d06caf072c4d",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--989bde14-99e9-46d0-a4d1-c5d2f7dd1e81",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -690,9 +690,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fc73389d-6fe8-4dad-9dd5-cfd34e2b2c0a",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--b9acf2b6-c5dc-420e-a2ff-b420c3b3365b",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "PwC's CISO on AI, Robots & What's Next for Security",
       "description": "As AI accelerates change across the enterprise, PwC's James Shira explains why security teams must rethink their approach to risk and adapt their strategies.",
       "indicator_types": [
@@ -700,7 +700,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/cybersecurity-operations/pwc-ciso-ai-robots-security']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -715,9 +715,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--06ec7711-f4e3-47f7-8766-ad6e69296830",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--553d9692-a57a-43ea-9c43-15c721b6ff2d",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Data from Local System / POS",
       "external_references": [
         {
@@ -729,9 +729,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--280807d9-1358-4417-93ff-03e41328a9ec",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--0b27e853-7002-45a9-a485-2bb665f80c39",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-102895 in GPUStack GPUStack Under Active Exploitation",
       "description": "GPUStack GPUStack is affected by CVE-2026-102895. GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/fro...",
       "indicator_types": [
@@ -739,7 +739,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-102895']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -756,9 +756,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--75884a0d-b75f-467c-a664-40165f080a2e",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--50d9f91e-abec-4984-9c60-27d6ce9d20f9",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -770,9 +770,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ceaadbd5-d831-41e4-9157-80542b4eba00",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--4d89ab67-40ab-4677-9628-47aeebcefbe8",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-123158 in OpenBSD OpenSSH Under Active Exploitation",
       "description": "OpenBSD OpenSSH is affected by CVE-2026-123158. OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (s...",
       "indicator_types": [
@@ -780,7 +780,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123158']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -797,9 +797,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--80b00361-af42-4679-8b05-90c378e2ab3d",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--45078a30-1907-459b-b363-cecb5582d6af",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -811,9 +811,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d78fce31-fdcc-4b82-89fb-3ee292891059",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--a3217a42-7f00-44a1-a154-191db8d8ae2d",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-116779 in SignalWire FreeSwitch Under Active Exploitation",
       "description": "SignalWire FreeSwitch is affected by CVE-2026-116779. SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizin...",
       "indicator_types": [
@@ -821,7 +821,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-116779']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -838,9 +838,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--8f10611d-4b44-4aa0-8a8c-347e019e4d4a",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--fe9f3f0f-265a-4b05-ba4b-3c44ac2bed8c",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -852,9 +852,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f842ef1d-a8e6-492e-8efd-7fe3540b8193",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "indicator--d452f3fa-8d27-4f89-a61e-5e44ed188326",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "CISA KEV Alert: CVE-2026-123218 in IBM Aspera Faspex Under Active Exploitation",
       "description": "IBM Aspera Faspex is affected by CVE-2026-123218. IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA...",
       "indicator_types": [
@@ -862,7 +862,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123218']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-13T02:29:02.108046+00:00",
+      "valid_from": "2026-11-13T03:22:35.059790+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -879,9 +879,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--421f9e76-b5f5-4dfe-8da3-ac0fade82391",
-      "created": "2026-11-13T02:29:02.108046+00:00",
-      "modified": "2026-11-13T02:29:02.108046+00:00",
+      "id": "attack-pattern--ded5bddd-1ea0-49c9-97db-c0d056a8c0ff",
+      "created": "2026-11-13T03:22:35.059790+00:00",
+      "modified": "2026-11-13T03:22:35.059790+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
