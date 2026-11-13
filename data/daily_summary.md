@@ -1,5 +1,5 @@
-*TL;DR:* Active exploitation of enterprise communications infrastructure presents an immediate perimeter risk. Threat actors are actively targeting public-facing Cisco BroadWorks and Openwave systems to secure initial network access.
+*TL;DR:* Today's perimeter risk has escalated sharply following active in-the-wild exploitation of a critical N-central zero-day granting unauthenticated root RCE. Retailers and their managed service providers face immediate initial compromise threats via exposed management tooling.
 
-*Key Alert:* Cisco BroadWorks and Openwave Messaging vulnerabilities (including CVE-2026-20320) are confirmed under active exploitation and added to CISA's KEV catalog.
+*Key Alert:* Threat actors are actively weaponising the "4EverAble2Shell" N-central zero-day (T1190) to gain full remote code execution on public-facing enterprise appliances.
 
-*Priority Action:* Immediately audit retail enterprise perimeters for exposed Cisco BroadWorks and Openwave instances, deploy available vendor patches, and review edge telemetry for unauthorized access (T1190).
+*Priority Action:* Audit networks immediately for internet-exposed N-central instances, restrict perimeter access behind a VPN/firewall, and verify MSP compliance with emergency mitigation guidance.
