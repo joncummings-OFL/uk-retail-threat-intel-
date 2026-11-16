@@ -6,7 +6,7 @@
     "url": "https://www.computerweekly.com/opinion/The-big-cyber-short-or-dot-AI-bubble",
     "date": "16 Nov 2026",
     "_timestamp": 1794844860.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": true,
     "severity": "HIGH",
@@ -14,9 +14,9 @@
     "actor": null,
     "cves": [],
     "tags": [
+      "Credential stuffing",
       "Next",
-      "Retail",
-      "Credential stuffing"
+      "Retail"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -27,34 +27,6 @@
       "https://www.computerweekly.com/opinion/The-big-cyber-short-or-dot-AI-bubble"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-5",
-    "title": "Threat actor use of AI becoming routine, warns Google",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654805/Threat-actor-use-of-AI-becoming-routine-warns-Google",
-    "date": "16 Nov 2026",
-    "_timestamp": 1794843120.0,
-    "is_new": true,
-    "is_flash": true,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Threat actor use of AI in malicious cyber campaigns is evolving at pace, with several trends emerging over the past three months that point to a fast-approaching inflection point, according to new research published this week by the Google Threat Intelligence Group (GTIG) and Mandiant. Google’s team said that while previously it had only observed “...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654805/Threat-actor-use-of-AI-becoming-routine-warns-Google"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
     "id": "scraped-14",
@@ -82,6 +54,34 @@
       "https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-5",
+    "title": "Threat actor use of AI becoming routine, warns Google",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366654805/Threat-actor-use-of-AI-becoming-routine-warns-Google",
+    "date": "16 Nov 2026",
+    "_timestamp": 1794843120.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Threat actor use of AI in malicious cyber campaigns is evolving at pace, with several trends emerging over the past three months that point to a fast-approaching inflection point, according to new research published this week by the Google Threat Intelligence Group (GTIG) and Mandiant. Google’s team said that while previously it had only observed “...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366654805/Threat-actor-use-of-AI-becoming-routine-warns-Google"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
     "id": "scraped-10",
@@ -126,8 +126,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
-      "Logistics"
+      "Logistics",
+      "Next"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -374,8 +374,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
-      "Retailers"
+      "Retailers",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
