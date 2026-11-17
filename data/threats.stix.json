@@ -1,13 +1,52 @@
 {
   "type": "bundle",
-  "id": "bundle--945b0b94-48d9-42a3-aae7-32e1d6828cfb",
+  "id": "bundle--c3624519-d7ca-40be-be40-fbac59b021a1",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9d223341-f366-40c5-b703-ffb7469f0a45",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--7a50a0c6-a566-4e5d-81be-4027d10e7710",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
+      "name": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
+      "description": "A breach at an Infoblox supplier exposed customer network snapshots and employee data, highlighting the risks of trusted third-party access. Infoblox, one of the major players in cybersecurity and network infrastructure, is investigating a data breach after attackers gained access to internal company information through a compromised third-party pr...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
+      "confidence": 90,
+      "labels": [
+        "Supply chain"
+      ],
+      "external_references": [
+        {
+          "source_name": "Security Affairs",
+          "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e149235c-6d32-43e2-8c4a-a516a812f361",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
+      "name": "Supply Chain Compromise",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1195"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f8ecd9c4-800c-4095-a476-a2aed6024b67",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Google Project Zero Slashes Bug Disclosure Deadlines, Splitting Experts",
       "description": "One of the oldest running bug disclosure programs announced it would shorten public disclosure timelines to vendors from 120 days to 30 over the next 14 months.",
       "indicator_types": [
@@ -15,7 +54,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -30,9 +69,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--cf285c2d-eb37-4430-af37-08473d9b436f",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--7eecb40c-a843-472d-9f3d-9c2c50213a84",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Data from Local System / POS",
       "external_references": [
         {
@@ -44,9 +83,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4d095911-2014-4d99-b519-51c7beb8e393",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--57fb812b-9d2e-4adb-b8a2-3a1c4c77a452",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "The big cyber short, or dot AI bubble?",
       "description": "The AI build-out will not cause a repeat of the 2008 financial crisis . It is far more likely to cause a repeat of 2000 , and that is not the reassurance it sounds like. A dotcom-style bust would still wipe trillions from markets, take a decade or more to recover, and arrive at a moment when the world has less slack to absorb it than it had in eith...",
       "indicator_types": [
@@ -54,12 +93,12 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/The-big-cyber-short-or-dot-AI-bubble']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 75,
       "labels": [
         "Retail",
-        "Credential stuffing",
-        "Next"
+        "Next",
+        "Credential stuffing"
       ],
       "external_references": [
         {
@@ -71,9 +110,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--dfec5259-e21e-4ebb-934b-723aed5ef7d4",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--bf1378b7-ddd9-4a28-b169-9344dc278255",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -85,9 +124,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bd42fce6-38a9-4305-9f81-9a44f6613ce7",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--5535bcd9-9927-4697-b249-559b54881d46",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Cursor Supply Chain Attack Started at Fireworks AI",
       "description": "The attacker stole an access key from Fireworks and used it to exfiltrate credentials that enabled them to push malicious Claude Code extension copies. The post Cursor Supply Chain Attack Started at Fireworks AI appeared first on SecurityWeek .",
       "indicator_types": [
@@ -95,7 +134,7 @@
       ],
       "pattern": "[url:value = 'https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 75,
       "labels": [
         "Supply chain"
@@ -110,9 +149,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--12884ace-0a69-4d91-9646-636093bc0deb",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--36f325c4-1d7f-4ed2-b90d-d831402ecd00",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -124,9 +163,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--488de77f-27ff-45c8-b3b0-f307fbc5af06",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--2ededa1d-a237-4364-90ab-c53badf82f0a",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Threat actor use of AI becoming routine, warns Google",
       "description": "Threat actor use of AI in malicious cyber campaigns is evolving at pace, with several trends emerging over the past three months that point to a fast-approaching inflection point, according to research published this week by the Google Threat Intelligence Group (GTIG) and Mandiant. Google\u2019s team said that while previously it had only observed \u201cnasc...",
       "indicator_types": [
@@ -134,7 +173,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654805/Threat-actor-use-of-AI-becoming-routine-warns-Google']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -150,9 +189,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--2679d86c-3798-4011-a60a-f5c6299c0909",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--6ef63350-e85d-43b9-b9d4-04ca7dc6818d",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -164,9 +203,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--213c4584-575f-44c1-b985-de4dd3b07dc9",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--b45f5653-0792-4116-af3d-945457584c8d",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
       "description": "An investigation into suspicious activity within a Russian software developer's network has uncovered a months-long compromise of its development infrastructure and a software code-signing server. The activity, documented by Kaspersky's ICS CERT team after it was contacted by the affected developer in June 2025, has been attributed to a threat acto...",
       "indicator_types": [
@@ -174,7 +213,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -190,9 +229,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5b58e69e-f699-4198-a9ef-9130817e9af6",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--09c2e8a6-756d-4f85-9883-e1c0a78213ac",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -204,9 +243,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b76c3ade-ef60-402a-8ef1-3ceea7c4681b",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--e3e6fc41-c459-42ed-ac9f-12b6364bef42",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Mid-sized businesses can't leave quantum readiness to their suppliers",
       "description": "Some of the world\u2019s largest technology providers have set 2029 deadlines to protect their services from future cyber threats based on emerging quantum technology. For their customers, that sounds reassuring, but each commitment covers only the technology that provider controls. A mid-sized business may still rely on older devices, certificates, bac...",
       "indicator_types": [
@@ -214,7 +253,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/Mid-sized-businesses-cant-leave-quantum-readiness-to-their-suppliers']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 75,
       "labels": [
         "Next",
@@ -230,9 +269,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5b0b7449-989c-4ddd-8911-f63b167628dc",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--6a1e2f2a-dab4-4021-b7e6-4d7e277df56d",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -244,9 +283,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cf5079ca-754a-4820-99ff-a07f2443d60c",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--e40690f8-2478-4a48-a5ed-f6ee2a7d20d8",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Italian court rejects data from police hacking of Sky ECC cryptophone network",
       "description": "An Italian criminal prosecution that relied on intercepted messages from an encrypted phone network, Sky ECC , which was infiltrated by French police, collapsed after a judge concluded the data should not be used as evidence in the case. The trial in Catanzaro , involving more than 50 alleged members of a notorious Ndrangheta crime group in Souther...",
       "indicator_types": [
@@ -254,7 +293,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654798/Italian-court-rejects-data-from-police-hacking-of-Sky-ECC-cryptophone-network']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -269,9 +308,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ddb405ae-1dba-4ca9-a780-16616fdc769d",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--35977583-9f01-4ee1-ae25-2ea70cf8dc1d",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -283,9 +322,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a3950a3a-5219-470b-bfbc-8ab0021682f0",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--4d028444-538d-4e6d-b65f-cdbed1d21b9d",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "CISA KEV Alert: CVE-2026-114713 in UnrealIRCd UnrealIRCd Under Active Exploitation",
       "description": "UnrealIRCd UnrealIRCd is affected by CVE-2026-114713. UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority. Required Remediation: Apply mitigations in accordance with vendor i...",
       "indicator_types": [
@@ -293,7 +332,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-114713']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -310,9 +349,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--545c5c23-ef19-47cb-87c9-58760b390f6a",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--a58f5a21-136a-4a0e-a446-585d13bb60a7",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -324,9 +363,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9cbb895f-e71f-47df-99c7-469d8ba46f4e",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--b52ff52c-654b-42aa-af39-ad21cb4e1ccf",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "CISA KEV Alert: CVE-2026-123039 in Check Point Multiple Products Under Active Exploitation",
       "description": "Check Point Multiple Products is affected by CVE-2026-123039. Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writ...",
       "indicator_types": [
@@ -334,7 +373,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123039']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -351,9 +390,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c33cf171-75db-4d21-8e6c-e1cc06bc78a4",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--22a5bac2-8a73-49a1-b0db-c8a35b73877b",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -365,9 +404,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--128e0e89-10de-42c3-b377-7313c002eab3",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--cee7eee3-deb3-4e61-82da-293c62690c61",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
       "description": "Public exploit code released earlier this week claims that a local Windows user can gain SYSTEM privileges through the Common Log File System driver. The proof of concept, called SignDrop, targets a log-authentication feature added to the driver last year. It abuses how clfs.sys creates companion files when a privileged process opens a prepared log...",
       "indicator_types": [
@@ -375,7 +414,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -391,9 +430,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--81852c15-ac47-4a67-81f9-7b8f6d55a210",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--06b9350e-4ded-48ae-9bfe-146c85146a54",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -405,9 +444,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d73b1156-f5b6-44e3-af19-1339f446333b",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "indicator--66cb3540-c7e6-49f9-a22e-d9bc8b1137a4",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Microsoft Exchange Server 2016 and 2019 enter their 'permanently vulnerable' era",
       "description": "Upgrade, migrate, but don't prevaricate \u2013 time has run out",
       "indicator_types": [
@@ -415,7 +454,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/saas/2026/11/12/microsoft-exchange-server-2016-and-2019-enter-their-permanently-vulnerable-era/5309401']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
+      "valid_from": "2026-11-17T11:29:00.896438+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -431,53 +470,14 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--629b41a7-817b-420c-8732-e3cd8207d7e1",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
+      "id": "attack-pattern--1e3fdcaf-2486-4611-83e3-0ca2837ee689",
+      "created": "2026-11-17T11:29:00.896438+00:00",
+      "modified": "2026-11-17T11:29:00.896438+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
           "source_name": "mitre-attack",
           "external_id": "T1190"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--b5b73a03-d24c-40e2-8330-5947ea9ce7e6",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
-      "name": "Inside an AI Attack Against a US Retailer",
-      "description": "When hand-typed commands failed to breach a US retailer, the attacker turned to AI-generated scripts, achieving lateral movement in minutes.",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-17T10:34:09.036338+00:00",
-      "confidence": 90,
-      "labels": [
-        "Retailer"
-      ],
-      "external_references": [
-        {
-          "source_name": "Dark Reading",
-          "url": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--a0a6b0de-0abc-4da0-8ee0-b26c7f9ef728",
-      "created": "2026-11-17T10:34:09.036338+00:00",
-      "modified": "2026-11-17T10:34:09.036338+00:00",
-      "name": "Data from Local System / POS",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1005"
         }
       ]
     }

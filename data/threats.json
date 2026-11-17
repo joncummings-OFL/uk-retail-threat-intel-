@@ -1,5 +1,32 @@
 [
   {
+    "id": "scraped-12",
+    "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
+    "date": "17 Nov 2026",
+    "_timestamp": 1794912875.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "supply",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Supply chain"
+    ],
+    "mitre": "T1195 (Supply Chain Compromise)",
+    "mitre_id": "T1195",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Supply Chain Compromise",
+    "summary": "A breach at an Infoblox supplier exposed customer network snapshots and employee data, highlighting the risks of trusted third-party access. Infoblox, one of the major players in cybersecurity and network infrastructure, is investigating a data breach after attackers gained access to internal company information through a compromised third-party pr...",
+    "indicators": [
+      "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
     "id": "scraped-10",
     "title": "Google Project Zero Slashes Bug Disclosure Deadlines, Splitting Experts",
     "source": "Dark Reading",
@@ -42,8 +69,8 @@
     "cves": [],
     "tags": [
       "Retail",
-      "Credential stuffing",
-      "Next"
+      "Next",
+      "Credential stuffing"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -56,7 +83,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-11",
     "title": "Cursor Supply Chain Attack Started at Fireworks AI",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/",
@@ -322,32 +349,5 @@
       "https://www.theregister.com/saas/2026/11/12/microsoft-exchange-server-2016-and-2019-enter-their-permanently-vulnerable-era/5309401"
     ],
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-11",
-    "title": "Inside an AI Attack Against a US Retailer",
-    "source": "Dark Reading",
-    "url": "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer",
-    "date": "12 Nov 2026",
-    "_timestamp": 1794481200.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "pos",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Retailer"
-    ],
-    "mitre": "T1005 (Data from Local System / POS)",
-    "mitre_id": "T1005",
-    "mitre_tactic": "Collection",
-    "mitre_name": "Data from Local System / POS",
-    "summary": "When hand-typed commands failed to breach a US retailer, the attacker turned to AI-generated scripts, achieving lateral movement in minutes.",
-    "indicators": [
-      "https://www.darkreading.com/cyberattacks-data-breaches/inside-ai-attack-us-retailer"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   }
 ]
