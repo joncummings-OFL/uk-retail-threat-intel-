@@ -1,13 +1,40 @@
 [
   {
     "id": "scraped-11",
+    "title": "Fandango Warns Ticket Buyers of Payment Card Data Exposure",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/fandango-warns-ticket-buyers-of-payment-card-data-exposure/",
+    "date": "17 Nov 2026",
+    "_timestamp": 1794924864.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Checkout"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Card numbers, CVVs, expiration dates, and email addresses used at Fandango’s ticketing checkout over four days in October may have been exposed. The post Fandango Warns Ticket Buyers of Payment Card Data Exposure appeared first on SecurityWeek .",
+    "indicators": [
+      "https://www.securityweek.com/fandango-warns-ticket-buyers-of-payment-card-data-exposure/"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-12",
     "title": "N-able Kills Legacy APIs, Patches 17 N-central Zero-Days",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/n-able-kills-legacy-apis-patches-17-n-central-zero-days/",
     "date": "17 Nov 2026",
     "_timestamp": 1794918525.0,
-    "is_new": true,
-    "is_flash": true,
+    "is_new": false,
+    "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "enterprise",
@@ -34,7 +61,7 @@
     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
     "date": "17 Nov 2026",
     "_timestamp": 1794918306.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
@@ -42,8 +69,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Supply chain",
-      "Checkout"
+      "Checkout",
+      "Supply chain"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -56,7 +83,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-14",
     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
@@ -139,7 +166,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-13",
     "title": "Cursor Supply Chain Attack Started at Fireworks AI",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/",
@@ -309,8 +336,8 @@
     "epss": {
       "cve": "CVE-2026-114713",
       "score": "0.5%",
-      "raw_score": 0.00508,
-      "percentile": "43.9%"
+      "raw_score": 0.00467,
+      "percentile": "41.0%"
     }
   },
   {
@@ -345,9 +372,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Multiple Products.",
     "epss": {
       "cve": "CVE-2026-123039",
-      "score": "2.2%",
-      "raw_score": 0.02191,
-      "percentile": "82.7%"
+      "score": "1.9%",
+      "raw_score": 0.01938,
+      "percentile": "80.5%"
     }
   },
   {
