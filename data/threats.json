@@ -1,60 +1,5 @@
 [
   {
-    "id": "scraped-3",
-    "title": "UK regulators call for tight control of personal AI agents",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654742/UK-regulators-call-for-tight-control-of-personal-AI-agents",
-    "date": "17 Nov 2026",
-    "_timestamp": 1794914100.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Ico",
-      "Information commissioner"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "The Competition and Markets Authority (CMA), Financial Conduct Authority (FCA), Information Commissioner’s Office (ICO) and Ofcom have asked the UK government to address their personal artificial intelligence (AI) agent concerns. The regulators, working as the Digital Regulation Coordination Forum (DRCF), have written a joint letter to UK chancello...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654742/UK-regulators-call-for-tight-control-of-personal-AI-agents"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-4",
-    "title": "Beyond the AI apocalypse: What CISOs need to do now",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/opinion/Beyond-the-AI-apocalypse-What-CISOs-need-to-do-now",
-    "date": "17 Nov 2026",
-    "_timestamp": 1794912060.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Media reports of rogue AI agents and AI-enabled cyber threats are prompting boards to ask about what these developments could mean for their organisations. AI’s capabilities are rapidly expanding, but there is no clear evidence that an AI catastrophe is imminent. CIOs and infrastructure and operations leaders (I&O) should therefore focus on the thr...",
-    "indicators": [
-      "https://www.computerweekly.com/opinion/Beyond-the-AI-apocalypse-What-CISOs-need-to-do-now"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
     "id": "scraped-12",
     "title": "Fandango Warns Ticket Buyers of Payment Card Data Exposure",
     "source": "SecurityWeek",
@@ -124,8 +69,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Checkout",
-      "Supply chain"
+      "Supply chain",
+      "Checkout"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -134,6 +79,33 @@
     "summary": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy, a widely used open-source security scanner, planted malicious code that looked like it came from GitHub's off...",
     "indicators": [
       "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-3",
+    "title": "UK regulators call for tight control of personal AI agents",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366654742/UK-regulators-call-for-tight-control-of-personal-AI-agents",
+    "date": "17 Nov 2026",
+    "_timestamp": 1794914100.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Information commissioner"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "The Competition and Markets Authority , Financial Conduct Authority, Information Commissioner’s Office and Ofcom have asked the UK government to address their personal artificial intelligence (AI) agent concerns. The regulators, working as the Digital Regulation Coordination Forum (DRCF); have written a joint letter to UK chancellor John Healey; AI...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366654742/UK-regulators-call-for-tight-control-of-personal-AI-agents"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
@@ -161,6 +133,33 @@
     "summary": "A breach at an Infoblox supplier exposed customer network snapshots and employee data, highlighting the risks of trusted third-party access. Infoblox, one of the major players in cybersecurity and network infrastructure, is investigating a data breach after attackers gained access to internal company information through a compromised third-party pr...",
     "indicators": [
       "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-4",
+    "title": "Beyond the AI apocalypse: What CISOs need to do now",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/opinion/Beyond-the-AI-apocalypse-What-CISOs-need-to-do-now",
+    "date": "17 Nov 2026",
+    "_timestamp": 1794912060.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Media reports of rogue AI agents and AI-enabled cyber threats are prompting boards to ask about what these developments could mean for their organisations. AI’s capabilities are rapidly expanding, but there is no clear evidence that an AI catastrophe is imminent. CIOs and infrastructure and operations leaders (I&O) should therefore focus on the thr...",
+    "indicators": [
+      "https://www.computerweekly.com/opinion/Beyond-the-AI-apocalypse-What-CISOs-need-to-do-now"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
@@ -206,9 +205,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
       "Credential stuffing",
-      "Retail"
+      "Retail",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
