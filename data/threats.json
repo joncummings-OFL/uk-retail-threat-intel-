@@ -1,12 +1,12 @@
 [
   {
-    "id": "scraped-12",
+    "id": "scraped-11",
     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
     "date": "17 Nov 2026",
     "_timestamp": 1794912875.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -27,7 +27,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-10",
+    "id": "scraped-9",
     "title": "Google Project Zero Slashes Bug Disclosure Deadlines, Splitting Experts",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines",
@@ -68,9 +68,9 @@
     "actor": null,
     "cves": [],
     "tags": [
+      "Credential stuffing",
       "Retail",
-      "Next",
-      "Credential stuffing"
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -83,7 +83,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-10",
     "title": "Cursor Supply Chain Attack Started at Fireworks AI",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/cursor-supply-chain-attack-started-at-fireworks/",
@@ -293,34 +293,6 @@
       "raw_score": 0.02191,
       "percentile": "82.7%"
     }
-  },
-  {
-    "id": "scraped-9",
-    "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
-    "date": "12 Nov 2026",
-    "_timestamp": 1794505827.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Public exploit code released earlier this week claims that a local Windows user can gain SYSTEM privileges through the Common Log File System driver. The proof of concept, called SignDrop, targets a log-authentication feature added to the driver last year. It abuses how clfs.sys creates companion files when a privileged process opens a prepared log...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
     "id": "scraped-3",
