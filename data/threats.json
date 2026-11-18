@@ -1,6 +1,6 @@
 [
   {
-    "id": "scraped-10",
+    "id": "scraped-9",
     "title": "CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html",
@@ -36,8 +36,8 @@
     }
   },
   {
-    "id": "scraped-16",
-    "title": "Java4Shell Vulnerability Puts Many Enterprise Applications at Risk of Takeover",
+    "id": "scraped-14",
+    "title": "Java4Shell Vulnerability Puts Enterprise Applications at Risk of Takeover",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/java4shell-vulnerability-puts-many-enterprise-applications-at-risk-of-takeover/",
     "date": "18 Nov 2026",
@@ -57,7 +57,7 @@
     "mitre_id": "T1190",
     "mitre_tactic": "Initial Access",
     "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Calif demonstrated remote code execution in Jira, Jenkins and Keycloak, while VulnCheck says real-world RCE requires per-target work The post Java4Shell Vulnerability Puts Many Enterprise Applications at Risk of Takeover appeared first on SecurityWeek .",
+    "summary": "Calif demonstrated remote code execution in Jira, Jenkins and Keycloak, while VulnCheck says real-world RCE requires per-target work The post Java4Shell Vulnerability Puts Enterprise Applications at Risk of Takeover appeared first on SecurityWeek .",
     "indicators": [
       "https://www.securityweek.com/java4shell-vulnerability-puts-many-enterprise-applications-at-risk-of-takeover/"
     ],
@@ -146,7 +146,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-15",
     "title": "Fireworks AI Breach Exposes Uber Data and Highlights Supply Chain Risks",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203339/data-breach/fireworks-ai-breach-exposes-uber-data-and-highlights-supply-chain-risks.html",
@@ -173,7 +173,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-10",
     "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
@@ -209,7 +209,7 @@
     }
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-11",
     "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
@@ -236,7 +236,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-12",
     "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
@@ -250,8 +250,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Checkout",
-      "Supply chain"
+      "Supply chain",
+      "Checkout"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -291,7 +291,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-16",
     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
@@ -382,7 +382,7 @@
     }
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-13",
     "title": "Google Project Zero Slashes Bug Disclosure Deadlines, Splitting Experts",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines",
@@ -423,9 +423,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Credential stuffing",
+      "Retail",
       "Next",
-      "Retail"
+      "Credential stuffing"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -464,61 +464,5 @@
       "https://www.computerweekly.com/news/366654805/Threat-actor-use-of-AI-becoming-routine-warns-Google"
     ],
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-14",
-    "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm's Code-Signing Server",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
-    "date": "16 Nov 2026",
-    "_timestamp": 1794812014.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "An investigation into suspicious activity within a Russian software developer's network has uncovered a months-long compromise of its development infrastructure and a software code-signing server. The activity, documented by Kaspersky's ICS CERT team after it was contacted by the affected developer in June 2025, has been attributed to a threat acto...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-9",
-    "title": "Mid-sized businesses can't leave quantum readiness to their suppliers",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/opinion/Mid-sized-businesses-cant-leave-quantum-readiness-to-their-suppliers",
-    "date": "13 Nov 2026",
-    "_timestamp": 1794582780.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Logistics",
-      "Next"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Some of the world’s largest technology providers have set 2029 deadlines to protect their services from future cyber threats based on emerging quantum technology. For their customers, that sounds reassuring, but each commitment covers only the technology that provider controls. A mid-sized business may still rely on older devices, certificates, bac...",
-    "indicators": [
-      "https://www.computerweekly.com/opinion/Mid-sized-businesses-cant-leave-quantum-readiness-to-their-suppliers"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   }
 ]
