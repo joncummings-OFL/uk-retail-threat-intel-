@@ -1,30 +1,39 @@
 [
   {
-    "id": "scraped-4",
-    "title": "I am the passenger: In Brussels at Google’s data sovereignty event",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/opinion/I-am-the-passenger-In-Brussels-at-Googles-data-sovereignty-event",
+    "id": "scraped-11",
+    "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
     "date": "18 Nov 2026",
-    "_timestamp": 1795003320.0,
+    "_timestamp": 1795021845.0,
     "is_new": true,
     "is_flash": false,
     "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "loyalty",
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
     "actor": null,
-    "cves": [],
+    "cves": [
+      "CVE-2026-129448"
+    ],
     "tags": [
-      "Next"
+      "Global 0-Day",
+      "Enterprise"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
     "mitre_tactic": "Initial Access",
     "mitre_name": "Exploit Public-Facing Application",
-    "summary": "As Mr I Pop so astutely pointed out, it’s from the viewpoint of the passenger that you see “the city’s ripped backsides”. And this is very much the case as our Eurostar creeps into Brussels. Many main railway stations have less than salubrious surroundings, and that’s the case with Brussels Midi. As my driver nudges the Merc slowly away from the ch...",
+    "summary": "A critical security flaw in Apache Roller, an open-source, Java-based blogging platform, has come under active exploitation in the wild, according to the Apache Software Foundation (ASF) The vulnerability, tracked as CVE-2026-129448 (CVSS score: 9.8), is a case of unauthenticated deserialization in the XML-RPC endpoint that could lead to remote cod...",
     "indicators": [
-      "https://www.computerweekly.com/opinion/I-am-the-passenger-In-Brussels-at-Googles-data-sovereignty-event"
+      "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html"
     ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-129448",
+      "score": "1.6%",
+      "raw_score": 0.0164,
+      "percentile": "76.9%"
+    }
   },
   {
     "id": "scraped-2",
@@ -54,7 +63,35 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-4",
+    "title": "I am the passenger: In Brussels at Google’s data sovereignty event",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/opinion/I-am-the-passenger-In-Brussels-at-Googles-data-sovereignty-event",
+    "date": "18 Nov 2026",
+    "_timestamp": 1795003320.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next",
+      "Warehouse"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "As Mr I Pop so astutely pointed out, it’s from the viewpoint of the passenger that you see “the city’s ripped backsides”. And this is very much the case as our Eurostar creeps into Brussels. Many main railway stations have less than salubrious surroundings, and that’s the case with Brussels Midi. As my driver nudges the Merc slowly away from the ch...",
+    "indicators": [
+      "https://www.computerweekly.com/opinion/I-am-the-passenger-In-Brussels-at-Googles-data-sovereignty-event"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-12",
     "title": "CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html",
@@ -90,7 +127,7 @@
     }
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-17",
     "title": "Java4Shell Vulnerability Puts Enterprise Applications at Risk of Takeover",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/java4shell-vulnerability-puts-many-enterprise-applications-at-risk-of-takeover/",
@@ -200,7 +237,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-18",
     "title": "Fireworks AI Breach Exposes Uber Data and Highlights Supply Chain Risks",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203339/data-breach/fireworks-ai-breach-exposes-uber-data-and-highlights-supply-chain-risks.html",
@@ -227,7 +264,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-13",
     "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
@@ -263,7 +300,7 @@
     }
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-14",
     "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
@@ -290,7 +327,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-15",
     "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
@@ -345,7 +382,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-19",
     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
@@ -436,7 +473,7 @@
     }
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-16",
     "title": "Google Project Zero Slashes Bug Disclosure Deadlines, Splitting Experts",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines",
@@ -477,8 +514,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
       "Retail",
+      "Next",
       "Credential stuffing"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
