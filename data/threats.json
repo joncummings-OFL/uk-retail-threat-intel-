@@ -1,60 +1,5 @@
 [
   {
-    "id": "scraped-6",
-    "title": "California tells Waymo to take the next exit after freeway mishaps",
-    "source": "The Register Security (UK)",
-    "url": "https://www.theregister.com/security/2026/11/18/california-tells-waymo-to-take-the-next-exit-after-freeway-mishaps/5310841",
-    "date": "18 Nov 2026",
-    "_timestamp": 1795023900.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "ecom",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "Robotaxi operator suspends driverless rides on high-speed roads nationwide after construction zone incursions and a run-in with patrol vehicles",
-    "indicators": [
-      "https://www.theregister.com/security/2026/11/18/california-tells-waymo-to-take-the-next-exit-after-freeway-mishaps/5310841"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-7",
-    "title": "Oracle reveals fix-this-ASAP-grade Java4Shell bug that allows attacks on many third-party apps",
-    "source": "The Register Security (UK)",
-    "url": "https://www.theregister.com/security/2026/11/18/oracle-reveals-fix-this-asap-grade-java4shell-bug-that-allows-attacks-on-many-third-party-apps/5310661",
-    "date": "18 Nov 2026",
-    "_timestamp": 1794976385.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Attackers can crash the JVM or achieve unauthenticated RCE",
-    "indicators": [
-      "https://www.theregister.com/security/2026/11/18/oracle-reveals-fix-this-asap-grade-java4shell-bug-that-allows-attacks-on-many-third-party-apps/5310661"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
     "id": "scraped-23",
     "title": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
     "source": "Security Affairs",
@@ -89,6 +34,33 @@
       "raw_score": 0.0164,
       "percentile": "76.9%"
     }
+  },
+  {
+    "id": "scraped-6",
+    "title": "California tells Waymo to take the next exit after freeway mishaps",
+    "source": "The Register Security (UK)",
+    "url": "https://www.theregister.com/security/2026/11/18/california-tells-waymo-to-take-the-next-exit-after-freeway-mishaps/5310841",
+    "date": "18 Nov 2026",
+    "_timestamp": 1795023900.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "Robotaxi operator suspends driverless rides on high-speed roads nationwide after construction zone incursions and a run-in with patrol vehicles",
+    "indicators": [
+      "https://www.theregister.com/security/2026/11/18/california-tells-waymo-to-take-the-next-exit-after-freeway-mishaps/5310841"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
     "id": "scraped-16",
@@ -141,8 +113,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
-      "Supply chain"
+      "Supply chain",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -272,6 +244,34 @@
       "https://www.computerweekly.com/news/366654825/Data-security-compliance-top-expected-connectivity-challenges-in-2027"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-7",
+    "title": "Oracle reveals fix-this-ASAP-grade Java4Shell bug that allows attacks on many third-party apps",
+    "source": "The Register Security (UK)",
+    "url": "https://www.theregister.com/security/2026/11/18/oracle-reveals-fix-this-asap-grade-java4shell-bug-that-allows-attacks-on-many-third-party-apps/5310661",
+    "date": "18 Nov 2026",
+    "_timestamp": 1794976385.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Attackers can crash the JVM or achieve unauthenticated RCE",
+    "indicators": [
+      "https://www.theregister.com/security/2026/11/18/oracle-reveals-fix-this-asap-grade-java4shell-bug-that-allows-attacks-on-many-third-party-apps/5310661"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
     "id": "scraped-11",
@@ -726,9 +726,9 @@
     "actor": null,
     "cves": [],
     "tags": [
+      "Next",
       "Retail",
-      "Credential stuffing",
-      "Next"
+      "Credential stuffing"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
