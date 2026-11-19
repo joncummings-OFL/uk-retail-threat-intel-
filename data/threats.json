@@ -1,6 +1,34 @@
 [
   {
-    "id": "scraped-22",
+    "id": "scraped-16",
+    "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
+    "date": "19 Nov 2026",
+    "_timestamp": 1795077731.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. \"We are aware of PoCs that prove some of them can be used to trigger remote code execution,\" the maintaine...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-23",
     "title": "Palo Alto Networks to Buy AI Startup Applied Compute for $4.5 Billion",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/",
@@ -28,7 +56,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-24",
     "title": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html",
@@ -91,7 +119,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-17",
     "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
@@ -169,8 +197,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Warehouse",
-      "Next"
+      "Next",
+      "Warehouse"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -183,7 +211,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-18",
     "title": "CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html",
@@ -449,7 +477,7 @@
     }
   },
   {
-    "id": "scraped-24",
+    "id": "scraped-25",
     "title": "Fireworks AI Breach Exposes Uber Data and Highlights Supply Chain Risks",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203339/data-breach/fireworks-ai-breach-exposes-uber-data-and-highlights-supply-chain-risks.html",
@@ -476,7 +504,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-19",
     "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
@@ -512,7 +540,7 @@
     }
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-20",
     "title": "Trigram Campaign Impersonates About 50 AI and Blockchain Brands to Target Devs with Infostealers",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/trigram-campaign-impersonates-about-50.html",
@@ -539,7 +567,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-20",
+    "id": "scraped-21",
     "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
@@ -594,7 +622,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-26",
     "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
@@ -685,7 +713,7 @@
     }
   },
   {
-    "id": "scraped-21",
+    "id": "scraped-22",
     "title": "Google Project Zero Slashes Bug Disclosure Deadlines, Splitting Experts",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines",
@@ -726,9 +754,9 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Credential stuffing",
+      "Next",
       "Retail",
-      "Next"
+      "Credential stuffing"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
