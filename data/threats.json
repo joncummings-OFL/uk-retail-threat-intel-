@@ -1,42 +1,5 @@
 [
   {
-    "id": "scraped-16",
-    "title": "Everything Is a Web Application, Including Your Firewall",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795089143.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-109619",
-      "CVE-2026-109618"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both flaws let anyone execute code on the web server without authentication. T...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/everything-is-web-application-including.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-109618",
-      "score": "100.0%",
-      "raw_score": 0.99999,
-      "percentile": "100.0%"
-    }
-  },
-  {
     "id": "scraped-24",
     "title": "StepSecurity Secures $20 Million to Expand Supply Chain Protection",
     "source": "SecurityWeek",
@@ -62,6 +25,43 @@
       "https://www.securityweek.com/stepsecurity-secures-20-million-to-expand-supply-chain-protection/"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-16",
+    "title": "Everything Is a Web Application, Including Your Firewall",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
+    "date": "19 Nov 2026",
+    "_timestamp": 1795089143.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-109618",
+      "CVE-2026-109619"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both flaws let anyone execute code on the web server without authentication. T...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/everything-is-web-application-including.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-109618",
+      "score": "100.0%",
+      "raw_score": 0.99999,
+      "percentile": "100.0%"
+    }
   },
   {
     "id": "scraped-25",
@@ -147,7 +147,13 @@
     "indicators": [
       "https://securityaffairs.com/203440/hacking/nginx2rootai-discovers-five-critical-nginx-flaws-and-a-path-to-root.html"
     ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-123007",
+      "score": "6.4%",
+      "raw_score": 0.06358,
+      "percentile": "93.8%"
+    }
   },
   {
     "id": "scraped-17",
@@ -236,9 +242,9 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
     "epss": {
       "cve": "CVE-2026-129448",
-      "score": "1.6%",
-      "raw_score": 0.0164,
-      "percentile": "76.9%"
+      "score": "1.2%",
+      "raw_score": 0.01191,
+      "percentile": "68.6%"
     }
   },
   {
@@ -299,9 +305,9 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
     "epss": {
       "cve": "CVE-2026-129448",
-      "score": "1.6%",
-      "raw_score": 0.0164,
-      "percentile": "76.9%"
+      "score": "1.2%",
+      "raw_score": 0.01191,
+      "percentile": "68.6%"
     }
   },
   {
@@ -391,9 +397,9 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
     "epss": {
       "cve": "CVE-2026-114938",
-      "score": "0.7%",
-      "raw_score": 0.00734,
-      "percentile": "55.1%"
+      "score": "0.8%",
+      "raw_score": 0.00753,
+      "percentile": "55.9%"
     }
   },
   {
@@ -510,9 +516,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for DiskStation Manager (DSM).",
     "epss": {
       "cve": "CVE-2024-10441",
-      "score": "1.3%",
-      "raw_score": 0.01251,
-      "percentile": "70.0%"
+      "score": "2.1%",
+      "raw_score": 0.0215,
+      "percentile": "82.5%"
     }
   },
   {
@@ -547,9 +553,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for LiteLLM.",
     "epss": {
       "cve": "CVE-2026-40217",
-      "score": "17.0%",
-      "raw_score": 0.1702,
-      "percentile": "97.1%"
+      "score": "61.9%",
+      "raw_score": 0.61911,
+      "percentile": "99.2%"
     }
   },
   {
@@ -584,9 +590,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Research Electronic Data Capture (REDCap).",
     "epss": {
       "cve": "CVE-2026-90817",
-      "score": "3.7%",
-      "raw_score": 0.03749,
-      "percentile": "90.1%"
+      "score": "25.2%",
+      "raw_score": 0.25187,
+      "percentile": "98.0%"
     }
   },
   {
@@ -621,9 +627,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Axis.",
     "epss": {
       "cve": "CVE-2026-90436",
-      "score": "1.1%",
-      "raw_score": 0.01128,
-      "percentile": "67.0%"
+      "score": "1.8%",
+      "raw_score": 0.01773,
+      "percentile": "78.7%"
     }
   },
   {
@@ -684,9 +690,9 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
     "epss": {
       "cve": "CVE-2026-114938",
-      "score": "0.7%",
-      "raw_score": 0.00734,
-      "percentile": "55.1%"
+      "score": "0.8%",
+      "raw_score": 0.00753,
+      "percentile": "55.9%"
     }
   },
   {
@@ -832,7 +838,7 @@
       "cve": "CVE-2026-115731",
       "score": "0.7%",
       "raw_score": 0.00691,
-      "percentile": "53.5%"
+      "percentile": "53.6%"
     }
   },
   {
