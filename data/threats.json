@@ -1,12 +1,70 @@
 [
   {
+    "id": "scraped-24",
+    "title": "PHP Warns of Critical Flaws Ahead of November Security Release",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/203472/security/php-warns-of-critical-flaws-ahead-of-november-security-release.html",
+    "date": "19 Nov 2026",
+    "_timestamp": 1795083771.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "PHP will patch critical security flaws across supported versions, including a session handling bug that could allow remote code execution. The PHP development team announced a new security release scheduled for November 19, warning that the updates will address vulnerabilities across all supported versions of the widely used server-side programming...",
+    "indicators": [
+      "https://securityaffairs.com/203472/security/php-warns-of-critical-flaws-ahead-of-november-security-release.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-25",
+    "title": "nginx2root:AI Discovers Five Critical nginx Flaws and a Path to Root",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/203440/hacking/nginx2rootai-discovers-five-critical-nginx-flaws-and-a-path-to-root.html",
+    "date": "19 Nov 2026",
+    "_timestamp": 1795080079.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-123007"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "nginx2root exposes five critical nginx flaws and a Linux kernel bug that can lead to remote code execution and root access. Xint Research has disclosed nginx2root, five distinct nginx vulnerabilities plus one Linux kernel bug, each with a proven exploit. The worst of the five, now tracked as CVE-2026-123007, lets an unauthenticated attacker run cod...",
+    "indicators": [
+      "https://securityaffairs.com/203440/hacking/nginx2rootai-discovers-five-critical-nginx-flaws-and-a-path-to-root.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
     "id": "scraped-16",
     "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
     "date": "19 Nov 2026",
     "_timestamp": 1795077731.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -56,7 +114,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-24",
+    "id": "scraped-26",
     "title": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html",
@@ -169,8 +227,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
-      "Supply chain"
+      "Supply chain",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -477,7 +535,7 @@
     }
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-27",
     "title": "Fireworks AI Breach Exposes Uber Data and Highlights Supply Chain Risks",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203339/data-breach/fireworks-ai-breach-exposes-uber-data-and-highlights-supply-chain-risks.html",
@@ -581,8 +639,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Checkout",
-      "Supply chain"
+      "Supply chain",
+      "Checkout"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -618,33 +676,6 @@
     "summary": "The Competition and Markets Authority , Financial Conduct Authority, Information Commissioner’s Office and Ofcom have asked the UK government to address their personal artificial intelligence (AI) agent concerns. The regulators, working as the Digital Regulation Coordination Forum (DRCF); have written a joint letter to UK chancellor John Healey; AI...",
     "indicators": [
       "https://www.computerweekly.com/news/366654742/UK-regulators-call-for-tight-control-of-personal-AI-agents"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-26",
-    "title": "Infoblox Confirms Supply Chain Breach After Attackers Access Sensitive Data",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html",
-    "date": "17 Nov 2026",
-    "_timestamp": 1794912875.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "supply",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Supply chain"
-    ],
-    "mitre": "T1195 (Supply Chain Compromise)",
-    "mitre_id": "T1195",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Supply Chain Compromise",
-    "summary": "A breach at an Infoblox supplier exposed customer network snapshots and employee data, highlighting the risks of trusted third-party access. Infoblox, one of the major players in cybersecurity and network infrastructure, is investigating a data breach after attackers gained access to internal company information through a compromised third-party pr...",
-    "indicators": [
-      "https://securityaffairs.com/203309/data-breach/infoblox-confirms-supply-chain-breach-after-attackers-access-sensitive-data.html"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
@@ -755,8 +786,8 @@
     "cves": [],
     "tags": [
       "Next",
-      "Retail",
-      "Credential stuffing"
+      "Credential stuffing",
+      "Retail"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
