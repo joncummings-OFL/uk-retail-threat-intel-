@@ -6,7 +6,7 @@
     "url": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
     "date": "19 Nov 2026",
     "_timestamp": 1795101487.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -23,7 +23,7 @@
     "mitre_id": "T1190",
     "mitre_tactic": "Initial Access",
     "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560. The list of vulnerabilities is as follows - CVE-2026-115560 (CVSS score: 9.2) - An improper input validation vulnerability that could result in remo...",
+    "summary": "The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560. The release of the patch follows an advance notice in which the project maintainers alerted users to multiple critical vulnerabilities affecting all...",
     "indicators": [
       "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html"
     ],
@@ -36,7 +36,7 @@
     "url": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
     "date": "19 Nov 2026",
     "_timestamp": 1795101066.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -64,7 +64,7 @@
     "url": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
     "date": "19 Nov 2026",
     "_timestamp": 1795098786.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -84,33 +84,6 @@
       "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html"
     ],
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-8",
-    "title": "UK court confirms existence of government surveillance order against Apple",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795084860.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "A British court has confirmed that the Home Office has issued a secret order to provide police and intelligence services with the capability to access encrypted data stored by users of Apple devices. The Investigatory Powers Tribunal found that government claims that confirming the existence of the order, known as a Technical Capability Notice (TCN...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
     "id": "scraped-28",
@@ -153,8 +126,8 @@
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-109618",
-      "CVE-2026-109619"
+      "CVE-2026-109619",
+      "CVE-2026-109618"
     ],
     "tags": [
       "Global 0-Day",
@@ -205,7 +178,34 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-31",
+    "id": "scraped-8",
+    "title": "UK court confirms existence of government surveillance order against Apple",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple",
+    "date": "19 Nov 2026",
+    "_timestamp": 1795084860.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "A British court has confirmed that the Home Office has issued a secret order to provide police and intelligence services with the capability to access encrypted data stored by users of Apple devices. The Investigatory Powers Tribunal found that government claims that confirming the existence of the order, known as a Technical Capability Notice (TCN...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-30",
     "title": "PHP Warns of Critical Flaws Ahead of November Security Release",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203472/security/php-warns-of-critical-flaws-ahead-of-november-security-release.html",
@@ -233,7 +233,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-32",
+    "id": "scraped-31",
     "title": "nginx2root:AI Discovers Five Critical nginx Flaws and a Path to Root",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203440/hacking/nginx2rootai-discovers-five-critical-nginx-flaws-and-a-path-to-root.html",
@@ -297,35 +297,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-30",
-    "title": "Palo Alto Networks to Buy AI Startup Applied Compute for $4.5 Billion",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795058723.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The all-stock deal will give the cybersecurity company a platform for fine-tuning and running open-weight AI models in public and sovereign clouds. The post Palo Alto Networks to Buy AI Startup Applied Compute for $4.5 Billion appeared first on SecurityWeek .",
-    "indicators": [
-      "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-33",
+    "id": "scraped-32",
     "title": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html",
@@ -746,7 +718,7 @@
     }
   },
   {
-    "id": "scraped-34",
+    "id": "scraped-33",
     "title": "Fireworks AI Breach Exposes Uber Data and Highlights Supply Chain Risks",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203339/data-breach/fireworks-ai-breach-exposes-uber-data-and-highlights-supply-chain-risks.html",
@@ -996,8 +968,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Credential stuffing",
       "Retail",
+      "Credential stuffing",
       "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
