@@ -1,3 +1,5 @@
-*TL;DR:* Threat posture is stable with no direct overnight retail breaches; heightened surveillance is maintained across our perimeter and customer loyalty vectors.
-*Key Alert:* Critical unauthenticated RCE flaw CVE-2026-129448 in Apache Roller is actively exploited in the wild, posing a severe edge-device risk.
-*Priority Action:* Immediately inventory Java-based web assets, review perimeter telemetry, and patch Apache Roller endpoints.
+*TL;DR:* Enterprise threat posture is heightened by confirmed in-the-wild zero-day exploitation targeting core infrastructure. Threat actors are leveraging an authentication bypass in VMware vCenter to breach enterprise perimeters.
+
+*Key Alert:* China-linked actor Armory Castle is actively exploiting a critical VMware vCenter zero-day (CVE-2026-123890, CVSS 9.8) to gain administrative access and exfiltrate data.
+
+*Priority Action:* Immediately isolate any internet-exposed vCenter instances, apply emergency vendor patches for CVE-2026-123890, and inspect Directory Service telemetry for anomalous administrator sessions.
