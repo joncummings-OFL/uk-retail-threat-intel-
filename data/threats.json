@@ -6,8 +6,8 @@
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day",
     "date": "20 Nov 2026",
     "_timestamp": 1795208607.0,
-    "is_new": true,
-    "is_flash": true,
+    "is_new": false,
+    "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "pos",
@@ -575,8 +575,8 @@
     "cves": [],
     "tags": [
       "Actor: Scattered Spider",
-      "Next",
       "Ico",
+      "Next",
       "Information commissioner"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
@@ -773,42 +773,6 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-43",
-    "title": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html",
-    "date": "18 Nov 2026",
-    "_timestamp": 1795032695.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-129448"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Attackers are exploiting a critical Apache Roller flaw that allows unauthenticated remote code execution, prompting urgent security updates. A critical vulnerability, tracked as CVE-2026-129448 (CVSS score of 9.8), in Apache Roller could allow an unauthenticated attacker to execute arbitrary code on a vulnerable server. Apache Roller is an open-sou...",
-    "indicators": [
-      "https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-129448",
-      "score": "1.2%",
-      "raw_score": 0.01191,
-      "percentile": "68.7%"
-    }
-  },
-  {
     "id": "scraped-13",
     "title": "California tells Waymo to take the next exit after freeway mishaps",
     "source": "The Register Security (UK)",
@@ -886,8 +850,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Supply chain",
-      "Next"
+      "Next",
+      "Supply chain"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -914,8 +878,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Warehouse",
-      "Next"
+      "Next",
+      "Warehouse"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -1290,8 +1254,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Credential stuffing",
       "Retail",
+      "Credential stuffing",
       "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
