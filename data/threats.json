@@ -1,5 +1,33 @@
 [
   {
+    "id": "scraped-22",
+    "title": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html",
+    "date": "20 Nov 2026",
+    "_timestamp": 1795152601.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "A newly disclosed unpatched zero-day technique called FastUnlock lets someone with physical access to a locked Windows computer start programs without signing in. Whoever uses it gets only a limited account, not administrator control of the machine. The method was posted yesterday by a researcher who uses the handles MSNightmare and Nightmare Eclip...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
     "id": "scraped-6",
     "title": "Flaws in VMware and KVM need attention, if you have time while fixing Java, PHP, and everything else",
     "source": "The Register Security (UK)",
@@ -111,7 +139,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-23",
     "title": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
@@ -141,7 +169,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-24",
     "title": "Critical VMware vCenter Zero-Day Flaw Lets Network Attackers Bypass Authentication",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
@@ -169,7 +197,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-24",
+    "id": "scraped-25",
     "title": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html",
@@ -266,9 +294,9 @@
     "cves": [],
     "tags": [
       "Actor: Scattered Spider",
-      "Information commissioner",
+      "Next",
       "Ico",
-      "Next"
+      "Information commissioner"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -308,7 +336,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-26",
     "title": "Everything Is a Web Application, Including Your Firewall",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
@@ -321,8 +349,8 @@
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-109619",
-      "CVE-2026-109618"
+      "CVE-2026-109618",
+      "CVE-2026-109619"
     ],
     "tags": [
       "Global 0-Day",
@@ -464,7 +492,7 @@
     }
   },
   {
-    "id": "scraped-26",
+    "id": "scraped-27",
     "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
@@ -555,7 +583,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-27",
+    "id": "scraped-28",
     "title": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html",
@@ -647,7 +675,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-28",
+    "id": "scraped-29",
     "title": "CISA Urges Immediate Patching of Java4Shell Flaw That Could Allow Remote Code Execution",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/cisa-urges-immediate-patching-of.html",
@@ -910,42 +938,6 @@
       "score": "1.8%",
       "raw_score": 0.01773,
       "percentile": "78.7%"
-    }
-  },
-  {
-    "id": "scraped-29",
-    "title": "Oracle to Patch 11 Java Flaws Today as Critical OpenJDK RCE (CVE-2026-114938) Report Emerges",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html",
-    "date": "17 Nov 2026",
-    "_timestamp": 1794928656.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-114938"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Oracle is preparing to release security patches for 11 vulnerabilities in Java SE on Tuesday, November 17, 2026, all of which may be exploited remotely without authentication, as separate reports warn of a potentially critical remote code execution (RCE) flaw affecting OpenJDK. The 11 vulnerabilities carry a maximum CVSS 3.1 severity score of 8.1,...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/oracle-to-patch-11-java-flaws-today-as.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-114938",
-      "score": "0.8%",
-      "raw_score": 0.00753,
-      "percentile": "55.9%"
     }
   },
   {
