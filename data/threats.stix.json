@@ -1,13 +1,92 @@
 {
   "type": "bundle",
-  "id": "bundle--a657e04a-9c8c-446a-b307-12c6ba32b1c5",
+  "id": "bundle--5d5f35bf-08e3-4926-b87c-b8874d06b223",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9de05205-b720-47f8-90dd-c66c75872569",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--12c19319-a2fb-4b44-a786-8cb523979e68",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
+      "name": "China attackers deployed AI agents that autonomously found and exploited a 0-day to take over a university server",
+      "description": "'Agents kept adapting for nearly a full day without human direction,' Amazon CISO said",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
+      "confidence": 90,
+      "labels": [
+        "Global 0-Day",
+        "Enterprise"
+      ],
+      "external_references": [
+        {
+          "source_name": "The Register Security (UK)",
+          "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--82599b99-6f79-4b7e-afba-06835747ab59",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cfa62134-5324-413d-b3c5-46ddb99a6fd6",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
+      "name": "FCA lines up new cyber guidance for UK financial services sector",
+      "description": "Citing a growing number of impactful cyber attacks, and the influence of evolving risk factors such as artificial intelligence (AI) and quantum computing, the Financial Conduct Authority (FCA) has hooked up with the Bank of England's Prudential Regulation Authority (PRA) have opened a public consultation on proposals to produce new security guidanc...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.computerweekly.com/news/366655173/FCA-lines-up-new-cyber-guidance-for-UK-financial-services-sector']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
+      "confidence": 75,
+      "labels": [
+        "Next"
+      ],
+      "external_references": [
+        {
+          "source_name": "Computer Weekly Security (UK)",
+          "url": "https://www.computerweekly.com/news/366655173/FCA-lines-up-new-cyber-guidance-for-UK-financial-services-sector"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2e2ba28a-f668-4567-9f79-46e376baeaaf",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
+      "name": "Brute Force / Credential Stuffing",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--490e9ee0-b5b3-4147-a23b-eff09d5171eb",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE",
       "description": "Tracked as CVE-2026-132825, the bug is a heap-based buffer overflow that could lead to remote code execution (RCE). The post Ruby Patches Ruby2Shell Vulnerability That Could Lead to RCE appeared first on SecurityWeek .",
       "indicator_types": [
@@ -15,7 +94,7 @@
       ],
       "pattern": "[url:value = 'https://www.securityweek.com/ruby-patches-ruby2shell-vulnerability-that-could-lead-to-rce/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -31,9 +110,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--22eedea8-72c9-47ac-a27b-afbfa13d6364",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--c7e3e1ad-1345-40dc-8602-c5863eb0a7f5",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -45,9 +124,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--78c7cb95-98c8-44ff-ba4d-e78d2d9e23d6",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--7e64930b-758a-47cc-86bf-782552f5b1e9",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
       "description": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026. The vulnerability, tracked as CVE-2026-123890 (CVSS score: 9.8), is a case of authentication bypass in the VMware Directory Service t...",
       "indicator_types": [
@@ -55,7 +134,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -71,9 +150,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--6952e23c-37cb-423b-a8a6-43189d87b334",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--acdd8f65-a4dc-43ee-83e8-f6e33e86f83d",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -85,9 +164,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7f7fca47-4672-4088-b204-2d57bffce72b",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--3742080e-964c-494b-ba32-addce9b94fe3",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "New Unpatched Windows 0-Day FastUnlock Lets Someone Holding a Locked PC Run Programs on It",
       "description": "A newly disclosed unpatched zero-day technique called FastUnlock lets someone with physical access to a locked Windows computer start programs without signing in. Whoever uses it gets only a limited account, not administrator control of the machine. The method was posted yesterday by a researcher who uses the handles MSNightmare and Nightmare Eclip...",
       "indicator_types": [
@@ -95,7 +174,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/new-unpatched-windows-0-day-fastunlock.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -111,9 +190,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a2a2cbe7-7240-4593-89c8-4b033cb898ae",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--50c000a7-9b88-490e-84dc-c90d760d3739",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -125,9 +204,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a61f345f-38eb-4960-a4bd-92d9dc8e5956",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--419ab0e2-7111-45c5-8f41-1d5831a5a6c4",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Flaws in VMware and KVM need attention, if you have time while fixing Java, PHP, and everything else",
       "description": "Critical Virtzilla bugs allow authentication bypass, as a nested virtualization issue got Digital Ocean ducking",
       "indicator_types": [
@@ -135,7 +214,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/20/flaws-in-vmware-and-kvm-need-attention-if-you-have-time-while-fixing-java-php-and-everything-else/5311193']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -151,9 +230,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--6fc38f8c-ae83-4d14-9d28-94024d70bb72",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--f41a3e13-94b5-443a-bc71-fe34666daa97",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -165,9 +244,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8178b49a-9701-4a7c-a399-c10cac4175f4",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--bcbda888-65b8-47f4-ba9b-d8d33ecb4310",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Chaotic Eclipse Releases FastUnlock, a New Windows Zero-Day Vulnerability",
       "description": "The researcher Chaotic Eclipse released FastUnlock, a new Windows zero-day vulnerability exploiting Narrator to bypass the lock screen. Security researcher Chaotic Eclipse, also known as INFINITE NIGHTMARE, MSNightmare and Nightmare-Eclipse, released a new Windows zero-day vulnerability, dubbed FastUnlock, exploiting Narrator to bypass the lock scr...",
       "indicator_types": [
@@ -175,7 +254,7 @@
       ],
       "pattern": "[url:value = 'https://securityaffairs.com/203537/hacking/chaotic-eclipse-releases-fastunlock-a-new-windows-zero-day-vulnerability.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -191,9 +270,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ade0627e-0ef7-4ae7-b3bc-d6827ca7026e",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--cbb9d624-65a9-44e8-af3b-07e4bbfb7b82",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -205,9 +284,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--dcc75f53-a33f-4a02-bdaf-32813116b124",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--e63760ac-cc55-41a9-9c32-58127151a487",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Chase, Visa, Mastercard confirm third-party cyberattacks that may have exposed customers' info",
       "description": "First service outages, then data breaches\u2026what's next?!",
       "indicator_types": [
@@ -215,7 +294,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -230,9 +309,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f1bef7e5-7725-42cf-906c-bd874d522731",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--fc7357a6-20bf-4ac0-9f82-05a4aa4e561b",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -244,9 +323,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--63044363-0a17-4bcd-b40b-d5c4ed197f31",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--7c948fba-73d3-4e2c-8c82-009ca3f4fac9",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT",
       "description": "Google says a China-linked espionage group exploited a critical VMware vCenter authentication bypass before Broadcom released a patch. The post Newly Patched VMware vCenter Flaw Exploited as Zero-Day by Chinese APT appeared first on SecurityWeek .",
       "indicator_types": [
@@ -254,7 +333,7 @@
       ],
       "pattern": "[url:value = 'https://www.securityweek.com/newly-patched-vmware-vcenter-flaw-exploited-as-zero-day-by-chinese-apt/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -270,9 +349,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--3e07ffa2-897d-4413-98a5-b2bd3461290a",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--156bb28d-a978-486a-982e-a8e5b99d83ae",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -284,9 +363,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--669ceb50-e756-4511-bfab-a40efb4d8ec0",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--84d1d4ff-54fe-4ce7-b71f-0c374d75518c",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
       "description": "The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560. The release of the patch follows an advance notice in which the project maintainers alerted users to multiple critical vulnerabilities affecting all...",
       "indicator_types": [
@@ -294,7 +373,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -310,9 +389,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--bf3a7dfe-df09-44fc-9e51-ef797fd9352c",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--89557f5b-7d50-46ba-a8e8-d10bfc4a0a6f",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -324,9 +403,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c01af4b6-46d2-4137-aee5-23b185c33f1e",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--83b22c2b-ad09-4d12-a4d4-f5f69a75ee29",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Critical VMware vCenter Zero-Day Flaw Lets Network Attackers Bypass Authentication",
       "description": "A critical flaw in VMware vCenter lets an attacker with network access bypass authentication and gain unauthorized access to the system, Broadcom, which owns VMware, said in an advisory published today. Fixed versions are out for all supported branches, and the company lists no workaround. vCenter is the central console for managing an organization...",
       "indicator_types": [
@@ -334,7 +413,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -350,9 +429,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a560cc04-5f4d-476b-b80a-da68b6d97191",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--c1d43e52-d47c-4eb6-8496-fc97091a78e4",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -364,9 +443,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fb0d8b3a-6719-4a71-a33b-c1a712da9796",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--570bf363-bc90-4302-9b83-960baef7fbaf",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Drupal Patches Critical Installer Flaw That Could Give Unauthenticated Attackers Control of Sites",
       "description": "Under specific conditions, a critical vulnerability in Drupal core can allow an attacker without login credentials to use the built-in installer to attempt to reinstall a site. That can lead to a site takeover or remote code execution, and the project rates the vulnerable configurations as uncommon. Fixed releases for all supported branches shipped...",
       "indicator_types": [
@@ -374,7 +453,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/drupal-patches-critical-installer-flaw.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -390,9 +469,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--29ca2e42-bfff-4460-b569-c596c4abc243",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--14c504b7-9dea-4557-bd02-41852c111b38",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -404,9 +483,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--368f278c-2abd-47af-9660-2fcb19fac2b6",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--2b28660c-c298-4c0d-afb9-44eeb6a1d1ac",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "AI red team tool Artex likely behind cyber attack on EU body",
       "description": "Artex, an open source penetration testing framework powered by artificial intelligence (AI), may have been implicated in a cyber incident affecting the European Union\u2019s (EU) executive body, the European Commission (EC) in Brussels. The attack, which unfolded at the end of October, appears to have targeted the commission\u2019s Sysper human resources (HR...",
       "indicator_types": [
@@ -414,7 +493,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654974/AI-red-team-tool-Artex-likely-behind-cyber-attack-on-EU-body']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -429,9 +508,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--40de9930-cb57-4f66-8a45-1f568b461e8b",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--b21b579c-29a2-40a9-8dc5-d8473ccc5ce4",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -443,9 +522,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--dc46cdbf-3768-42b6-90e4-bd6b082a67e4",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--b3a3d710-acaf-442e-ae88-86eb6a4bbb02",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Over 250,000 Londoners affected by latest TfL breach",
       "description": "The personal information of approximately 265,000 bus, rail and tube passengers in London has been exposed in a new data breach at service operator Transport for London (TfL). The data leak affected users of TfL\u2019s Oyster photocards \u2013 which are provided to children and students, the over-60s, military veterans and people participating in apprentices...",
       "indicator_types": [
@@ -453,12 +532,12 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654973/Over-250000-Londoners-affected-by-latest-TfL-breach']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Actor: Scattered Spider",
-        "Ico",
         "Information commissioner",
+        "Ico",
         "Next"
       ],
       "external_references": [
@@ -471,9 +550,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--542a5b26-902c-4d13-8087-aae13d2adf7c",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--b4803494-9b1e-4d4b-8c20-af7f8faf8242",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -485,9 +564,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6c889a74-6a19-49e6-9dd8-59e6979e8321",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--b985bd30-9d45-461f-9f39-dec192a5ea65",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Ukrainian police arrest former members of Conti ransomware group",
       "description": "Ukrainian police have arrested four cyber criminals as part of an investigation conducted in cooperation with the FBI, claiming they are part of a much wider ransomware gang responsible for $40m of extorted funds from victims. \u201cThe organisation comprises at least 27 people from different countries, including Ukraine, Kazakhstan and Russia. The asso...",
       "indicator_types": [
@@ -495,7 +574,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654831/Ukrainian-police-arrest-former-members-of-Conti-ransomware-group']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Logistics"
@@ -510,9 +589,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e63829c0-16c3-450a-af5f-984fa85bc8c1",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--59c87383-9336-490a-98eb-9ceacd7e3c7a",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Data Encrypted for Impact",
       "external_references": [
         {
@@ -524,9 +603,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--96988647-b2a8-47eb-81c1-b598f14f7e10",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--e03f7d2d-391c-4112-8a37-3491d9882ec3",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Everything Is a Web Application, Including Your Firewall",
       "description": "One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both flaws let anyone execute code on the web server without authentication. T...",
       "indicator_types": [
@@ -534,7 +613,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/everything-is-web-application-including.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -550,9 +629,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--059a5a50-3306-4305-aba7-66cf0bdf7921",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--7875d380-0754-42c3-bb27-098646d8dc30",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -564,9 +643,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--41833034-3061-4909-96c0-82eeecd41a20",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--f65ee1e7-827f-4c3c-bf35-904971a47b71",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "UK court confirms existence of government surveillance order against Apple",
       "description": "A British court has confirmed that the Home Office has issued a secret order to provide police and intelligence services with the capability to access encrypted data stored by users of Apple devices. The Investigatory Powers Tribunal found that government claims that confirming the existence of the order, known as a Technical Capability Notice (TCN...",
       "indicator_types": [
@@ -574,7 +653,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Next"
@@ -589,9 +668,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a8a21ba4-f534-4ed0-8344-1ce123a41278",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--064a54fa-d2fe-4e13-9d6b-f902f2ae512c",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -603,9 +682,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6df2cf8f-f051-4a42-9e99-e7d52fa3a3a5",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--04784592-b32f-4b7b-982f-481f238e5e9e",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "PHP Warns of Critical Flaws Ahead of November Security Release",
       "description": "PHP will patch critical security flaws across supported versions, including a session handling bug that could allow remote code execution. The PHP development team announced a new security release scheduled for November 19, warning that the updates will address vulnerabilities across all supported versions of the widely used server-side programming...",
       "indicator_types": [
@@ -613,7 +692,7 @@
       ],
       "pattern": "[url:value = 'https://securityaffairs.com/203472/security/php-warns-of-critical-flaws-ahead-of-november-security-release.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -629,9 +708,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--08d2d117-4fb8-4383-b4e8-f07e45524a34",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--a6146880-7345-410b-a9c3-3f3e9dc56644",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -643,9 +722,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d4e12a99-5246-4d71-8ab1-5850a097b78f",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--d1f7900b-d5a4-41b3-8b4f-cf7bd0d48744",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "nginx2root:AI Discovers Five Critical nginx Flaws and a Path to Root",
       "description": "nginx2root exposes five critical nginx flaws and a Linux kernel bug that can lead to remote code execution and root access. Xint Research has disclosed nginx2root, five distinct nginx vulnerabilities plus one Linux kernel bug, each with a proven exploit. The worst of the five, now tracked as CVE-2026-123007, lets an unauthenticated attacker run cod...",
       "indicator_types": [
@@ -653,7 +732,7 @@
       ],
       "pattern": "[url:value = 'https://securityaffairs.com/203440/hacking/nginx2rootai-discovers-five-critical-nginx-flaws-and-a-path-to-root.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -669,9 +748,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--7633ce50-bd9c-4be8-8788-e4ffcb1e8adf",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--bd35de55-2492-420c-a434-55e68b55335c",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -683,9 +762,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f7473974-3e9b-456c-9d42-b23b019d93ec",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--06ef25fb-b2d0-4af2-9b0c-a4a883b88486",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Ruby Ships Fixes for 7 Flaws, Including Critical Ruby2Shell, Said to Hit Default Rails Apps Pre-Auth",
       "description": "Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. \"We are aware of PoCs that prove some of them can be used to trigger remote code execution,\" the maintaine...",
       "indicator_types": [
@@ -693,7 +772,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -709,9 +788,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5b627cb3-9d30-49df-8013-e5b1d5d81a49",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--3a713a7e-e0b9-4836-bf25-f90e2044796a",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -723,9 +802,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8fa2bf7d-8b0f-4998-b6d2-38cfe0a00762",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--3913ac31-f4c0-457e-a612-272aeeea8f5b",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Apache Roller RCE Flaw CVE-2026-129448 Under Active Attack",
       "description": "Attackers are exploiting a critical Apache Roller flaw that allows unauthenticated remote code execution, prompting urgent security updates. A critical vulnerability, tracked as CVE-2026-129448 (CVSS score of 9.8), in Apache Roller could allow an unauthenticated attacker to execute arbitrary code on a vulnerable server. Apache Roller is an open-sou...",
       "indicator_types": [
@@ -733,7 +812,7 @@
       ],
       "pattern": "[url:value = 'https://securityaffairs.com/203419/security/apache-roller-rce-flaw-cve-2026-129448-under-active-attack.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -749,9 +828,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--2591a59f-c120-42ca-8a6c-817bae92cb32",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--23b1d918-9f74-4259-8ad8-c1e926384f8a",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -763,9 +842,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--39ce1d62-0ee6-42bf-bdba-5c65af178b55",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--6f41ba8d-9130-4015-94f8-f56908ecc497",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "California tells Waymo to take the next exit after freeway mishaps",
       "description": "Robotaxi operator suspends driverless rides on high-speed roads nationwide after construction zone incursions and a run-in with patrol vehicles",
       "indicator_types": [
@@ -773,7 +852,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/18/california-tells-waymo-to-take-the-next-exit-after-freeway-mishaps/5310841']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -788,9 +867,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--2d37791b-ff6d-49ec-9fce-57287181af61",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--bbd0cd5e-0882-4a08-be46-3b87d04ec2ca",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -802,9 +881,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d0c70a64-0275-462d-baea-4c3beb3f401e",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--a8277a92-cf2d-4b54-8384-5b8d89fd6156",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Critical Apache Roller RCE Flaw Under Active Exploitation, No Authentication Required",
       "description": "A critical security flaw in Apache Roller, an open-source, Java-based blogging platform, has come under active exploitation in the wild, according to the Apache Software Foundation (ASF) The vulnerability, tracked as CVE-2026-129448 (CVSS score: 9.8), is a case of unauthenticated deserialization in the XML-RPC endpoint that could lead to remote cod...",
       "indicator_types": [
@@ -812,7 +891,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/critical-apache-roller-rce-flaw-under.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -828,9 +907,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--0342cdc0-308b-41b4-9a20-7848f28a9a1e",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--73d1c94e-668b-4a0f-ab49-2b3e35e4db15",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -842,9 +921,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ab59a7d1-c446-4f11-870b-9d10a641330c",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--03a4939a-55c3-4892-b590-2acf6d71b2c1",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "US tech outages spark conversation on resilience in the age of AI",
       "description": "A series of widespread technology outages affecting a wide range of organisations across the US has sparked a discussion around business continuity and cyber resilience, and speculation over the impact of artificial intelligence (AI) systems. From downtime affecting the likes of Apple, Microsoft and Workday, to a nationwide ground stop affecting al...",
       "indicator_types": [
@@ -852,11 +931,11 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654898/US-tech-outages-spark-conversation-on-resilience-in-the-age-of-AI']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
-        "Next",
-        "Supply chain"
+        "Supply chain",
+        "Next"
       ],
       "external_references": [
         {
@@ -868,9 +947,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e6daf65c-c2ec-4d98-a4bd-1d8f4d8efd0f",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--6495886e-b077-4ba5-9160-bb5cc1dbddd6",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -882,9 +961,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3949dbcb-5ef8-4065-8b36-a94135f780e6",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--753e9c57-21a8-4ef5-9c1f-9cb0072c3eb4",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "I am the passenger: In Brussels at Google\u2019s data sovereignty event",
       "description": "As Mr I Pop so astutely pointed out, it\u2019s from the viewpoint of the passenger that you see \u201cthe city\u2019s ripped backsides\u201d. And this is very much the case as our Eurostar creeps into Brussels. Many main railway stations have less than salubrious surroundings, and that\u2019s the case with Brussels Midi. As my driver nudges the Merc slowly away from the ch...",
       "indicator_types": [
@@ -892,7 +971,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/I-am-the-passenger-In-Brussels-at-Googles-data-sovereignty-event']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 75,
       "labels": [
         "Warehouse",
@@ -908,9 +987,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--7d3aa46a-0923-4392-8124-658f9610811b",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--59d65d4e-d045-4047-99f8-ae5ead4bb3f4",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -922,9 +1001,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1ce9897c-de79-48fb-a32f-f5cc180569ad",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--c172b8af-db95-4055-9e85-c07455d5766b",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Data security, compliance top expected connectivity challenges in 2027",
       "description": "For businesses, talk of an artificial intelligence (AI) bubble or build-out is somewhat secondary as soaring AI adoption means increased investment in networking to deal with much higher workloads on their infrastructures. However, as these structures are being built, a study from DE-CIX has revealed data security and compliance is an even bigger c...",
       "indicator_types": [
@@ -932,7 +1011,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654825/Data-security-compliance-top-expected-connectivity-challenges-in-2027']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -947,9 +1026,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e5ea5c61-ff6c-4de1-8787-934a666051a4",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--b3588496-dafe-4e10-aa47-fac458d20310",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -961,9 +1040,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--78e351d1-a9ac-4228-bd88-9873a06fed6c",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--c57142f8-2e1a-4503-ae66-b6df6f1fce90",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Oracle reveals fix-this-ASAP-grade Java4Shell bug that allows attacks on many third-party apps",
       "description": "Attackers can crash the JVM or achieve unauthenticated RCE",
       "indicator_types": [
@@ -971,7 +1050,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/18/oracle-reveals-fix-this-asap-grade-java4shell-bug-that-allows-attacks-on-many-third-party-apps/5310661']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -987,9 +1066,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--2d6ac4a1-ebd1-4d55-baf2-0f88e0f56943",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--7a4a7d3e-dc3e-43ee-91e7-579a6c02bf5b",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1001,9 +1080,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--18877e38-18f6-47be-9786-f224b7737be7",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--b2e41661-ad61-459f-9b2f-03b0cc6c4770",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "The cyber threats to businesses from \u2018Grand Theft Auto VI\u2019",
       "description": "Having waited 13 years since the last full release in the series, fans of Rockstar Games \u2019 blockbuster video game franchise, Grand Theft Auto ( GTA ), have been a patient bunch. That changes this week, with the anticipated launch of the sixth instalment in the series, GTA VI . While downloads of GTA VI have already begun \u2013 spiking global network tr...",
       "indicator_types": [
@@ -1011,7 +1090,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654629/The-cyber-threats-to-businesses-from-Grand-Theft-Auto-VI']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Retailers"
@@ -1026,9 +1105,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--6c480aba-2b04-42de-b42b-5be6f00287aa",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--0390242e-0d8a-4667-9777-441abedcbd15",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Phishing / Courier Smishing",
       "external_references": [
         {
@@ -1040,9 +1119,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9851505b-fb5f-49f8-8b81-2695440bd8ab",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--b4f1a2af-bde1-4741-8e29-f3867d308469",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "CISA KEV Alert: CVE-2024-10441 in Synology DiskStation Manager (DSM) Under Active Exploitation",
       "description": "Synology DiskStation Manager (DSM) is affected by CVE-2024-10441. Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors. Required Remediation: Apply mitigations in accordance with...",
       "indicator_types": [
@@ -1050,7 +1129,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-10441']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1067,9 +1146,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--58ec7f2f-dd8c-4b80-a4c7-9f77f83215d8",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--98eddb20-f57e-4cf9-b0b5-d4856750d87b",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1081,9 +1160,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bbc86bf0-4d07-4c20-b1a6-b5114cac2282",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--63a445fd-1ccf-483e-9919-0a248939a83b",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "CISA KEV Alert: CVE-2026-40217 in BerriAI LiteLLM Under Active Exploitation",
       "description": "BerriAI LiteLLM is affected by CVE-2026-40217. BerriAI LiteLLM contains an unprotected alternate channel vulnerability that could allow remote attackers to execute arbitrary code via bytecode rewriting at the /guardrails/test_custom_code URI. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CI...",
       "indicator_types": [
@@ -1091,7 +1170,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-40217']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1108,9 +1187,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ae62b37d-1656-4577-b6e7-bffa8caae9d1",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--743ab379-119f-43c4-ae81-d65130edb978",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1122,9 +1201,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6cab1d1a-ab2d-4ab3-835c-aa98f183bfe0",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--daa02d3b-124e-4e61-875a-588a5eced1f1",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "CISA KEV Alert: CVE-2026-90817 in Vanderbilt University Research Electronic Data Capture (REDCap) Under Active Exploitation",
       "description": "Vanderbilt University Research Electronic Data Capture (REDCap) is affected by CVE-2026-90817. Vanderbilt University Research Electronic Data Capture (REDCap) contains a code injection vulnerability which could allow an unauthenticated attacker to execute arbitrary code on the server. An attacker could exploit this via crafted HTTP requests that ac...",
       "indicator_types": [
@@ -1132,7 +1211,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-90817']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1149,9 +1228,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a7808482-1f25-4c3c-856a-6de5265dc749",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--66c3e33b-1381-4eae-87ad-aa16a65bd8d5",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1163,9 +1242,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--95b5f097-a4ac-4565-b31e-e996c9b9b12e",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--91d1b6c3-de8b-4573-8e71-61d57c05fd95",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "CISA KEV Alert: CVE-2026-90436 in Apache Axis Under Active Exploitation",
       "description": "Apache Axis is affected by CVE-2026-90436. Apache Axis contains an unsafe reflection vulnerability that could allow an unauthenticated remote attacker to execute arbitrary code via a crafted SOAP fault message that causes Axis to load and instantiate an attacker-specified class when a suitable class is available on the application classpath. The im...",
       "indicator_types": [
@@ -1173,7 +1252,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-90436']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1190,9 +1269,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--200582cd-404d-48e5-a6fc-d5726914ede3",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--7a98a42a-07ed-4b54-9b70-b7c07fb7b6b0",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1204,9 +1283,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--40c13d91-ac4f-431b-a09e-b65a0a5fd1af",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--921ae74b-234e-4cd3-839b-c810a071004f",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "UK regulators call for tight control of personal AI agents",
       "description": "The Competition and Markets Authority , Financial Conduct Authority, Information Commissioner\u2019s Office and Ofcom have asked the UK government to address their personal artificial intelligence (AI) agent concerns. The regulators, working as the Digital Regulation Coordination Forum (DRCF); have written a joint letter to UK chancellor John Healey; AI...",
       "indicator_types": [
@@ -1214,7 +1293,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654742/UK-regulators-call-for-tight-control-of-personal-AI-agents']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 75,
       "labels": [
         "Information commissioner"
@@ -1229,9 +1308,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a9a66bfc-1226-476b-bad2-c537fa0341cd",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--67cf7090-cd48-44a2-98bb-2d13bc40a0db",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -1243,9 +1322,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8b598360-6bab-4996-bb6f-df4bd605ef15",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--8ad089c8-ec8c-403e-9812-3b1994e1a876",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Beyond the AI apocalypse: What CISOs need to do now",
       "description": "Media reports of rogue AI agents and AI-enabled cyber threats are prompting boards to ask about what these developments could mean for their organisations. AI\u2019s capabilities are rapidly expanding, but there is no clear evidence that an AI catastrophe is imminent. CIOs and infrastructure and operations leaders (I&O) should therefore focus on the thr...",
       "indicator_types": [
@@ -1253,7 +1332,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/Beyond-the-AI-apocalypse-What-CISOs-need-to-do-now']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -1268,9 +1347,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5bf651b7-6417-4e46-a7b0-1ffb2c1d6a8e",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--0b5a156a-9513-46c3-abe6-995e13c8c329",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1282,9 +1361,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--01706121-5258-4344-ba81-2a1dd7fe0c24",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--cfcdbd81-1371-4900-aaff-6b2eba86f7c2",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "CISA KEV Alert: CVE-2026-115731 in Perforce Puppet Enterprise Under Active Exploitation",
       "description": "Perforce Puppet Enterprise is affected by CVE-2026-115731. Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet\u2019s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted r...",
       "indicator_types": [
@@ -1292,7 +1371,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-115731']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1309,9 +1388,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--92a1a060-7c19-4381-a682-c2d90e6b8a71",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--a7fe7f01-eb71-4001-acef-29fd022f72dc",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1323,9 +1402,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5a48df3f-71e8-4175-82f4-f73067f48fe2",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--3788fec7-c67b-491d-826a-0c4dbf8c8cff",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Google Project Zero Slashes Bug Disclosure Deadlines, Splitting Experts",
       "description": "One of the oldest running bug disclosure programs announced it would shorten public disclosure timelines to vendors from 120 days to 30 over the next 14 months.",
       "indicator_types": [
@@ -1333,7 +1412,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/vulnerabilities-threats/google-project-zero-bug-disclosure-deadlines']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -1348,9 +1427,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--eb83efa0-1ada-473a-82d4-af21297c5bb7",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--153b9643-e910-4c56-bf9a-e2c2c2dd88bb",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Data from Local System / POS",
       "external_references": [
         {
@@ -1362,9 +1441,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--94909852-2de4-44bc-8394-5d10e3dd34cd",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--12ba0e17-c218-4c41-95ff-ed28c9052294",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "The big cyber short, or dot AI bubble?",
       "description": "The AI build-out will not cause a repeat of the 2008 financial crisis . It is far more likely to cause a repeat of 2000 , and that is not the reassurance it sounds like. A dotcom-style bust would still wipe trillions from markets, take a decade or more to recover, and arrive at a moment when the world has less slack to absorb it than it had in eith...",
       "indicator_types": [
@@ -1372,12 +1451,12 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/The-big-cyber-short-or-dot-AI-bubble']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 75,
       "labels": [
-        "Next",
         "Retail",
-        "Credential stuffing"
+        "Credential stuffing",
+        "Next"
       ],
       "external_references": [
         {
@@ -1389,9 +1468,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--269fe453-f0d2-4924-87e8-66df7ac92949",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--aeb94da6-c53d-4c79-8aa2-53c1c704f24e",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -1403,9 +1482,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0f170a61-1235-4d91-9575-1cb0cf1583ae",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "indicator--02daa01d-6ceb-47c9-9f48-a93d68fc11b2",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Threat actor use of AI becoming routine, warns Google",
       "description": "Threat actor use of AI in malicious cyber campaigns is evolving at pace, with several trends emerging over the past three months that point to a fast-approaching inflection point, according to research published this week by the Google Threat Intelligence Group (GTIG) and Mandiant. Google\u2019s team said that while previously it had only observed \u201cnasc...",
       "indicator_types": [
@@ -1413,7 +1492,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366654805/Threat-actor-use-of-AI-becoming-routine-warns-Google']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-20T17:08:04.104184+00:00",
+      "valid_from": "2026-11-20T18:06:21.890161+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -1429,9 +1508,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c32ee2dd-b09a-4c96-a751-33feadb9b787",
-      "created": "2026-11-20T17:08:04.104184+00:00",
-      "modified": "2026-11-20T17:08:04.104184+00:00",
+      "id": "attack-pattern--4d5ec11c-df3e-4ddd-9c22-fc4690539fc6",
+      "created": "2026-11-20T18:06:21.890161+00:00",
+      "modified": "2026-11-20T18:06:21.890161+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
