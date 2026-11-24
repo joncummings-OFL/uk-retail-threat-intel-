@@ -1,13 +1,259 @@
 [
   {
-    "id": "scraped-21",
+    "id": "scraped-31",
+    "title": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795537976.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "The critical bugs include an authentication bypass in vCenter and flaws that could allow code execution on ESX hosts. The post VMware Updates Patch Critical ESX, vCenter Vulnerabilities appeared first on SecurityWeek .",
+    "indicators": [
+      "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-22",
+    "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795526906.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-123903"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication. The critical vulnerability, tracked as CVE-2026-123903, is rated 9.8 out of 10.0 on the CVSS scoring system. It resides in the VMware Director...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-23",
+    "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795524129.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Checkout",
+      "Supply chain"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy, a widely used open-source security scanner, planted malicious code that looked like it came from GitHub's off...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-16",
+    "title": "Amazon CTO Werner Vogels: Computing to converge with biology",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366655113/Amazon-CTO-Werner-Vogels-Computing-to-converge-with-biology",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795514400.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Technology must decode how biology handles information, because nature handles vast amounts of data with a fraction of the energy used in datacentres. Meanwhile, security and sovereignty need to be built into systems and software at their inception, and scientists will find new cures for diseases that were unattainable before artificial intelligenc...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366655113/Amazon-CTO-Werner-Vogels-Computing-to-converge-with-biology"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-17",
+    "title": "UK cyber legislation fails to tackle real-world resilience",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/opinion/UK-cyber-legislation-fails-to-tackle-real-world-resilience",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795500600.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Retail",
+      "Supply chain"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "From mid-July through into October, more than a fair amount of my House of Lords colleagues' and my time has been filled with trying to improve the Cyber Security and Resilience Bill (CSRB). A milestone, of sorts, came when the bill passed its third reading on 2 November. The bill will be considered in the House of Commons today (24 November) with...",
+    "indicators": [
+      "https://www.computerweekly.com/opinion/UK-cyber-legislation-fails-to-tackle-real-world-resilience"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "cisa-kev-cve_2026_132224",
+    "title": "CISA KEV Alert: CVE-2026-132224 in Optimizely Web Experimentation Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132224",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795478400.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-132224"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-132224"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Optimizely Web Experimentation is affected by CVE-2026-132224. Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaSc...",
+    "indicators": [
+      "CVE-2026-132224"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Web Experimentation.",
+    "epss": {
+      "cve": "CVE-2026-132224",
+      "score": "0.4%",
+      "raw_score": 0.00411,
+      "percentile": "35.8%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_131914",
+    "title": "CISA KEV Alert: CVE-2026-131914 in Idunno AntiCsrf Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-131914",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795478400.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-131914"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-131914"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Idunno AntiCsrf is affected by CVE-2026-131914. Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transiti...",
+    "indicators": [
+      "CVE-2026-131914"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AntiCsrf.",
+    "epss": {
+      "cve": "CVE-2026-131914",
+      "score": "0.6%",
+      "raw_score": 0.00614,
+      "percentile": "50.2%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_132165",
+    "title": "CISA KEV Alert: CVE-2026-132165 in Drupal Core Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132165",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795478400.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-132165"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-132165"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Drupal Core is affected by CVE-2026-132165. Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site. Required Remediat...",
+    "indicators": [
+      "CVE-2026-132165"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Core."
+  },
+  {
+    "id": "scraped-24",
     "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
     "date": "24 Nov 2026",
     "_timestamp": 1795500165.0,
-    "is_new": true,
-    "is_flash": true,
+    "is_new": false,
+    "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "enterprise",
@@ -30,13 +276,13 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
     "epss": {
       "cve": "CVE-2026-134624",
-      "score": "0.4%",
-      "raw_score": 0.00354,
-      "percentile": "29.7%"
+      "score": "0.6%",
+      "raw_score": 0.00617,
+      "percentile": "50.3%"
     }
   },
   {
-    "id": "scraped-7",
+    "id": "scraped-10",
     "title": "Critical Cisco remote code execution bug under attack",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722",
@@ -64,7 +310,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-27",
+    "id": "scraped-29",
     "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
@@ -92,7 +338,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-25",
     "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
@@ -120,7 +366,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-8",
+    "id": "scraped-11",
     "title": "Everything going down at once wasn't evidence of a conspiracy – but the truth may be scarier",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/off-prem/2026/11/23/everything-going-down-at-once-wasnt-evidence-of-a-conspiracy-but-the-truth-may-be-scarier/5311458",
@@ -148,7 +394,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-18",
     "title": "Digital sovereignty not smart, says The Hague CIO",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/feature/Digital-sovereignty-not-smart-says-The-Hague-CIO",
@@ -176,7 +422,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-14",
+    "id": "scraped-19",
     "title": "Nation-state APTs don't need new tricks; the old ones still work",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/Nation-state-APTs-dont-need-new-tricks-the-old-ones-still-work",
@@ -204,7 +450,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-26",
     "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
@@ -236,11 +482,11 @@
       "cve": "CVE-2026-131914",
       "score": "0.6%",
       "raw_score": 0.00614,
-      "percentile": "50.4%"
+      "percentile": "50.2%"
     }
   },
   {
-    "id": "scraped-15",
+    "id": "scraped-20",
     "title": "Staff gagging clauses lifted for review of ‘toxic culture’ at information watchdog",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655253/Staff-gagging-clauses-lifted-for-review-of-toxic-culture-at-information-watchdog",
@@ -254,8 +500,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Information commissioner",
-      "Ico"
+      "Ico",
+      "Information commissioner"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -268,7 +514,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-9",
+    "id": "scraped-12",
     "title": "Google claims last week’s critical VMware bug was under attack in September",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547",
@@ -327,9 +573,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MONAI Label.",
     "epss": {
       "cve": "CVE-2026-133968",
-      "score": "3.7%",
-      "raw_score": 0.03664,
-      "percentile": "89.9%"
+      "score": "49.8%",
+      "raw_score": 0.49795,
+      "percentile": "98.9%"
     }
   },
   {
@@ -364,13 +610,13 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MailAssure.",
     "epss": {
       "cve": "CVE-2026-134624",
-      "score": "0.4%",
-      "raw_score": 0.00354,
-      "percentile": "29.7%"
+      "score": "0.6%",
+      "raw_score": 0.00617,
+      "percentile": "50.3%"
     }
   },
   {
-    "id": "scraped-29",
+    "id": "scraped-32",
     "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 123",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203714/malware/security-affairs-malware-newsletter-round-123-2.html",
@@ -397,35 +643,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-30",
-    "title": "Security Affairs newsletter Round 605 by Pierluigi Paganini – INTERNATIONAL EDITION",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/203701/breaking-news/security-affairs-newsletter-round-605-by-pierluigi-paganini-international-edition.html",
-    "date": "22 Nov 2026",
-    "_timestamp": 1795353766.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "A new round of the weekly Security Affairs newsletter has arrived! Every week, the best security articles from Security Affairs are free in your email box. Enjoy a new round of the weekly SecurityAffairs newsletter, including international press. Cyberattack on Austrian Foreign Ministry Exposes Diplomatic Staff Data Cairn AI Framework Used in Auton...",
-    "indicators": [
-      "https://securityaffairs.com/203701/breaking-news/security-affairs-newsletter-round-605-by-pierluigi-paganini-international-edition.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-24",
+    "id": "scraped-27",
     "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
@@ -453,7 +671,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-28",
     "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
@@ -483,13 +701,13 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
     "epss": {
       "cve": "CVE-2026-129448",
-      "score": "5.5%",
-      "raw_score": 0.05459,
-      "percentile": "92.9%"
+      "score": "40.1%",
+      "raw_score": 0.40069,
+      "percentile": "98.7%"
     }
   },
   {
-    "id": "scraped-28",
+    "id": "scraped-30",
     "title": "China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day",
@@ -516,7 +734,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-10",
+    "id": "scraped-13",
     "title": "China attackers deployed AI agents that autonomously found and exploited a 0-day to take over a university server",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382",
@@ -544,7 +762,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-21",
     "title": "FCA lines up new cyber guidance for UK financial services sector",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655173/FCA-lines-up-new-cyber-guidance-for-UK-financial-services-sector",
@@ -571,43 +789,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-26",
-    "title": "China-Linked Hackers Exploit Critical VMware vCenter Zero-Day to Gain Admin Access and Steal Data",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html",
-    "date": "20 Nov 2026",
-    "_timestamp": 1795167495.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-123890"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The suspected China-nexus cyber espionage group known as Armory Castle (formerly UNC5221) has been attributed to the zero-day exploitation of a critical security flaw in VMware vCenter Server in early September 2026. The vulnerability, tracked as CVE-2026-123890 (CVSS score: 9.8), is a case of authentication bypass in the VMware Directory Service t...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/china-linked-hackers-exploit-critical.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-123890",
-      "score": "3.5%",
-      "raw_score": 0.03526,
-      "percentile": "89.5%"
-    }
-  },
-  {
-    "id": "scraped-11",
+    "id": "scraped-14",
     "title": "Flaws in VMware and KVM need attention, if you have time while fixing Java, PHP, and everything else",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/20/flaws-in-vmware-and-kvm-need-attention-if-you-have-time-while-fixing-java-php-and-everything-else/5311193",
@@ -666,9 +848,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Roller.",
     "epss": {
       "cve": "CVE-2026-129448",
-      "score": "5.5%",
-      "raw_score": 0.05459,
-      "percentile": "92.9%"
+      "score": "40.1%",
+      "raw_score": 0.40069,
+      "percentile": "98.7%"
     }
   },
   {
@@ -705,7 +887,7 @@
       "cve": "CVE-2026-123890",
       "score": "3.5%",
       "raw_score": 0.03526,
-      "percentile": "89.5%"
+      "percentile": "89.4%"
     }
   },
   {
@@ -742,7 +924,7 @@
       "cve": "CVE-2025-42884",
       "score": "0.9%",
       "raw_score": 0.00902,
-      "percentile": "60.6%"
+      "percentile": "60.5%"
     }
   },
   {
@@ -779,11 +961,11 @@
       "cve": "CVE-2026-76466",
       "score": "2.2%",
       "raw_score": 0.02187,
-      "percentile": "82.9%"
+      "percentile": "82.8%"
     }
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-15",
     "title": "Chase, Visa, Mastercard confirm third-party cyberattacks that may have exposed customers' info",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175",
@@ -806,117 +988,6 @@
     "summary": "First service outages, then data breaches…what's next?!",
     "indicators": [
       "https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-17",
-    "title": "AI red team tool Artex likely behind cyber attack on EU body",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654974/AI-red-team-tool-Artex-likely-behind-cyber-attack-on-EU-body",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795092120.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "Artex, an open source penetration testing framework powered by artificial intelligence (AI), may have been implicated in a cyber incident affecting the European Union’s (EU) executive body, the European Commission (EC) in Brussels. The attack, which unfolded at the end of October, appears to have targeted the commission’s Sysper human resources (HR...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654974/AI-red-team-tool-Artex-likely-behind-cyber-attack-on-EU-body"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-18",
-    "title": "Over 250,000 Londoners affected by latest TfL breach",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654973/Over-250000-Londoners-affected-by-latest-TfL-breach",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795090440.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "loyalty",
-    "actor": "Scattered Spider",
-    "cves": [],
-    "tags": [
-      "Actor: Scattered Spider",
-      "Next",
-      "Information commissioner",
-      "Ico"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "The personal information of approximately 265,000 bus, rail and tube passengers in London has been exposed in a new data breach at service operator Transport for London (TfL). The data leak affected users of TfL’s Oyster photocards – which are provided to children and students, the over-60s, military veterans and people participating in apprentices...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654973/Over-250000-Londoners-affected-by-latest-TfL-breach"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-19",
-    "title": "Ukrainian police arrest former members of Conti ransomware group",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654831/Ukrainian-police-arrest-former-members-of-Conti-ransomware-group",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795090200.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Logistics"
-    ],
-    "mitre": "T1486 (Data Encrypted for Impact)",
-    "mitre_id": "T1486",
-    "mitre_tactic": "Impact",
-    "mitre_name": "Data Encrypted for Impact",
-    "summary": "Ukrainian police have arrested four cyber criminals as part of an investigation conducted in cooperation with the FBI, claiming they are part of a much wider ransomware gang responsible for $40m of extorted funds from victims. “The organisation comprises at least 27 people from different countries, including Ukraine, Kazakhstan and Russia. The asso...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654831/Ukrainian-police-arrest-former-members-of-Conti-ransomware-group"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-20",
-    "title": "UK court confirms existence of government surveillance order against Apple",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795084860.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "A British court has confirmed that the Home Office has issued a secret order to provide police and intelligence services with the capability to access encrypted data stored by users of Apple devices. The Investigatory Powers Tribunal found that government claims that confirming the existence of the order, known as a Technical Capability Notice (TCN...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366654729/UK-court-confirms-existence-of-government-surveillance-order-against-Apple"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   }
