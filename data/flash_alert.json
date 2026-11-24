@@ -1,17 +1,19 @@
 {
-  "id": "scraped-27",
-  "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
-  "source": "Dark Reading",
-  "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
-  "date": "23 Nov 2026",
-  "_timestamp": 1795450641.0,
+  "id": "scraped-21",
+  "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+  "source": "The Hacker News",
+  "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+  "date": "24 Nov 2026",
+  "_timestamp": 1795500165.0,
   "is_new": true,
   "is_flash": true,
   "is_peak_trading": false,
   "severity": "CRITICAL",
   "subsector": "enterprise",
   "actor": null,
-  "cves": [],
+  "cves": [
+    "CVE-2026-134624"
+  ],
   "tags": [
     "Global 0-Day",
     "Enterprise"
@@ -20,9 +22,15 @@
   "mitre_id": "T1190",
   "mitre_tactic": "Initial Access",
   "mitre_name": "Exploit Public-Facing Application",
-  "summary": "A China-nexus actor used the Cairn penetration testing tool in attacks against East Asian universities, exploiting a zero-day in a medical imaging app.",
+  "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF)...",
   "indicators": [
-    "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes"
+    "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html"
   ],
-  "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+  "epss": {
+    "cve": "CVE-2026-134624",
+    "score": "0.4%",
+    "raw_score": 0.00354,
+    "percentile": "29.7%"
+  }
 }
