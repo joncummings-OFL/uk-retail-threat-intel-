@@ -1,12 +1,40 @@
 [
   {
-    "id": "scraped-31",
+    "id": "scraped-26",
+    "title": "VMware patches critical vCenter authentication bypass and ESX flaws",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/203931/security/vmware-patches-critical-vcenter-authentication-bypass-and-esx-flaws.html",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795562402.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Broadcom patches 23 VMware flaws, including a critical vCenter authentication bypass and three flaws allowing code execution on ESX hosts. Broadcom has released security updates to address 23 vulnerabilities affecting multiple VMware products, including vCenter, ESX, Workstation, Fusion, VMware Tools, and Avi Load Balancer. The security advisory in...",
+    "indicators": [
+      "https://securityaffairs.com/203931/security/vmware-patches-critical-vcenter-authentication-bypass-and-esx-flaws.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-25",
     "title": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/",
     "date": "24 Nov 2026",
     "_timestamp": 1795537976.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -28,14 +56,14 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-16",
     "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
     "date": "24 Nov 2026",
     "_timestamp": 1795526906.0,
-    "is_new": true,
-    "is_flash": true,
+    "is_new": false,
+    "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "enterprise",
@@ -58,13 +86,13 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-17",
     "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
     "date": "24 Nov 2026",
     "_timestamp": 1795524129.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
@@ -86,13 +114,13 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-10",
     "title": "Amazon CTO Werner Vogels: Computing to converge with biology",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655113/Amazon-CTO-Werner-Vogels-Computing-to-converge-with-biology",
     "date": "24 Nov 2026",
     "_timestamp": 1795514400.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
@@ -113,13 +141,13 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-11",
     "title": "UK cyber legislation fails to tackle real-world resilience",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/UK-cyber-legislation-fails-to-tackle-real-world-resilience",
     "date": "24 Nov 2026",
     "_timestamp": 1795500600.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
@@ -141,13 +169,49 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
+    "id": "scraped-18",
+    "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+    "date": "24 Nov 2026",
+    "_timestamp": 1795500165.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-134624"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF)...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-134624",
+      "score": "0.6%",
+      "raw_score": 0.00617,
+      "percentile": "50.3%"
+    }
+  },
+  {
     "id": "cisa-kev-cve_2026_132224",
     "title": "CISA KEV Alert: CVE-2026-132224 in Optimizely Web Experimentation Under Active Exploitation",
     "source": "CISA KEV Catalog",
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132224",
     "date": "24 Nov 2026",
     "_timestamp": 1795478400.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -184,7 +248,7 @@
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-131914",
     "date": "24 Nov 2026",
     "_timestamp": 1795478400.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -221,7 +285,7 @@
     "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132165",
     "date": "24 Nov 2026",
     "_timestamp": 1795478400.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -246,43 +310,7 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Core."
   },
   {
-    "id": "scraped-24",
-    "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
-    "date": "24 Nov 2026",
-    "_timestamp": 1795500165.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-134624"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF)...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-134624",
-      "score": "0.6%",
-      "raw_score": 0.00617,
-      "percentile": "50.3%"
-    }
-  },
-  {
-    "id": "scraped-10",
+    "id": "scraped-6",
     "title": "Critical Cisco remote code execution bug under attack",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722",
@@ -310,7 +338,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-29",
+    "id": "scraped-23",
     "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
@@ -338,7 +366,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-19",
     "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
@@ -366,7 +394,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-11",
+    "id": "scraped-7",
     "title": "Everything going down at once wasn't evidence of a conspiracy – but the truth may be scarier",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/off-prem/2026/11/23/everything-going-down-at-once-wasnt-evidence-of-a-conspiracy-but-the-truth-may-be-scarier/5311458",
@@ -394,7 +422,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-12",
     "title": "Digital sovereignty not smart, says The Hague CIO",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/feature/Digital-sovereignty-not-smart-says-The-Hague-CIO",
@@ -422,7 +450,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-13",
     "title": "Nation-state APTs don't need new tricks; the old ones still work",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/Nation-state-APTs-dont-need-new-tricks-the-old-ones-still-work",
@@ -450,7 +478,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-26",
+    "id": "scraped-20",
     "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
@@ -486,7 +514,7 @@
     }
   },
   {
-    "id": "scraped-20",
+    "id": "scraped-14",
     "title": "Staff gagging clauses lifted for review of ‘toxic culture’ at information watchdog",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655253/Staff-gagging-clauses-lifted-for-review-of-toxic-culture-at-information-watchdog",
@@ -500,8 +528,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Ico",
-      "Information commissioner"
+      "Information commissioner",
+      "Ico"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -514,7 +542,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-12",
+    "id": "scraped-8",
     "title": "Google claims last week’s critical VMware bug was under attack in September",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547",
@@ -616,34 +644,7 @@
     }
   },
   {
-    "id": "scraped-32",
-    "title": "SECURITY AFFAIRS MALWARE NEWSLETTER ROUND 123",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/203714/malware/security-affairs-malware-newsletter-round-123-2.html",
-    "date": "22 Nov 2026",
-    "_timestamp": 1795355803.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "supply",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Supply chain"
-    ],
-    "mitre": "T1195 (Supply Chain Compromise)",
-    "mitre_id": "T1195",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Supply Chain Compromise",
-    "summary": "Security Affairs Malware newsletter includes a collection of the best articles and research on malware in the international landscape Malware Newsletter MMD-073-2026 – Linux/EasyShell, a new Rust RAT implant and beacon aims Linux and MacOS Supply chain attack: BO Team in a software developer’s infrastructure 0% GPU utilization: How SANSAR hides Lin...",
-    "indicators": [
-      "https://securityaffairs.com/203714/malware/security-affairs-malware-newsletter-round-123-2.html"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-27",
+    "id": "scraped-21",
     "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
@@ -671,7 +672,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-28",
+    "id": "scraped-22",
     "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
@@ -707,7 +708,7 @@
     }
   },
   {
-    "id": "scraped-30",
+    "id": "scraped-24",
     "title": "China's 'Armory Castle' Lays Siege to VMware vCenter Zero-Day",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/china-armory-castle-vmware-vcenter-zero-day",
@@ -734,7 +735,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-13",
+    "id": "scraped-9",
     "title": "China attackers deployed AI agents that autonomously found and exploited a 0-day to take over a university server",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/20/china-attackers-deployed-ai-agents-that-autonomously-found-and-exploited-a-0-day-to-take-over-a-university-server/5311382",
@@ -762,7 +763,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-21",
+    "id": "scraped-15",
     "title": "FCA lines up new cyber guidance for UK financial services sector",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655173/FCA-lines-up-new-cyber-guidance-for-UK-financial-services-sector",
@@ -785,209 +786,6 @@
     "summary": "Citing a growing number of impactful cyber attacks, and the influence of evolving risk factors such as artificial intelligence (AI) and quantum computing, the Financial Conduct Authority (FCA) has teamed up with the Bank of England’s Prudential Regulation Authority (PRA) to open a public consultation on proposals to produce new security guidance th...",
     "indicators": [
       "https://www.computerweekly.com/news/366655173/FCA-lines-up-new-cyber-guidance-for-UK-financial-services-sector"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-14",
-    "title": "Flaws in VMware and KVM need attention, if you have time while fixing Java, PHP, and everything else",
-    "source": "The Register Security (UK)",
-    "url": "https://www.theregister.com/security/2026/11/20/flaws-in-vmware-and-kvm-need-attention-if-you-have-time-while-fixing-java-php-and-everything-else/5311193",
-    "date": "20 Nov 2026",
-    "_timestamp": 1795136265.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Critical Virtzilla bugs allow authentication bypass, as a nested virtualization issue got Digital Ocean ducking",
-    "indicators": [
-      "https://www.theregister.com/security/2026/11/20/flaws-in-vmware-and-kvm-need-attention-if-you-have-time-while-fixing-java-php-and-everything-else/5311193"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "cisa-kev-cve_2026_129448",
-    "title": "CISA KEV Alert: CVE-2026-129448 in Apache Roller Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-129448",
-    "date": "20 Nov 2026",
-    "_timestamp": 1795132800.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-129448"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-129448"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Apache Roller is affected by CVE-2026-129448. Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CV...",
-    "indicators": [
-      "CVE-2026-129448"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Roller.",
-    "epss": {
-      "cve": "CVE-2026-129448",
-      "score": "40.1%",
-      "raw_score": 0.40069,
-      "percentile": "98.7%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_123890",
-    "title": "CISA KEV Alert: CVE-2026-123890 in Broadcom VMware vCenter Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-123890",
-    "date": "20 Nov 2026",
-    "_timestamp": 1795132800.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-123890"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-123890"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Broadcom VMware vCenter is affected by CVE-2026-123890. Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system. Required Remedi...",
-    "indicators": [
-      "CVE-2026-123890"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines Check retail perimeter and server inventory for VMware vCenter.",
-    "epss": {
-      "cve": "CVE-2026-123890",
-      "score": "3.5%",
-      "raw_score": 0.03526,
-      "percentile": "89.4%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2025_42884",
-    "title": "CISA KEV Alert: CVE-2025-42884 in SAP NetWeaver Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-42884",
-    "date": "20 Nov 2026",
-    "_timestamp": 1795132800.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2025-42884"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2025-42884"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "SAP NetWeaver is affected by CVE-2025-42884. SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations. Required Remedia...",
-    "indicators": [
-      "CVE-2025-42884"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for NetWeaver.",
-    "epss": {
-      "cve": "CVE-2025-42884",
-      "score": "0.9%",
-      "raw_score": 0.00902,
-      "percentile": "60.5%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_76466",
-    "title": "CISA KEV Alert: CVE-2026-76466 in Cisco Expressway Series Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-76466",
-    "date": "20 Nov 2026",
-    "_timestamp": 1795132800.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-76466"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-76466"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Cisco Expressway Series is affected by CVE-2026-76466. Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service. Required Remediation: Apply mitigations in accord...",
-    "indicators": [
-      "CVE-2026-76466"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Expressway Series.",
-    "epss": {
-      "cve": "CVE-2026-76466",
-      "score": "2.2%",
-      "raw_score": 0.02187,
-      "percentile": "82.8%"
-    }
-  },
-  {
-    "id": "scraped-15",
-    "title": "Chase, Visa, Mastercard confirm third-party cyberattacks that may have exposed customers' info",
-    "source": "The Register Security (UK)",
-    "url": "https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175",
-    "date": "19 Nov 2026",
-    "_timestamp": 1795122753.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "ecom",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "First service outages, then data breaches…what's next?!",
-    "indicators": [
-      "https://www.theregister.com/security/2026/11/19/chase-visa-mastercard-confirm-third-party-cyberattacks-that-may-have-exposed-customers-info/5311175"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   }
