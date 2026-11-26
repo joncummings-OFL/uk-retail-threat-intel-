@@ -1,13 +1,78 @@
 [
   {
-    "id": "scraped-35",
+    "id": "scraped-36",
+    "title": "Drupal Warns of New Critical Flaw Exploited in the Wild",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html",
+    "date": "26 Nov 2026",
+    "_timestamp": 1795722357.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-136716"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Drupal fixes a critical flaw exploited in the wild that could let attackers take over vulnerable websites. Drupal has warned of a new highly critical vulnerability in Drupal Core that attackers are actively exploiting to take over vulnerable websites. Tracked as CVE-2026-136716, the flaw is related to improper handling of unusual or incomplete inst...",
+    "indicators": [
+      "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-136716",
+      "score": "1.0%",
+      "raw_score": 0.01014,
+      "percentile": "62.3%"
+    }
+  },
+  {
+    "id": "scraped-20",
+    "title": "Independent review into ICO amid claims of ‘toxic culture’ at data protection watchdog",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog",
+    "date": "26 Nov 2026",
+    "_timestamp": 1795691700.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next",
+      "Information commissioner",
+      "Ico"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "Barrister Karon Monaghan KC has been appointed to conduct an independent review of the UK’s information and data protection regulator, following an internal investigation into its former chief, John Edwards, who resigned after being accused of using “ vulgar and highly sexualised language ” towards women. Monaghan – an experienced barrister who has...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-34",
     "title": "Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/",
     "date": "26 Nov 2026",
     "_timestamp": 1795692925.0,
-    "is_new": true,
-    "is_flash": true,
+    "is_new": false,
+    "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "enterprise",
@@ -34,7 +99,7 @@
     "url": "https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162",
     "date": "26 Nov 2026",
     "_timestamp": 1795685400.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "HIGH",
@@ -61,15 +126,15 @@
     "url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
     "date": "26 Nov 2026",
     "_timestamp": 1795676554.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-132165",
-      "CVE-2026-136716"
+      "CVE-2026-136716",
+      "CVE-2026-132165"
     ],
     "tags": [
       "Global 0-Day",
@@ -83,10 +148,16 @@
     "indicators": [
       "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html"
     ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-132165",
+      "score": "11.1%",
+      "raw_score": 0.11053,
+      "percentile": "96.6%"
+    }
   },
   {
-    "id": "scraped-36",
+    "id": "scraped-35",
     "title": "Two Newly Disclosed GeoServer Vulnerabilities Under Attack",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/",
@@ -127,8 +198,8 @@
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-129243",
-      "CVE-2026-120705"
+      "CVE-2026-120705",
+      "CVE-2026-129243"
     ],
     "tags": [
       "Global 0-Day",
@@ -172,7 +243,13 @@
     "indicators": [
       "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html"
     ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-132165",
+      "score": "11.1%",
+      "raw_score": 0.11053,
+      "percentile": "96.6%"
+    }
   },
   {
     "id": "scraped-29",
@@ -204,42 +281,6 @@
   },
   {
     "id": "scraped-37",
-    "title": "Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795597513.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-131914"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Attackers can exploit CVE-2026-131914 to achieve remote code execution via a single web request containing specially crafted data. The post Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library appeared first on SecurityWeek .",
-    "indicators": [
-      "https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-131914",
-      "score": "4.3%",
-      "raw_score": 0.04292,
-      "percentile": "91.9%"
-    }
-  },
-  {
-    "id": "scraped-38",
     "title": "Maritime industry faces growing cyber threats as 50 ships targeted",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203918/intelligence/maritime-industry-faces-growing-cyber-threats-as-50-ships-targeted.html",
@@ -354,9 +395,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Juniper Session Smart Conductor and Session Smart Router.",
     "epss": {
       "cve": "CVE-2026-103406",
-      "score": "0.9%",
-      "raw_score": 0.0086,
-      "percentile": "56.0%"
+      "score": "1.5%",
+      "raw_score": 0.01535,
+      "percentile": "75.2%"
     }
   },
   {
@@ -391,9 +432,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Xen Orchestra.",
     "epss": {
       "cve": "CVE-2026-133469",
-      "score": "1.1%",
-      "raw_score": 0.01101,
-      "percentile": "65.3%"
+      "score": "31.8%",
+      "raw_score": 0.31768,
+      "percentile": "98.7%"
     }
   },
   {
@@ -428,9 +469,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
     "epss": {
       "cve": "CVE-2025-41450",
-      "score": "0.5%",
-      "raw_score": 0.00513,
-      "percentile": "37.0%"
+      "score": "4.3%",
+      "raw_score": 0.04271,
+      "percentile": "91.9%"
     }
   },
   {
@@ -465,9 +506,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
     "epss": {
       "cve": "CVE-2023-25914",
-      "score": "1.1%",
-      "raw_score": 0.01078,
-      "percentile": "64.6%"
+      "score": "1.8%",
+      "raw_score": 0.01845,
+      "percentile": "79.6%"
     }
   },
   {
@@ -502,9 +543,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
     "epss": {
       "cve": "CVE-2023-25915",
-      "score": "1.4%",
-      "raw_score": 0.01431,
-      "percentile": "73.2%"
+      "score": "2.5%",
+      "raw_score": 0.02485,
+      "percentile": "85.3%"
     }
   },
   {
@@ -539,9 +580,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
     "epss": {
       "cve": "CVE-2026-133324",
-      "score": "0.4%",
-      "raw_score": 0.00414,
-      "percentile": "27.3%"
+      "score": "0.8%",
+      "raw_score": 0.00832,
+      "percentile": "54.8%"
     }
   },
   {
@@ -576,9 +617,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
     "epss": {
       "cve": "CVE-2026-133275",
-      "score": "0.3%",
-      "raw_score": 0.00315,
-      "percentile": "16.9%"
+      "score": "0.8%",
+      "raw_score": 0.00771,
+      "percentile": "52.1%"
     }
   },
   {
@@ -613,9 +654,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
     "epss": {
       "cve": "CVE-2026-133311",
-      "score": "0.4%",
-      "raw_score": 0.00396,
-      "percentile": "25.4%"
+      "score": "1.0%",
+      "raw_score": 0.00985,
+      "percentile": "61.2%"
     }
   },
   {
@@ -650,9 +691,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
     "epss": {
       "cve": "CVE-2026-133303",
-      "score": "0.5%",
-      "raw_score": 0.00515,
-      "percentile": "37.1%"
+      "score": "1.3%",
+      "raw_score": 0.01326,
+      "percentile": "71.1%"
     }
   },
   {
@@ -687,38 +728,10 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
     "epss": {
       "cve": "CVE-2026-133323",
-      "score": "2.5%",
-      "raw_score": 0.02546,
-      "percentile": "85.7%"
+      "score": "5.6%",
+      "raw_score": 0.05628,
+      "percentile": "93.7%"
     }
-  },
-  {
-    "id": "scraped-39",
-    "title": "VMware patches critical vCenter authentication bypass and ESX flaws",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/203931/security/vmware-patches-critical-vcenter-authentication-bypass-and-esx-flaws.html",
-    "date": "24 Nov 2026",
-    "_timestamp": 1795562402.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Broadcom patches 23 VMware flaws, including a critical vCenter authentication bypass and three flaws allowing code execution on ESX hosts. Broadcom has released security updates to address 23 vulnerabilities affecting multiple VMware products, including vCenter, ESX, Workstation, Fusion, VMware Tools, and Avi Load Balancer. The security advisory in...",
-    "indicators": [
-      "https://securityaffairs.com/203931/security/vmware-patches-critical-vcenter-authentication-bypass-and-esx-flaws.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
     "id": "scraped-31",
@@ -748,7 +761,13 @@
     "indicators": [
       "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html"
     ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
+    "epss": {
+      "cve": "CVE-2026-123903",
+      "score": "0.6%",
+      "raw_score": 0.00614,
+      "percentile": "43.7%"
+    }
   },
   {
     "id": "scraped-32",
@@ -820,8 +839,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Supply chain",
-      "Retail"
+      "Retail",
+      "Supply chain"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -832,42 +851,6 @@
       "https://www.computerweekly.com/opinion/UK-cyber-legislation-fails-to-tackle-real-world-resilience"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-33",
-    "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
-    "date": "24 Nov 2026",
-    "_timestamp": 1795500165.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-134624"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF)...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-134624",
-      "score": "1.8%",
-      "raw_score": 0.01793,
-      "percentile": "78.9%"
-    }
   },
   {
     "id": "cisa-kev-cve_2026_132224",
@@ -901,9 +884,9 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Web Experimentation.",
     "epss": {
       "cve": "CVE-2026-132224",
-      "score": "0.8%",
-      "raw_score": 0.00784,
-      "percentile": "52.5%"
+      "score": "1.1%",
+      "raw_score": 0.01055,
+      "percentile": "63.8%"
     }
   },
   {
@@ -972,7 +955,13 @@
     "indicators": [
       "CVE-2026-132165"
     ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Core."
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Core.",
+    "epss": {
+      "cve": "CVE-2026-132165",
+      "score": "11.1%",
+      "raw_score": 0.11053,
+      "percentile": "96.6%"
+    }
   },
   {
     "id": "scraped-18",
@@ -1003,7 +992,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-34",
+    "id": "scraped-33",
     "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
@@ -1073,8 +1062,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Supply chain",
-      "Next"
+      "Next",
+      "Supply chain"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -1129,8 +1118,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Ico",
-      "Information commissioner"
+      "Information commissioner",
+      "Ico"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -1141,34 +1130,6 @@
       "https://www.computerweekly.com/news/366655253/Staff-gagging-clauses-lifted-for-review-of-toxic-culture-at-information-watchdog"
     ],
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-20",
-    "title": "Google claims last week’s critical VMware bug was under attack in September",
-    "source": "The Register Security (UK)",
-    "url": "https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547",
-    "date": "23 Nov 2026",
-    "_timestamp": 1795408759.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "China-linked ARMORY CASTLE knew about it weeks before it unleashed five custom malware tools targeting vCenter",
-    "indicators": [
-      "https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
     "id": "cisa-kev-cve_2026_133968",
