@@ -1,6 +1,92 @@
 [
   {
     "id": "scraped-35",
+    "title": "Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks",
+    "source": "SecurityWeek",
+    "url": "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/",
+    "date": "26 Nov 2026",
+    "_timestamp": 1795692925.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1486 (Data Encrypted for Impact)",
+    "mitre_id": "T1486",
+    "mitre_tactic": "Impact",
+    "mitre_name": "Data Encrypted for Impact",
+    "summary": "Accenture says hackers exploited MiCollab flaws before Mitel’s advisory, likely aided by AI, in a suspected extortion campaign. The post Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks appeared first on SecurityWeek .",
+    "indicators": [
+      "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-16",
+    "title": "UK Home Office waved through border system without a working fix for bad data",
+    "source": "The Register Security (UK)",
+    "url": "https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162",
+    "date": "26 Nov 2026",
+    "_timestamp": 1795685400.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Ico"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "ICO reprimand follows failings that risked wrongful detention, with a temporary correction process taking more than a year to arrive",
+    "indicators": [
+      "https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-26",
+    "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
+    "date": "26 Nov 2026",
+    "_timestamp": 1795676554.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-132165",
+      "CVE-2026-136716"
+    ],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Drupal has warned of a new \"highly critical\" security flaw impacting Drupal core that it said has been exploited in the wild. The vulnerability, tracked as CVE-2026-136716 (CVSS score: N/A), has been described as a case of improper checking for unusual or exceptional conditions. It also relates to CVE-2026-132165 aka Fail2Install in that it address...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-36",
     "title": "Two Newly Disclosed GeoServer Vulnerabilities Under Attack",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/",
@@ -28,7 +114,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-27",
     "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
@@ -59,7 +145,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-26",
+    "id": "scraped-28",
     "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
@@ -89,7 +175,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-27",
+    "id": "scraped-29",
     "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
@@ -117,7 +203,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-36",
+    "id": "scraped-37",
     "title": "Hackers Exploit Unpatched Flaw in Defunct Idunno AntiCsrf Library",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/hackers-exploit-unpatched-flaw-in-defunct-idunno-anticsrf-library/",
@@ -153,7 +239,7 @@
     }
   },
   {
-    "id": "scraped-39",
+    "id": "scraped-38",
     "title": "Maritime industry faces growing cyber threats as 50 ships targeted",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203918/intelligence/maritime-industry-faces-growing-cyber-threats-as-50-ships-targeted.html",
@@ -181,35 +267,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-37",
-    "title": "Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795594344.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "A China-linked hacking group chained PHP2Shell with Fragnesia in AI-assisted attacks that hit 25 servers. The post Palo Alto Networks Patches Fragnesia Flaw Used to Root Firewalls appeared first on SecurityWeek .",
-    "indicators": [
-      "https://www.securityweek.com/palo-alto-networks-patches-fragnesia-flaw-used-to-root-firewalls/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-28",
+    "id": "scraped-30",
     "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
@@ -237,7 +295,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-17",
     "title": "This could mess with Thanksgiving, says VMware as it drops third critical patch bundle in a week",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/virtualization/2026/11/25/this-could-mess-with-thanksgiving-says-vmware-as-it-drops-third-critical-patch-bundle-in-a-week/5312017",
@@ -635,7 +693,7 @@
     }
   },
   {
-    "id": "scraped-40",
+    "id": "scraped-39",
     "title": "VMware patches critical vCenter authentication bypass and ESX flaws",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/203931/security/vmware-patches-critical-vcenter-authentication-bypass-and-esx-flaws.html",
@@ -663,35 +721,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-38",
-    "title": "VMware Updates Patch Critical ESX, vCenter Vulnerabilities",
-    "source": "SecurityWeek",
-    "url": "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/",
-    "date": "24 Nov 2026",
-    "_timestamp": 1795537976.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The critical bugs include an authentication bypass in vCenter and flaws that could allow code execution on ESX hosts. The post VMware Updates Patch Critical ESX, vCenter Vulnerabilities appeared first on SecurityWeek .",
-    "indicators": [
-      "https://www.securityweek.com/vmware-updates-patch-critical-esx-vcenter-vulnerabilities/"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-29",
+    "id": "scraped-31",
     "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
@@ -721,7 +751,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-30",
+    "id": "scraped-32",
     "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
@@ -735,8 +765,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Checkout",
-      "Supply chain"
+      "Supply chain",
+      "Checkout"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -749,7 +779,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-20",
+    "id": "scraped-21",
     "title": "Amazon CTO Werner Vogels: Computing to converge with biology",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655113/Amazon-CTO-Werner-Vogels-Computing-to-converge-with-biology",
@@ -776,7 +806,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-21",
+    "id": "scraped-22",
     "title": "UK cyber legislation fails to tackle real-world resilience",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/UK-cyber-legislation-fails-to-tackle-real-world-resilience",
@@ -804,7 +834,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-31",
+    "id": "scraped-33",
     "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
@@ -945,7 +975,7 @@
     "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Core."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-18",
     "title": "Critical Cisco remote code execution bug under attack",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722",
@@ -1001,35 +1031,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-32",
-    "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
-    "date": "23 Nov 2026",
-    "_timestamp": 1795446648.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That's partly why they work. Attackers don't always need to break down a door. Sometimes they just use one that's already open. This week's stories show how quickly a small opening can turn into a much bigger mess. One breach helps att...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-18",
+    "id": "scraped-19",
     "title": "Everything going down at once wasn't evidence of a conspiracy – but the truth may be scarier",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/off-prem/2026/11/23/everything-going-down-at-once-wasnt-evidence-of-a-conspiracy-but-the-truth-may-be-scarier/5311458",
@@ -1057,7 +1059,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-23",
     "title": "Digital sovereignty not smart, says The Hague CIO",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/feature/Digital-sovereignty-not-smart-says-The-Hague-CIO",
@@ -1071,8 +1073,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
-      "Supply chain"
+      "Supply chain",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -1085,7 +1087,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-24",
     "title": "Nation-state APTs don't need new tricks; the old ones still work",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/Nation-state-APTs-dont-need-new-tricks-the-old-ones-still-work",
@@ -1113,43 +1115,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-33",
-    "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
-    "source": "The Hacker News",
-    "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
-    "date": "23 Nov 2026",
-    "_timestamp": 1795425116.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-131914"
-    ],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (\"Idunno.AntiCsrf.dll\") following the discovery of a critical vulnerability that has been exploited in the wild. The vulnerability, tracked as CVE-2026-131914, carries a CVSS score of 9.3 out of 10.0. The issue affects versions 0...",
-    "indicators": [
-      "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately.",
-    "epss": {
-      "cve": "CVE-2026-131914",
-      "score": "4.3%",
-      "raw_score": 0.04292,
-      "percentile": "91.9%"
-    }
-  },
-  {
-    "id": "scraped-24",
+    "id": "scraped-25",
     "title": "Staff gagging clauses lifted for review of ‘toxic culture’ at information watchdog",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655253/Staff-gagging-clauses-lifted-for-review-of-toxic-culture-at-information-watchdog",
@@ -1177,7 +1143,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-20",
     "title": "Google claims last week’s critical VMware bug was under attack in September",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/virtualization/2026/11/23/google-claims-last-weeks-critical-vmware-bug-was-under-attack-in-september/5311547",
