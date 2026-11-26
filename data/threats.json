@@ -6,7 +6,7 @@
     "url": "https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/",
     "date": "25 Nov 2026",
     "_timestamp": 1795620456.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -34,15 +34,15 @@
     "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
     "date": "25 Nov 2026",
     "_timestamp": 1795610934.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-120705",
-      "CVE-2026-129243"
+      "CVE-2026-129243",
+      "CVE-2026-120705"
     ],
     "tags": [
       "Global 0-Day",
@@ -57,376 +57,6 @@
       "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html"
     ],
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "cisa-kev-cve_2026_103406",
-    "title": "CISA KEV Alert: CVE-2026-103406 in Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-103406",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-103406"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-103406"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router is affected by CVE-2026-103406. Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially cra...",
-    "indicators": [
-      "CVE-2026-103406"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Juniper Session Smart Conductor and Session Smart Router.",
-    "epss": {
-      "cve": "CVE-2026-103406",
-      "score": "0.9%",
-      "raw_score": 0.0086,
-      "percentile": "56.0%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_133469",
-    "title": "CISA KEV Alert: CVE-2026-133469 in Vates Xen Orchestra Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133469",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-133469"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-133469"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Vates Xen Orchestra is affected by CVE-2026-133469. Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted authentication token containing an empty JSON object. Requir...",
-    "indicators": [
-      "CVE-2026-133469"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Xen Orchestra.",
-    "epss": {
-      "cve": "CVE-2026-133469",
-      "score": "1.1%",
-      "raw_score": 0.01101,
-      "percentile": "65.3%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2025_41450",
-    "title": "CISA KEV Alert: CVE-2025-41450 in Danfoss AK-SM 800A Series Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-41450",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2025-41450"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2025-41450"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Danfoss AK-SM 800A Series is affected by CVE-2025-41450. Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names. Required Remediation: Apply mitigations in accordance with vendor inst...",
-    "indicators": [
-      "CVE-2025-41450"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
-    "epss": {
-      "cve": "CVE-2025-41450",
-      "score": "0.5%",
-      "raw_score": 0.00513,
-      "percentile": "37.0%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2023_25914",
-    "title": "CISA KEV Alert: CVE-2023-25914 in Danfoss AK-SM 800A Series Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25914",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2023-25914"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2023-25914"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Danfoss AK-SM 800A Series is affected by CVE-2023-25914. Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Pri...",
-    "indicators": [
-      "CVE-2023-25914"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
-    "epss": {
-      "cve": "CVE-2023-25914",
-      "score": "1.1%",
-      "raw_score": 0.01078,
-      "percentile": "64.6%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2023_25915",
-    "title": "CISA KEV Alert: CVE-2023-25915 in Danfoss AK-SM 800A Series Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25915",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2023-25915"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2023-25915"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Danfoss AK-SM 800A Series is affected by CVE-2023-25915. Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioriti...",
-    "indicators": [
-      "CVE-2023-25915"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
-    "epss": {
-      "cve": "CVE-2023-25915",
-      "score": "1.4%",
-      "raw_score": 0.01431,
-      "percentile": "73.2%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_133324",
-    "title": "CISA KEV Alert: CVE-2026-133324 in Mitel MiCollab Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133324",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-133324"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-133324"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Mitel MiCollab is affected by CVE-2026-133324. Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions. Required Remediation: Apply mitigations in accordance with vendor instru...",
-    "indicators": [
-      "CVE-2026-133324"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
-    "epss": {
-      "cve": "CVE-2026-133324",
-      "score": "0.4%",
-      "raw_score": 0.00414,
-      "percentile": "27.3%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_133275",
-    "title": "CISA KEV Alert: CVE-2026-133275 in Mitel MiCollab Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133275",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-133275"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-133275"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Mitel MiCollab is affected by CVE-2026-133275. Mitel MiCollab contains an unrestricted upload of file with dangerous type vulnerability in the Audio, Web and Video Conferencing (AWV) component due to insufficient file type validation that could allow an unauthenticated attacker to upload arbitrary files. Required Remediation: Apply mitigations in a...",
-    "indicators": [
-      "CVE-2026-133275"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
-    "epss": {
-      "cve": "CVE-2026-133275",
-      "score": "0.3%",
-      "raw_score": 0.00315,
-      "percentile": "16.9%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_133311",
-    "title": "CISA KEV Alert: CVE-2026-133311 in Mitel MiCollab Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133311",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-133311"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-133311"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Mitel MiCollab is affected by CVE-2026-133311. Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content. Required Remediation: Apply mitiga...",
-    "indicators": [
-      "CVE-2026-133311"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
-    "epss": {
-      "cve": "CVE-2026-133311",
-      "score": "0.4%",
-      "raw_score": 0.00396,
-      "percentile": "25.4%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_133303",
-    "title": "CISA KEV Alert: CVE-2026-133303 in Mitel MiCollab Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133303",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-133303"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-133303"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Mitel MiCollab is affected by CVE-2026-133303. Mitel MiCollab contains an XML injection vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary commands using pre-staged malicious content. Required Remediation: Apply mitigations in accordance with vendor instructions,...",
-    "indicators": [
-      "CVE-2026-133303"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
-    "epss": {
-      "cve": "CVE-2026-133303",
-      "score": "0.5%",
-      "raw_score": 0.00515,
-      "percentile": "37.1%"
-    }
-  },
-  {
-    "id": "cisa-kev-cve_2026_133323",
-    "title": "CISA KEV Alert: CVE-2026-133323 in Mitel MiCollab Under Active Exploitation",
-    "source": "CISA KEV Catalog",
-    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133323",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795564800.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [
-      "CVE-2026-133323"
-    ],
-    "tags": [
-      "CISA KEV",
-      "Active Exploit",
-      "CVE-2026-133323"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "Mitel MiCollab is affected by CVE-2026-133323. Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands. Required Remediation: Apply miti...",
-    "indicators": [
-      "CVE-2026-133323"
-    ],
-    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
-    "epss": {
-      "cve": "CVE-2026-133323",
-      "score": "2.5%",
-      "raw_score": 0.02546,
-      "percentile": "85.7%"
-    }
   },
   {
     "id": "scraped-26",
@@ -635,6 +265,376 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
+    "id": "cisa-kev-cve_2026_103406",
+    "title": "CISA KEV Alert: CVE-2026-103406 in Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-103406",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-103406"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-103406"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router is affected by CVE-2026-103406. Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially cra...",
+    "indicators": [
+      "CVE-2026-103406"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Juniper Session Smart Conductor and Session Smart Router.",
+    "epss": {
+      "cve": "CVE-2026-103406",
+      "score": "0.9%",
+      "raw_score": 0.0086,
+      "percentile": "56.0%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_133469",
+    "title": "CISA KEV Alert: CVE-2026-133469 in Vates Xen Orchestra Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133469",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-133469"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-133469"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Vates Xen Orchestra is affected by CVE-2026-133469. Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted authentication token containing an empty JSON object. Requir...",
+    "indicators": [
+      "CVE-2026-133469"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Xen Orchestra.",
+    "epss": {
+      "cve": "CVE-2026-133469",
+      "score": "1.1%",
+      "raw_score": 0.01101,
+      "percentile": "65.3%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2025_41450",
+    "title": "CISA KEV Alert: CVE-2025-41450 in Danfoss AK-SM 800A Series Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-41450",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2025-41450"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2025-41450"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Danfoss AK-SM 800A Series is affected by CVE-2025-41450. Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names. Required Remediation: Apply mitigations in accordance with vendor inst...",
+    "indicators": [
+      "CVE-2025-41450"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
+    "epss": {
+      "cve": "CVE-2025-41450",
+      "score": "0.5%",
+      "raw_score": 0.00513,
+      "percentile": "37.0%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2023_25914",
+    "title": "CISA KEV Alert: CVE-2023-25914 in Danfoss AK-SM 800A Series Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25914",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2023-25914"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2023-25914"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Danfoss AK-SM 800A Series is affected by CVE-2023-25914. Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Pri...",
+    "indicators": [
+      "CVE-2023-25914"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
+    "epss": {
+      "cve": "CVE-2023-25914",
+      "score": "1.1%",
+      "raw_score": 0.01078,
+      "percentile": "64.6%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2023_25915",
+    "title": "CISA KEV Alert: CVE-2023-25915 in Danfoss AK-SM 800A Series Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25915",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2023-25915"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2023-25915"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Danfoss AK-SM 800A Series is affected by CVE-2023-25915. Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioriti...",
+    "indicators": [
+      "CVE-2023-25915"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for AK-SM 800A Series.",
+    "epss": {
+      "cve": "CVE-2023-25915",
+      "score": "1.4%",
+      "raw_score": 0.01431,
+      "percentile": "73.2%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_133324",
+    "title": "CISA KEV Alert: CVE-2026-133324 in Mitel MiCollab Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133324",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-133324"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-133324"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Mitel MiCollab is affected by CVE-2026-133324. Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions. Required Remediation: Apply mitigations in accordance with vendor instru...",
+    "indicators": [
+      "CVE-2026-133324"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
+    "epss": {
+      "cve": "CVE-2026-133324",
+      "score": "0.4%",
+      "raw_score": 0.00414,
+      "percentile": "27.3%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_133275",
+    "title": "CISA KEV Alert: CVE-2026-133275 in Mitel MiCollab Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133275",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-133275"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-133275"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Mitel MiCollab is affected by CVE-2026-133275. Mitel MiCollab contains an unrestricted upload of file with dangerous type vulnerability in the Audio, Web and Video Conferencing (AWV) component due to insufficient file type validation that could allow an unauthenticated attacker to upload arbitrary files. Required Remediation: Apply mitigations in a...",
+    "indicators": [
+      "CVE-2026-133275"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
+    "epss": {
+      "cve": "CVE-2026-133275",
+      "score": "0.3%",
+      "raw_score": 0.00315,
+      "percentile": "16.9%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_133311",
+    "title": "CISA KEV Alert: CVE-2026-133311 in Mitel MiCollab Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133311",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-133311"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-133311"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Mitel MiCollab is affected by CVE-2026-133311. Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content. Required Remediation: Apply mitiga...",
+    "indicators": [
+      "CVE-2026-133311"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
+    "epss": {
+      "cve": "CVE-2026-133311",
+      "score": "0.4%",
+      "raw_score": 0.00396,
+      "percentile": "25.4%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_133303",
+    "title": "CISA KEV Alert: CVE-2026-133303 in Mitel MiCollab Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133303",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-133303"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-133303"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Mitel MiCollab is affected by CVE-2026-133303. Mitel MiCollab contains an XML injection vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary commands using pre-staged malicious content. Required Remediation: Apply mitigations in accordance with vendor instructions,...",
+    "indicators": [
+      "CVE-2026-133303"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
+    "epss": {
+      "cve": "CVE-2026-133303",
+      "score": "0.5%",
+      "raw_score": 0.00515,
+      "percentile": "37.1%"
+    }
+  },
+  {
+    "id": "cisa-kev-cve_2026_133323",
+    "title": "CISA KEV Alert: CVE-2026-133323 in Mitel MiCollab Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133323",
+    "date": "25 Nov 2026",
+    "_timestamp": 1795564800.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-133323"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-133323"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Mitel MiCollab is affected by CVE-2026-133323. Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands. Required Remediation: Apply miti...",
+    "indicators": [
+      "CVE-2026-133323"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for MiCollab.",
+    "epss": {
+      "cve": "CVE-2026-133323",
+      "score": "2.5%",
+      "raw_score": 0.02546,
+      "percentile": "85.7%"
+    }
+  },
+  {
     "id": "scraped-40",
     "title": "VMware patches critical vCenter authentication bypass and ESX flaws",
     "source": "Security Affairs",
@@ -735,8 +735,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Supply chain",
-      "Checkout"
+      "Checkout",
+      "Supply chain"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
@@ -790,8 +790,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Retail",
-      "Supply chain"
+      "Supply chain",
+      "Retail"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -1071,8 +1071,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Supply chain",
-      "Next"
+      "Next",
+      "Supply chain"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -1163,8 +1163,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Information commissioner",
-      "Ico"
+      "Ico",
+      "Information commissioner"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
