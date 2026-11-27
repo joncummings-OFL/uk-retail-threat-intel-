@@ -1,13 +1,13 @@
 {
   "type": "bundle",
-  "id": "bundle--87de9e55-b73c-41d9-87e1-69eb29c839c1",
+  "id": "bundle--30190944-dc0c-432b-a438-0aa0efdc46bc",
   "objects": [
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5dfeeca8-85a1-4e92-88d9-896e43cc65e3",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--48055899-f25a-400b-947f-9d0efe85b20f",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Drupal Warns of New Critical Flaw Exploited in the Wild",
       "description": "Drupal fixes a critical flaw exploited in the wild that could let attackers take over vulnerable websites. Drupal has warned of a new highly critical vulnerability in Drupal Core that attackers are actively exploiting to take over vulnerable websites. Tracked as CVE-2026-136716, the flaw is related to improper handling of unusual or incomplete inst...",
       "indicator_types": [
@@ -15,7 +15,7 @@
       ],
       "pattern": "[url:value = 'https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -31,9 +31,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--0b9e21ae-7b6b-495f-95cf-be8840cd9ee3",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--52076bf5-973b-40b6-a9e4-66284f162c28",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -45,50 +45,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--165845b6-c19e-414a-98b8-3898c395e8b1",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
-      "name": "Independent review into ICO amid claims of \u2018toxic culture\u2019 at data protection watchdog",
-      "description": "Barrister Karon Monaghan KC has been appointed to conduct an independent review of the UK\u2019s information and data protection regulator, following an internal investigation into its former chief, John Edwards, who resigned after being accused of using \u201c vulgar and highly sexualised language \u201d towards women. Monaghan \u2013 an experienced barrister who has...",
-      "indicator_types": [
-        "malicious-activity"
-      ],
-      "pattern": "[url:value = 'https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog']",
-      "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
-      "confidence": 75,
-      "labels": [
-        "Next",
-        "Information commissioner",
-        "Ico"
-      ],
-      "external_references": [
-        {
-          "source_name": "Computer Weekly Security (UK)",
-          "url": "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog"
-        }
-      ]
-    },
-    {
-      "type": "attack-pattern",
-      "spec_version": "2.1",
-      "id": "attack-pattern--06a9a528-77fb-40a8-86a1-bec65b3489fa",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
-      "name": "Brute Force / Credential Stuffing",
-      "external_references": [
-        {
-          "source_name": "mitre-attack",
-          "external_id": "T1110"
-        }
-      ]
-    },
-    {
-      "type": "indicator",
-      "spec_version": "2.1",
-      "id": "indicator--34555195-d739-4a46-847d-e1bd0fa68172",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--ba137150-bc54-4b48-8f4d-c9446f9c9f58",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks",
       "description": "Accenture says hackers exploited MiCollab flaws before Mitel\u2019s advisory, likely aided by AI, in a suspected extortion campaign. The post Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks appeared first on SecurityWeek .",
       "indicator_types": [
@@ -96,7 +55,7 @@
       ],
       "pattern": "[url:value = 'https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -112,9 +71,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--56d2826e-ef3c-474d-9265-252864f7d5de",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--4649e44b-9d66-4b23-ab8a-bf27594d0049",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Data Encrypted for Impact",
       "external_references": [
         {
@@ -126,9 +85,50 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2f20fa67-57f0-4974-98b3-9e201cdea02a",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--9a8cec10-aa5f-45f0-a99f-d1a12b383405",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
+      "name": "Independent review into ICO amid claims of \u2018toxic culture\u2019 at data protection watchdog",
+      "description": "Barrister Karon Monaghan KC has been appointed to conduct an independent review of the UK\u2019s information and data protection regulator, following an internal investigation into its former chief, John Edwards, who resigned after being accused of using \u201c vulgar and highly sexualised language \u201d towards women. Monaghan \u2013 an experienced barrister who has...",
+      "indicator_types": [
+        "malicious-activity"
+      ],
+      "pattern": "[url:value = 'https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog']",
+      "pattern_type": "stix",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
+      "confidence": 75,
+      "labels": [
+        "Next",
+        "Ico",
+        "Information commissioner"
+      ],
+      "external_references": [
+        {
+          "source_name": "Computer Weekly Security (UK)",
+          "url": "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7636a498-061c-4f9e-8a60-b9bffc120216",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
+      "name": "Brute Force / Credential Stuffing",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1110"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f75a252a-971f-46f6-aeff-6319e8969614",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "UK Home Office waved through border system without a working fix for bad data",
       "description": "ICO reprimand follows failings that risked wrongful detention, with a temporary correction process taking more than a year to arrive",
       "indicator_types": [
@@ -136,7 +136,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 75,
       "labels": [
         "Ico"
@@ -151,9 +151,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--4520b1bf-9666-4c3c-8069-2d59c23b2182",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--2569d2dc-be85-4de7-8d48-e5510a17f0e6",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -165,9 +165,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9d9ddc56-ab27-4839-a965-f27fc2a879f1",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--f7950ea0-0788-4a81-880b-7fdbc20ccd62",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
       "description": "Drupal has warned of a new \"highly critical\" security flaw impacting Drupal core that it said has been exploited in the wild. The vulnerability, tracked as CVE-2026-136716 (CVSS score: N/A), has been described as a case of improper checking for unusual or exceptional conditions. It also relates to CVE-2026-132165 aka Fail2Install in that it address...",
       "indicator_types": [
@@ -175,7 +175,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -191,9 +191,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--95f89aa4-469e-43d2-a785-3bbd89ac631a",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--a00de56e-f120-4448-b869-0ca36bf7f1cf",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -205,9 +205,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--53fd8a74-7e87-4037-8190-2cef0241133c",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--72758ec2-d77e-43b5-81d4-60aa715a3642",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Two Newly Disclosed GeoServer Vulnerabilities Under Attack",
       "description": "Attackers are probing GeoServer instances for two high-severity flaws that can be chained with other bugs for unauthenticated RCE. The post Two Newly Disclosed GeoServer Vulnerabilities Under Attack appeared first on SecurityWeek .",
       "indicator_types": [
@@ -215,7 +215,7 @@
       ],
       "pattern": "[url:value = 'https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -231,9 +231,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--ff4a8199-3b73-4cc5-87b0-f78dc1bdfc4e",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--c078a513-beb2-4164-9fd3-fa070eb14857",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -245,9 +245,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--72305d73-211a-443b-bd73-986f06e8f2ba",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--7bc1214c-587c-4382-ba4d-4de1e31f6ac3",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
       "description": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr. The vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below - CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerability that could enable an attacker to access local text files readable...",
       "indicator_types": [
@@ -255,7 +255,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -271,9 +271,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--88fd8f67-ae5f-4b19-912e-fdf865195a87",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--51d2f487-3d5b-427c-8b27-1701fcaeb17d",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -285,9 +285,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--de2b8967-6693-404f-aa2c-71fbed419e58",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--3d36b3e6-93de-4b58-9a1a-d6f43a18e159",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
       "description": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the fixes by November 27, 2026. The vulnerability, tracked as CVE-2026-132165 aka Fail2Install (CVSS score: 9.8), is a case of remote code execut...",
       "indicator_types": [
@@ -295,7 +295,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -311,9 +311,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--022c260f-158c-4390-87c8-5b6b8ec73c1d",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--44e10206-081d-4d9e-8e3c-1120299183df",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -325,9 +325,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3e361240-a2ac-460d-a160-28029bd8d6c0",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--4a391463-8681-4e98-9958-dff247f5c462",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
       "description": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch their dependencies from. The flaw used in the attack had been in the registry's code since February 2016, and the team that maintains the service had every server on a patched build within about 15 mi...",
       "indicator_types": [
@@ -335,7 +335,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -351,9 +351,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--7e1216c3-3ebc-4652-bd4a-0d1876d952ea",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--52de7968-2636-49fc-8531-068239164313",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -365,9 +365,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5fd597dd-ae2e-4ec6-86db-cd53ba5e5b43",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--19219c95-0022-443b-83a9-219a1c12e49a",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Maritime industry faces growing cyber threats as 50 ships targeted",
       "description": "US authorities investigate suspected cyberattacks on up to 50 commercial ships, with Iran and Russia under scrutiny and Fortinet flaws involved. The United States is investigating a wave of cyberattacks targeting commercial vessels carrying oil, liquefied petroleum gas, chemicals, and other potentially hazardous cargo. According to a Wall Street Jo...",
       "indicator_types": [
@@ -375,7 +375,7 @@
       ],
       "pattern": "[url:value = 'https://securityaffairs.com/203918/intelligence/maritime-industry-faces-growing-cyber-threats-as-50-ships-targeted.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -391,9 +391,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--8edd916f-f7f5-481a-9475-a75f731b6c90",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--8b73f867-218c-4b29-bc1d-bcffaa9a47ae",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -405,9 +405,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--afb13084-527d-4279-a47c-87daeeeccac4",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--c9b17f09-4029-4c66-8c68-58487c2a5aaa",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
       "description": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The attacks have targeted financial services, healthcare, and legal services located in the U.S., the U.K., and Austra...",
       "indicator_types": [
@@ -415,7 +415,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -431,9 +431,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--4801f389-0f1b-4156-bd4b-6712ad9dc918",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--e7dd852c-71ff-4f07-8e63-fe95b7d53dc0",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Data Encrypted for Impact",
       "external_references": [
         {
@@ -445,9 +445,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3e66ae52-51e6-41e4-bd66-79a9b3924b3f",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--a57163d5-70ff-44fa-9f82-4b9952809f68",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "This could mess with Thanksgiving, says VMware as it drops third critical patch bundle in a week",
       "description": "Four more critical vulns, including another unauthorized access flaw in vCenter",
       "indicator_types": [
@@ -455,7 +455,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/virtualization/2026/11/25/this-could-mess-with-thanksgiving-says-vmware-as-it-drops-third-critical-patch-bundle-in-a-week/5312017']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -471,9 +471,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--6ae99e45-9e9e-4604-9c1b-f331a68e8001",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--db1c6df2-06ae-485a-9e8a-86980264db5b",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -485,9 +485,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e32a4894-0d93-4eef-8d92-e7b1a3f4b735",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--43a14f7d-1c22-419f-9657-883343dba907",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-103406 in Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router Under Active Exploitation",
       "description": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router is affected by CVE-2026-103406. Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially cra...",
       "indicator_types": [
@@ -495,7 +495,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-103406']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -512,9 +512,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--6d18a7d2-d3f9-49ef-afcd-a15ade05417c",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--1560e9bf-0480-4ebb-8ee9-e5bb6ab66305",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -526,9 +526,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9e44f897-e15a-4282-af9b-1285237e05c1",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--b6868439-e35b-43f1-94e7-8266765f7a27",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-133469 in Vates Xen Orchestra Under Active Exploitation",
       "description": "Vates Xen Orchestra is affected by CVE-2026-133469. Vates Xen Orchestra contains an improper validation of specified type of input vulnerability that could allow an unauthenticated attacker to bypass authentication and perform actions with administrative privileges via a specially crafted authentication token containing an empty JSON object. Requir...",
       "indicator_types": [
@@ -536,7 +536,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133469']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -553,9 +553,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--e7d6a4af-1fb4-4e2b-8378-cf4e67eaf42d",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--f40b1f9a-2010-4f4d-89e6-56af79cf3d9e",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -567,9 +567,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--712f0a5d-302b-4c6a-9a38-f44378b2506f",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--fc91568c-ccef-489e-b474-6e06707b47b7",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2025-41450 in Danfoss AK-SM 800A Series Under Active Exploitation",
       "description": "Danfoss AK-SM 800A Series is affected by CVE-2025-41450. Danfoss AK-SM 800A Series contains an improper authentication vulnerability that could allow an attacker to generate a web report exposing sensitive information, including internal IP addresses, usernames, and store names. Required Remediation: Apply mitigations in accordance with vendor inst...",
       "indicator_types": [
@@ -577,7 +577,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2025-41450']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -594,9 +594,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--90fdc760-33f3-48c2-94ea-896095733d8c",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--b6c0ede8-e8da-4376-a100-6d9e4fd50f62",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -608,9 +608,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5f2def2a-d372-4e90-9798-2afee7fd2321",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--d75eb598-e29d-4bbc-8423-c1679c57d6b0",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2023-25914 in Danfoss AK-SM 800A Series Under Active Exploitation",
       "description": "Danfoss AK-SM 800A Series is affected by CVE-2023-25914. Danfoss AK-SM 800A Series contains a path traversal vulnerability that could allow an attacker to access and read underlying server system files via the XML interface. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Pri...",
       "indicator_types": [
@@ -618,7 +618,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25914']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -635,9 +635,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c5a67c12-acd9-4b46-8125-5dc17ce2face",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--333ce137-a98e-412a-a22a-d0a535ec0127",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -649,9 +649,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b717cf70-ca01-43a8-ac02-f70ae6cb8ad4",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--b7bba8c5-71e9-4e22-ba27-c2de192411dd",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2023-25915 in Danfoss AK-SM 800A Series Under Active Exploitation",
       "description": "Danfoss AK-SM 800A Series is affected by CVE-2023-25915. Danfoss AK-SM 800A Series contains an improper input validation vulnerability that could allow a remote attacker to run arbitrary commands on the affected system. Required Remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioriti...",
       "indicator_types": [
@@ -659,7 +659,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2023-25915']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -676,9 +676,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--625c308c-7d5d-4893-aa33-b99267420593",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--317676fc-b13b-4f63-b699-9f907cef9868",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -690,9 +690,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a2493bb7-9fe0-4438-abca-639fe56e4de9",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--b3ca0c4f-79ed-4048-ad3b-070b7f19919a",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-133324 in Mitel MiCollab Under Active Exploitation",
       "description": "Mitel MiCollab is affected by CVE-2026-133324. Mitel MiCollab contains a not failing securely vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to bypass authentication controls and perform unauthorized actions. Required Remediation: Apply mitigations in accordance with vendor instru...",
       "indicator_types": [
@@ -700,7 +700,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133324']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -717,9 +717,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--a4bc762a-bed5-416d-88af-ac16008866c6",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--91f877fd-b8aa-4d8e-83c1-2e00b93b0835",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -731,9 +731,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2af5bdb3-1a62-4941-a9e2-69e7c986ed45",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--69bbbfca-64a3-4304-9a52-c2246938ce16",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-133275 in Mitel MiCollab Under Active Exploitation",
       "description": "Mitel MiCollab is affected by CVE-2026-133275. Mitel MiCollab contains an unrestricted upload of file with dangerous type vulnerability in the Audio, Web and Video Conferencing (AWV) component due to insufficient file type validation that could allow an unauthenticated attacker to upload arbitrary files. Required Remediation: Apply mitigations in a...",
       "indicator_types": [
@@ -741,7 +741,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133275']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -758,9 +758,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c3a1265f-5633-4935-8321-84f3572a1edc",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--35062fa2-689f-4294-a190-c45fdacd1cba",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -772,9 +772,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--baa55408-c2e9-48d7-b919-ab07353fa3e0",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--d0baa634-979d-4ce1-8fa1-b271c2661e40",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-133311 in Mitel MiCollab Under Active Exploitation",
       "description": "Mitel MiCollab is affected by CVE-2026-133311. Mitel MiCollab contains a weak authentication vulnerability in the Audio, Web and Video Conferencing (AWV) component that could allow an unauthenticated attacker to access sensitive information using a specific system-generated random identifier or pre-staged content. Required Remediation: Apply mitiga...",
       "indicator_types": [
@@ -782,7 +782,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133311']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -799,9 +799,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--cc70b7cb-ea28-4cfd-a7ee-0541765e4872",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--38c207b8-f785-4aab-8b16-d233f3f9e350",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -813,9 +813,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--50048073-b8e5-4f4b-998a-b6465b82a2e9",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--d146228a-05b7-49a7-8107-f39f9f7155e3",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-133303 in Mitel MiCollab Under Active Exploitation",
       "description": "Mitel MiCollab is affected by CVE-2026-133303. Mitel MiCollab contains an XML injection vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary commands using pre-staged malicious content. Required Remediation: Apply mitigations in accordance with vendor instructions,...",
       "indicator_types": [
@@ -823,7 +823,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133303']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -840,9 +840,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--1878464d-f60f-4e5d-a7e6-efe0a0f94e75",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--64ceef0a-34d7-40c9-af69-8a2a29a2f25f",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -854,9 +854,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ed21def3-f5d9-424c-aa17-fd331a685d40",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--f714df58-1ed6-43bc-86c3-ab484e876a55",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-133323 in Mitel MiCollab Under Active Exploitation",
       "description": "Mitel MiCollab is affected by CVE-2026-133323. Mitel MiCollab contains an improper neutralization of special elements used in an OS command (OS command injection) vulnerability in its Audio, Web, and Video Conferencing (AWV) component that could allow an unauthenticated attacker to execute arbitrary system commands. Required Remediation: Apply miti...",
       "indicator_types": [
@@ -864,7 +864,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133323']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -881,9 +881,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--931f1f04-7892-407b-b282-e773fd331174",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--bdcc209f-19d3-47c6-afb3-6f187820f256",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -895,9 +895,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--377dfd5a-0c72-4cf3-84db-d54678f2754e",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--a3b2309c-d591-41c3-995d-e2f598983079",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
       "description": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication. The critical vulnerability, tracked as CVE-2026-123903, is rated 9.8 out of 10.0 on the CVSS scoring system. It resides in the VMware Director...",
       "indicator_types": [
@@ -905,7 +905,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -921,9 +921,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c2cb699d-7621-4e83-9a95-1237a218bb22",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--f96853c9-12f1-45be-91b5-7bd81bb35212",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -935,9 +935,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c337a30d-4db2-4816-9606-6143d6460b89",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--654cc0f0-454c-4be6-9e4b-d18e95f18ec3",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
       "description": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy, a widely used open-source security scanner, planted malicious code that looked like it came from GitHub's off...",
       "indicator_types": [
@@ -945,7 +945,7 @@
       ],
       "pattern": "[url:value = 'https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 75,
       "labels": [
         "Supply chain",
@@ -961,9 +961,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--c4520c2f-de4a-4a0f-a4f1-7c813c7c51ff",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--1042004c-4529-44e2-a116-f547bb1b5623",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -975,9 +975,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--80e34197-852e-46e7-b4ba-3d5f1693c627",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--f86a8df9-a357-44df-8e87-a00a6f611097",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Amazon CTO Werner Vogels: Computing to converge with biology",
       "description": "Technology must decode how biology handles information, because nature handles vast amounts of data with a fraction of the energy used in datacentres. Meanwhile, security and sovereignty need to be built into systems and software at their inception, and scientists will find new cures for diseases that were unattainable before artificial intelligenc...",
       "indicator_types": [
@@ -985,7 +985,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366655113/Amazon-CTO-Werner-Vogels-Computing-to-converge-with-biology']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 75,
       "labels": [
         "Next"
@@ -1000,9 +1000,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--90f5441a-91e2-48e5-a3b4-0bd475aba067",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--2b6a4e7d-7454-4487-a4ee-afcba21788df",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1014,9 +1014,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ddc12d28-28a7-4df8-a7c0-5585bf844f4d",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--70a703fd-bcb6-44c1-8d6e-7f7c837447ce",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "UK cyber legislation fails to tackle real-world resilience",
       "description": "From mid-July through into October, more than a fair amount of my House of Lords colleagues' and my time has been filled with trying to improve the Cyber Security and Resilience Bill (CSRB). A milestone, of sorts, came when the bill passed its third reading on 2 November. The bill will be considered in the House of Commons today (24 November) with...",
       "indicator_types": [
@@ -1024,7 +1024,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/UK-cyber-legislation-fails-to-tackle-real-world-resilience']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 75,
       "labels": [
         "Retail",
@@ -1040,9 +1040,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--6104c51a-8f2c-4c1d-81ed-fa57ccd4c066",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--c23bf285-8133-43cd-8eec-fc1c9178b572",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -1054,9 +1054,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6d604998-fac5-4030-8a31-d168d3dd76b9",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--afe2e1bd-7d46-46d9-8c2f-0a3761af8330",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-132224 in Optimizely Web Experimentation Under Active Exploitation",
       "description": "Optimizely Web Experimentation is affected by CVE-2026-132224. Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaSc...",
       "indicator_types": [
@@ -1064,7 +1064,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132224']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1081,9 +1081,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--cfb59552-97d2-4624-9dfc-6dc3a21261fb",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--3f6f9963-5d08-49c3-9c01-24987c5d0467",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1095,9 +1095,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b8e88bba-2802-4d5e-8e98-bf4a9e26f4ca",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--cbcde331-a48c-4de3-9299-4cfbd0ac78a9",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-131914 in Idunno AntiCsrf Under Active Exploitation",
       "description": "Idunno AntiCsrf is affected by CVE-2026-131914. Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transiti...",
       "indicator_types": [
@@ -1105,7 +1105,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-131914']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1122,9 +1122,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--27756df0-162f-4270-a09d-4dccaa417314",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--98d77933-912a-4811-acd3-a83216f8fab3",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1136,9 +1136,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c099de90-d9ed-4b41-bd04-1e6281596fb7",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--34e80649-0c68-4c1b-a33a-1d87bb2a11cf",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-132165 in Drupal Core Under Active Exploitation",
       "description": "Drupal Core is affected by CVE-2026-132165. Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site. Required Remediat...",
       "indicator_types": [
@@ -1146,7 +1146,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-132165']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1163,9 +1163,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f92e2309-4854-411a-a4e7-f2065cb73815",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--605783d6-6f90-4b93-9c73-6f5cd9819250",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1177,9 +1177,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b283ec37-879e-4aa9-817f-ddaa96c57b51",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--e76c2387-b015-4c99-a337-f74eeea3aa54",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Critical Cisco remote code execution bug under attack",
       "description": "CISA, F6 sound the alarm after PoC exploit made public",
       "indicator_types": [
@@ -1187,7 +1187,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -1203,9 +1203,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f9d6d963-75e6-49f9-aeb7-0a43229f6879",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--ef2c9e18-59f6-4590-8fc4-dc72353eaf7a",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1217,9 +1217,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--6103a742-d988-4cc6-86ac-1a676a80c00e",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--2133ef6d-b98e-4ad9-a560-2cc4c58ff922",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
       "description": "A China-nexus actor used the Cairn penetration testing tool in attacks against East Asian universities, exploiting a zero-day in a medical imaging app.",
       "indicator_types": [
@@ -1227,7 +1227,7 @@
       ],
       "pattern": "[url:value = 'https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -1243,9 +1243,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--41e94d48-4c84-45df-a9df-f9f9b7c735fc",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--c7ed123b-50a2-4609-8590-7c11e7979d1b",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1257,9 +1257,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f36719f6-c422-4e7b-a955-a69645a2083c",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--e7781568-9e1f-4065-a7ff-cfe91be48667",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Everything going down at once wasn't evidence of a conspiracy \u2013 but the truth may be scarier",
       "description": "Rogue AI or nation-state hackers would be preferable to the amount of technical debt the past week of wobbling services laid bare",
       "indicator_types": [
@@ -1267,7 +1267,7 @@
       ],
       "pattern": "[url:value = 'https://www.theregister.com/off-prem/2026/11/23/everything-going-down-at-once-wasnt-evidence-of-a-conspiracy-but-the-truth-may-be-scarier/5311458']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -1283,9 +1283,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--5ca6ad5f-b0c2-4593-8fda-a20abe52e5c7",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--ce5c33df-c736-4556-b877-c6baed1d1bbd",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1297,9 +1297,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--006a300c-02ac-41d8-bf9e-4b859cc1c8db",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--feb6552a-1fd0-48e9-bac0-3b5965afde50",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Digital sovereignty not smart, says The Hague CIO",
       "description": "Policymakers calling for Europe to be as independent of US technology as possible are unrealistic, says the chief information officer of The Hague, the Netherlands\u2019 seat of government. The Hague, host of the International Criminal Court (ICC), has become a flashpoint for European alarm about US domination of the software, cloud and AI services on w...",
       "indicator_types": [
@@ -1307,7 +1307,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/feature/Digital-sovereignty-not-smart-says-The-Hague-CIO']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Next",
@@ -1323,9 +1323,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--4b3dc6a3-1377-489c-9d9b-9b283bbec327",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--8588a353-382d-4af4-88b8-32ae47b9cbf8",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -1337,9 +1337,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4594b684-12a3-4c7c-bf2c-908e3884cff5",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--267bbc50-f47d-4938-a007-832788e63a9b",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Nation-state APTs don't need new tricks; the old ones still work",
       "description": "Nation-state cyber espionage is a persistent challenge for businesses, particularly as geopolitical tensions grow and new technologies create opportunities for attackers. However, while nation-state groups have demonstrated an ability to exploit technological innovation, this does not mean they are abandoning established intrusion techniques. Inste...",
       "indicator_types": [
@@ -1347,7 +1347,7 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/opinion/Nation-state-APTs-dont-need-new-tricks-the-old-ones-still-work']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "Global 0-Day",
@@ -1363,9 +1363,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--9ce43557-5576-42b3-bfd7-cfe2fa4ff5ff",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--b26ef756-aabc-4a80-ac49-8d6835ded20e",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -1377,9 +1377,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--56f6df20-2f87-4369-a009-6cdf05a2f44e",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--bac8615d-000e-4bbb-9d02-09eb10a503ab",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Staff gagging clauses lifted for review of \u2018toxic culture\u2019 at information watchdog",
       "description": "Current and former staff of the UK\u2019s information watchdog the Information Commission\u2019s Office (ICO) will have non-disclosure agreements (NDAs) lifted to allow them to contribute to an independent review into the culture, accountability and governance at the organisation. The review follows the resignation of the information commissioner , John Edwa...",
       "indicator_types": [
@@ -1387,11 +1387,11 @@
       ],
       "pattern": "[url:value = 'https://www.computerweekly.com/news/366655253/Staff-gagging-clauses-lifted-for-review-of-toxic-culture-at-information-watchdog']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
-        "Information commissioner",
-        "Ico"
+        "Ico",
+        "Information commissioner"
       ],
       "external_references": [
         {
@@ -1403,9 +1403,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--f42d98df-245d-44ab-97c8-02f2d4fec185",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--63d23e63-04ff-43db-a5a5-c1f4b4631146",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Brute Force / Credential Stuffing",
       "external_references": [
         {
@@ -1417,9 +1417,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--be6440a4-7505-436f-9077-117a94c036d7",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--3fc0f88d-4ec3-435e-9393-63daa6911a6d",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-133968 in Project MONAI MONAI Label Under Active Exploitation",
       "description": "Project MONAI MONAI Label is affected by CVE-2026-133968. Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution. Required Remediation: Apply mitigations in accordance with vendo...",
       "indicator_types": [
@@ -1427,7 +1427,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-133968']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1444,9 +1444,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--47603ebf-6115-4435-bc8a-55f9fe410b72",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--d4743a24-59a3-4ff5-a9d4-f4402e5aa975",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {
@@ -1458,9 +1458,9 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a3326246-9faa-4d83-ba0e-2abddb767125",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "indicator--a9ddba5e-7c2f-49bf-9cac-1dc3dca13541",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "CISA KEV Alert: CVE-2026-134624 in N-able MailAssure Under Active Exploitation",
       "description": "N-able MailAssure is affected by CVE-2026-134624. N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services. Require...",
       "indicator_types": [
@@ -1468,7 +1468,7 @@
       ],
       "pattern": "[url:value = 'https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-134624']",
       "pattern_type": "stix",
-      "valid_from": "2026-11-26T22:36:43.324099+00:00",
+      "valid_from": "2026-11-27T04:33:23.419245+00:00",
       "confidence": 90,
       "labels": [
         "CISA KEV",
@@ -1485,9 +1485,9 @@
     {
       "type": "attack-pattern",
       "spec_version": "2.1",
-      "id": "attack-pattern--d6c9356b-1c30-4529-9741-4953eac68805",
-      "created": "2026-11-26T22:36:43.324099+00:00",
-      "modified": "2026-11-26T22:36:43.324099+00:00",
+      "id": "attack-pattern--a241a6bd-f6c0-488e-9cf5-842ac3ce7fad",
+      "created": "2026-11-27T04:33:23.419245+00:00",
+      "modified": "2026-11-27T04:33:23.419245+00:00",
       "name": "Exploit Public-Facing Application",
       "external_references": [
         {

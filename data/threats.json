@@ -6,7 +6,7 @@
     "url": "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html",
     "date": "26 Nov 2026",
     "_timestamp": 1795722357.0,
-    "is_new": true,
+    "is_new": false,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
@@ -36,35 +36,6 @@
     }
   },
   {
-    "id": "scraped-20",
-    "title": "Independent review into ICO amid claims of ‘toxic culture’ at data protection watchdog",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog",
-    "date": "26 Nov 2026",
-    "_timestamp": 1795691700.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Next",
-      "Information commissioner",
-      "Ico"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "Barrister Karon Monaghan KC has been appointed to conduct an independent review of the UK’s information and data protection regulator, following an internal investigation into its former chief, John Edwards, who resigned after being accused of using “ vulgar and highly sexualised language ” towards women. Monaghan – an experienced barrister who has...",
-    "indicators": [
-      "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
     "id": "scraped-34",
     "title": "Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks",
     "source": "SecurityWeek",
@@ -91,6 +62,35 @@
       "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/"
     ],
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-20",
+    "title": "Independent review into ICO amid claims of ‘toxic culture’ at data protection watchdog",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog",
+    "date": "26 Nov 2026",
+    "_timestamp": 1795691700.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next",
+      "Ico",
+      "Information commissioner"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "Barrister Karon Monaghan KC has been appointed to conduct an independent review of the UK’s information and data protection regulator, following an internal investigation into its former chief, John Edwards, who resigned after being accused of using “ vulgar and highly sexualised language ” towards women. Monaghan – an experienced barrister who has...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
     "id": "scraped-16",
@@ -198,8 +198,8 @@
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-120705",
-      "CVE-2026-129243"
+      "CVE-2026-129243",
+      "CVE-2026-120705"
     ],
     "tags": [
       "Global 0-Day",
@@ -1118,8 +1118,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Information commissioner",
-      "Ico"
+      "Ico",
+      "Information commissioner"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
