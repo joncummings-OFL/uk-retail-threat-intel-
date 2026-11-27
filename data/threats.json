@@ -1,63 +1,105 @@
 [
   {
-    "id": "scraped-20",
-    "title": "Resilience takes centre stage as applications move to the edge",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/opinion/Resilience-takes-centre-stage-as-applications-move-to-the-edge",
+    "id": "cisa-kev-cve_2026_120705",
+    "title": "CISA KEV Alert: CVE-2026-120705 in OSGeo GeoServer Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-120705",
     "date": "27 Nov 2026",
-    "_timestamp": 1795776060.0,
-    "is_new": true,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "HIGH",
-    "subsector": "loyalty",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Retailers",
-      "Next",
-      "Ecommerce"
-    ],
-    "mitre": "T1110 (Brute Force / Credential Stuffing)",
-    "mitre_id": "T1110",
-    "mitre_tactic": "Credential Access",
-    "mitre_name": "Brute Force / Credential Stuffing",
-    "summary": "Real-time digital services succeed or fail on the basis of the digital experience. As consumers, we all know the frustration that comes with a stalled TV show, a video game that crashes mid-stream, or an ecommerce transaction that fails. For businesses the implications can be even more serious, with entire operations grinding to a halt. In both cas...",
-    "indicators": [
-      "https://www.computerweekly.com/opinion/Resilience-takes-centre-stage-as-applications-move-to-the-edge"
-    ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
-  },
-  {
-    "id": "scraped-21",
-    "title": "Investigation underway into DWP cyber incident as services taken offline",
-    "source": "Computer Weekly Security (UK)",
-    "url": "https://www.computerweekly.com/news/366655538/Investigation-underway-into-DWP-cyber-security-incident-as-services-taken-offline",
-    "date": "27 Nov 2026",
-    "_timestamp": 1795772700.0,
+    "_timestamp": 1795737600.0,
     "is_new": true,
     "is_flash": false,
     "is_peak_trading": false,
     "severity": "CRITICAL",
-    "subsector": "loyalty",
+    "subsector": "enterprise",
     "actor": null,
-    "cves": [],
+    "cves": [
+      "CVE-2026-120705"
+    ],
     "tags": [
-      "Information commissioner",
-      "Ico"
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-120705"
     ],
     "mitre": "T1190 (Exploit Public-Facing Application)",
     "mitre_id": "T1190",
     "mitre_tactic": "Initial Access",
     "mitre_name": "Exploit Public-Facing Application",
-    "summary": "The UK’s largest government department, the Department for Work and Pensions (DWP), has taken services offline following a cyber incident. DWP, which administers disability and health benefits, state pensions and child maintenance payments, said it was working with government cyber security specialists to assess the incident. Downing Street said an...",
+    "summary": "OSGeo GeoServer is affected by CVE-2026-120705. OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query....",
     "indicators": [
-      "https://www.computerweekly.com/news/366655538/Investigation-underway-into-DWP-cyber-security-incident-as-services-taken-offline"
+      "CVE-2026-120705"
     ],
-    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for GeoServer."
   },
   {
-    "id": "scraped-41",
+    "id": "cisa-kev-cve_2026_129243",
+    "title": "CISA KEV Alert: CVE-2026-129243 in OSGeo GeoServer Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-129243",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795737600.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-129243"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-129243"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "OSGeo GeoServer is affected by CVE-2026-129243. GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244,...",
+    "indicators": [
+      "CVE-2026-129243"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for GeoServer."
+  },
+  {
+    "id": "cisa-kev-cve_2026_136716",
+    "title": "CISA KEV Alert: CVE-2026-136716 in Drupal Core Under Active Exploitation",
+    "source": "CISA KEV Catalog",
+    "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2026-136716",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795737600.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [
+      "CVE-2026-136716"
+    ],
+    "tags": [
+      "CISA KEV",
+      "Active Exploit",
+      "CVE-2026-136716"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Drupal Core is affected by CVE-2026-136716. Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states. Required Remediation: Apply miti...",
+    "indicators": [
+      "CVE-2026-136716"
+    ],
+    "advisory": "Mandatory remediation: Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines. Check retail perimeter and server inventory for Core.",
+    "epss": {
+      "cve": "CVE-2026-136716",
+      "score": "1.2%",
+      "raw_score": 0.01212,
+      "percentile": "68.4%"
+    }
+  },
+  {
+    "id": "scraped-44",
     "title": "SAP Security Incident: Stolen Tokens Raise Supply Chain Concerns",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/204121/data-breach/sap-security-incident-stolen-tokens-raise-supply-chain-concerns.html",
@@ -84,7 +126,36 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-28",
+    "id": "scraped-23",
+    "title": "Resilience takes centre stage as applications move to the edge",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/opinion/Resilience-takes-centre-stage-as-applications-move-to-the-edge",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795776060.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Retailers",
+      "Ecommerce",
+      "Next"
+    ],
+    "mitre": "T1110 (Brute Force / Credential Stuffing)",
+    "mitre_id": "T1110",
+    "mitre_tactic": "Credential Access",
+    "mitre_name": "Brute Force / Credential Stuffing",
+    "summary": "Real-time digital services succeed or fail on the basis of the digital experience. As consumers, we all know the frustration that comes with a stalled TV show, a video game that crashes mid-stream, or an ecommerce transaction that fails. For businesses the implications can be even more serious, with entire operations grinding to a halt. In both cas...",
+    "indicators": [
+      "https://www.computerweekly.com/opinion/Resilience-takes-centre-stage-as-applications-move-to-the-edge"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-31",
     "title": "How to Keep Your Security Picture Current When Attackers Move at AI Speed",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/how-to-keep-your-security-picture.html",
@@ -111,7 +182,35 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-29",
+    "id": "scraped-24",
+    "title": "Investigation underway into DWP cyber incident as services taken offline",
+    "source": "Computer Weekly Security (UK)",
+    "url": "https://www.computerweekly.com/news/366655538/Investigation-underway-into-DWP-cyber-security-incident-as-services-taken-offline",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795772700.0,
+    "is_new": false,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "loyalty",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Information commissioner",
+      "Ico"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "The UK’s largest government department, the Department for Work and Pensions (DWP), has taken services offline following a cyber incident. DWP, which administers disability and health benefits, state pensions and child maintenance payments, said it was working with government cyber security specialists to assess the incident. Downing Street said an...",
+    "indicators": [
+      "https://www.computerweekly.com/news/366655538/Investigation-underway-into-DWP-cyber-security-incident-as-services-taken-offline"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-32",
     "title": "Hackers Trojanize Official Q-Dir and DesktopOK Downloads to Deliver Remote Access Malware",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html",
@@ -138,7 +237,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-30",
+    "id": "scraped-33",
     "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
@@ -166,7 +265,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-42",
+    "id": "scraped-45",
     "title": "Drupal Warns of New Critical Flaw Exploited in the Wild",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html",
@@ -202,7 +301,7 @@
     }
   },
   {
-    "id": "scraped-31",
+    "id": "scraped-34",
     "title": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
@@ -229,7 +328,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-39",
+    "id": "scraped-42",
     "title": "Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/",
@@ -257,7 +356,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-22",
+    "id": "scraped-25",
     "title": "Independent review into ICO amid claims of ‘toxic culture’ at data protection watchdog",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655461/Independent-review-into-ICO-amid-claims-of-toxic-culture-at-data-protection-watchdog",
@@ -272,8 +371,8 @@
     "cves": [],
     "tags": [
       "Information commissioner",
-      "Next",
-      "Ico"
+      "Ico",
+      "Next"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -286,7 +385,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-16",
+    "id": "scraped-19",
     "title": "UK Home Office waved through border system without a working fix for bad data",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/26/uk-home-office-waved-through-border-system-without-a-working-fix-for-bad-data/5312162",
@@ -313,7 +412,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-32",
+    "id": "scraped-35",
     "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
@@ -326,8 +425,8 @@
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-136716",
-      "CVE-2026-132165"
+      "CVE-2026-132165",
+      "CVE-2026-136716"
     ],
     "tags": [
       "Global 0-Day",
@@ -350,7 +449,7 @@
     }
   },
   {
-    "id": "scraped-40",
+    "id": "scraped-43",
     "title": "Two Newly Disclosed GeoServer Vulnerabilities Under Attack",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/",
@@ -378,7 +477,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-33",
+    "id": "scraped-36",
     "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
@@ -409,7 +508,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-34",
+    "id": "scraped-37",
     "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
@@ -445,7 +544,7 @@
     }
   },
   {
-    "id": "scraped-35",
+    "id": "scraped-38",
     "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
@@ -473,7 +572,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-36",
+    "id": "scraped-39",
     "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
@@ -501,7 +600,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-17",
+    "id": "scraped-20",
     "title": "This could mess with Thanksgiving, says VMware as it drops third critical patch bundle in a week",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/virtualization/2026/11/25/this-could-mess-with-thanksgiving-says-vmware-as-it-drops-third-critical-patch-bundle-in-a-week/5312017",
@@ -899,7 +998,7 @@
     }
   },
   {
-    "id": "scraped-37",
+    "id": "scraped-40",
     "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
@@ -935,7 +1034,7 @@
     }
   },
   {
-    "id": "scraped-23",
+    "id": "scraped-26",
     "title": "Amazon CTO Werner Vogels: Computing to converge with biology",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655113/Amazon-CTO-Werner-Vogels-Computing-to-converge-with-biology",
@@ -962,7 +1061,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-24",
+    "id": "scraped-27",
     "title": "UK cyber legislation fails to tackle real-world resilience",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/UK-cyber-legislation-fails-to-tackle-real-world-resilience",
@@ -976,8 +1075,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Retail",
-      "Supply chain"
+      "Supply chain",
+      "Retail"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
     "mitre_id": "T1110",
@@ -1101,7 +1200,7 @@
     }
   },
   {
-    "id": "scraped-18",
+    "id": "scraped-21",
     "title": "Critical Cisco remote code execution bug under attack",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/security/2026/11/23/critical-cisco-remote-code-execution-bug-under-attack/5311722",
@@ -1129,7 +1228,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-38",
+    "id": "scraped-41",
     "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
@@ -1157,7 +1256,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-19",
+    "id": "scraped-22",
     "title": "Everything going down at once wasn't evidence of a conspiracy – but the truth may be scarier",
     "source": "The Register Security (UK)",
     "url": "https://www.theregister.com/off-prem/2026/11/23/everything-going-down-at-once-wasnt-evidence-of-a-conspiracy-but-the-truth-may-be-scarier/5311458",
@@ -1185,7 +1284,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-25",
+    "id": "scraped-28",
     "title": "Digital sovereignty not smart, says The Hague CIO",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/feature/Digital-sovereignty-not-smart-says-The-Hague-CIO",
@@ -1213,7 +1312,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-26",
+    "id": "scraped-29",
     "title": "Nation-state APTs don't need new tricks; the old ones still work",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/opinion/Nation-state-APTs-dont-need-new-tricks-the-old-ones-still-work",
@@ -1241,7 +1340,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-27",
+    "id": "scraped-30",
     "title": "Staff gagging clauses lifted for review of ‘toxic culture’ at information watchdog",
     "source": "Computer Weekly Security (UK)",
     "url": "https://www.computerweekly.com/news/366655253/Staff-gagging-clauses-lifted-for-review-of-toxic-culture-at-information-watchdog",
