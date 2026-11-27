@@ -1,6 +1,142 @@
 [
   {
-    "id": "scraped-36",
+    "id": "scraped-40",
+    "title": "SAP Security Incident: Stolen Tokens Raise Supply Chain Concerns",
+    "source": "Security Affairs",
+    "url": "https://securityaffairs.com/204121/data-breach/sap-security-incident-stolen-tokens-raise-supply-chain-concerns.html",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795779560.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "supply",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Supply chain"
+    ],
+    "mitre": "T1195 (Supply Chain Compromise)",
+    "mitre_id": "T1195",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Supply Chain Compromise",
+    "summary": "SAP confirms a security incident as reports point to stolen GitHub tokens and altered source code. Data breach remains unconfirmed. SAP has confirmed a security incident, and most of the details come from the press, not from the company. The global enterprise found suspicious activity in its IT systems. DER SPIEGEL reported that attackers stole […]",
+    "indicators": [
+      "https://securityaffairs.com/204121/data-breach/sap-security-incident-stolen-tokens-raise-supply-chain-concerns.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-26",
+    "title": "How to Keep Your Security Picture Current When Attackers Move at AI Speed",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/how-to-keep-your-security-picture.html",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795775538.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Most security metrics are not built to be used. They are built to be shown. Somewhere between the quarterly review and the next status update, a set of numbers gets assembled that looks reassuring in a room and tells almost no one what is actually happening across the environment that week. Someone pulls them together the week before, cleans them u...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/how-to-keep-your-security-picture.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-27",
+    "title": "Hackers Trojanize Official Q-Dir and DesktopOK Downloads to Deliver Remote Access Malware",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795771770.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Supply chain"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Cybersecurity researchers have disclosed details of a software supply chain attack that has tampered with Q-Dir and DesktopOK installation files distributed via the official SoftwareOK website. \"Evidence indicates that malicious files were generated not only when users downloaded the programs directly from the official download page but also during...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/hackers-trojanize-official-q-dir-and.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-28",
+    "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
+    "date": "27 Nov 2026",
+    "_timestamp": 1795758500.0,
+    "is_new": true,
+    "is_flash": true,
+    "is_peak_trading": false,
+    "severity": "CRITICAL",
+    "subsector": "enterprise",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Global 0-Day",
+      "Enterprise"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution. The proof-of-concept (PoC) exploit, which has yet to be assigned a CVE identifier, has been tracked as 4HTTP2SHELL and 4HTTP2ROOT. \"I found a path from a fresh, unauthenticated HTTP sess...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html"
+    ],
+    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
+  },
+  {
+    "id": "scraped-29",
+    "title": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
+    "source": "The Hacker News",
+    "url": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
+    "date": "26 Nov 2026",
+    "_timestamp": 1795706021.0,
+    "is_new": true,
+    "is_flash": false,
+    "is_peak_trading": false,
+    "severity": "HIGH",
+    "subsector": "ecom",
+    "actor": null,
+    "cves": [],
+    "tags": [
+      "Next"
+    ],
+    "mitre": "T1190 (Exploit Public-Facing Application)",
+    "mitre_id": "T1190",
+    "mitre_tactic": "Initial Access",
+    "mitre_name": "Exploit Public-Facing Application",
+    "summary": "The threat actors behind the PolinRider campaign have compromised over 7,600 GitHub repositories, in some cases planting a Python loader capable of delivering next-stage payloads, as evidence emerges that the activity may have started as far back as February 2025. \"These are real developers, not throwaway accounts,\" Apiiro researcher Shmulik Cohen...",
+    "indicators": [
+      "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html"
+    ],
+    "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
+  },
+  {
+    "id": "scraped-41",
     "title": "Drupal Warns of New Critical Flaw Exploited in the Wild",
     "source": "Security Affairs",
     "url": "https://securityaffairs.com/204085/security/drupal-warns-of-new-critical-flaw-exploited-in-the-wild.html",
@@ -36,7 +172,7 @@
     }
   },
   {
-    "id": "scraped-34",
+    "id": "scraped-38",
     "title": "Mitel MiCollab Zero-Days Exploited in Suspected AI-Assisted Attacks",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/mitel-micollab-zero-days-exploited-in-suspected-ai-assisted-attacks/",
@@ -78,8 +214,8 @@
     "actor": null,
     "cves": [],
     "tags": [
-      "Next",
       "Ico",
+      "Next",
       "Information commissioner"
     ],
     "mitre": "T1110 (Brute Force / Credential Stuffing)",
@@ -120,7 +256,7 @@
     "advisory": "Review logs and e-commerce infrastructure for exposure to this vector."
   },
   {
-    "id": "scraped-26",
+    "id": "scraped-30",
     "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
@@ -133,8 +269,8 @@
     "subsector": "enterprise",
     "actor": null,
     "cves": [
-      "CVE-2026-136716",
-      "CVE-2026-132165"
+      "CVE-2026-132165",
+      "CVE-2026-136716"
     ],
     "tags": [
       "Global 0-Day",
@@ -157,7 +293,7 @@
     }
   },
   {
-    "id": "scraped-35",
+    "id": "scraped-39",
     "title": "Two Newly Disclosed GeoServer Vulnerabilities Under Attack",
     "source": "SecurityWeek",
     "url": "https://www.securityweek.com/two-newly-disclosed-geoserver-vulnerabilities-under-attack/",
@@ -185,7 +321,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-27",
+    "id": "scraped-31",
     "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
@@ -216,7 +352,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-28",
+    "id": "scraped-32",
     "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
@@ -252,7 +388,7 @@
     }
   },
   {
-    "id": "scraped-29",
+    "id": "scraped-33",
     "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
@@ -280,35 +416,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-37",
-    "title": "Maritime industry faces growing cyber threats as 50 ships targeted",
-    "source": "Security Affairs",
-    "url": "https://securityaffairs.com/203918/intelligence/maritime-industry-faces-growing-cyber-threats-as-50-ships-targeted.html",
-    "date": "25 Nov 2026",
-    "_timestamp": 1795594990.0,
-    "is_new": false,
-    "is_flash": false,
-    "is_peak_trading": false,
-    "severity": "CRITICAL",
-    "subsector": "enterprise",
-    "actor": null,
-    "cves": [],
-    "tags": [
-      "Global 0-Day",
-      "Enterprise"
-    ],
-    "mitre": "T1190 (Exploit Public-Facing Application)",
-    "mitre_id": "T1190",
-    "mitre_tactic": "Initial Access",
-    "mitre_name": "Exploit Public-Facing Application",
-    "summary": "US authorities investigate suspected cyberattacks on up to 50 commercial ships, with Iran and Russia under scrutiny and Fortinet flaws involved. The United States is investigating a wave of cyberattacks targeting commercial vessels carrying oil, liquefied petroleum gas, chemicals, and other potentially hazardous cargo. According to a Wall Street Jo...",
-    "indicators": [
-      "https://securityaffairs.com/203918/intelligence/maritime-industry-faces-growing-cyber-threats-as-50-ships-targeted.html"
-    ],
-    "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
-  },
-  {
-    "id": "scraped-30",
+    "id": "scraped-34",
     "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
@@ -734,7 +842,7 @@
     }
   },
   {
-    "id": "scraped-31",
+    "id": "scraped-35",
     "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
@@ -770,7 +878,7 @@
     }
   },
   {
-    "id": "scraped-32",
+    "id": "scraped-36",
     "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
     "source": "The Hacker News",
     "url": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
@@ -992,7 +1100,7 @@
     "advisory": "Urgent: Patch edge devices and review perimeter telemetry immediately."
   },
   {
-    "id": "scraped-33",
+    "id": "scraped-37",
     "title": "AI Agents Zip From Flaw Discovery to Root Access in 11 Minutes",
     "source": "Dark Reading",
     "url": "https://www.darkreading.com/cyberattacks-data-breaches/ai-agents-flaw-discovery-root-access-11-minutes",
